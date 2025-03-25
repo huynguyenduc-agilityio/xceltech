@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaveTile component should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center gap-12 w-[445px] h-[182px] px-5 py-6 rounded-[16px] bg-primary"
+  >
+    <div
+      class="flex items-center justify-center w-[135px] h-[135px] rounded-full bg-white"
+    >
+      <span
+        class="text-primary text-[70px]"
+      >
+        60
+      </span>
+    </div>
+    <div
+      class="flex flex-col items-center"
+    >
+      <span
+        class="text-xl font-bold text-white"
+      >
+        Annual Leave
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

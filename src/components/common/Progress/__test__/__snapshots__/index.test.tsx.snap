@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress component should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col flex-1"
+  >
+    <div
+      class="flex items-center justify-between"
+    >
+      <span
+        class="font-lg"
+      >
+        Annual Leave
+      </span>
+      <span
+        class="font-lg"
+      >
+        10 of 60 day(s)
+      </span>
+    </div>
+    <div
+      aria-valuemax="100"
+      aria-valuemin="0"
+      class="relative h-7 w-full overflow-hidden rounded-[3px] bg-backgroundGray"
+      data-max="100"
+      data-state="indeterminate"
+      role="progressbar"
+    >
+      <div
+        class="h-full flex-1 transition-all rounded-[3px] bg-primary"
+        data-max="100"
+        data-state="indeterminate"
+        style="transform: translateX(-70%);"
+      />
+    </div>
+  </div>
+</div>
+`;

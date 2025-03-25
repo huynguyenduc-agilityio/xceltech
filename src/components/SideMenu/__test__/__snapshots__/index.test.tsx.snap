@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideMenu component should match snapshot 1`] = `
+<div
+  class="w-full h-full flex"
+  data-orientation="horizontal"
+  dir="ltr"
+>
+  <div
+    aria-orientation="horizontal"
+    class="flex flex-col justify-start gap-5 min-w-[540px] h-full pl-4 pr-9 pt-9 pb-5 mr-[51px] rounded-[15px] bg-white"
+    data-orientation="horizontal"
+    role="tablist"
+    style="outline: none;"
+    tabindex="0"
+  >
+    <button
+      aria-controls="radix-:r0:-content-Personal Details"
+      aria-selected="true"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary"
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="active"
+      id="radix-:r0:-trigger-Personal Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Personal Details
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Contact Details"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary opacity-50 cursor-not-allowed"
+      data-disabled=""
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      disabled=""
+      id="radix-:r0:-trigger-Contact Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Contact Details
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Next of kin Details"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary opacity-50 cursor-not-allowed"
+      data-disabled=""
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      disabled=""
+      id="radix-:r0:-trigger-Next of kin Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Next of kin Details
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Education Qualifications"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary opacity-50 cursor-not-allowed"
+      data-disabled=""
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      disabled=""
+      id="radix-:r0:-trigger-Education Qualifications"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Education Qualifications
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Guarantor Details"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary opacity-50 cursor-not-allowed"
+      data-disabled=""
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      disabled=""
+      id="radix-:r0:-trigger-Guarantor Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Guarantor Details
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Family Details"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary opacity-50 cursor-not-allowed"
+      data-disabled=""
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      disabled=""
+      id="radix-:r0:-trigger-Family Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Family Details
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Job Details"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary"
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      id="radix-:r0:-trigger-Job Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Job Details
+    </button>
+    <button
+      aria-controls="radix-:r0:-content-Financial Details"
+      aria-selected="false"
+      class="w-full h-[78px] rounded-[15px] bg-blue-light text-lg font-bold hover:bg-secondary hover:opacity-80 data-[state=active]:bg-secondary opacity-50 cursor-not-allowed"
+      data-disabled=""
+      data-orientation="horizontal"
+      data-radix-collection-item=""
+      data-state="inactive"
+      disabled=""
+      id="radix-:r0:-trigger-Financial Details"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      Financial Details
+    </button>
+  </div>
+  <div
+    class="w-full bg-white rounded-[15px]"
+  >
+    <div
+      aria-labelledby="radix-:r0:-trigger-Personal Details"
+      data-orientation="horizontal"
+      data-state="active"
+      id="radix-:r0:-content-Personal Details"
+      role="tabpanel"
+      style="animation-duration: 0s;"
+      tabindex="0"
+    >
+      1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facere, dolor, rerum iste eveniet voluptatibus soluta sint in delectus explicabo asperiores quo aut ad fugit recusandae temporibus. Nam, voluptate sed.
+    </div>
+    <div
+      aria-labelledby="radix-:r0:-trigger-Contact Details"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Contact Details"
+      role="tabpanel"
+      tabindex="0"
+    />
+    <div
+      aria-labelledby="radix-:r0:-trigger-Next of kin Details"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Next of kin Details"
+      role="tabpanel"
+      tabindex="0"
+    />
+    <div
+      aria-labelledby="radix-:r0:-trigger-Education Qualifications"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Education Qualifications"
+      role="tabpanel"
+      tabindex="0"
+    />
+    <div
+      aria-labelledby="radix-:r0:-trigger-Guarantor Details"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Guarantor Details"
+      role="tabpanel"
+      tabindex="0"
+    />
+    <div
+      aria-labelledby="radix-:r0:-trigger-Family Details"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Family Details"
+      role="tabpanel"
+      tabindex="0"
+    />
+    <div
+      aria-labelledby="radix-:r0:-trigger-Job Details"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Job Details"
+      role="tabpanel"
+      tabindex="0"
+    />
+    <div
+      aria-labelledby="radix-:r0:-trigger-Financial Details"
+      data-orientation="horizontal"
+      data-state="inactive"
+      hidden=""
+      id="radix-:r0:-content-Financial Details"
+      role="tabpanel"
+      tabindex="0"
+    />
+  </div>
+</div>
+`;

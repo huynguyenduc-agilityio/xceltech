@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component should match snapshot 1`] = `
+<div>
+  <span
+    class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full"
+    style="width: 100px; height: 100px;"
+  >
+    <span
+      class="flex h-full w-full items-center justify-center rounded-full bg-muted"
+    />
+  </span>
+</div>
+`;

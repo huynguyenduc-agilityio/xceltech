@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker component should match snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-:r0:"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-state="closed"
+    type="button"
+  />
+  <button
+    class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground w-[280px] h-[54px] justify-between px-5 py-4 text-lg bg-blue-light text-black-smoky"
+  >
+    <span
+      class="text-gray-soft"
+    >
+      Pick a date
+    </span>
+    <svg
+      class="w-[23px] h-[27px]"
+      fill="none"
+      height="27px"
+      viewBox="0 0 23 27"
+      width="23px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+        fill="#9C9C9C"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;

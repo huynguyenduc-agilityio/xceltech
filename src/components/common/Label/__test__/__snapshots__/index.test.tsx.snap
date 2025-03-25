@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Component should match snapshot 1`] = `
+<div>
+  <label
+    class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+  >
+    Test Label
+  </label>
+</div>
+`;

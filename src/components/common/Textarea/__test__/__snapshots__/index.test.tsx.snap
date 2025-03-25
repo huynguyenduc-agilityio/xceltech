@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea component should match snapshot 1`] = `
+<div>
+  <textarea
+    class="flex min-h-[80px] w-full rounded-regular bg-blue-light px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50"
+    placeholder="Description"
+  />
+</div>
+`;

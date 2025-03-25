@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb component should match snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="flex items-center gap-2 text-xl text-black-soft"
+  >
+    <a
+      class="hover:underline"
+      href="/dashboard"
+    >
+      Dashboard
+    </a>
+    &gt;
+    <span>
+      Apply for Leave
+    </span>
+  </nav>
+</DocumentFragment>
+`;

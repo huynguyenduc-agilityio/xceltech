@@ -1,0 +1,2 @@
+cd ./xceltech
+npx --no -- commitlint --edit ${1}
