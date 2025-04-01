@@ -8,4 +8,8 @@ export * from './Avatar';
 export * from './Textarea';
 export * from './Progress';
 export * from './Select';
+export * from './Checkbox';
+export * from './Carousel';
+export * from './Dialog';
 export { default as DatePicker } from './DatePicker';
+export { default as Toast } from './Toast';

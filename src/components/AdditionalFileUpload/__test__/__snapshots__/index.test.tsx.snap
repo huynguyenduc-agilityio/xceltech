@@ -3,40 +3,32 @@
 exports[`AdditionalFileUpload component should match snapshot 1`] = `
 <div>
   <div
-    class="flex-1 w-full"
+    class="space-y-2 w-full"
   >
     <div
-      class="space-y-2"
+      class="relative flex items-center h-[68px]"
     >
+      <input
+        accept=".pdf"
+        autocomplete="off"
+        class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] hidden"
+        data-testid="input-element"
+        id="file-upload-test"
+        type="file"
+      />
       <div
-        class="relative flex items-center h-[68px]"
+        class="absolute inset-0 flex items-center px-6 w-full h-full bg-blue-light rounded-[15px]"
       >
-        <input
-          accept=".pdf"
-          autocomplete="off"
-          class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] rounded-regular hidden"
-          data-testid="input-element"
-          id="file-upload"
-          type="file"
+        <span
+          class="mr-[291px] text-md truncate text-black-smoky-"
         />
-        <div
-          class="absolute inset-0 flex items-center px-6 w-full h-full bg-blue-light rounded-[15px] test-huy"
-        >
-          <span
-            class="mr-[291px] text-md truncate text-black-smoky-"
-          />
-        </div>
-        <button
-          class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 bg-secondary text-black-default hover:bg-secondary/80 absolute bottom-0 right-0 w-[291px] py-[12px] h-full rounded-[15px]"
-        >
-          <label
-            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-lg text-bold cursor-pointer"
-            for="file-upload"
-          >
-            Upload
-          </label>
-        </button>
       </div>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 absolute bottom-0 right-0 w-[291px] py-[12px] h-full rounded-[15px]"
+        type="button"
+      >
+        Upload
+      </button>
     </div>
   </div>
 </div>

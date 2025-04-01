@@ -1,7 +1,21 @@
+import { Suspense } from 'react';
+import { RouterProvider } from 'react-router-dom';
+
+// Routers
+import { router } from '@/routers';
+
+// Components
+import { Fallback, Toast } from './components';
+
 import './global.css';
 
-function App() {
-  return <p className="text-secondary">Hello World</p>;
-}
+const App = () => {
+  return (
+    <Suspense fallback={<Fallback />}>
+      <RouterProvider router={router} />
+      <Toast />
+    </Suspense>
+  );
+};
 
 export default App;

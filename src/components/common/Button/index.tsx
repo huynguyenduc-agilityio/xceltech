@@ -6,11 +6,12 @@ import { cn } from '@/utils';
 import { LoaderCircleIcon } from 'lucide-react';
 
 const buttonVariants = cva(
-  'font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
+  'font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed',
   {
     variants: {
       variant: {
-        default: 'bg-primary text-white hover:bg-primary/90',
+        default:
+          'bg-primary text-white hover:bg-primary/90 disabled:hover:bg-primary',
         outline:
           'border-[3px] border-primary text-primary bg-background hover:bg-accent',
         secondary: 'bg-secondary text-black-default hover:bg-secondary/80',
@@ -22,6 +23,7 @@ const buttonVariants = cva(
         md: 'h-14 py-5',
         lg: 'h-[61px] rounded-md',
         fit: 'w-fit h-fit',
+        icon: 'h-10 w-10 rounded-full',
       },
     },
     defaultVariants: {
@@ -70,7 +72,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             size={loaderSize}
             strokeWidth={3}
             strokeLinecap="square"
-            className="animate-spin-fast"
+            className="w-6 h-6 animate-spin"
           />
         ) : (
           children

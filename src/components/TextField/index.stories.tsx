@@ -50,6 +50,6 @@ export const Secondary: Story = {
 export const WithError: Story = {
   args: {
     ...defaultProps,
-    errorMessages: 'This field is required',
+    errorMessage: 'This field is required',
   },
 };

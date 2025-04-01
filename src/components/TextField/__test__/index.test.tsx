@@ -46,10 +46,10 @@ describe('TextField Component', () => {
     expect(mockOnChange).toHaveBeenLastCalledWith('Hello');
   });
 
-  it('shows error message when errorMessages is provided', () => {
+  it('shows error message when errorMessage is provided', () => {
     render(
       <Wrapper>
-        <TextField {...commonProps} errorMessages="Invalid input" />
+        <TextField {...commonProps} errorMessage="Invalid input" />
       </Wrapper>,
     );
 
@@ -57,7 +57,7 @@ describe('TextField Component', () => {
     expect(screen.getByText(/invalid input/i)).toHaveClass('text-red-500');
   });
 
-  it('does not show error message when errorMessages is not provided', () => {
+  it('does not show error message when errorMessage is not provided', () => {
     render(
       <Wrapper>
         <TextField {...commonProps} />

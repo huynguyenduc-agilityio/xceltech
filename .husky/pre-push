@@ -1,2 +1,0 @@
-cd ./xceltech
-pnpm test -- -u && pnpm build

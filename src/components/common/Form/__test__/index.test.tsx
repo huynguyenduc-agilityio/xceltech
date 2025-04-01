@@ -67,7 +67,7 @@ describe('Form Component', () => {
 
     const message = screen.getByText('Test error message');
 
-    expect(message).toHaveClass('text-destructive');
+    expect(message).toHaveClass('text-red-500');
   });
 
   it('applies error class to FormLabel when there is an error', () => {

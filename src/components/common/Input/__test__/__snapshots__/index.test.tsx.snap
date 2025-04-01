@@ -4,7 +4,7 @@ exports[`Input Component should match snapshot 1`] = `
 <div>
   <input
     autocomplete="off"
-    class="font-productsans flex w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] rounded-regular"
+    class="font-productsans flex w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px]"
     data-testid="input-element"
     placeholder="Enter text"
   />

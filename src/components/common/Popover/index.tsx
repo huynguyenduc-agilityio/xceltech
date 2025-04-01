@@ -15,7 +15,7 @@ const PopoverTrigger = PopoverPrimitive.Trigger;
 const PopoverContent = forwardRef<
   ElementRef<typeof PopoverPrimitive.Content>,
   ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
->(({ className, align = 'center', sideOffset = 16, ...props }, ref) => (
+>(({ className, align = 'center', sideOffset = 6, ...props }, ref) => (
   <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
       ref={ref}
@@ -28,7 +28,6 @@ const PopoverContent = forwardRef<
       {...props}
     >
       {props.children}
-      <PopoverPrimitive.Arrow className="fill-current text-popover w-3" />
     </PopoverPrimitive.Content>
   </PopoverPrimitive.Portal>
 ));
@@ -37,16 +36,18 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 interface PopoverContainerProps {
   trigger: ReactNode;
   content: ReactNode;
+  triggerClassName?: string;
   contentClassName?: string;
 }
 
 const PopoverContainer = ({
   trigger,
   content,
+  triggerClassName,
   contentClassName,
 }: PopoverContainerProps) => (
   <Popover>
-    <PopoverTrigger>{trigger}</PopoverTrigger>
+    <PopoverTrigger className={triggerClassName}>{trigger}</PopoverTrigger>
     <PopoverContent className={contentClassName}>{content}</PopoverContent>
   </Popover>
 );

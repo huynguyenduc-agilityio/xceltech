@@ -19,13 +19,24 @@ import {
 type TTextFieldProps = InputHTMLAttributes<HTMLInputElement> &
   VariantProps<typeof inputVariants> & {
     label: string;
-    errorMessages?: string;
+    errorMessage?: string;
+    inputClassName?: string;
+    labelClassName?: string;
     onChange: (value: string) => void;
   };
 
 const TextField = forwardRef<HTMLInputElement, TTextFieldProps>(
   (
-    { label, variant = 'primary', errorMessages, onChange, className, ...rest },
+    {
+      label,
+      variant = 'primary',
+      errorMessage,
+      className,
+      inputClassName,
+      labelClassName,
+      onChange,
+      ...rest
+    },
     ref,
   ) => {
     const handleChangeValue = useCallback(
@@ -36,8 +47,13 @@ const TextField = forwardRef<HTMLInputElement, TTextFieldProps>(
     );
 
     return (
-      <FormItem>
-        <Label id={`${label}-label`} variant={variant} size={variant}>
+      <FormItem className={className}>
+        <Label
+          id={`${label}-label`}
+          variant={variant}
+          size={variant}
+          className={labelClassName}
+        >
           {label}
         </Label>
         <FormControl>
@@ -45,16 +61,13 @@ const TextField = forwardRef<HTMLInputElement, TTextFieldProps>(
             ref={ref}
             aria-labelledby={`${label}-label`}
             variant={variant}
+            className={inputClassName}
             onChange={handleChangeValue}
             {...rest}
-            isInvalid={!!errorMessages}
+            isInvalid={!!errorMessage}
           />
         </FormControl>
-        {errorMessages && (
-          <FormMessage className="text-red-500 text-sm">
-            {errorMessages}
-          </FormMessage>
-        )}
+        {errorMessage && <FormMessage>{errorMessage}</FormMessage>}
       </FormItem>
     );
   },

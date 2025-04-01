@@ -1,93 +1,74 @@
-import { useCallback, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { ChangeEvent, useRef } from 'react';
+import { FieldErrors } from 'react-hook-form';
 
-import {
-  Button,
-  FormField,
-  FormItem,
-  FormMessage,
-  Input,
-  Label,
-} from '../common';
+// Types
+import { UploadFileForm } from '@/types';
+
+// Components
+import { FormItem, FormMessage, Input, Button } from '@/components';
 
 export interface AdditionalFileUploadProps {
   name: string;
-  fileUrl?: string;
-  onFileChange: (file: string) => void;
+  value?: File | null;
+  errors?: FieldErrors<UploadFileForm>;
+  onFileChange: (file: File | null) => void;
 }
 
 const AdditionalFileUpload = ({
   name,
-  fileUrl = '',
+  value,
+  errors,
+  onFileChange,
 }: AdditionalFileUploadProps) => {
-  const [selectedFile] = useState<string | null>(fileUrl);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const {
-    control,
-    setValue,
-    formState: { errors },
-  } = useForm<Record<string, File>>({
-    mode: 'onBlur',
-    reValidateMode: 'onChange',
-  });
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
 
-  const handleFileChange = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
+    onFileChange(file);
+  };
 
-      if (file) {
-        setValue(name, file, { shouldValidate: true });
-
-        //TODO: Hanlde Upload File
-      }
-    },
-    [setValue],
-  );
+  const handleOpenFile = () => {
+    fileInputRef.current?.click();
+  };
 
   return (
-    <div className="flex-1 w-full">
-      <FormField
-        control={control}
-        name={name}
-        render={() => (
-          <FormItem>
-            <div className="relative flex items-center h-[68px]">
-              <Input
-                id="file-upload"
-                type="file"
-                className="hidden"
-                onChange={handleFileChange}
-                accept=".pdf"
-              />
-              <div className="absolute inset-0 flex items-center px-6 w-full h-full bg-blue-light rounded-[15px] test-huy">
-                <span className="mr-[291px] text-md truncate text-black-smoky-">
-                  {selectedFile}
-                </span>
-              </div>
-              <Button
-                variant="secondary"
-                className="absolute bottom-0 right-0 w-[291px] py-[12px] h-full rounded-[15px]"
-              >
-                <Label
-                  htmlFor="file-upload"
-                  className="text-lg text-bold cursor-pointer"
-                >
-                  Upload
-                </Label>
-              </Button>
-            </div>
-            {errors?.file && (
-              <FormMessage className="">
-                <div className="flex flex-col gap-4 text-red-500 text-sm">
-                  <p>{errors.file.message}</p>
-                  <p>Please select again!!!</p>
-                </div>
-              </FormMessage>
-            )}
-          </FormItem>
-        )}
-      />
-    </div>
+    <FormItem>
+      <div className="relative flex items-center h-[68px]">
+        <Input
+          ref={fileInputRef}
+          id={`file-upload-${name}`}
+          type="file"
+          className="hidden"
+          onChange={handleFileChange}
+          accept=".pdf"
+        />
+
+        <div className="absolute inset-0 flex items-center px-6 w-full h-full bg-blue-light rounded-[15px]">
+          <span className="mr-[291px] text-md truncate text-black-smoky-">
+            {value ? value.name : ''}
+          </span>
+        </div>
+
+        <Button
+          type="button"
+          variant="secondary"
+          className="absolute bottom-0 right-0 w-[291px] py-[12px] h-full rounded-[15px]"
+          onClick={handleOpenFile}
+        >
+          Upload
+        </Button>
+      </div>
+
+      {errors?.file && (
+        <FormMessage className="">
+          <div className="flex flex-col gap-4 text-red-500 text-sm">
+            <p>{errors.file.message}</p>
+            <p>Please select again!!!</p>
+          </div>
+        </FormMessage>
+      )}
+    </FormItem>
   );
 };
 

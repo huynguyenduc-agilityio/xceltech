@@ -3,11 +3,18 @@ import { useState } from 'react';
 // Constants
 import { USER_NAVIGATION_CONFIG } from '@/constants';
 
+// Icons
+import { BellIcon, MailIcon } from '@/icons';
+
+// Components
+import { Avatar } from '../common';
+import NotificationBadge from '../NotificationBadge';
+
 const Navbar = () => {
   const [active, setActive] = useState('Dashboard');
 
   return (
-    <nav className="h-[122px] bg-white flex items-end justify-between">
+    <nav className="h-[122px] bg-white flex items-end justify-between px-[72px]">
       {/* Left side */}
       <div className=""></div>
 
@@ -28,7 +35,23 @@ const Navbar = () => {
       </div>
 
       {/* TODO: Right side*/}
-      <div className="flex items-center space-x-7 pb-[22px]"></div>
+      <div className="flex items-center space-x-7 pb-[22px]">
+        <NotificationBadge
+          count={13}
+          icon={<BellIcon className="text-white w-6 h-6" />}
+        />
+        <NotificationBadge
+          count={13}
+          icon={<MailIcon className="text-white w-6 h-6" />}
+          className="bg-green-primary"
+        />
+        {/* TODO: Get user */}
+        <Avatar
+          alt="avatar-user"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtXo0VK1WnuWrlK1tOXQizpHNhvqSJ9hUnQ&s"
+          size={53}
+        />
+      </div>
     </nav>
   );
 };

@@ -20,14 +20,14 @@ exports[`Calendar component should match snapshot 1`] = `
             id="react-day-picker-1"
             role="presentation"
           >
-            March 2025
+            April 2025
           </div>
           <div
             class="space-x-1 flex items-center"
           >
             <button
               aria-label="Go to previous month"
-              class="rdp-button_reset rdp-button font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 absolute left-1 hover:bg-gray-neutral"
+              class="rdp-button_reset rdp-button font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 absolute left-1 hover:bg-gray-neutral"
               name="previous-month"
               type="button"
             >
@@ -50,7 +50,7 @@ exports[`Calendar component should match snapshot 1`] = `
             </button>
             <button
               aria-label="Go to next month"
-              class="rdp-button_reset rdp-button font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 absolute right-1 hover:bg-gray-neutral"
+              class="rdp-button_reset rdp-button font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 absolute right-1 hover:bg-gray-neutral"
               name="next-month"
               type="button"
             >
@@ -146,412 +146,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
-                  role="gridcell"
-                >
-                  23
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
-                  role="gridcell"
-                >
-                  24
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
-                  role="gridcell"
-                >
-                  25
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
-                  role="gridcell"
-                >
-                  26
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
-                  role="gridcell"
-                >
-                  27
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
-                  role="gridcell"
-                >
-                  28
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  1
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="flex w-full mt-2"
-            >
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  2
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  3
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  4
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  5
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  6
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  7
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  8
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="flex w-full mt-2"
-            >
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  9
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  10
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  11
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  12
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  13
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  14
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  15
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="flex w-full mt-2"
-            >
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  16
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  17
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  18
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  19
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral bg-accent text-accent-foreground"
-                  role="gridcell"
-                >
-                  20
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  21
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  22
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="flex w-full mt-2"
-            >
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  23
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  24
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  25
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  26
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  27
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  28
-                </div>
-              </td>
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
-                  role="gridcell"
-                >
-                  29
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="flex w-full mt-2"
-            >
-              <td
-                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
-                role="presentation"
-              >
-                <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
                   role="gridcell"
                 >
                   30
@@ -562,7 +157,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
                   role="gridcell"
                 >
                   31
@@ -573,7 +168,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral bg-accent text-accent-foreground"
                   role="gridcell"
                 >
                   1
@@ -584,7 +179,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
                   role="gridcell"
                 >
                   2
@@ -595,7 +190,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
                   role="gridcell"
                 >
                   3
@@ -606,7 +201,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
                   role="gridcell"
                 >
                   4
@@ -617,10 +212,334 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
                   role="gridcell"
                 >
                   5
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="flex w-full mt-2"
+            >
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  6
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  7
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  8
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  9
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  10
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  11
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  12
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="flex w-full mt-2"
+            >
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  13
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  14
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  15
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  16
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  17
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  18
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  19
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="flex w-full mt-2"
+            >
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  20
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  21
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  22
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  23
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  24
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  25
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  26
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="flex w-full mt-2"
+            >
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  27
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  28
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  29
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  role="gridcell"
+                >
+                  30
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  role="gridcell"
+                >
+                  1
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  role="gridcell"
+                >
+                  2
+                </div>
+              </td>
+              <td
+                class="h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+                role="presentation"
+              >
+                <div
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground"
+                  role="gridcell"
+                >
+                  3
                 </div>
               </td>
             </tr>

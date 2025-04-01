@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component should match snapshot 1`] = `
+<div>
+  <button
+    aria-checked="false"
+    class="peer w-[30px] h-[26px] shrink-0 rounded-md border-2 border-gray-muted ring-offset-background focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-transparent data-[state=checked]:text-primary"
+    data-state="unchecked"
+    role="checkbox"
+    type="button"
+    value="on"
+  />
+</div>
+`;

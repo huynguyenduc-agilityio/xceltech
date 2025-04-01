@@ -9,7 +9,7 @@ const inputVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-blue-light h-[54px] rounded-regular',
+        primary: 'bg-blue-light h-[54px]',
         secondary: 'h-[61px] rounded-md border-2 border-gray-muted',
       },
     },

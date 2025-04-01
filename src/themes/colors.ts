@@ -30,6 +30,7 @@ export const colors = {
     deeper: '#0E2B8F',
     deep: '#183188',
     deepest: '#121C3E',
+    midnightAzure: '#193288',
   },
   red: {
     primary: '#FF0000',

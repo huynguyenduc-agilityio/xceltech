@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import TailwindAnimate from 'tailwindcss-animate';
 
 // Themes
 import {
@@ -27,7 +28,7 @@ const config: Config = {
       screens,
     },
   },
-  plugins: [],
+  plugins: [TailwindAnimate],
 };
 
 export default config;

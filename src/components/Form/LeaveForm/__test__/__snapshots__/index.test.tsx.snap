@@ -1,0 +1,902 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaveForm Component should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        class="max-w-6xl mx-auto mt-[18px] px-[102px] py-[68px] bg-white"
+      >
+        <div
+          class="flex flex-col items-center gap-[26px]"
+        >
+          <div
+            class="flex items-center gap-4"
+          >
+            <svg
+              fill="none"
+              height="28"
+              viewBox="0 0 34 28"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M32.006.78c-3.235.184-9.664.852-13.633 3.282a.907.907 0 0 0-.43.777v21.479c0 .681.746 1.112 1.375.796 4.084-2.055 9.99-2.616 12.91-2.77.996-.052 1.771-.851 1.771-1.81V2.594C34 1.547 33.093.719 32.006.78Zm-16.38 3.282C11.658 1.632 5.23.965 1.994.78.907.719 0 1.547 0 2.593v19.942c0 .959.775 1.758 1.772 1.81 2.921.154 8.83.715 12.913 2.771.627.316 1.37-.114 1.37-.794V4.829a.889.889 0 0 0-.429-.767Z"
+                fill="currentColor"
+              />
+            </svg>
+            <h2
+              class="text-3xl text-black-soft"
+            >
+              Leave Application
+            </h2>
+          </div>
+          <p
+            class="text-xl text-black-soft"
+          >
+            Fill the required fields below to apply for annual leave.
+          </p>
+        </div>
+        <div
+          class="space-y-6 mt-[30px]"
+        >
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+            >
+              Leave Type
+            </label>
+            <button
+              aria-autocomplete="none"
+              aria-controls="radix-:r1:"
+              aria-expanded="false"
+              class="font-productsans flex h-full w-full items-center justify-between rounded-md border border-input text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light px-5 py-4 rounded-regular"
+              data-placeholder=""
+              data-state="closed"
+              dir="ltr"
+              role="combobox"
+              type="button"
+            >
+              <span
+                style="pointer-events: none;"
+              >
+                Select your leave type
+              </span>
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </button>
+            <select
+              aria-hidden="true"
+              style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+              tabindex="-1"
+            >
+              <option
+                value=""
+              />
+              <option
+                value="annual leave"
+              >
+                Annual Leave
+              </option>
+              <option
+                value="sick"
+              >
+                Sick
+              </option>
+              <option
+                value="exam"
+              >
+                Exam
+              </option>
+              <option
+                value="maternity"
+              >
+                Maternity
+              </option>
+            </select>
+          </div>
+          <div
+            class="flex items-center gap-[70px]"
+          >
+            <div
+              class="space-y-2 w-full"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+              >
+                Start Date
+              </label>
+              <button
+                aria-controls="radix-:r3:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="w-full"
+                data-state="closed"
+                type="button"
+              >
+                <button
+                  class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky w-full"
+                >
+                  <span
+                    class="text-gray-soft"
+                  >
+                    Pick a date
+                  </span>
+                  <svg
+                    class="w-[23px] h-[27px]"
+                    fill="none"
+                    height="27px"
+                    style="color: rgb(156, 156, 156);"
+                    viewBox="0 0 23 27"
+                    width="23px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </button>
+            </div>
+            <div
+              class="space-y-2 w-full"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+              >
+                End Date
+              </label>
+              <button
+                aria-controls="radix-:r5:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="w-full"
+                data-state="closed"
+                type="button"
+              >
+                <button
+                  class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky"
+                >
+                  <span
+                    class="text-gray-soft"
+                  >
+                    Pick a date
+                  </span>
+                  <svg
+                    class="w-[23px] h-[27px]"
+                    fill="none"
+                    height="27px"
+                    style="color: rgb(156, 156, 156);"
+                    viewBox="0 0 23 27"
+                    width="23px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-[70px]"
+          >
+            <div
+              class="space-y-2 w-full"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+                id="Duration-label"
+              >
+                Duration
+              </label>
+              <input
+                aria-describedby=":r6:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Duration-label"
+                autocomplete="off"
+                class="font-productsans flex w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px]"
+                data-testid="input-element"
+                id=":r6:-form-item"
+                name="duration"
+                placeholder="Enter duration"
+                type="number"
+                value=""
+              />
+            </div>
+            <div
+              class="space-y-2 w-full"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+              >
+                Resumption Date
+              </label>
+              <button
+                aria-controls="radix-:r8:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="w-full"
+                data-state="closed"
+                type="button"
+              >
+                <button
+                  class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky"
+                >
+                  <span
+                    class="text-gray-soft"
+                  >
+                    Pick a date
+                  </span>
+                  <svg
+                    class="w-[23px] h-[27px]"
+                    fill="none"
+                    height="27px"
+                    style="color: rgb(156, 156, 156);"
+                    viewBox="0 0 23 27"
+                    width="23px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </button>
+            </div>
+          </div>
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+            >
+              Reason for leave
+            </label>
+            <textarea
+              aria-describedby=":r9:-form-item-description"
+              aria-invalid="false"
+              class="flex min-h-[80px] w-full rounded-regular bg-blue-light px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50"
+              id=":r9:-form-item"
+              name="reason"
+              placeholder="Enter your reason"
+            />
+          </div>
+          <div>
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+            >
+              Attach handover document (pdf, jpg, png, docx)
+            </label>
+            <div
+              class="flex-1 w-full"
+            >
+              <div
+                class="space-y-2 w-full"
+              >
+                <div
+                  class="relative flex items-center h-[54px]"
+                >
+                  <label
+                    class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary absolute inset z-10 bg-black-shadow hover:bg-black-shadow w-[254px] py-[12px] text-white h-full rounded cursor-pointer"
+                    for="file-upload"
+                  >
+                    Choose File
+                  </label>
+                  <input
+                    accept=".pdf,.jpg,.png,.docx"
+                    autocomplete="off"
+                    class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] hidden"
+                    data-testid="input-element"
+                    id="file-upload"
+                    type="file"
+                  />
+                  <div
+                    class="absolute flex items-center px-6 w-full h-full bg-blue-light rounded-regular test-huy"
+                  >
+                    <span
+                      class="ml-[254px] text-md truncate text-black-smoky-"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+            >
+              Choose Relief Officer
+            </label>
+            <button
+              aria-autocomplete="none"
+              aria-controls="radix-:rc:"
+              aria-expanded="false"
+              class="font-productsans flex h-full w-full items-center justify-between rounded-md border border-input text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light px-5 py-4 rounded-regular"
+              data-placeholder=""
+              data-state="closed"
+              dir="ltr"
+              role="combobox"
+              type="button"
+            >
+              <span
+                style="pointer-events: none;"
+              >
+                Select your relief officer
+              </span>
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </button>
+            <select
+              aria-hidden="true"
+              style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+              tabindex="-1"
+            >
+              <option
+                value=""
+              />
+              <option
+                value="June Heaney"
+              >
+                June Heaney
+              </option>
+              <option
+                value="Rudy Witting"
+              >
+                Rudy Witting
+              </option>
+              <option
+                value="Elaine Prohaska"
+              >
+                Elaine Prohaska
+              </option>
+              <option
+                value="Jordan Corwin"
+              >
+                Jordan Corwin
+              </option>
+              <option
+                value="Nadine Collins"
+              >
+                Nadine Collins
+              </option>
+              <option
+                value="Caleb Thiel"
+              >
+                Caleb Thiel
+              </option>
+            </select>
+          </div>
+          <div
+            class="flex gap-[30px] w-full h-[70px]"
+          >
+            <button
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white hover:bg-primary/90 disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              type="submit"
+            >
+              Submit
+            </button>
+            <button
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed border-[3px] bg-background hover:bg-accent h-[70px] py-6 w-[364px] text-red-primary border-red-deep"
+              type="button"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="max-w-6xl mx-auto mt-[18px] px-[102px] py-[68px] bg-white"
+    >
+      <div
+        class="flex flex-col items-center gap-[26px]"
+      >
+        <div
+          class="flex items-center gap-4"
+        >
+          <svg
+            fill="none"
+            height="28"
+            viewBox="0 0 34 28"
+            width="34"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32.006.78c-3.235.184-9.664.852-13.633 3.282a.907.907 0 0 0-.43.777v21.479c0 .681.746 1.112 1.375.796 4.084-2.055 9.99-2.616 12.91-2.77.996-.052 1.771-.851 1.771-1.81V2.594C34 1.547 33.093.719 32.006.78Zm-16.38 3.282C11.658 1.632 5.23.965 1.994.78.907.719 0 1.547 0 2.593v19.942c0 .959.775 1.758 1.772 1.81 2.921.154 8.83.715 12.913 2.771.627.316 1.37-.114 1.37-.794V4.829a.889.889 0 0 0-.429-.767Z"
+              fill="currentColor"
+            />
+          </svg>
+          <h2
+            class="text-3xl text-black-soft"
+          >
+            Leave Application
+          </h2>
+        </div>
+        <p
+          class="text-xl text-black-soft"
+        >
+          Fill the required fields below to apply for annual leave.
+        </p>
+      </div>
+      <div
+        class="space-y-6 mt-[30px]"
+      >
+        <div
+          class="space-y-2 w-full"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+          >
+            Leave Type
+          </label>
+          <button
+            aria-autocomplete="none"
+            aria-controls="radix-:r1:"
+            aria-expanded="false"
+            class="font-productsans flex h-full w-full items-center justify-between rounded-md border border-input text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light px-5 py-4 rounded-regular"
+            data-placeholder=""
+            data-state="closed"
+            dir="ltr"
+            role="combobox"
+            type="button"
+          >
+            <span
+              style="pointer-events: none;"
+            >
+              Select your leave type
+            </span>
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </button>
+          <select
+            aria-hidden="true"
+            style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+            tabindex="-1"
+          >
+            <option
+              value=""
+            />
+            <option
+              value="annual leave"
+            >
+              Annual Leave
+            </option>
+            <option
+              value="sick"
+            >
+              Sick
+            </option>
+            <option
+              value="exam"
+            >
+              Exam
+            </option>
+            <option
+              value="maternity"
+            >
+              Maternity
+            </option>
+          </select>
+        </div>
+        <div
+          class="flex items-center gap-[70px]"
+        >
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+            >
+              Start Date
+            </label>
+            <button
+              aria-controls="radix-:r3:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="w-full"
+              data-state="closed"
+              type="button"
+            >
+              <button
+                class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky w-full"
+              >
+                <span
+                  class="text-gray-soft"
+                >
+                  Pick a date
+                </span>
+                <svg
+                  class="w-[23px] h-[27px]"
+                  fill="none"
+                  height="27px"
+                  style="color: rgb(156, 156, 156);"
+                  viewBox="0 0 23 27"
+                  width="23px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </button>
+          </div>
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+            >
+              End Date
+            </label>
+            <button
+              aria-controls="radix-:r5:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="w-full"
+              data-state="closed"
+              type="button"
+            >
+              <button
+                class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky"
+              >
+                <span
+                  class="text-gray-soft"
+                >
+                  Pick a date
+                </span>
+                <svg
+                  class="w-[23px] h-[27px]"
+                  fill="none"
+                  height="27px"
+                  style="color: rgb(156, 156, 156);"
+                  viewBox="0 0 23 27"
+                  width="23px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-[70px]"
+        >
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+              id="Duration-label"
+            >
+              Duration
+            </label>
+            <input
+              aria-describedby=":r6:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Duration-label"
+              autocomplete="off"
+              class="font-productsans flex w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px]"
+              data-testid="input-element"
+              id=":r6:-form-item"
+              name="duration"
+              placeholder="Enter duration"
+              type="number"
+              value=""
+            />
+          </div>
+          <div
+            class="space-y-2 w-full"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+            >
+              Resumption Date
+            </label>
+            <button
+              aria-controls="radix-:r8:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="w-full"
+              data-state="closed"
+              type="button"
+            >
+              <button
+                class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky"
+              >
+                <span
+                  class="text-gray-soft"
+                >
+                  Pick a date
+                </span>
+                <svg
+                  class="w-[23px] h-[27px]"
+                  fill="none"
+                  height="27px"
+                  style="color: rgb(156, 156, 156);"
+                  viewBox="0 0 23 27"
+                  width="23px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </button>
+          </div>
+        </div>
+        <div
+          class="space-y-2 w-full"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+          >
+            Reason for leave
+          </label>
+          <textarea
+            aria-describedby=":r9:-form-item-description"
+            aria-invalid="false"
+            class="flex min-h-[80px] w-full rounded-regular bg-blue-light px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50"
+            id=":r9:-form-item"
+            name="reason"
+            placeholder="Enter your reason"
+          />
+        </div>
+        <div>
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+          >
+            Attach handover document (pdf, jpg, png, docx)
+          </label>
+          <div
+            class="flex-1 w-full"
+          >
+            <div
+              class="space-y-2 w-full"
+            >
+              <div
+                class="relative flex items-center h-[54px]"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary absolute inset z-10 bg-black-shadow hover:bg-black-shadow w-[254px] py-[12px] text-white h-full rounded cursor-pointer"
+                  for="file-upload"
+                >
+                  Choose File
+                </label>
+                <input
+                  accept=".pdf,.jpg,.png,.docx"
+                  autocomplete="off"
+                  class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] hidden"
+                  data-testid="input-element"
+                  id="file-upload"
+                  type="file"
+                />
+                <div
+                  class="absolute flex items-center px-6 w-full h-full bg-blue-light rounded-regular test-huy"
+                >
+                  <span
+                    class="ml-[254px] text-md truncate text-black-smoky-"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-2 w-full"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+          >
+            Choose Relief Officer
+          </label>
+          <button
+            aria-autocomplete="none"
+            aria-controls="radix-:rc:"
+            aria-expanded="false"
+            class="font-productsans flex h-full w-full items-center justify-between rounded-md border border-input text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light px-5 py-4 rounded-regular"
+            data-placeholder=""
+            data-state="closed"
+            dir="ltr"
+            role="combobox"
+            type="button"
+          >
+            <span
+              style="pointer-events: none;"
+            >
+              Select your relief officer
+            </span>
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </button>
+          <select
+            aria-hidden="true"
+            style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+            tabindex="-1"
+          >
+            <option
+              value=""
+            />
+            <option
+              value="June Heaney"
+            >
+              June Heaney
+            </option>
+            <option
+              value="Rudy Witting"
+            >
+              Rudy Witting
+            </option>
+            <option
+              value="Elaine Prohaska"
+            >
+              Elaine Prohaska
+            </option>
+            <option
+              value="Jordan Corwin"
+            >
+              Jordan Corwin
+            </option>
+            <option
+              value="Nadine Collins"
+            >
+              Nadine Collins
+            </option>
+            <option
+              value="Caleb Thiel"
+            >
+              Caleb Thiel
+            </option>
+          </select>
+        </div>
+        <div
+          class="flex gap-[30px] w-full h-[70px]"
+        >
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white hover:bg-primary/90 disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed border-[3px] bg-background hover:bg-accent h-[70px] py-6 w-[364px] text-red-primary border-red-deep"
+            type="button"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

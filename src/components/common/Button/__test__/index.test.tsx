@@ -19,7 +19,7 @@ describe('Button component', () => {
     render(<Button isLoading>Loading Button</Button>);
     const loaderIcon = screen.getByTestId('loader-button');
     expect(loaderIcon).toBeInTheDocument();
-    expect(loaderIcon).toHaveClass('animate-spin-fast');
+    expect(loaderIcon).toHaveClass('animate-spin');
   });
 
   it('applies custom className', () => {

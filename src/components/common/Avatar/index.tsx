@@ -47,21 +47,29 @@ AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
 type AvatarContainerProps = {
   src: string;
+  alt?: string;
   fallback?: React.ReactNode;
-  alt?: '';
-  size?: number;
+  size?: number | string;
   className?: string;
+  onClick?: () => void;
 };
 
-const Avatar: React.FC<AvatarContainerProps> = ({
+const Avatar = ({
   src,
   fallback,
   alt = 'avatar',
   size = 40,
   className,
-}) => {
+  onClick,
+}: AvatarContainerProps) => {
+  const computedSize = typeof size === 'number' ? `${size}px` : size;
+
   return (
-    <AvatarRoot style={{ width: size, height: size }} className={className}>
+    <AvatarRoot
+      style={{ width: computedSize, height: computedSize }}
+      className={className}
+      onClick={onClick}
+    >
       <AvatarImage alt={alt} src={src} />
       <AvatarFallback>{fallback}</AvatarFallback>
     </AvatarRoot>
