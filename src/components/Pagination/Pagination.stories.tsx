@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Pagination>;
 export const Default: Story = {
   args: {
     totalRecords: 200,
-    pageSize: 10,
+    limit: 10,
     currentPage: 2,
   },
 };

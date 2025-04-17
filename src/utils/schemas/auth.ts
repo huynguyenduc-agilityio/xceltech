@@ -1,7 +1,8 @@
 import { z } from 'zod';
 
 // Constants
-import { MESSAGES, REGEX } from '@/constants';
+import { REGEX } from '@/constants';
+import MESSAGES from '@/constants/message';
 
 const requiredString = (field: string) => {
   return z.string().trim().min(1, MESSAGES.VALIDATE.FIELD_REQUIRED(field));

@@ -14,6 +14,7 @@ const config: Config = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
+
   moduleNameMapper: {
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '^.+\\.svg$': 'jest-transformer-svg',
@@ -40,6 +41,7 @@ const config: Config = {
     '<rootDir>/jest.setup.ts',
     '/.storybook/',
   ],
+  // collectCoverage: true,
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 

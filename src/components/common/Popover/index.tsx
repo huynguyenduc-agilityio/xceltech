@@ -36,18 +36,24 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 interface PopoverContainerProps {
   trigger: ReactNode;
   content: ReactNode;
+  isOpen?: boolean;
   triggerClassName?: string;
   contentClassName?: string;
+  onOpenChange?: (open: boolean) => void;
 }
 
 const PopoverContainer = ({
+  isOpen,
   trigger,
   content,
   triggerClassName,
   contentClassName,
+  onOpenChange,
 }: PopoverContainerProps) => (
-  <Popover>
-    <PopoverTrigger className={triggerClassName}>{trigger}</PopoverTrigger>
+  <Popover open={isOpen} onOpenChange={onOpenChange}>
+    <PopoverTrigger className={triggerClassName} asChild>
+      {trigger}
+    </PopoverTrigger>
     <PopoverContent className={contentClassName}>{content}</PopoverContent>
   </Popover>
 );

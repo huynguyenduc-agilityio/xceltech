@@ -22,7 +22,7 @@ const QuickAction = () => {
         {listAction.map((action) =>
           action.path ? (
             <Link key={action.title} to={action.path} className="w-full">
-              <Button className="w-full py-4 text-xl rounded-full bg-white text-black-soft shadow-lg shadow-black-default/15 hover:text-white">
+              <Button className="w-full py-4 text-xl rounded-full bg-white text-black-soft shadow-lg shadow-black-default/15 hover:bg-secondary transition-all">
                 {action.title}
               </Button>
             </Link>

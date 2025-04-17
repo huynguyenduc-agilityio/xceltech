@@ -6,6 +6,9 @@ import {
 } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
+// Utils
+import { cn, removeNonDigits } from '@/utils';
+
 // Component
 import {
   FormControl,
@@ -22,7 +25,7 @@ type TTextFieldProps = InputHTMLAttributes<HTMLInputElement> &
     errorMessage?: string;
     inputClassName?: string;
     labelClassName?: string;
-    onChange: (value: string) => void;
+    onChange: (value: string | number) => void;
   };
 
 const TextField = forwardRef<HTMLInputElement, TTextFieldProps>(
@@ -41,34 +44,47 @@ const TextField = forwardRef<HTMLInputElement, TTextFieldProps>(
   ) => {
     const handleChangeValue = useCallback(
       (e: ChangeEvent<HTMLInputElement>) => {
-        onChange(e.target.value);
+        if (rest.type === 'number') {
+          const rawValue = removeNonDigits(e.target.value);
+
+          onChange(rawValue);
+        } else {
+          onChange(e.target.value);
+        }
       },
-      [onChange],
+      [onChange, rest.type],
     );
 
     return (
-      <FormItem className={className}>
-        <Label
-          id={`${label}-label`}
-          variant={variant}
-          size={variant}
-          className={labelClassName}
+      <div className="grid w-full gap-2">
+        <FormItem
+          className={cn(
+            variant === 'primary' ? 'space-y-5' : 'space-y-3',
+            className,
+          )}
         >
-          {label}
-        </Label>
-        <FormControl>
-          <Input
-            ref={ref}
-            aria-labelledby={`${label}-label`}
+          <Label
+            id={`${label}-label`}
             variant={variant}
-            className={inputClassName}
-            onChange={handleChangeValue}
-            {...rest}
-            isInvalid={!!errorMessage}
-          />
-        </FormControl>
+            size={variant}
+            className={labelClassName}
+          >
+            {label}
+          </Label>
+          <FormControl>
+            <Input
+              ref={ref}
+              aria-labelledby={`${label}-label`}
+              variant={variant}
+              className={inputClassName}
+              onChange={handleChangeValue}
+              {...rest}
+              isInvalid={!!errorMessage}
+            />
+          </FormControl>
+        </FormItem>
         {errorMessage && <FormMessage>{errorMessage}</FormMessage>}
-      </FormItem>
+      </div>
     );
   },
 );

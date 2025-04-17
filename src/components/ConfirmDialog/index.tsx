@@ -27,12 +27,12 @@ const ConfirmDialog = () => {
         <>
           <Button
             variant="outline"
-            className="text-sm h-fit px-4 py-2"
+            className="text-sm h-10 px-4 py-2"
             onClick={handleCancel}
           >
             Cancel
           </Button>
-          <Button className="text-sm h-fit px-4 py-2" onClick={handleConfirm}>
+          <Button className="text-sm h-10 px-4 py-2" onClick={handleConfirm}>
             Confirm
           </Button>
         </>

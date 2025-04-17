@@ -3,36 +3,28 @@
 exports[`DocumentUpload component should match snapshot 1`] = `
 <div>
   <div
-    class="flex-1 w-full"
+    class="relative flex items-center h-[54px]"
   >
-    <div
-      class="space-y-2 w-full"
+    <label
+      class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary absolute inset z-10 bg-black-shadow hover:bg-black-shadow w-[254px] py-[12px] text-white h-full rounded cursor-pointer"
+      for="file-upload"
     >
-      <div
-        class="relative flex items-center h-[54px]"
-      >
-        <label
-          class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary absolute inset z-10 bg-black-shadow hover:bg-black-shadow w-[254px] py-[12px] text-white h-full rounded cursor-pointer"
-          for="file-upload"
-        >
-          Choose File
-        </label>
-        <input
-          accept=".pdf,.jpg,.png,.docx"
-          autocomplete="off"
-          class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] hidden"
-          data-testid="input-element"
-          id="file-upload"
-          type="file"
-        />
-        <div
-          class="absolute flex items-center px-6 w-full h-full bg-blue-light rounded-regular test-huy"
-        >
-          <span
-            class="ml-[254px] text-md truncate text-black-smoky-"
-          />
-        </div>
-      </div>
+      Choose File
+    </label>
+    <input
+      accept=".pdf,.jpg,.png,.docx"
+      autocomplete="off"
+      class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] hidden"
+      data-testid="input-element"
+      id="file-upload"
+      type="file"
+    />
+    <div
+      class="absolute flex items-center px-6 w-full h-full bg-blue-light rounded-regular"
+    >
+      <span
+        class="ml-[254px] text-md truncate text-black-smoky-"
+      />
     </div>
   </div>
 </div>

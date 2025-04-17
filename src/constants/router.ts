@@ -10,12 +10,15 @@ export const USER_PAGE = {
   DASHBOARD: '/user/dashboard',
   LEAVE: '/user/dashboard/leave',
   PROFILE_EDIT: '/user/dashboard/update-profile',
+  LEAVE_RECALL: '/user/dashboard/leave-recall',
   NOT_FOUND: '*',
 };
 
 export const ADMIN_PAGE = {
   ROOT: '/admin',
   DASHBOARD: '/admin/dashboard',
-  LEAVE_MANAGEMENT: 'admin/leave-management',
+  LEAVE_MANAGEMENT: '/admin/leave-management',
+  LEAVE_HISTORY: '/admin/leave-management/leave-history',
+  LEAVE_RECALL: '/admin/leave-management/leave-recall',
   NOT_FOUND: '*',
 };

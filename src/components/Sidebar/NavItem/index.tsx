@@ -1,4 +1,5 @@
 import { ComponentType, SVGProps } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // Utils
 import { cn } from '@/utils';
@@ -10,8 +11,9 @@ type TNavItemProps = {
 };
 
 const NavItem = ({ subTitle, url, icon: Icon }: TNavItemProps) => {
+  const location = useLocation();
   const isDefaultFocused = location.pathname === '/';
-  const isFocused = location.pathname === url;
+  const isFocused = location.pathname.includes(url);
 
   const linkClasses = cn(
     'flex items-center w-full gap-3 px-5 py-4 rounded-[14px] rounded-lg transition-colors',

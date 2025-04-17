@@ -10,19 +10,19 @@ describe('Status Component', () => {
   it('renders with default status Pending', () => {
     render(<Status />);
 
-    expect(screen.getByText('pending')).toBeInTheDocument();
+    expect(screen.getByText('Pending')).toBeInTheDocument();
   });
 
-  it('renders with Approve status', () => {
-    render(<Status type={StatusLeave.Approve} />);
+  it('renders with Approved status', () => {
+    render(<Status type={StatusLeave.Approved} />);
 
-    expect(screen.getByText('approve')).toBeInTheDocument();
+    expect(screen.getByText('Approved')).toBeInTheDocument();
   });
 
-  it('renders with Decline status', () => {
-    render(<Status type={StatusLeave.Decline} />);
+  it('renders with Rejected status', () => {
+    render(<Status type={StatusLeave.Rejected} />);
 
-    expect(screen.getByText('decline')).toBeInTheDocument();
+    expect(screen.getByText('Rejected')).toBeInTheDocument();
   });
 
   it('should match snapshot', () => {

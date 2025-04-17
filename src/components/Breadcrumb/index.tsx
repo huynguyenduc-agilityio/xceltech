@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 type BreadcrumbItem = {
   label: string;
@@ -14,11 +15,10 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
     <nav className="flex items-center gap-2 text-xl text-black-soft">
       {items.map((item, index) => (
         <React.Fragment key={index}>
-          {/* TODO: Convert <a> to <Link> */}
           {item.href ? (
-            <a href={item.href} className="hover:underline">
+            <Link to={item.href} className="hover:underline">
               {item.label}
-            </a>
+            </Link>
           ) : (
             <span>{item.label}</span>
           )}

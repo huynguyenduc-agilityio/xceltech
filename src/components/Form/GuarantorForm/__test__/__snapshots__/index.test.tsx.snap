@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuarantorForm Component should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        class=""
+      >
+        <div
+          class="w-full text-black-default space-y-10"
+        >
+          <div
+            class="grid w-full gap-2"
+          >
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Guarantor’s Name-label"
+              >
+                Guarantor’s Name
+              </label>
+              <input
+                aria-describedby=":r0:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Guarantor’s Name-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r0:-form-item"
+                name="name"
+                placeholder="Enter your guarantor’s name"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="grid w-full gap-2"
+          >
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Job Title / Occupation-label"
+              >
+                Job Title / Occupation
+              </label>
+              <input
+                aria-describedby=":r1:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Job Title / Occupation-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r1:-form-item"
+                name="job"
+                placeholder="Enter your job title / occupation"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="grid w-full gap-2"
+          >
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Phone No-label"
+              >
+                Phone No
+              </label>
+              <input
+                aria-describedby=":r2:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Phone No-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r2:-form-item"
+                name="phone"
+                placeholder="Enter your phone number"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="w-full h-[70px]"
+          >
+            <button
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              type="submit"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class=""
+    >
+      <div
+        class="w-full text-black-default space-y-10"
+      >
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="Guarantor’s Name-label"
+            >
+              Guarantor’s Name
+            </label>
+            <input
+              aria-describedby=":r0:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Guarantor’s Name-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r0:-form-item"
+              name="name"
+              placeholder="Enter your guarantor’s name"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="Job Title / Occupation-label"
+            >
+              Job Title / Occupation
+            </label>
+            <input
+              aria-describedby=":r1:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Job Title / Occupation-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r1:-form-item"
+              name="job"
+              placeholder="Enter your job title / occupation"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="Phone No-label"
+            >
+              Phone No
+            </label>
+            <input
+              aria-describedby=":r2:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Phone No-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r2:-form-item"
+              name="phone"
+              placeholder="Enter your phone number"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="w-full h-[70px]"
+        >
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

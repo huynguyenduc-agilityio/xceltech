@@ -1,42 +1,75 @@
-import { Breadcrumb, SideMenu } from '@/components';
-import PersonalTab from './components/PersonalDetail';
-import JobDetailTab from './components/JobDetail';
+// Constants
+import { USER_PAGE } from '@/constants';
+
+// Hooks
+import { useGetInfoUser } from '@/hooks';
+
+// Components
+import { Breadcrumb, ContactForm, NextOfKinForm, SideMenu } from '@/components';
+
+import {
+  EducationTab,
+  FamilyTab,
+  FinancialTab,
+  GuarantorTab,
+  JobDetailTab,
+  PersonalDetailTab,
+} from './components';
 
 const BREADCRUMB_ITEMS = [
-  { label: 'Dashboard', href: '/dashboard' },
+  { label: 'Dashboard', href: USER_PAGE.DASHBOARD },
   { label: 'Update Profile' },
 ];
 
-const TAB_LIST = [
-  {
-    label: 'Personal Details',
-    content: <PersonalTab />,
-  },
-  {
-    label: 'Contact Details',
-  },
-  {
-    label: 'Next of kin Details',
-  },
-  {
-    label: 'Education Qualifications',
-  },
-  {
-    label: 'Guarantor Details',
-  },
-  {
-    label: 'Family Details',
-  },
-  {
-    label: 'Job Details',
-    content: <JobDetailTab />,
-  },
-  {
-    label: 'Financial Details',
-  },
-];
-
 const UpdateProfile = () => {
+  const { userInfo } = useGetInfoUser();
+
+  const { name, department, lineManagement, description } = userInfo?.job || {};
+
+  const TAB_LIST = [
+    {
+      label: 'Personal Details',
+      content: <PersonalDetailTab userInfo={userInfo} />,
+    },
+    {
+      label: 'Contact Details',
+      content: <ContactForm />,
+    },
+    {
+      label: 'Next of kin Details',
+      content: <NextOfKinForm />,
+    },
+    {
+      label: 'Education Qualifications',
+      content: <EducationTab />,
+    },
+    {
+      label: 'Guarantor Details',
+      content: <GuarantorTab />,
+    },
+    {
+      label: 'Family Details',
+      content: <FamilyTab />,
+    },
+    {
+      label: 'Job Details',
+      content: (
+        <JobDetailTab
+          jobInfo={{
+            name,
+            department,
+            lineManagement,
+            description,
+          }}
+        />
+      ),
+    },
+    {
+      label: 'Financial Details',
+      content: <FinancialTab />,
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-11">
       <div className="flex items-center w-full px-[62px] py-8 bg-white">

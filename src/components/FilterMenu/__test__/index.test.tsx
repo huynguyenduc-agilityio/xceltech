@@ -1,11 +1,14 @@
 import { render } from '@testing-library/react';
 
+// Types
+import { LeaveType } from '@/types';
+
 // Components
 import FilterMenu from '..';
 
 describe('FilterMenu component', () => {
   const mockProps = {
-    options: ['Name', 'Type'],
+    options: { type: Object.values(LeaveType) },
     onApply: jest.fn(),
   };
 

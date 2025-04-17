@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { USER_NAVIGATION_CONFIG } from '@/constants';
 
 // Icons
-import { BellIcon, MailIcon } from '@/icons';
+import { MailIcon } from '@/icons';
 
 // Components
 import { Avatar } from '../common';
 import NotificationBadge from '../NotificationBadge';
+import DropdownNotification from '../DropdownNotification';
 
 const Navbar = () => {
   const [active, setActive] = useState('Dashboard');
@@ -36,10 +37,7 @@ const Navbar = () => {
 
       {/* TODO: Right side*/}
       <div className="flex items-center space-x-7 pb-[22px]">
-        <NotificationBadge
-          count={13}
-          icon={<BellIcon className="text-white w-6 h-6" />}
-        />
+        <DropdownNotification />
         <NotificationBadge
           count={13}
           icon={<MailIcon className="text-white w-6 h-6" />}

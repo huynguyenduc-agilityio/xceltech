@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // Constants
 import { ADMIN_NAVIGATION_CONFIG } from '@/constants';
 
@@ -13,7 +15,9 @@ const NavCollapse = () => {
           </div>
           <div className="grid gap-[10px]">
             {navItem.map(({ title, icon, url }) => (
-              <NavItem key={title} subTitle={title} url={url} icon={icon} />
+              <Link key={title} to={url}>
+                <NavItem key={title} subTitle={title} url={url} icon={icon} />
+              </Link>
             ))}
           </div>
         </div>

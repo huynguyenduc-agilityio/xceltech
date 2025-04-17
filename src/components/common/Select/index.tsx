@@ -71,7 +71,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        'relative max-h-[--radix-select-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-select-content-transform-origin]',
+        'relative max-h-[--radix-select-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover text-popover-foreground shadow-md z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-select-content-transform-origin]',
         position === 'popper' &&
           'data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
         className,
@@ -138,35 +138,56 @@ SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
 export interface SelectContainerProps {
   option: {
+    id?: string;
     value: string | readonly string[] | number | undefined;
     label: string;
   }[];
+  isError?: boolean;
+  isDisable?: boolean;
   placeholder?: string;
   defaultValue?: string;
   className?: string;
   onChange: (value: string) => void;
 }
 
-const Select = ({
-  option,
-  placeholder,
-  defaultValue,
-  className,
-  onChange,
-  ...props
-}: SelectContainerProps) => (
-  <SelectShadcn defaultValue={defaultValue} onValueChange={onChange} {...props}>
-    <SelectTrigger className={className}>
-      <SelectValue placeholder={placeholder} />
-    </SelectTrigger>
-    <SelectContent>
-      {option.map(({ value, label }) => (
-        <SelectItem key={label} value={String(value)}>
-          {label}
-        </SelectItem>
-      ))}
-    </SelectContent>
-  </SelectShadcn>
+const Select = React.forwardRef<
+  React.ElementRef<typeof SelectTrigger>,
+  SelectContainerProps
+>(
+  (
+    {
+      option,
+      placeholder,
+      isError,
+      isDisable,
+      defaultValue,
+      className,
+      onChange,
+      ...props
+    },
+    ref,
+  ) => (
+    <SelectShadcn
+      defaultValue={defaultValue}
+      onValueChange={onChange}
+      disabled={isDisable}
+      {...props}
+    >
+      <SelectTrigger
+        ref={ref}
+        className={cn(className, isError && 'bg-red-100')}
+      >
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        {option.map(({ id, value, label }) => (
+          <SelectItem key={id ?? String(value)} value={String(value)}>
+            {label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </SelectShadcn>
+  ),
 );
 
 export { Select };

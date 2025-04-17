@@ -1,0 +1,526 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaveHistory should render successfully 1`] = `
+<div>
+  <div
+    class="bg-white p-12 mt-8 rounded-3xl"
+  >
+    <div>
+      <div
+        class="flex justify-between px-5 pt-0 py-6"
+      >
+        <h2
+          class="text-xl font-bold"
+        >
+          Leave History
+        </h2>
+        <div
+          class="flex items-center gap-14"
+        >
+          <button
+            aria-controls="radix-:r0:"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full p-2"
+            data-state="closed"
+            title="Filter Dropdown"
+            type="button"
+          >
+            <svg
+              fill="none"
+              height="25"
+              viewBox="0 0 31 25"
+              width="31"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#a)"
+              >
+                <path
+                  d="M29.545 0H1.455C.165 0-.487 1.263.427 2l11.198 9.032v10.062c0 .382.231.74.62.96l4.844 2.733c.955.54 2.286-.007 2.286-.96V11.032l11.198-9.031C31.486 1.264 30.839 0 29.545 0"
+                  fill="#1A1A1A"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="a"
+                >
+                  <path
+                    d="M0 0h31v25H0z"
+                    fill="#fff"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary py-6 w-[195px] h-14 bg-green-primary hover:bg-green-primary/90 shadow-md"
+            data-state="closed"
+            id="radix-:r1:"
+            type="button"
+          >
+            Export
+            <svg
+              class="ml-4"
+              fill="none"
+              height="14"
+              viewBox="0 0 17 14"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#a)"
+              >
+                <path
+                  d="M16.734 7c0 3.746-3.685 6.781-8.234 6.781S.266 10.746.266 7 3.95.219 8.5.219 16.734 3.254 16.734 7m-7.67 3.114 4.5-3.705c.312-.257.312-.672 0-.927l-.565-.464a.92.92 0 0 0-1.126 0L8.5 7.796 5.127 5.018a.92.92 0 0 0-1.126 0l-.564.464c-.313.257-.313.673 0 .927l4.499 3.706a.92.92 0 0 0 1.128 0"
+                  fill="#fff"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="a"
+                >
+                  <path
+                    d="M0 0h17v14H0z"
+                    fill="#fff"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="relative w-full overflow-auto"
+      >
+        <table
+          class="w-full caption-bottom text-sm"
+        >
+          <thead
+            class="text-lg font-bold"
+          >
+            <tr
+              class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-blue-light"
+            >
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Name(s)
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Duration(s)
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Start Date
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                End Date
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Type
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Status
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Actions
+              </td>
+            </tr>
+          </thead>
+          <tbody
+            class="[&_tr:last-child]:border-0 text-lg"
+          >
+            <tr
+              class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-white"
+            >
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                John Caster
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                5
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                2025-03-31
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                2025-04-30
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Sick
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                <div
+                  class="flex items-center justify-center"
+                >
+                  <div
+                    class="flex items-center w-28 justify-center gap-1 px-2.5 py-1 rounded-full border text-white bg-gray-500"
+                  >
+                    <span
+                      class="text-base font-bold capitalize"
+                    >
+                      Pending
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  data-state="closed"
+                  disabled=""
+                  id="radix-:r8:"
+                  type="button"
+                >
+                  Action
+                  <svg
+                    class="ml-4"
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 17 14"
+                    width="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#a)"
+                    >
+                      <path
+                        d="M16.734 7c0 3.746-3.685 6.781-8.234 6.781S.266 10.746.266 7 3.95.219 8.5.219 16.734 3.254 16.734 7m-7.67 3.114 4.5-3.705c.312-.257.312-.672 0-.927l-.565-.464a.92.92 0 0 0-1.126 0L8.5 7.796 5.127 5.018a.92.92 0 0 0-1.126 0l-.564.464c-.313.257-.313.673 0 .927l4.499 3.706a.92.92 0 0 0 1.128 0"
+                        fill="#fff"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="a"
+                      >
+                        <path
+                          d="M0 0h17v14H0z"
+                          fill="#fff"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-blue-light"
+            >
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                aman bey
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                7
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                2025-03-31
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                2025-03-31
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Exam
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                <div
+                  class="flex items-center justify-center"
+                >
+                  <div
+                    class="flex items-center w-28 justify-center gap-1 px-2.5 py-1 rounded-full border text-white bg-gray-500"
+                  >
+                    <span
+                      class="text-base font-bold capitalize"
+                    >
+                      Pending
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  data-state="closed"
+                  disabled=""
+                  id="radix-:ra:"
+                  type="button"
+                >
+                  Action
+                  <svg
+                    class="ml-4"
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 17 14"
+                    width="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#a)"
+                    >
+                      <path
+                        d="M16.734 7c0 3.746-3.685 6.781-8.234 6.781S.266 10.746.266 7 3.95.219 8.5.219 16.734 3.254 16.734 7m-7.67 3.114 4.5-3.705c.312-.257.312-.672 0-.927l-.565-.464a.92.92 0 0 0-1.126 0L8.5 7.796 5.127 5.018a.92.92 0 0 0-1.126 0l-.564.464c-.313.257-.313.673 0 .927l4.499 3.706a.92.92 0 0 0 1.128 0"
+                        fill="#fff"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="a"
+                      >
+                        <path
+                          d="M0 0h17v14H0z"
+                          fill="#fff"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-white"
+            >
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                feven Tesfaye
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                120
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                2025-03-31
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                2025-03-31
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                Maternity
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                <div
+                  class="flex items-center justify-center"
+                >
+                  <div
+                    class="flex items-center w-28 justify-center gap-1 px-2.5 py-1 rounded-full border text-white bg-gray-500"
+                  >
+                    <span
+                      class="text-base font-bold capitalize"
+                    >
+                      Pending
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  data-state="closed"
+                  disabled=""
+                  id="radix-:rc:"
+                  type="button"
+                >
+                  Action
+                  <svg
+                    class="ml-4"
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 17 14"
+                    width="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#a)"
+                    >
+                      <path
+                        d="M16.734 7c0 3.746-3.685 6.781-8.234 6.781S.266 10.746.266 7 3.95.219 8.5.219 16.734 3.254 16.734 7m-7.67 3.114 4.5-3.705c.312-.257.312-.672 0-.927l-.565-.464a.92.92 0 0 0-1.126 0L8.5 7.796 5.127 5.018a.92.92 0 0 0-1.126 0l-.564.464c-.313.257-.313.673 0 .927l4.499 3.706a.92.92 0 0 0 1.128 0"
+                        fill="#fff"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="a"
+                      >
+                        <path
+                          d="M0 0h17v14H0z"
+                          fill="#fff"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="w-full flex justify-between mt-6"
+      >
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-md"
+          >
+            1 - 1 of 1 Leave
+          </p>
+        </div>
+        <div
+          class="flex items-center gap-10"
+        >
+          <div
+            class="flex items-center gap-3 text-md"
+          >
+            <p>
+              Rows per page:
+            </p>
+            <button
+              aria-autocomplete="none"
+              aria-controls="radix-:r3:"
+              aria-expanded="false"
+              class="font-productsans flex h-full items-center justify-between px-3 py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-white border border-gray-dark rounded-md w-fit"
+              data-state="closed"
+              dir="ltr"
+              role="combobox"
+              type="button"
+            >
+              <span
+                style="pointer-events: none;"
+              >
+                10
+              </span>
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex items-center gap-2"
+          >
+            <button
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground bg-primary rounded-md w-7 h-7 p-0"
+              title="prev-button"
+            >
+              <svg
+                class="lucide lucide-move-left text-white w-4 h-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 8L2 12L6 16"
+                />
+                <path
+                  d="M2 12H22"
+                />
+              </svg>
+            </button>
+            <button
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground bg-primary rounded-md w-7 h-7 p-0"
+              title="next-button"
+            >
+              <svg
+                class="lucide lucide-move-right text-white w-4 h-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 8L22 12L18 16"
+                />
+                <path
+                  d="M2 12H22"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

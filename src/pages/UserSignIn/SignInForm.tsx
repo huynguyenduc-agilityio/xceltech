@@ -12,7 +12,7 @@ import { ILoginUser } from '@/types';
 import { useLogin } from '@/hooks';
 
 // Utils
-import { SignInFormValues, signInSchema } from '@/utils';
+import { SignInFormValues, signInSchema } from '@/utils/schemas/auth';
 
 // Components
 import {

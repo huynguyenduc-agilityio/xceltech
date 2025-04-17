@@ -1,11 +1,16 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 
 //Types
 import { IActiveUser } from '@/types';
 
 // Constants
-import { USER_PAGE } from '@/constants';
+import {
+  ADMIN_PAGE,
+  AUTHENTICATION_PAGE,
+  RoleAuthentication,
+  USER_PAGE,
+} from '@/constants';
 
 // Services
 import { activateAccount, loginUser, registerUser } from '@/services';
@@ -15,6 +20,7 @@ import { useUserActions } from '@/stores';
 
 export const useLogin = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { setUser } = useUserActions();
 
   const {
@@ -26,8 +32,26 @@ export const useLogin = () => {
     onSuccess: (data) => {
       // Save data in local storage
       if (data) {
-        setUser(data);
-        navigate(USER_PAGE.DASHBOARD);
+        const path = location.pathname;
+        const role = data.user.role;
+        const isAdmin =
+          role === RoleAuthentication.Admin &&
+          path === AUTHENTICATION_PAGE.ADMIN_SIGN_IN;
+
+        const isUser =
+          [RoleAuthentication.Employee, RoleAuthentication.Candidate].includes(
+            role as RoleAuthentication,
+          ) && path === AUTHENTICATION_PAGE.USER_SIGN_IN;
+
+        if (isAdmin) {
+          setUser(data);
+          navigate(ADMIN_PAGE.DASHBOARD);
+        }
+
+        if (isUser) {
+          setUser(data);
+          navigate(USER_PAGE.DASHBOARD);
+        }
       }
     },
   });

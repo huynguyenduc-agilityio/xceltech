@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionsDropdown component should match snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-expanded="false"
+    aria-haspopup="menu"
+    class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+    data-state="closed"
+    id="radix-:r0:"
+    type="button"
+  >
+    Export
+    <svg
+      class="ml-4"
+      fill="none"
+      height="14"
+      viewBox="0 0 17 14"
+      width="17"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        clip-path="url(#a)"
+      >
+        <path
+          d="M16.734 7c0 3.746-3.685 6.781-8.234 6.781S.266 10.746.266 7 3.95.219 8.5.219 16.734 3.254 16.734 7m-7.67 3.114 4.5-3.705c.312-.257.312-.672 0-.927l-.565-.464a.92.92 0 0 0-1.126 0L8.5 7.796 5.127 5.018a.92.92 0 0 0-1.126 0l-.564.464c-.313.257-.313.673 0 .927l4.499 3.706a.92.92 0 0 0 1.128 0"
+          fill="#fff"
+        />
+      </g>
+      <defs>
+        <clippath
+          id="a"
+        >
+          <path
+            d="M0 0h17v14H0z"
+            fill="#fff"
+          />
+        </clippath>
+      </defs>
+    </svg>
+  </button>
+</DocumentFragment>
+`;

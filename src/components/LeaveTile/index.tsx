@@ -1,11 +1,17 @@
+import { Link } from 'react-router-dom';
+
+// Utils
 import { cn, formatNumberWithMetricPrefix } from '@/utils';
+
+import { Button } from '../common';
 
 export interface LeaveTileProps {
   count: number;
   title: string;
+  path: string;
 }
 
-const LeaveTile = ({ count, title }: LeaveTileProps) => {
+const LeaveTile = ({ count, title, path }: LeaveTileProps) => {
   const formattedCount = formatNumberWithMetricPrefix(count);
   let fontSize = 'text-[70px]';
 
@@ -18,15 +24,22 @@ const LeaveTile = ({ count, title }: LeaveTileProps) => {
   return (
     <div
       className={
-        'flex items-center gap-12 w-[445px] h-[182px] px-5 py-6 rounded-[16px] bg-primary'
+        'flex items-center gap-12 w-full h-[182px] px-5 py-6 rounded-[16px] bg-primary'
       }
     >
       <div className="flex items-center justify-center w-[135px] h-[135px] rounded-full bg-white">
         <span className={cn('text-primary', fontSize)}>{formattedCount}</span>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center gap-3">
         <span className="text-xl font-bold text-white">{title}</span>
-        {/* TODO: Button  */}
+        <Link to={path}>
+          <Button
+            size="sm"
+            className="bg-secondary hover:bg-secondary/90 text-black-default px-[72px] py-2"
+          >
+            Apply
+          </Button>
+        </Link>
       </div>
     </div>
   );

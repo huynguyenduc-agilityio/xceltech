@@ -80,7 +80,7 @@ export const ADMIN_NAVIGATION_CONFIG = [
       {
         title: 'Leave Management',
         icon: BookIcon,
-        url: '',
+        url: 'leave-management',
       },
       {
         title: 'Performance Management',
@@ -98,5 +98,24 @@ export const ADMIN_NAVIGATION_CONFIG = [
         url: '',
       },
     ],
+  },
+];
+
+export const LEAVE_NAVIGATION = [
+  {
+    title: 'Leave Settings',
+    path: 'leave-management/leave-settings',
+  },
+  {
+    title: 'Leave Recall',
+    path: 'leave-management/leave-recall',
+  },
+  {
+    title: 'Leave History',
+    path: 'leave-management/leave-history',
+  },
+  {
+    title: 'Relief Officers',
+    path: 'leave-management/relief-officers',
   },
 ];

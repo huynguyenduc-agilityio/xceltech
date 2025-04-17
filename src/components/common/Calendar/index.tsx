@@ -9,12 +9,12 @@ import { buttonVariants } from '../Button';
 
 export type CalendarProps = ComponentProps<typeof DayPicker>;
 
-function Calendar({
+const Calendar = ({
   className,
   classNames,
   showOutsideDays = true,
   ...props
-}: CalendarProps) {
+}: CalendarProps) => {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -64,7 +64,7 @@ function Calendar({
       {...props}
     />
   );
-}
+};
 Calendar.displayName = 'Calendar';
 
 export { Calendar };

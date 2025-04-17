@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDashboard renders correctly and matches snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    class="text-2xl text-primary font-bold"
+  >
+    Dashboard
+  </h1>
+  <div
+    class="relative bg-blue-midnightAzure text-white mt-8 pl-[52px] py-[52px] flex items-center justify-between rounded-regular"
+  >
+    <div
+      class="flex items-center gap-9"
+    >
+      <div
+        class="w-[139px] h-[139px] p-2 rounded-full border-2 border-white"
+      >
+        <span
+          class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full text-2xl"
+          style="width: 100%; height: 100%;"
+        >
+          <span
+            class="flex h-full w-full items-center justify-center rounded-full text-2xl text-white bg-blue-electric"
+          >
+            J D
+          </span>
+        </span>
+      </div>
+      <div
+        class="flex flex-col gap-4"
+      >
+        <span
+          class="text-3xl font-bold"
+        >
+          John Doe
+        </span>
+        <span
+          class="text-2xl"
+        >
+          Software Engineer
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex items-center gap-8"
+    >
+      <a
+        data-discover="true"
+        href="/user/dashboard/update-profile"
+      >
+        <button
+          class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 py-6 w-[252px] h-[65px] text-xl"
+        >
+          Edit Profile
+        </button>
+      </a>
+      <img
+        src="/public/assets/images/arrow.webp"
+      />
+    </div>
+  </div>
+  <div
+    class="mt-12 gap-[30px]"
+  >
+    <h3
+      class="text-2xl"
+    >
+      Quick Actions
+    </h3>
+    <div
+      class="mt-[30px] flex gap-6"
+    >
+      <a
+        class="w-full"
+        data-discover="true"
+        href="/user/dashboard/leave"
+      >
+        <button
+          class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary h-[70px] w-full py-4 text-xl rounded-full bg-white text-black-soft shadow-lg shadow-black-default/15 hover:bg-secondary transition-all"
+        >
+          Apply for Leave
+        </button>
+      </a>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:cursor-not-allowed bg-primary text-white h-[70px] w-full py-4 text-xl rounded-full disabled:bg-white disabled:opacity-100 disabled:text-black-soft disabled:hover:bg-white"
+        disabled=""
+      >
+        KPI Goals
+      </button>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:cursor-not-allowed bg-primary text-white h-[70px] w-full py-4 text-xl rounded-full disabled:bg-white disabled:opacity-100 disabled:text-black-soft disabled:hover:bg-white"
+        disabled=""
+      >
+        Take Appraisal
+      </button>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:cursor-not-allowed bg-primary text-white h-[70px] w-full py-4 text-xl rounded-full disabled:bg-white disabled:opacity-100 disabled:text-black-soft disabled:hover:bg-white"
+        disabled=""
+      >
+        View Payslip
+      </button>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:cursor-not-allowed bg-primary text-white h-[70px] w-full py-4 text-xl rounded-full disabled:bg-white disabled:opacity-100 disabled:text-black-soft disabled:hover:bg-white"
+        disabled=""
+      >
+        Update Profile
+      </button>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:cursor-not-allowed bg-primary text-white h-[70px] w-full py-4 text-xl rounded-full disabled:bg-white disabled:opacity-100 disabled:text-black-soft disabled:hover:bg-white"
+        disabled=""
+      >
+        Events
+      </button>
+    </div>
+  </div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-[64px]"
+  >
+    <div
+      class="h-full p-10 rounded-regular bg-white"
+    >
+      <div
+        class="flex items-center justify-between mb-6"
+      >
+        <span
+          class="text-2xl font-bold"
+        >
+          Available Leave Days
+        </span>
+        <button
+          aria-label="More options"
+        >
+          <svg
+            fill="none"
+            height="27"
+            width="31"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+              fill="#000"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-7"
+      >
+        <div
+          class="flex flex-col flex-1 w-full"
+        >
+          <div
+            class="flex items-center justify-between mb-3"
+          >
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Annual Leave
+            </span>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              10 of 60 day(s)
+            </span>
+          </div>
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            class="relative h-7 w-full overflow-hidden rounded-[3px] bg-backgroundGray"
+            data-max="100"
+            data-state="indeterminate"
+            role="progressbar"
+          >
+            <div
+              class="h-full flex-1 transition-all rounded-[3px] bg-primary"
+              data-max="100"
+              data-state="indeterminate"
+              style="transform: translateX(-84%);"
+            />
+          </div>
+        </div>
+        <div
+          class="flex flex-col flex-1 w-full"
+        >
+          <div
+            class="flex items-center justify-between mb-3"
+          >
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Sick Leave
+            </span>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              0 of 10 day(s)
+            </span>
+          </div>
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            class="relative h-7 w-full overflow-hidden rounded-[3px] bg-backgroundGray"
+            data-max="100"
+            data-state="indeterminate"
+            role="progressbar"
+          >
+            <div
+              class="h-full flex-1 transition-all rounded-[3px] bg-primary"
+              data-max="100"
+              data-state="indeterminate"
+              style="transform: translateX(-100%);"
+            />
+          </div>
+        </div>
+        <div
+          class="flex flex-col flex-1 w-full"
+        >
+          <div
+            class="flex items-center justify-between mb-3"
+          >
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Compassionate Leave
+            </span>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              8 of 15 day(s)
+            </span>
+          </div>
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            class="relative h-7 w-full overflow-hidden rounded-[3px] bg-backgroundGray"
+            data-max="100"
+            data-state="indeterminate"
+            role="progressbar"
+          >
+            <div
+              class="h-full flex-1 transition-all rounded-[3px] bg-primary"
+              data-max="100"
+              data-state="indeterminate"
+              style="transform: translateX(-40%);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="h-full p-10 rounded-regular bg-white"
+    >
+      <div
+        class="flex items-center justify-between mb-6"
+      >
+        <span
+          class="text-2xl font-bold"
+        >
+          Birthdays
+        </span>
+        <button
+          aria-label="More options"
+        >
+          <svg
+            fill="none"
+            height="27"
+            width="31"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+              fill="#000"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-[14px]"
+      >
+        <div
+          class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+        >
+          <div
+            class="flex items-center gap-6"
+          >
+            <svg
+              class="text-black-default"
+              fill="none"
+              height="25"
+              style="fill: black;"
+              viewBox="0 0 23 27"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Biruk Kidan's Day - April 25th
+            </span>
+          </div>
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 h-10 rounded-[23px] w-[182px] rounded-regular text-base"
+          >
+            Send Wishes
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+        >
+          <div
+            class="flex items-center gap-6"
+          >
+            <svg
+              class="text-black-default"
+              fill="none"
+              height="25"
+              style="fill: black;"
+              viewBox="0 0 23 27"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Biruk Kidan's Day - April 25th
+            </span>
+          </div>
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 h-10 rounded-[23px] w-[182px] rounded-regular text-base"
+          >
+            Send Wishes
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+        >
+          <div
+            class="flex items-center gap-6"
+          >
+            <svg
+              class="text-black-default"
+              fill="none"
+              height="25"
+              style="fill: black;"
+              viewBox="0 0 23 27"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Biruk Kidan's Day - April 25th
+            </span>
+          </div>
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 h-10 rounded-[23px] w-[182px] rounded-regular text-base"
+          >
+            Send Wishes
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+        >
+          <div
+            class="flex items-center gap-6"
+          >
+            <svg
+              class="text-black-default"
+              fill="none"
+              height="25"
+              style="fill: black;"
+              viewBox="0 0 23 27"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Biruk Kidan's Day - April 25th
+            </span>
+          </div>
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 h-10 rounded-[23px] w-[182px] rounded-regular text-base"
+          >
+            Send Wishes
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+        >
+          <div
+            class="flex items-center gap-6"
+          >
+            <svg
+              class="text-black-default"
+              fill="none"
+              height="25"
+              style="fill: black;"
+              viewBox="0 0 23 27"
+              width="22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="text-lg text-gray-steel"
+            >
+              Biruk Kidan's Day - April 25th
+            </span>
+          </div>
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 h-10 rounded-[23px] w-[182px] rounded-regular text-base"
+          >
+            Send Wishes
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="h-full p-10 rounded-regular bg-white"
+    >
+      <div
+        class="flex items-center justify-between mb-6"
+      >
+        <span
+          class="text-2xl font-bold"
+        >
+          April Pay Slip Breakdown
+        </span>
+        <button
+          aria-label="More options"
+        >
+          <svg
+            fill="none"
+            height="27"
+            width="31"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+              fill="#000"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="grid grid-cols-4 text-lg bg-blue-light text-gray-steel px-7 py-4 rounded-regular"
+      >
+        <div>
+          Earnings
+        </div>
+        <div>
+          Amount
+        </div>
+        <div>
+          Deductions
+        </div>
+        <div>
+          Total
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-4 text-lg bg-blue-light text-gray-steel px-7 py-4 rounded-regular mt-3"
+      >
+        <div>
+          Basic Wage
+        </div>
+        <div>
+          150,000
+        </div>
+        <div>
+          -30,000
+        </div>
+        <div>
+          120,000
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-4 text-lg bg-blue-light text-gray-steel px-7 py-4 rounded-regular mt-3"
+      >
+        <div>
+          Tax
+        </div>
+        <div>
+          15,000
+        </div>
+        <div>
+          -3,000
+        </div>
+        <div>
+          12,000
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-4 text-lg bg-blue-light text-gray-steel px-7 py-4 rounded-regular mt-3"
+      >
+        <div>
+          Pension
+        </div>
+        <div>
+          15,000
+        </div>
+        <div>
+          -3,000
+        </div>
+        <div>
+          12,000
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-4 text-lg bg-blue-light text-gray-steel px-7 py-4 rounded-regular mt-3"
+      >
+        <div>
+          Total Earnings
+        </div>
+        <div>
+          150,000
+        </div>
+        <div>
+          -36,000
+        </div>
+        <div>
+          114,000
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

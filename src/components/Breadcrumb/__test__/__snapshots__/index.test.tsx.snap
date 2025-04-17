@@ -7,6 +7,7 @@ exports[`Breadcrumb component should match snapshot 1`] = `
   >
     <a
       class="hover:underline"
+      data-discover="true"
       href="/dashboard"
     >
       Dashboard

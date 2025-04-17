@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm Component should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        class="w-full px-10 py-16 text-black-default space-y-10"
+      >
+        <div
+          class="flex items-start gap-14"
+        >
+          <div
+            class="grid w-full gap-2"
+          >
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Phone Number 1-label"
+              >
+                Phone Number 1
+              </label>
+              <input
+                aria-describedby=":r0:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Phone Number 1-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r0:-form-item"
+                name="phone"
+                placeholder="Enter your phone number 1"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="grid w-full gap-2"
+          >
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Phone Number 2-label"
+              >
+                Phone Number 2
+              </label>
+              <input
+                aria-describedby=":r1:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Phone Number 2-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r1:-form-item"
+                name="phoneNum2"
+                placeholder="Enter your phone number 2"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="E-mail Address-label"
+            >
+              E-mail Address
+            </label>
+            <input
+              aria-describedby=":r2:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="E-mail Address-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r2:-form-item"
+              name="email"
+              placeholder="Enter your email address"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="City of residence-label"
+            >
+              City of residence
+            </label>
+            <input
+              aria-describedby=":r3:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="City of residence-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] max-w-[431px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r3:-form-item"
+              name="cityOfResidence"
+              placeholder="Enter your city of residence"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="space-y-2 w-full"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+          >
+            Residential Address
+          </label>
+          <textarea
+            aria-describedby=":r4:-form-item-description"
+            aria-invalid="false"
+            class="flex min-h-[80px] w-full rounded-regular bg-blue-light py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50 h-[122px] px-9 rounded-[15px]"
+            id=":r4:-form-item"
+            name="residentialAddress"
+            placeholder="Enter your address"
+          />
+        </div>
+        <div
+          class="w-full h-[70px]"
+        >
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="w-full px-10 py-16 text-black-default space-y-10"
+    >
+      <div
+        class="flex items-start gap-14"
+      >
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="Phone Number 1-label"
+            >
+              Phone Number 1
+            </label>
+            <input
+              aria-describedby=":r0:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Phone Number 1-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r0:-form-item"
+              name="phone"
+              placeholder="Enter your phone number 1"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="grid w-full gap-2"
+        >
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="Phone Number 2-label"
+            >
+              Phone Number 2
+            </label>
+            <input
+              aria-describedby=":r1:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Phone Number 2-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r1:-form-item"
+              name="phoneNum2"
+              placeholder="Enter your phone number 2"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid w-full gap-2"
+      >
+        <div
+          class="w-full space-y-5"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+            id="E-mail Address-label"
+          >
+            E-mail Address
+          </label>
+          <input
+            aria-describedby=":r2:-form-item-description"
+            aria-invalid="false"
+            aria-labelledby="E-mail Address-label"
+            autocomplete="off"
+            class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+            data-testid="input-element"
+            id=":r2:-form-item"
+            name="email"
+            placeholder="Enter your email address"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="grid w-full gap-2"
+      >
+        <div
+          class="w-full space-y-5"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+            id="City of residence-label"
+          >
+            City of residence
+          </label>
+          <input
+            aria-describedby=":r3:-form-item-description"
+            aria-invalid="false"
+            aria-labelledby="City of residence-label"
+            autocomplete="off"
+            class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] max-w-[431px] px-12 rounded-[15px]"
+            data-testid="input-element"
+            id=":r3:-form-item"
+            name="cityOfResidence"
+            placeholder="Enter your city of residence"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="space-y-2 w-full"
+      >
+        <label
+          class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+        >
+          Residential Address
+        </label>
+        <textarea
+          aria-describedby=":r4:-form-item-description"
+          aria-invalid="false"
+          class="flex min-h-[80px] w-full rounded-regular bg-blue-light py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50 h-[122px] px-9 rounded-[15px]"
+          id=":r4:-form-item"
+          name="residentialAddress"
+          placeholder="Enter your address"
+        />
+      </div>
+      <div
+        class="w-full h-[70px]"
+      >
+        <button
+          class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+          type="submit"
+        >
+          Update
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

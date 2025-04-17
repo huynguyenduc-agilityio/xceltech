@@ -9,6 +9,8 @@ export interface IAuthUser {
   user: {
     id: string;
     email: string;
+    role: string;
+    username: string;
   };
 }
 

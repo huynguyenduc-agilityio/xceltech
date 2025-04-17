@@ -22,3 +22,6 @@ export const formatNumberWithMetricPrefix = (
         .replace(REGEX.decimalZeroTrim, '$1') + currentValue.symbol
     : '0';
 };
+
+export const removeNonDigits = (value: string): string =>
+  value.replace(/\D/g, '');

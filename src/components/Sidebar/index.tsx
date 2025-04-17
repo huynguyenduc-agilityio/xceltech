@@ -7,7 +7,14 @@ import { LogoIcon, LogoutIcon } from '@/icons';
 import NavCollapse from './NavCollapse';
 import { Avatar } from '../common';
 
+// Hooks
+import { useGetInfoUser } from '@/hooks';
+
 const Sidebar = ({ children }: { children: ReactNode }) => {
+  const { userInfo } = useGetInfoUser();
+
+  const { firstName = '', lastName = '', role } = userInfo || {};
+
   return (
     <div className="flex min-h-screen w-full">
       {/* Navbar */}
@@ -23,8 +30,10 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
               />
             </div>
             <div className="flex flex-col ml-[22px]">
-              <span className="text-xl font-bold">Aman admin</span>
-              <span className="text-sm">Admin</span>
+              <span className="text-xl font-bold">
+                {firstName} {lastName}
+              </span>
+              <span className="text-sm">{role}</span>
             </div>
           </div>
 
@@ -37,7 +46,7 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
 
-        <img src="public/assets/images/footerNav.png" />
+        <img src="/public/assets/images/footerNav.webp" />
       </nav>
 
       {/* Body Content */}

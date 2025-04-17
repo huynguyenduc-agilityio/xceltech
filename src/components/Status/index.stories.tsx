@@ -22,14 +22,14 @@ export const Default: Story = {
   args: {},
 };
 
-export const Approve: Story = {
+export const Approved: Story = {
   args: {
-    type: StatusLeave.Approve,
+    type: StatusLeave.Approved,
   },
 };
 
-export const Decline: Story = {
+export const Rejected: Story = {
   args: {
-    type: StatusLeave.Decline,
+    type: StatusLeave.Rejected,
   },
 };

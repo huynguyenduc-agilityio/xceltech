@@ -1,30 +1,53 @@
+import { Link } from 'react-router-dom';
+
+// Constants
+import { USER_PAGE } from '@/constants';
+
+// Hooks
+import { useGetInfoUser } from '@/hooks';
+
+// Utils
+import { getInitialsAvatar } from '@/utils';
+
+// Components
 import { Avatar, Button } from '@/components';
+
 import OverviewSection from './OverviewSection';
 import QuickAction from './QuickAction';
 
 const UserDashboard = () => {
+  const { userInfo } = useGetInfoUser();
+
+  const { firstName = '', lastName = '', avatar = '', job } = userInfo || {};
+
   return (
     <>
       <h1 className="text-2xl text-primary font-bold">Dashboard</h1>
       {/* Profile Section */}
-      {/* TODO: Get Profile User */}
       <div className="relative bg-blue-midnightAzure text-white mt-8 pl-[52px] py-[52px] flex items-center justify-between rounded-regular">
         <div className="flex items-center gap-9">
           <div className="w-[139px] h-[139px] p-2 rounded-full border-2 border-white">
             <Avatar
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtXo0VK1WnuWrlK1tOXQizpHNhvqSJ9hUnQ&s"
+              src={avatar as string}
+              fallback={getInitialsAvatar(`${firstName} ${lastName}`)}
               size="100%"
+              className="text-2xl"
             />
           </div>
           <div className="flex flex-col gap-4">
-            <span className="text-3xl font-bold">Redwan husein</span>
-            <span className="text-2xl">UI / UX Designer & UX Writer</span>
+            <span className="text-3xl font-bold">
+              {`${firstName} ${lastName}`}
+            </span>
+            <span className="text-2xl">{job?.name}</span>
           </div>
         </div>
         <div className="flex items-center gap-8">
-          <Button variant="secondary" className="w-[252px] h-[65px] text-xl">
-            Edit Profile
-          </Button>
+          <Link to={USER_PAGE.PROFILE_EDIT}>
+            <Button variant="secondary" className="w-[252px] h-[65px] text-xl">
+              Edit Profile
+            </Button>
+          </Link>
+
           <img src="/public/assets/images/arrow.webp" />
         </div>
       </div>

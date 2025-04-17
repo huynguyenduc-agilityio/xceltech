@@ -18,3 +18,7 @@ export { default as WrenchIcon } from './WrenchIcon';
 export { default as HamburgerIcon } from './HamburgerIcon';
 export { default as EditIcon } from './EditIcon';
 export { default as PdfIcon } from './PdfIcon';
+export { default as CircleDownIcon } from './CircleDownIcon';
+export { default as DownloadIcon } from './DownloadIcon';
+export { default as EyeIcon } from './EyeIcon';
+export { default as PhoneIcon } from './PhoneIcon';

@@ -168,7 +168,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral bg-accent text-accent-foreground"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
                   role="gridcell"
                 >
                   1
@@ -330,7 +330,7 @@ exports[`Calendar component should match snapshot 1`] = `
                 role="presentation"
               >
                 <div
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:text-accent-foreground h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-gray-neutral bg-accent text-accent-foreground"
                   role="gridcell"
                 >
                   15

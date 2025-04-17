@@ -5,9 +5,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <form
-        class=""
-      >
+      <form>
         <div
           class="flex justify-center"
         >
@@ -22,33 +20,26 @@ exports[`PersonalForm Component should match snapshot 1`] = `
               >
                 <button
                   class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground rounded-full w-full h-full"
+                  type="button"
                 >
                   <svg
-                    class="text-white transition-all group-hover:opacity-50"
+                    class="lucide lucide-plus text-white"
                     fill="none"
-                    height="80"
-                    viewBox="0 0 28 28"
-                    width="80"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="40"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      clip-path="url(#a)"
-                    >
-                      <path
-                        d="M14 15.75a7.877 7.877 0 0 0 7.875-7.875A7.877 7.877 0 0 0 14 0a7.877 7.877 0 0 0-7.875 7.875A7.877 7.877 0 0 0 14 15.75Zm7 1.75h-3.013a9.53 9.53 0 0 1-3.987.875 9.549 9.549 0 0 1-3.987-.875H7a7 7 0 0 0-7 7v.875A2.626 2.626 0 0 0 2.625 28h22.75A2.626 2.626 0 0 0 28 25.375V24.5a7 7 0 0 0-7-7Z"
-                        fill="currentColor"
-                      />
-                    </g>
-                    <defs>
-                      <clippath
-                        id="a"
-                      >
-                        <path
-                          d="M0 0h28v28H0z"
-                          fill="currentColor"
-                        />
-                      </clippath>
-                    </defs>
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
                   </svg>
                 </button>
                 <div
@@ -86,86 +77,89 @@ exports[`PersonalForm Component should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="space-y-10 mt-[30px] rounded-[15px]"
+          class="space-y-10 mt-10 rounded-[15px]"
         >
           <div
-            class="w-full space-y-5"
+            class="grid grid-cols-2 gap-5"
           >
-            <label
-              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
-              id="Employee Name-label"
+            <div
+              class="grid w-full gap-2"
             >
-              Employee Name
-            </label>
-            <input
-              aria-describedby=":r1:-form-item-description"
-              aria-invalid="false"
-              aria-labelledby="Employee Name-label"
-              autocomplete="off"
-              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
-              data-testid="input-element"
-              id=":r1:-form-item"
-              name="name"
-              placeholder="Enter your employee name"
-              value=""
-            />
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                  id="First Name-label"
+                >
+                  First Name
+                </label>
+                <input
+                  aria-describedby=":r1:-form-item-description"
+                  aria-invalid="false"
+                  aria-labelledby="First Name-label"
+                  autocomplete="off"
+                  class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                  data-testid="input-element"
+                  id=":r1:-form-item"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="grid w-full gap-2"
+            >
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                  id="Last Name-label"
+                >
+                  Last Name
+                </label>
+                <input
+                  aria-describedby=":r2:-form-item-description"
+                  aria-invalid="false"
+                  aria-labelledby="Last Name-label"
+                  autocomplete="off"
+                  class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                  data-testid="input-element"
+                  id=":r2:-form-item"
+                  name="lastName"
+                  placeholder="Enter your last name"
+                  value=""
+                />
+              </div>
+            </div>
           </div>
           <div
-            class="space-y-2 w-full"
+            class="grid w-full gap-2"
           >
-            <label
-              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+            <div
+              class="w-full space-y-5"
             >
-              Department
-            </label>
-            <button
-              aria-autocomplete="none"
-              aria-controls="radix-:r3:"
-              aria-expanded="false"
-              class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
-              data-placeholder=""
-              data-state="closed"
-              dir="ltr"
-              role="combobox"
-              type="button"
-            >
-              <span
-                style="pointer-events: none;"
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Department-label"
               >
-                Select your department
-              </span>
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-chevron-down h-4 w-4 opacity-50"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m6 9 6 6 6-6"
-                />
-              </svg>
-            </button>
-            <select
-              aria-hidden="true"
-              style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
-              tabindex="-1"
-            >
-              <option
+                Department
+              </label>
+              <input
+                aria-describedby=":r3:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Department-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r3:-form-item"
+                name="department"
+                placeholder="Enter your last name"
                 value=""
               />
-              <option
-                value="designMarketing"
-              >
-                Design & Marketing
-              </option>
-            </select>
+            </div>
           </div>
           <div
             class="space-y-2 w-full"
@@ -180,9 +174,11 @@ exports[`PersonalForm Component should match snapshot 1`] = `
               aria-controls="radix-:r5:"
               aria-expanded="false"
               class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-disabled=""
               data-placeholder=""
               data-state="closed"
               dir="ltr"
+              disabled=""
               role="combobox"
               type="button"
             >
@@ -211,18 +207,11 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             </button>
             <select
               aria-hidden="true"
+              disabled=""
+              name="jobTitle"
               style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
               tabindex="-1"
-            >
-              <option
-                value=""
-              />
-              <option
-                value="designer"
-              >
-                UI / UX Designer
-              </option>
-            </select>
+            />
           </div>
           <div
             class="space-y-2 w-full"
@@ -268,19 +257,17 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             </button>
             <select
               aria-hidden="true"
+              name="jobCategory"
               style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
               tabindex="-1"
             >
               <option
-                value=""
-              />
-              <option
-                value="fulltime"
+                value="Full Time"
               >
-                Full time
+                Full Time
               </option>
               <option
-                value="parttime"
+                value="Part Time"
               >
                 Part time
               </option>
@@ -290,7 +277,8 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             class="w-full h-[70px]"
           >
             <button
-              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white hover:bg-primary/90 disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              disabled=""
               type="submit"
             >
               Update
@@ -301,9 +289,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
     </div>
   </body>,
   "container": <div>
-    <form
-      class=""
-    >
+    <form>
       <div
         class="flex justify-center"
       >
@@ -318,33 +304,26 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             >
               <button
                 class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground rounded-full w-full h-full"
+                type="button"
               >
                 <svg
-                  class="text-white transition-all group-hover:opacity-50"
+                  class="lucide lucide-plus text-white"
                   fill="none"
-                  height="80"
-                  viewBox="0 0 28 28"
-                  width="80"
+                  height="40"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="40"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g
-                    clip-path="url(#a)"
-                  >
-                    <path
-                      d="M14 15.75a7.877 7.877 0 0 0 7.875-7.875A7.877 7.877 0 0 0 14 0a7.877 7.877 0 0 0-7.875 7.875A7.877 7.877 0 0 0 14 15.75Zm7 1.75h-3.013a9.53 9.53 0 0 1-3.987.875 9.549 9.549 0 0 1-3.987-.875H7a7 7 0 0 0-7 7v.875A2.626 2.626 0 0 0 2.625 28h22.75A2.626 2.626 0 0 0 28 25.375V24.5a7 7 0 0 0-7-7Z"
-                      fill="currentColor"
-                    />
-                  </g>
-                  <defs>
-                    <clippath
-                      id="a"
-                    >
-                      <path
-                        d="M0 0h28v28H0z"
-                        fill="currentColor"
-                      />
-                    </clippath>
-                  </defs>
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
                 </svg>
               </button>
               <div
@@ -382,86 +361,89 @@ exports[`PersonalForm Component should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="space-y-10 mt-[30px] rounded-[15px]"
+        class="space-y-10 mt-10 rounded-[15px]"
       >
         <div
-          class="w-full space-y-5"
+          class="grid grid-cols-2 gap-5"
         >
-          <label
-            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
-            id="Employee Name-label"
+          <div
+            class="grid w-full gap-2"
           >
-            Employee Name
-          </label>
-          <input
-            aria-describedby=":r1:-form-item-description"
-            aria-invalid="false"
-            aria-labelledby="Employee Name-label"
-            autocomplete="off"
-            class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
-            data-testid="input-element"
-            id=":r1:-form-item"
-            name="name"
-            placeholder="Enter your employee name"
-            value=""
-          />
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="First Name-label"
+              >
+                First Name
+              </label>
+              <input
+                aria-describedby=":r1:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="First Name-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r1:-form-item"
+                name="firstName"
+                placeholder="Enter your first name"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="grid w-full gap-2"
+          >
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                id="Last Name-label"
+              >
+                Last Name
+              </label>
+              <input
+                aria-describedby=":r2:-form-item-description"
+                aria-invalid="false"
+                aria-labelledby="Last Name-label"
+                autocomplete="off"
+                class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                data-testid="input-element"
+                id=":r2:-form-item"
+                name="lastName"
+                placeholder="Enter your last name"
+                value=""
+              />
+            </div>
+          </div>
         </div>
         <div
-          class="space-y-2 w-full"
+          class="grid w-full gap-2"
         >
-          <label
-            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+          <div
+            class="w-full space-y-5"
           >
-            Department
-          </label>
-          <button
-            aria-autocomplete="none"
-            aria-controls="radix-:r3:"
-            aria-expanded="false"
-            class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
-            data-placeholder=""
-            data-state="closed"
-            dir="ltr"
-            role="combobox"
-            type="button"
-          >
-            <span
-              style="pointer-events: none;"
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+              id="Department-label"
             >
-              Select your department
-            </span>
-            <svg
-              aria-hidden="true"
-              class="lucide lucide-chevron-down h-4 w-4 opacity-50"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m6 9 6 6 6-6"
-              />
-            </svg>
-          </button>
-          <select
-            aria-hidden="true"
-            style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
-            tabindex="-1"
-          >
-            <option
+              Department
+            </label>
+            <input
+              aria-describedby=":r3:-form-item-description"
+              aria-invalid="false"
+              aria-labelledby="Department-label"
+              autocomplete="off"
+              class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+              data-testid="input-element"
+              id=":r3:-form-item"
+              name="department"
+              placeholder="Enter your last name"
               value=""
             />
-            <option
-              value="designMarketing"
-            >
-              Design & Marketing
-            </option>
-          </select>
+          </div>
         </div>
         <div
           class="space-y-2 w-full"
@@ -476,9 +458,11 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             aria-controls="radix-:r5:"
             aria-expanded="false"
             class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
+            data-disabled=""
             data-placeholder=""
             data-state="closed"
             dir="ltr"
+            disabled=""
             role="combobox"
             type="button"
           >
@@ -507,18 +491,11 @@ exports[`PersonalForm Component should match snapshot 1`] = `
           </button>
           <select
             aria-hidden="true"
+            disabled=""
+            name="jobTitle"
             style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
             tabindex="-1"
-          >
-            <option
-              value=""
-            />
-            <option
-              value="designer"
-            >
-              UI / UX Designer
-            </option>
-          </select>
+          />
         </div>
         <div
           class="space-y-2 w-full"
@@ -564,19 +541,17 @@ exports[`PersonalForm Component should match snapshot 1`] = `
           </button>
           <select
             aria-hidden="true"
+            name="jobCategory"
             style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
             tabindex="-1"
           >
             <option
-              value=""
-            />
-            <option
-              value="fulltime"
+              value="Full Time"
             >
-              Full time
+              Full Time
             </option>
             <option
-              value="parttime"
+              value="Part Time"
             >
               Part time
             </option>
@@ -586,7 +561,8 @@ exports[`PersonalForm Component should match snapshot 1`] = `
           class="w-full h-[70px]"
         >
           <button
-            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white hover:bg-primary/90 disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            disabled=""
             type="submit"
           >
             Update

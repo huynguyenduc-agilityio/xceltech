@@ -1,10 +1,10 @@
 export const getRecordRange = (
   currentPage: number,
-  pageSize: number,
+  limit: number,
   totalRecords: number,
 ) => {
-  const startRecord = (currentPage - 1) * pageSize + 1;
-  let endRecord = currentPage * pageSize;
+  const startRecord = (currentPage - 1) * limit + 1;
+  let endRecord = currentPage * limit;
 
   if (endRecord > totalRecords) {
     endRecord = totalRecords;

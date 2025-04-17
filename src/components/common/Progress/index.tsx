@@ -13,7 +13,7 @@ const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   ProgressProps
 >(({ className, value, indicatorContent, indicatorClass, ...props }, ref) => (
-  <div className="flex flex-col flex-1">
+  <div className="flex flex-col flex-1 w-full">
     {indicatorContent}
     <ProgressPrimitive.Root
       ref={ref}

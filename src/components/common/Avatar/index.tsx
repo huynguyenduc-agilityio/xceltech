@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 
-import { cn } from '@/utils';
+import { cn, generateBgColor } from '@/utils';
 
 const AvatarRoot = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
@@ -37,7 +37,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      'flex h-full w-full items-center justify-center rounded-full bg-muted',
+      'flex h-full w-full items-center justify-center rounded-full bg-muted text-2xl',
       className,
     )}
     {...props}
@@ -51,6 +51,7 @@ type AvatarContainerProps = {
   fallback?: React.ReactNode;
   size?: number | string;
   className?: string;
+  fallbackClass?: string;
   onClick?: () => void;
 };
 
@@ -60,9 +61,11 @@ const Avatar = ({
   alt = 'avatar',
   size = 40,
   className,
+  fallbackClass,
   onClick,
 }: AvatarContainerProps) => {
   const computedSize = typeof size === 'number' ? `${size}px` : size;
+  const bgColor = generateBgColor(alt);
 
   return (
     <AvatarRoot
@@ -71,7 +74,9 @@ const Avatar = ({
       onClick={onClick}
     >
       <AvatarImage alt={alt} src={src} />
-      <AvatarFallback>{fallback}</AvatarFallback>
+      <AvatarFallback className={cn(`text-white ${bgColor}`, fallbackClass)}>
+        {fallback}
+      </AvatarFallback>
     </AvatarRoot>
   );
 };

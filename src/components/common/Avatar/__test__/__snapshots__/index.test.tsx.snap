@@ -7,7 +7,7 @@ exports[`Avatar component should match snapshot 1`] = `
     style="width: 100px; height: 100px;"
   >
     <span
-      class="flex h-full w-full items-center justify-center rounded-full bg-muted"
+      class="flex h-full w-full items-center justify-center rounded-full text-2xl text-white bg-blue-electric"
     />
   </span>
 </div>

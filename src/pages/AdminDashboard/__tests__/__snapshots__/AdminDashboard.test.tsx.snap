@@ -1,0 +1,846 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminDashboard should render successfully 1`] = `
+<div>
+  <div
+    class="px-12"
+  >
+    <h1
+      class="text-xl font-bold"
+    >
+      Dashboard
+    </h1>
+    <div>
+      InfoTileList
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-[64px]"
+    >
+      <div
+        class="h-full p-10 rounded-regular bg-white"
+      >
+        <div
+          class="flex items-center justify-between mb-6"
+        >
+          <span
+            class="text-2xl font-bold"
+          >
+            Applied Jobs
+          </span>
+          <button
+            aria-label="More options"
+          >
+            <svg
+              fill="none"
+              height="27"
+              width="31"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-[14px]"
+        >
+          <div
+            class="flex items-center justify-between px-[30px] py-3 h-[79px] bg-blue-light rounded-2xl"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="/public/assets/images/accessBank.webp"
+                class="w-14 h-11"
+                src="/public/assets/images/accessBank.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Sales Executive
+                </p>
+                <span
+                  class="text-sm text-gray-steel"
+                >
+                  Access Bank
+                </span>
+              </div>
+            </div>
+            <p>
+              20mins ago
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 h-[79px] bg-blue-light rounded-2xl"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="/public/assets/images/payStack.webp"
+                class="w-14 h-11"
+                src="/public/assets/images/payStack.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  User Experience Designer
+                </p>
+                <span
+                  class="text-sm text-gray-steel"
+                >
+                  Paystack
+                </span>
+              </div>
+            </div>
+            <p>
+              20mins ago
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 h-[79px] bg-blue-light rounded-2xl"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="/public/assets/images/tpay.webp"
+                class="w-14 h-11"
+                src="/public/assets/images/tpay.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Product Manager
+                </p>
+                <span
+                  class="text-sm text-gray-steel"
+                >
+                  T-Pay
+                </span>
+              </div>
+            </div>
+            <p>
+              20mins ago
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="h-full p-10 rounded-regular bg-white"
+      >
+        <div
+          class="flex items-center justify-between mb-6"
+        >
+          <span
+            class="text-2xl font-bold"
+          >
+            Employees
+          </span>
+          <button
+            aria-label="More options"
+          >
+            <svg
+              fill="none"
+              height="27"
+              width="31"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-[14px]"
+        >
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Aman"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngMan.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Aman
+                </p>
+                <span
+                  class="text-sm font-bold text-gray-steel"
+                >
+                  Role : 
+                  Product Manager
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-7"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <p
+                  class="text-xs font-bold"
+                >
+                  View
+                </p>
+                <button
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-8 rounded-md text-base bg-green-primary"
+                >
+                  <svg
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 20 13"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.8792 6.00573C17.9962 2.42362 14.2684 0 10 0C5.73159 0 2.00276 2.42531 0.120815 6.00607C0.0413845 6.15926 0 6.32851 0 6.50017C0 6.67183 0.0413845 6.84108 0.120815 6.99427C2.0038 10.5764 5.73159 13 10 13C14.2684 13 17.9972 10.5747 19.8792 6.99393C19.9586 6.84074 20 6.67149 20 6.49983C20 6.32818 19.9586 6.15892 19.8792 6.00573ZM10 11.375C9.01109 11.375 8.04439 11.0891 7.22214 10.5534C6.3999 10.0177 5.75903 9.25637 5.38059 8.36558C5.00215 7.47479 4.90314 6.49459 5.09606 5.54893C5.28899 4.60328 5.7652 3.73464 6.46446 3.05285C7.16372 2.37107 8.05464 1.90677 9.02455 1.71867C9.99445 1.53057 10.9998 1.62711 11.9134 1.99609C12.8271 2.36506 13.6079 2.98991 14.1574 3.79159C14.7068 4.59328 15 5.53582 15 6.5C15.0003 7.14028 14.8712 7.77435 14.6201 8.36595C14.3689 8.95755 14.0006 9.49509 13.5363 9.94784C13.0719 10.4006 12.5206 10.7597 11.9138 11.0045C11.307 11.2494 10.6567 11.3753 10 11.375ZM10 3.25C9.70248 3.25405 9.40687 3.29721 9.12118 3.37831C9.35667 3.69033 9.46968 4.07431 9.43971 4.46061C9.40973 4.8469 9.23877 5.20993 8.95781 5.48387C8.67685 5.7578 8.30451 5.92449 7.90831 5.95372C7.51211 5.98294 7.11828 5.87276 6.79826 5.64315C6.61602 6.29775 6.64892 6.99159 6.89231 7.62701C7.13571 8.26242 7.57735 8.80742 8.15507 9.1853C8.73279 9.56317 9.4175 9.7549 10.1128 9.73348C10.8082 9.71206 11.4791 9.47859 12.0312 9.06591C12.5833 8.65324 12.9888 8.08215 13.1906 7.43302C13.3923 6.78389 13.3803 6.08941 13.156 5.44733C12.9318 4.80525 12.5066 4.2479 11.9405 3.85372C11.3744 3.45955 10.6957 3.2484 10 3.25Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <p
+                  class="text-xs font-bold"
+                >
+                  Download
+                </p>
+                <button
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-8 rounded-md text-base bg-primary"
+                >
+                  <svg
+                    fill="none"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    width="19"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1_1890)"
+                    >
+                      <path
+                        d="M8.01562 0H10.9844C11.4779 0 11.875 0.39707 11.875 0.890625V7.125H15.1295C15.79 7.125 16.1203 7.92285 15.6527 8.39043L10.0084 14.0385C9.73008 14.3168 9.27363 14.3168 8.99531 14.0385L3.34355 8.39043C2.87598 7.92285 3.20625 7.125 3.8668 7.125H7.125V0.890625C7.125 0.39707 7.52207 0 8.01562 0ZM19 13.9531V18.1094C19 18.6029 18.6029 19 18.1094 19H0.890625C0.39707 19 0 18.6029 0 18.1094V13.9531C0 13.4596 0.39707 13.0625 0.890625 13.0625H6.33457L8.15293 14.8809C8.89883 15.6268 10.1012 15.6268 10.8471 14.8809L12.6654 13.0625H18.1094C18.6029 13.0625 19 13.4596 19 13.9531ZM14.3984 17.2188C14.3984 16.8105 14.0645 16.4766 13.6562 16.4766C13.248 16.4766 12.9141 16.8105 12.9141 17.2188C12.9141 17.627 13.248 17.9609 13.6562 17.9609C14.0645 17.9609 14.3984 17.627 14.3984 17.2188ZM16.7734 17.2188C16.7734 16.8105 16.4395 16.4766 16.0312 16.4766C15.623 16.4766 15.2891 16.8105 15.2891 17.2188C15.2891 17.627 15.623 17.9609 16.0312 17.9609C16.4395 17.9609 16.7734 17.627 16.7734 17.2188Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1_1890"
+                      >
+                        <rect
+                          fill="white"
+                          height="19"
+                          width="19"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Gelila"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngGirl.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Gelila
+                </p>
+                <span
+                  class="text-sm font-bold text-gray-steel"
+                >
+                  Role : 
+                  Sales Executive
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-7"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <p
+                  class="text-xs font-bold"
+                >
+                  View
+                </p>
+                <button
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-8 rounded-md text-base bg-green-primary"
+                >
+                  <svg
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 20 13"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.8792 6.00573C17.9962 2.42362 14.2684 0 10 0C5.73159 0 2.00276 2.42531 0.120815 6.00607C0.0413845 6.15926 0 6.32851 0 6.50017C0 6.67183 0.0413845 6.84108 0.120815 6.99427C2.0038 10.5764 5.73159 13 10 13C14.2684 13 17.9972 10.5747 19.8792 6.99393C19.9586 6.84074 20 6.67149 20 6.49983C20 6.32818 19.9586 6.15892 19.8792 6.00573ZM10 11.375C9.01109 11.375 8.04439 11.0891 7.22214 10.5534C6.3999 10.0177 5.75903 9.25637 5.38059 8.36558C5.00215 7.47479 4.90314 6.49459 5.09606 5.54893C5.28899 4.60328 5.7652 3.73464 6.46446 3.05285C7.16372 2.37107 8.05464 1.90677 9.02455 1.71867C9.99445 1.53057 10.9998 1.62711 11.9134 1.99609C12.8271 2.36506 13.6079 2.98991 14.1574 3.79159C14.7068 4.59328 15 5.53582 15 6.5C15.0003 7.14028 14.8712 7.77435 14.6201 8.36595C14.3689 8.95755 14.0006 9.49509 13.5363 9.94784C13.0719 10.4006 12.5206 10.7597 11.9138 11.0045C11.307 11.2494 10.6567 11.3753 10 11.375ZM10 3.25C9.70248 3.25405 9.40687 3.29721 9.12118 3.37831C9.35667 3.69033 9.46968 4.07431 9.43971 4.46061C9.40973 4.8469 9.23877 5.20993 8.95781 5.48387C8.67685 5.7578 8.30451 5.92449 7.90831 5.95372C7.51211 5.98294 7.11828 5.87276 6.79826 5.64315C6.61602 6.29775 6.64892 6.99159 6.89231 7.62701C7.13571 8.26242 7.57735 8.80742 8.15507 9.1853C8.73279 9.56317 9.4175 9.7549 10.1128 9.73348C10.8082 9.71206 11.4791 9.47859 12.0312 9.06591C12.5833 8.65324 12.9888 8.08215 13.1906 7.43302C13.3923 6.78389 13.3803 6.08941 13.156 5.44733C12.9318 4.80525 12.5066 4.2479 11.9405 3.85372C11.3744 3.45955 10.6957 3.2484 10 3.25Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <p
+                  class="text-xs font-bold"
+                >
+                  Download
+                </p>
+                <button
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-8 rounded-md text-base bg-primary"
+                >
+                  <svg
+                    fill="none"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    width="19"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1_1890)"
+                    >
+                      <path
+                        d="M8.01562 0H10.9844C11.4779 0 11.875 0.39707 11.875 0.890625V7.125H15.1295C15.79 7.125 16.1203 7.92285 15.6527 8.39043L10.0084 14.0385C9.73008 14.3168 9.27363 14.3168 8.99531 14.0385L3.34355 8.39043C2.87598 7.92285 3.20625 7.125 3.8668 7.125H7.125V0.890625C7.125 0.39707 7.52207 0 8.01562 0ZM19 13.9531V18.1094C19 18.6029 18.6029 19 18.1094 19H0.890625C0.39707 19 0 18.6029 0 18.1094V13.9531C0 13.4596 0.39707 13.0625 0.890625 13.0625H6.33457L8.15293 14.8809C8.89883 15.6268 10.1012 15.6268 10.8471 14.8809L12.6654 13.0625H18.1094C18.6029 13.0625 19 13.4596 19 13.9531ZM14.3984 17.2188C14.3984 16.8105 14.0645 16.4766 13.6562 16.4766C13.248 16.4766 12.9141 16.8105 12.9141 17.2188C12.9141 17.627 13.248 17.9609 13.6562 17.9609C14.0645 17.9609 14.3984 17.627 14.3984 17.2188ZM16.7734 17.2188C16.7734 16.8105 16.4395 16.4766 16.0312 16.4766C15.623 16.4766 15.2891 16.8105 15.2891 17.2188C15.2891 17.627 15.623 17.9609 16.0312 17.9609C16.4395 17.9609 16.7734 17.627 16.7734 17.2188Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1_1890"
+                      >
+                        <rect
+                          fill="white"
+                          height="19"
+                          width="19"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Biruk"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/oldMan.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Biruk
+                </p>
+                <span
+                  class="text-sm font-bold text-gray-steel"
+                >
+                  Role : 
+                  UI UX Designer
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-7"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <p
+                  class="text-xs font-bold"
+                >
+                  View
+                </p>
+                <button
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-8 rounded-md text-base bg-green-primary"
+                >
+                  <svg
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 20 13"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.8792 6.00573C17.9962 2.42362 14.2684 0 10 0C5.73159 0 2.00276 2.42531 0.120815 6.00607C0.0413845 6.15926 0 6.32851 0 6.50017C0 6.67183 0.0413845 6.84108 0.120815 6.99427C2.0038 10.5764 5.73159 13 10 13C14.2684 13 17.9972 10.5747 19.8792 6.99393C19.9586 6.84074 20 6.67149 20 6.49983C20 6.32818 19.9586 6.15892 19.8792 6.00573ZM10 11.375C9.01109 11.375 8.04439 11.0891 7.22214 10.5534C6.3999 10.0177 5.75903 9.25637 5.38059 8.36558C5.00215 7.47479 4.90314 6.49459 5.09606 5.54893C5.28899 4.60328 5.7652 3.73464 6.46446 3.05285C7.16372 2.37107 8.05464 1.90677 9.02455 1.71867C9.99445 1.53057 10.9998 1.62711 11.9134 1.99609C12.8271 2.36506 13.6079 2.98991 14.1574 3.79159C14.7068 4.59328 15 5.53582 15 6.5C15.0003 7.14028 14.8712 7.77435 14.6201 8.36595C14.3689 8.95755 14.0006 9.49509 13.5363 9.94784C13.0719 10.4006 12.5206 10.7597 11.9138 11.0045C11.307 11.2494 10.6567 11.3753 10 11.375ZM10 3.25C9.70248 3.25405 9.40687 3.29721 9.12118 3.37831C9.35667 3.69033 9.46968 4.07431 9.43971 4.46061C9.40973 4.8469 9.23877 5.20993 8.95781 5.48387C8.67685 5.7578 8.30451 5.92449 7.90831 5.95372C7.51211 5.98294 7.11828 5.87276 6.79826 5.64315C6.61602 6.29775 6.64892 6.99159 6.89231 7.62701C7.13571 8.26242 7.57735 8.80742 8.15507 9.1853C8.73279 9.56317 9.4175 9.7549 10.1128 9.73348C10.8082 9.71206 11.4791 9.47859 12.0312 9.06591C12.5833 8.65324 12.9888 8.08215 13.1906 7.43302C13.3923 6.78389 13.3803 6.08941 13.156 5.44733C12.9318 4.80525 12.5066 4.2479 11.9405 3.85372C11.3744 3.45955 10.6957 3.2484 10 3.25Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <p
+                  class="text-xs font-bold"
+                >
+                  Download
+                </p>
+                <button
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-8 rounded-md text-base bg-primary"
+                >
+                  <svg
+                    fill="none"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    width="19"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      clip-path="url(#clip0_1_1890)"
+                    >
+                      <path
+                        d="M8.01562 0H10.9844C11.4779 0 11.875 0.39707 11.875 0.890625V7.125H15.1295C15.79 7.125 16.1203 7.92285 15.6527 8.39043L10.0084 14.0385C9.73008 14.3168 9.27363 14.3168 8.99531 14.0385L3.34355 8.39043C2.87598 7.92285 3.20625 7.125 3.8668 7.125H7.125V0.890625C7.125 0.39707 7.52207 0 8.01562 0ZM19 13.9531V18.1094C19 18.6029 18.6029 19 18.1094 19H0.890625C0.39707 19 0 18.6029 0 18.1094V13.9531C0 13.4596 0.39707 13.0625 0.890625 13.0625H6.33457L8.15293 14.8809C8.89883 15.6268 10.1012 15.6268 10.8471 14.8809L12.6654 13.0625H18.1094C18.6029 13.0625 19 13.4596 19 13.9531ZM14.3984 17.2188C14.3984 16.8105 14.0645 16.4766 13.6562 16.4766C13.248 16.4766 12.9141 16.8105 12.9141 17.2188C12.9141 17.627 13.248 17.9609 13.6562 17.9609C14.0645 17.9609 14.3984 17.627 14.3984 17.2188ZM16.7734 17.2188C16.7734 16.8105 16.4395 16.4766 16.0312 16.4766C15.623 16.4766 15.2891 16.8105 15.2891 17.2188C15.2891 17.627 15.623 17.9609 16.0312 17.9609C16.4395 17.9609 16.7734 17.627 16.7734 17.2188Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clippath
+                        id="clip0_1_1890"
+                      >
+                        <rect
+                          fill="white"
+                          height="19"
+                          width="19"
+                        />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="h-full p-10 rounded-regular bg-white"
+      >
+        <div
+          class="flex items-center justify-between mb-6"
+        >
+          <span
+            class="text-2xl font-bold"
+          >
+            Candidates
+          </span>
+          <button
+            aria-label="More options"
+          >
+            <svg
+              fill="none"
+              height="27"
+              width="31"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-[14px]"
+        >
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Feven Tesfaye"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngMan.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-abril"
+                >
+                  Feven Tesfaye
+                </p>
+                <span
+                  class="text-sm text-gray-steel"
+                >
+                  Applied for : 
+                  <span
+                    class="font-bold"
+                  >
+                     backend Engineer
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <p
+                class="text-xs font-bold"
+              >
+                View
+              </p>
+              <button
+                class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-9 rounded-[20px] text-base bg-green-primary"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 20 13"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.8792 6.00573C17.9962 2.42362 14.2684 0 10 0C5.73159 0 2.00276 2.42531 0.120815 6.00607C0.0413845 6.15926 0 6.32851 0 6.50017C0 6.67183 0.0413845 6.84108 0.120815 6.99427C2.0038 10.5764 5.73159 13 10 13C14.2684 13 17.9972 10.5747 19.8792 6.99393C19.9586 6.84074 20 6.67149 20 6.49983C20 6.32818 19.9586 6.15892 19.8792 6.00573ZM10 11.375C9.01109 11.375 8.04439 11.0891 7.22214 10.5534C6.3999 10.0177 5.75903 9.25637 5.38059 8.36558C5.00215 7.47479 4.90314 6.49459 5.09606 5.54893C5.28899 4.60328 5.7652 3.73464 6.46446 3.05285C7.16372 2.37107 8.05464 1.90677 9.02455 1.71867C9.99445 1.53057 10.9998 1.62711 11.9134 1.99609C12.8271 2.36506 13.6079 2.98991 14.1574 3.79159C14.7068 4.59328 15 5.53582 15 6.5C15.0003 7.14028 14.8712 7.77435 14.6201 8.36595C14.3689 8.95755 14.0006 9.49509 13.5363 9.94784C13.0719 10.4006 12.5206 10.7597 11.9138 11.0045C11.307 11.2494 10.6567 11.3753 10 11.375ZM10 3.25C9.70248 3.25405 9.40687 3.29721 9.12118 3.37831C9.35667 3.69033 9.46968 4.07431 9.43971 4.46061C9.40973 4.8469 9.23877 5.20993 8.95781 5.48387C8.67685 5.7578 8.30451 5.92449 7.90831 5.95372C7.51211 5.98294 7.11828 5.87276 6.79826 5.64315C6.61602 6.29775 6.64892 6.99159 6.89231 7.62701C7.13571 8.26242 7.57735 8.80742 8.15507 9.1853C8.73279 9.56317 9.4175 9.7549 10.1128 9.73348C10.8082 9.71206 11.4791 9.47859 12.0312 9.06591C12.5833 8.65324 12.9888 8.08215 13.1906 7.43302C13.3923 6.78389 13.3803 6.08941 13.156 5.44733C12.9318 4.80525 12.5066 4.2479 11.9405 3.85372C11.3744 3.45955 10.6957 3.2484 10 3.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Yanet mekuriya"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngGirl.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-abril"
+                >
+                  Yanet mekuriya
+                </p>
+                <span
+                  class="text-sm text-gray-steel"
+                >
+                  Applied for : 
+                  <span
+                    class="font-bold"
+                  >
+                    Sales
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <p
+                class="text-xs font-bold"
+              >
+                View
+              </p>
+              <button
+                class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-9 rounded-[20px] text-base bg-green-primary"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 20 13"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.8792 6.00573C17.9962 2.42362 14.2684 0 10 0C5.73159 0 2.00276 2.42531 0.120815 6.00607C0.0413845 6.15926 0 6.32851 0 6.50017C0 6.67183 0.0413845 6.84108 0.120815 6.99427C2.0038 10.5764 5.73159 13 10 13C14.2684 13 17.9972 10.5747 19.8792 6.99393C19.9586 6.84074 20 6.67149 20 6.49983C20 6.32818 19.9586 6.15892 19.8792 6.00573ZM10 11.375C9.01109 11.375 8.04439 11.0891 7.22214 10.5534C6.3999 10.0177 5.75903 9.25637 5.38059 8.36558C5.00215 7.47479 4.90314 6.49459 5.09606 5.54893C5.28899 4.60328 5.7652 3.73464 6.46446 3.05285C7.16372 2.37107 8.05464 1.90677 9.02455 1.71867C9.99445 1.53057 10.9998 1.62711 11.9134 1.99609C12.8271 2.36506 13.6079 2.98991 14.1574 3.79159C14.7068 4.59328 15 5.53582 15 6.5C15.0003 7.14028 14.8712 7.77435 14.6201 8.36595C14.3689 8.95755 14.0006 9.49509 13.5363 9.94784C13.0719 10.4006 12.5206 10.7597 11.9138 11.0045C11.307 11.2494 10.6567 11.3753 10 11.375ZM10 3.25C9.70248 3.25405 9.40687 3.29721 9.12118 3.37831C9.35667 3.69033 9.46968 4.07431 9.43971 4.46061C9.40973 4.8469 9.23877 5.20993 8.95781 5.48387C8.67685 5.7578 8.30451 5.92449 7.90831 5.95372C7.51211 5.98294 7.11828 5.87276 6.79826 5.64315C6.61602 6.29775 6.64892 6.99159 6.89231 7.62701C7.13571 8.26242 7.57735 8.80742 8.15507 9.1853C8.73279 9.56317 9.4175 9.7549 10.1128 9.73348C10.8082 9.71206 11.4791 9.47859 12.0312 9.06591C12.5833 8.65324 12.9888 8.08215 13.1906 7.43302C13.3923 6.78389 13.3803 6.08941 13.156 5.44733C12.9318 4.80525 12.5066 4.2479 11.9405 3.85372C11.3744 3.45955 10.6957 3.2484 10 3.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Aman beyene"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngMan.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-abril"
+                >
+                  Aman beyene
+                </p>
+                <span
+                  class="text-sm text-gray-steel"
+                >
+                  Applied for : 
+                  <span
+                    class="font-bold"
+                  >
+                    Product Manager
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <p
+                class="text-xs font-bold"
+              >
+                View
+              </p>
+              <button
+                class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-black-default hover:bg-secondary/80 w-9 h-9 rounded-[20px] text-base bg-green-primary"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 20 13"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.8792 6.00573C17.9962 2.42362 14.2684 0 10 0C5.73159 0 2.00276 2.42531 0.120815 6.00607C0.0413845 6.15926 0 6.32851 0 6.50017C0 6.67183 0.0413845 6.84108 0.120815 6.99427C2.0038 10.5764 5.73159 13 10 13C14.2684 13 17.9972 10.5747 19.8792 6.99393C19.9586 6.84074 20 6.67149 20 6.49983C20 6.32818 19.9586 6.15892 19.8792 6.00573ZM10 11.375C9.01109 11.375 8.04439 11.0891 7.22214 10.5534C6.3999 10.0177 5.75903 9.25637 5.38059 8.36558C5.00215 7.47479 4.90314 6.49459 5.09606 5.54893C5.28899 4.60328 5.7652 3.73464 6.46446 3.05285C7.16372 2.37107 8.05464 1.90677 9.02455 1.71867C9.99445 1.53057 10.9998 1.62711 11.9134 1.99609C12.8271 2.36506 13.6079 2.98991 14.1574 3.79159C14.7068 4.59328 15 5.53582 15 6.5C15.0003 7.14028 14.8712 7.77435 14.6201 8.36595C14.3689 8.95755 14.0006 9.49509 13.5363 9.94784C13.0719 10.4006 12.5206 10.7597 11.9138 11.0045C11.307 11.2494 10.6567 11.3753 10 11.375ZM10 3.25C9.70248 3.25405 9.40687 3.29721 9.12118 3.37831C9.35667 3.69033 9.46968 4.07431 9.43971 4.46061C9.40973 4.8469 9.23877 5.20993 8.95781 5.48387C8.67685 5.7578 8.30451 5.92449 7.90831 5.95372C7.51211 5.98294 7.11828 5.87276 6.79826 5.64315C6.61602 6.29775 6.64892 6.99159 6.89231 7.62701C7.13571 8.26242 7.57735 8.80742 8.15507 9.1853C8.73279 9.56317 9.4175 9.7549 10.1128 9.73348C10.8082 9.71206 11.4791 9.47859 12.0312 9.06591C12.5833 8.65324 12.9888 8.08215 13.1906 7.43302C13.3923 6.78389 13.3803 6.08941 13.156 5.44733C12.9318 4.80525 12.5066 4.2479 11.9405 3.85372C11.3744 3.45955 10.6957 3.2484 10 3.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="h-full p-10 rounded-regular bg-white"
+      >
+        <div
+          class="flex items-center justify-between mb-6"
+        >
+          <span
+            class="text-2xl font-bold"
+          >
+            April Payrolls
+          </span>
+          <button
+            aria-label="More options"
+          >
+            <svg
+              fill="none"
+              height="27"
+              width="31"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.5 9.703c2.41 0 4.36 1.698 4.36 3.797s-1.95 3.797-4.36 3.797-4.36-1.698-4.36-3.797 1.95-3.797 4.36-3.797ZM11.14 4.22c0 2.099 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797c0-2.1-1.95-3.797-4.36-3.797s-4.36 1.698-4.36 3.797Zm0 18.562c0 2.1 1.95 3.797 4.36 3.797s4.36-1.698 4.36-3.797-1.95-3.797-4.36-3.797-4.36 1.698-4.36 3.797Z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-[14px]"
+        >
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Aman"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngMan.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Aman
+                </p>
+                <span
+                  class="text-sm font-bold text-gray-steel"
+                >
+                  Applied for : 
+                  30,000 Birr
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1 w-[169px]"
+            >
+              <p
+                class="text-xs font-bold"
+              >
+                Paid
+              </p>
+              <div
+                class="flex flex-col flex-1 w-full"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  class="relative w-full overflow-hidden h-4 rounded-2xl bg-green-primary"
+                  data-max="100"
+                  data-state="indeterminate"
+                  role="progressbar"
+                >
+                  <div
+                    class="h-full flex-1 transition-all rounded-[3px] bg-black-default"
+                    data-max="100"
+                    data-state="indeterminate"
+                    style="transform: translateX(-100%);"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Gelila"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/youngGirl.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Gelila
+                </p>
+                <span
+                  class="text-sm font-bold text-gray-steel"
+                >
+                  Applied for : 
+                  50,000 Birr
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1 w-[169px]"
+            >
+              <p
+                class="text-xs font-bold"
+              >
+                Processing
+              </p>
+              <div
+                class="flex flex-col flex-1 w-full"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  class="relative w-full overflow-hidden h-4 rounded-2xl bg-secondary"
+                  data-max="100"
+                  data-state="indeterminate"
+                  role="progressbar"
+                >
+                  <div
+                    class="h-full flex-1 transition-all rounded-[3px] bg-black-default"
+                    data-max="100"
+                    data-state="indeterminate"
+                    style="transform: translateX(-80%);"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between px-[30px] py-3 bg-blue-light rounded-regular"
+          >
+            <div
+              class="flex items-center gap-6"
+            >
+              <img
+                alt="Biruk"
+                class="w-[52px] h-[49px]"
+                src="/public/assets/images/oldMan.webp"
+              />
+              <div>
+                <p
+                  class="text-md font-bold"
+                >
+                  Biruk
+                </p>
+                <span
+                  class="text-sm font-bold text-gray-steel"
+                >
+                  Applied for : 
+                  40,000 Birr
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1 w-[169px]"
+            >
+              <p
+                class="text-xs font-bold"
+              >
+                Processing
+              </p>
+              <div
+                class="flex flex-col flex-1 w-full"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  class="relative w-full overflow-hidden h-4 rounded-2xl bg-secondary"
+                  data-max="100"
+                  data-state="indeterminate"
+                  role="progressbar"
+                >
+                  <div
+                    class="h-full flex-1 transition-all rounded-[3px] bg-black-default"
+                    data-max="100"
+                    data-state="indeterminate"
+                    style="transform: translateX(-80%);"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

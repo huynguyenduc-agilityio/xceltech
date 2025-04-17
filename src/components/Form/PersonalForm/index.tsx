@@ -1,15 +1,18 @@
 import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
-import {
-  DEPARTMENT_OPTIONS,
-  JOB_CATEGORY_OPTIONS,
-  JOB_TITLE_OPTIONS,
-} from '@/constants';
+import { JOB_CATEGORY_OPTIONS, MESSAGES } from '@/constants';
 
 // Types
-import { IEmployeePersonalInfo } from '@/types';
+import { IInfoUser, ToastStatus } from '@/types';
+
+// Hooks
+import { useGetJobs, useToast, useUpdateInfoUser } from '@/hooks';
+
+// Utils
+import { UpdateProfileFormValues, updateProfileSchema } from '@/utils';
 
 // Components
 import {
@@ -26,84 +29,150 @@ import {
 } from '@/components';
 
 export interface IPersonalForm {
-  initialValues?: Partial<IEmployeePersonalInfo>;
+  initialValues?: Partial<IInfoUser>;
+  onBack?: () => void;
 }
 
-const PersonalForm = ({ initialValues }: IPersonalForm) => {
+const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
+  const { toast } = useToast();
+  const { jobs = [], isJobsLoading } = useGetJobs();
+  const { handleUpdateInfoUser, isUpdateInfoLoading } = useUpdateInfoUser();
+
   const {
-    name = '',
-    avatar = '',
-    department = '',
-    jobTitle = '',
-    jobCategory = '',
-  } = initialValues || {};
-  const defaultValues: IEmployeePersonalInfo = {
-    name,
+    firstName = '',
+    lastName = '',
     avatar,
-    department,
-    jobTitle,
-    jobCategory,
+    job = { department: '', jobCategory: '', name: '' },
+    jobId,
+  } = initialValues || {};
+
+  const defaultValues = {
+    firstName,
+    lastName,
+    avatar,
+    department: job?.department || '',
+    jobTitle: job?.name || '',
+    jobCategory: job?.jobCategory || '',
+    jobId,
   };
 
-  const form = useForm({
+  const form = useForm<UpdateProfileFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onChange',
+    resolver: zodResolver(updateProfileSchema),
     defaultValues,
   });
 
-  const { control, handleSubmit, setValue } = form;
+  const {
+    control,
+    handleSubmit,
+    setValue,
+    getValues,
+    reset,
+    formState: { isValid, isDirty, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: IEmployeePersonalInfo) => {
-    console.log('Form Data:', data);
+  const onSubmit = async (data: UpdateProfileFormValues) => {
+    const selectedJob = jobs.find(
+      ({ value }: { value: string }) => value === data.jobTitle,
+    );
+
+    const payload: Partial<IInfoUser> = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      job: {
+        name: data.jobTitle || '',
+        department: data.department || '',
+        jobCategory: data.jobCategory || '',
+      },
+      ...(selectedJob && { jobId: selectedJob.id }),
+      ...(data.avatar &&
+        data.avatar instanceof File &&
+        typeof data.avatar !== 'string' && { avatar: data.avatar }),
+    };
+
+    try {
+      await handleUpdateInfoUser(payload);
+
+      toast({
+        title: MESSAGES.COMMON.UPDATE_SUCCESS('Profile'),
+        status: ToastStatus.Success,
+      });
+
+      onBack?.();
+    } catch {
+      toast({
+        title: MESSAGES.COMMON.UPDATE_FAILED('Profile'),
+        status: ToastStatus.Error,
+      });
+    } finally {
+      reset(getValues());
+    }
   };
 
   const handleFileChange = useCallback(
-    (file: string) => {
-      setValue('avatar', file, { shouldDirty: true });
+    (file: File) => {
+      setValue('avatar', file);
     },
     [setValue],
   );
 
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex justify-center">
           <ImageUpload imageUrl={avatar} onImageChange={handleFileChange} />
         </div>
 
-        <div className="space-y-10 mt-[30px] rounded-[15px]">
+        <div className="space-y-10 mt-10 rounded-[15px]">
+          <div className="grid grid-cols-2 gap-5">
+            <FormField
+              control={control}
+              name="firstName"
+              render={({ field, fieldState: { error } }) => (
+                <TextField
+                  label="First Name"
+                  variant="primary"
+                  className="space-y-5"
+                  labelClassName="text-md"
+                  inputClassName="h-[68px] px-12 rounded-[15px]"
+                  placeholder="Enter your first name"
+                  errorMessage={error?.message}
+                  {...field}
+                />
+              )}
+            />
+            <FormField
+              control={control}
+              name="lastName"
+              render={({ field, fieldState: { error } }) => (
+                <TextField
+                  label="Last Name"
+                  variant="primary"
+                  className="space-y-5"
+                  labelClassName="text-md"
+                  inputClassName="h-[68px] px-12 rounded-[15px]"
+                  placeholder="Enter your last name"
+                  {...field}
+                  errorMessage={error?.message}
+                />
+              )}
+            />
+          </div>
           <FormField
             control={control}
-            name="name"
+            name="department"
             render={({ field, fieldState: { error } }) => (
               <TextField
-                label="Employee Name"
+                label="Department"
                 variant="primary"
                 className="space-y-5"
                 labelClassName="text-md"
                 inputClassName="h-[68px] px-12 rounded-[15px]"
-                placeholder="Enter your employee name"
+                placeholder="Enter your last name"
                 {...field}
                 errorMessage={error?.message}
               />
-            )}
-          />
-          <FormField
-            control={control}
-            name="department"
-            render={({ field }) => (
-              <FormItem>
-                <Label className="text-md">Department</Label>
-                <FormControl>
-                  <Select
-                    option={DEPARTMENT_OPTIONS}
-                    placeholder="Select your department"
-                    className="bg-blue-light h-[68px] px-12 rounded-[15px]"
-                    onChange={field.onChange}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
             )}
           />
           <FormField
@@ -114,9 +183,11 @@ const PersonalForm = ({ initialValues }: IPersonalForm) => {
                 <Label className="text-md">Job Title</Label>
                 <FormControl>
                   <Select
-                    option={JOB_TITLE_OPTIONS}
+                    option={jobs}
                     placeholder="Select your job title"
                     className="bg-blue-light h-[68px] px-12 rounded-[15px]"
+                    isDisable={isJobsLoading}
+                    {...field}
                     onChange={field.onChange}
                   />
                 </FormControl>
@@ -135,6 +206,7 @@ const PersonalForm = ({ initialValues }: IPersonalForm) => {
                     option={JOB_CATEGORY_OPTIONS}
                     placeholder="Select your job category"
                     className="bg-blue-light h-[68px] px-12 rounded-[15px]"
+                    {...field}
                     onChange={field.onChange}
                   />
                 </FormControl>
@@ -143,7 +215,12 @@ const PersonalForm = ({ initialValues }: IPersonalForm) => {
             )}
           />
           <div className="w-full h-[70px]">
-            <Button type="submit" className="w-[364px] bg-green-primary">
+            <Button
+              type="submit"
+              className="w-[364px] bg-green-primary"
+              isLoading={isUpdateInfoLoading}
+              disabled={!isDirty || !isValid || isSubmitting}
+            >
               Update
             </Button>
           </div>

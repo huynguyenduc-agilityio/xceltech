@@ -12,7 +12,7 @@ import { IRegisterUser, ToastStatus } from '@/types';
 import { useRegister, useToast } from '@/hooks';
 
 // Utils
-import { SignUpFormValues, signUpSchema } from '@/utils';
+import { SignUpFormValues, signUpSchema } from '@/utils/schemas/auth';
 
 // Components
 import {

@@ -6,7 +6,7 @@ export enum ToastStatus {
 
 // Define status common for leave form
 export enum StatusLeave {
-  Pending = 'pending',
-  Approve = 'approve',
-  Decline = 'decline',
+  Pending = 'Pending',
+  Approved = 'Approved',
+  Rejected = 'Rejected',
 }

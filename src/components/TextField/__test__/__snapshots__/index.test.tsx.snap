@@ -3,24 +3,28 @@
 exports[`TextField Component should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-2 w-full"
+    class="grid w-full gap-2"
   >
-    <label
-      class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
-      id="Username-label"
+    <div
+      class="w-full space-y-5"
     >
-      Username
-    </label>
-    <input
-      aria-describedby=":r4:-form-item-description"
-      aria-invalid="false"
-      aria-labelledby="Username-label"
-      autocomplete="off"
-      class="font-productsans flex w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px]"
-      data-testid="input-element"
-      id=":r4:-form-item"
-      placeholder="Enter your username"
-    />
+      <label
+        class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl"
+        id="Username-label"
+      >
+        Username
+      </label>
+      <input
+        aria-describedby=":r4:-form-item-description"
+        aria-invalid="false"
+        aria-labelledby="Username-label"
+        autocomplete="off"
+        class="font-productsans flex w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px]"
+        data-testid="input-element"
+        id=":r4:-form-item"
+        placeholder="Enter your username"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

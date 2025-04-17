@@ -1,10 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Types
+import { LeaveType } from '@/types';
+
 // Components
 import FilterMenu from '.';
 
 const defaultProps = {
-  options: ['Name', 'Type'],
+  options: { type: Object.values(LeaveType) },
   onApply: () => {},
 };
 

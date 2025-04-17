@@ -20,17 +20,17 @@ import { Button, Select } from '../common';
 
 interface PaginationProps {
   totalRecords?: number;
-  pageSize?: number;
+  limit?: number;
   currentPage?: number;
   isDisabledPrev?: boolean;
   isDisabledNext?: boolean;
-  onPageChange?: (direction: string) => void;
+  onPageChange?: (direction: number | 'prev' | 'next') => void;
   onChangeLimit?: (value: number) => void;
 }
 
 const Pagination = ({
   currentPage = DEFAULT_CURRENT_PAGE,
-  pageSize = DEFAULT_PAGE_SIZE,
+  limit = DEFAULT_PAGE_SIZE,
   totalRecords = DEFAULT_TOTAL,
   isDisabledPrev,
   isDisabledNext,
@@ -49,14 +49,14 @@ const Pagination = ({
     <div className="w-full flex justify-between mt-6">
       <div className="flex items-center">
         <p className="text-md">
-          {getRecordRange(currentPage, pageSize, totalRecords)}
+          {getRecordRange(currentPage, limit, totalRecords)}
         </p>
       </div>
       <div className="flex items-center gap-10">
         <div className="flex items-center gap-3 text-md">
           <p>Rows per page:</p>
           <Select
-            defaultValue={String(pageSize)}
+            defaultValue={String(limit)}
             option={OPTION_LIMITS}
             onChange={handleChangeLimit}
             className="bg-white border border-gray-dark rounded-md w-fit"

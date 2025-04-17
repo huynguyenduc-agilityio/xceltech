@@ -3,208 +3,156 @@
 exports[`Table Component should match snapshot 1`] = `
 <div>
   <div
-    class="w-full overflow-hidden"
+    class="relative w-full overflow-auto"
   >
-    <div
-      class="flex justify-between px-5 py-6"
+    <table
+      class="w-full caption-bottom text-sm"
     >
-      <h2
-        class="text-xl font-bold"
+      <thead
+        class="text-lg font-bold"
       >
-        Leave History
-      </h2>
-      <button
-        aria-controls="radix-:r0:"
-        aria-expanded="false"
-        aria-haspopup="dialog"
-        class=""
-        data-state="closed"
-        type="button"
+        <tr
+          class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-blue-light"
+        >
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Name(s)
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Duration(s)
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Start Date
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            End Date
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Type
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Reason(s)
+          </td>
+        </tr>
+      </thead>
+      <tbody
+        class="[&_tr:last-child]:border-0 text-lg"
       >
-        <button
-          class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full p-2"
+        <tr
+          class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-white"
         >
-          <svg
-            fill="none"
-            height="25"
-            viewBox="0 0 31 25"
-            width="31"
-            xmlns="http://www.w3.org/2000/svg"
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
           >
-            <g
-              clip-path="url(#a)"
-            >
-              <path
-                d="M29.545 0H1.455C.165 0-.487 1.263.427 2l11.198 9.032v10.062c0 .382.231.74.62.96l4.844 2.733c.955.54 2.286-.007 2.286-.96V11.032l11.198-9.031C31.486 1.264 30.839 0 29.545 0"
-                fill="#1A1A1A"
-              />
-            </g>
-            <defs>
-              <clippath
-                id="a"
-              >
-                <path
-                  d="M0 0h31v25H0z"
-                  fill="#fff"
-                />
-              </clippath>
-            </defs>
-          </svg>
-        </button>
-      </button>
-    </div>
-    <div
-      class="relative w-full overflow-auto"
-    >
-      <table
-        class="w-full caption-bottom text-sm"
-      >
-        <thead
-          class="text-lg font-bold"
+            John Caster
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            5
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            22/04/2022
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            28/04/2022
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Sick
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Personal
+          </td>
+        </tr>
+        <tr
+          class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-blue-light"
         >
-          <tr
-            class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-blue-light"
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
           >
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Name(s)
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Duration(s)
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Start Date
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              End Date
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Type
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Reason(s)
-            </td>
-          </tr>
-        </thead>
-        <tbody
-          class="[&_tr:last-child]:border-0 text-lg"
+            aman bey
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            7
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            22/04/2022
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            28/04/2022
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Exam
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Examination
+          </td>
+        </tr>
+        <tr
+          class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-white"
         >
-          <tr
-            class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-white"
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
           >
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              John Caster
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              5
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              22/04/2022
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              28/04/2022
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Sick
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Personal
-            </td>
-          </tr>
-          <tr
-            class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-blue-light"
+            feven Tesfaye
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
           >
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              aman bey
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              7
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              22/04/2022
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              28/04/2022
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Exam
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Examination
-            </td>
-          </tr>
-          <tr
-            class="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted px-5 bg-white"
+            120
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
           >
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              feven Tesfaye
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              120
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              22/04/2022
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              28/04/2022
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Maternity
-            </td>
-            <td
-              class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
-            >
-              Child Care
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+            22/04/2022
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            28/04/2022
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Maternity
+          </td>
+          <td
+            class="p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] py-6 text-center"
+          >
+            Child Care
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 `;

@@ -18,7 +18,7 @@ const AdminLayout = () => {
           </div>
         </main>
       </Sidebar>
-      <ConfirmDialog />;
+      <ConfirmDialog />
     </>
   );
 };

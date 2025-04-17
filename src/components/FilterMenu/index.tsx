@@ -3,60 +3,101 @@ import { useState } from 'react';
 // Icons
 import { FilterIcon } from '@/icons';
 
+//Types
+import { FilterCriteria } from '@/types';
+
 // Components
 import { Button, Checkbox, PopoverContainer } from '../common';
 
 export interface FilterMenuProps {
-  options: string[];
-  selectedValues?: string[];
-  onApply: (values: string[]) => void;
+  options: FilterCriteria;
+  selectedValues?: FilterCriteria;
+  onApply: (filter: FilterCriteria) => void;
 }
 
 const FilterMenu = ({
   options,
-  selectedValues = [],
+  selectedValues = {},
   onApply,
 }: FilterMenuProps) => {
-  const [selected, setSelected] = useState<string[]>(selectedValues);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedFilters, setSelectedFilters] = useState<FilterCriteria>(
+    () => ({ ...selectedValues }),
+  );
 
-  const toggleSelection = (value: string) => {
-    setSelected((prev) =>
-      prev.includes(value)
-        ? prev.filter((item) => item !== value)
-        : [...prev, value],
-    );
+  const toggleSelection = (field: string, value: string) => {
+    setSelectedFilters((prev) => {
+      const currentValues = prev[field];
+
+      if (Array.isArray(currentValues)) {
+        return {
+          ...prev,
+          [field]: currentValues.includes(value)
+            ? currentValues.filter((item) => item !== value)
+            : [...currentValues, value],
+        };
+      }
+      return {
+        ...prev,
+        [field]: [value],
+      };
+    });
   };
 
-  const resetFilters = () => setSelected([]);
+  const resetFilters = () => {
+    setSelectedFilters({});
+    onApply({});
+  };
 
   const handleFilter = () => {
-    onApply(selected);
+    onApply(selectedFilters);
+    setIsOpen(false);
   };
 
   return (
     <PopoverContainer
+      isOpen={isOpen}
+      onOpenChange={setIsOpen}
       trigger={
-        <Button variant="ghost" size="icon" className="p-2">
+        <Button
+          title="Filter Dropdown"
+          variant="ghost"
+          size="icon"
+          className="p-2"
+        >
           <FilterIcon />
         </Button>
       }
       contentClassName="px-0 pt-4 pb-2"
       content={
-        <div>
-          <div className="space-y-2 px-4">
-            {options.map((option) => (
-              <div key={option} className="flex items-center space-x-2">
-                <Checkbox
-                  id={option}
-                  checked={selected.includes(option)}
-                  onCheckedChange={() => toggleSelection(option)}
-                />
-                <label htmlFor={option} className="text-sm">
-                  {option}
-                </label>
+        <>
+          {Object.entries(options).map(([field, values]) =>
+            Array.isArray(values) ? (
+              <div key={field} className="px-4">
+                <h3 className="font-bold text-base mb-3">
+                  {field.toUpperCase()}
+                </h3>
+                <div className="flex flex-col gap-4">
+                  {values.map((value) => (
+                    <div key={value} className="flex items-center space-x-2">
+                      <Checkbox
+                        id={`${field}-${value}`}
+                        checked={
+                          Array.isArray(selectedFilters[field]) &&
+                          selectedFilters[field].includes(value)
+                        }
+                        onCheckedChange={() => toggleSelection(field, value)}
+                      />
+                      <label htmlFor={`${field}-${value}`} className="text-sm">
+                        {value}
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            ) : null,
+          )}
+
           <div className="mt-4 border-t border-gray-muted">
             <div className="flex justify-between px-4 pt-2">
               <Button
@@ -74,7 +115,7 @@ const FilterMenu = ({
               </Button>
             </div>
           </div>
-        </div>
+        </>
       }
     />
   );

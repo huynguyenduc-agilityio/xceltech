@@ -1,0 +1,510 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EducationForm Component should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form>
+        <div
+          class="w-full text-black-default space-y-10"
+        >
+          <div
+            class="flex w-full items-start justify-between gap-9"
+          >
+            <div
+              class="flex flex-col w-full gap-8"
+            >
+              <div
+                class="grid w-full gap-2"
+              >
+                <div
+                  class="w-full space-y-5"
+                >
+                  <label
+                    class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                    id="Name of Institution-label"
+                  >
+                    Name of Institution
+                  </label>
+                  <input
+                    aria-describedby=":r0:-form-item-description"
+                    aria-invalid="false"
+                    aria-labelledby="Name of Institution-label"
+                    autocomplete="off"
+                    class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                    data-testid="input-element"
+                    id=":r0:-form-item"
+                    name="name"
+                    placeholder="Enter your institution name"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="grid w-full gap-2"
+              >
+                <div
+                  class="w-full space-y-5"
+                >
+                  <label
+                    class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                    id="Course-label"
+                  >
+                    Course
+                  </label>
+                  <input
+                    aria-describedby=":r1:-form-item-description"
+                    aria-invalid="false"
+                    aria-labelledby="Course-label"
+                    autocomplete="off"
+                    class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                    data-testid="input-element"
+                    id=":r1:-form-item"
+                    name="course"
+                    placeholder="Enter your course"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft flex flex-1 text-md"
+                >
+                  Start Date
+                </label>
+                <button
+                  aria-controls="radix-:r3:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky px-11"
+                  data-state="closed"
+                  type="button"
+                >
+                  <span
+                    class="text-gray-soft"
+                  >
+                    Pick a date
+                  </span>
+                  <svg
+                    class="w-[23px] h-[27px]"
+                    fill="none"
+                    height="27px"
+                    style="color: rgb(156, 156, 156);"
+                    viewBox="0 0 23 27"
+                    width="23px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full gap-8"
+            >
+              <div
+                class="grid w-full gap-2"
+              >
+                <div
+                  class="w-full space-y-5"
+                >
+                  <label
+                    class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                    id="Department-label"
+                  >
+                    Department
+                  </label>
+                  <input
+                    aria-describedby=":r4:-form-item-description"
+                    aria-invalid="false"
+                    aria-labelledby="Department-label"
+                    autocomplete="off"
+                    class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                    data-testid="input-element"
+                    id=":r4:-form-item"
+                    name="department"
+                    placeholder="Enter your department"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="grid w-full gap-2"
+              >
+                <div
+                  class="w-full space-y-5"
+                >
+                  <label
+                    class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                    id="Location-label"
+                  >
+                    Location
+                  </label>
+                  <input
+                    aria-describedby=":r5:-form-item-description"
+                    aria-invalid="false"
+                    aria-labelledby="Location-label"
+                    autocomplete="off"
+                    class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                    data-testid="input-element"
+                    id=":r5:-form-item"
+                    name="location"
+                    placeholder="Enter your location"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft flex flex-1 text-md"
+                >
+                  End Date
+                </label>
+                <button
+                  aria-controls="radix-:r7:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky px-11"
+                  data-state="closed"
+                  type="button"
+                >
+                  <span
+                    class="text-gray-soft"
+                  >
+                    Pick a date
+                  </span>
+                  <svg
+                    class="w-[23px] h-[27px]"
+                    fill="none"
+                    height="27px"
+                    style="color: rgb(156, 156, 156);"
+                    viewBox="0 0 23 27"
+                    width="23px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full space-y-5"
+          >
+            <label
+              class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+            >
+              Description
+            </label>
+            <textarea
+              aria-describedby=":r8:-form-item-description"
+              aria-invalid="false"
+              class="flex min-h-[80px] w-full rounded-regular bg-blue-light py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50 h-[122px] px-9 rounded-[15px]"
+              id=":r8:-form-item"
+              name="description"
+              placeholder="Enter your description"
+            />
+          </div>
+          <div
+            class="w-full h-[70px]"
+          >
+            <button
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              type="submit"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form>
+      <div
+        class="w-full text-black-default space-y-10"
+      >
+        <div
+          class="flex w-full items-start justify-between gap-9"
+        >
+          <div
+            class="flex flex-col w-full gap-8"
+          >
+            <div
+              class="grid w-full gap-2"
+            >
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                  id="Name of Institution-label"
+                >
+                  Name of Institution
+                </label>
+                <input
+                  aria-describedby=":r0:-form-item-description"
+                  aria-invalid="false"
+                  aria-labelledby="Name of Institution-label"
+                  autocomplete="off"
+                  class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                  data-testid="input-element"
+                  id=":r0:-form-item"
+                  name="name"
+                  placeholder="Enter your institution name"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="grid w-full gap-2"
+            >
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                  id="Course-label"
+                >
+                  Course
+                </label>
+                <input
+                  aria-describedby=":r1:-form-item-description"
+                  aria-invalid="false"
+                  aria-labelledby="Course-label"
+                  autocomplete="off"
+                  class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                  data-testid="input-element"
+                  id=":r1:-form-item"
+                  name="course"
+                  placeholder="Enter your course"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft flex flex-1 text-md"
+              >
+                Start Date
+              </label>
+              <button
+                aria-controls="radix-:r3:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky px-11"
+                data-state="closed"
+                type="button"
+              >
+                <span
+                  class="text-gray-soft"
+                >
+                  Pick a date
+                </span>
+                <svg
+                  class="w-[23px] h-[27px]"
+                  fill="none"
+                  height="27px"
+                  style="color: rgb(156, 156, 156);"
+                  viewBox="0 0 23 27"
+                  width="23px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col w-full gap-8"
+          >
+            <div
+              class="grid w-full gap-2"
+            >
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                  id="Department-label"
+                >
+                  Department
+                </label>
+                <input
+                  aria-describedby=":r4:-form-item-description"
+                  aria-invalid="false"
+                  aria-labelledby="Department-label"
+                  autocomplete="off"
+                  class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                  data-testid="input-element"
+                  id=":r4:-form-item"
+                  name="department"
+                  placeholder="Enter your department"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="grid w-full gap-2"
+            >
+              <div
+                class="w-full space-y-5"
+              >
+                <label
+                  class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+                  id="Location-label"
+                >
+                  Location
+                </label>
+                <input
+                  aria-describedby=":r5:-form-item-description"
+                  aria-invalid="false"
+                  aria-labelledby="Location-label"
+                  autocomplete="off"
+                  class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
+                  data-testid="input-element"
+                  id=":r5:-form-item"
+                  name="location"
+                  placeholder="Enter your location"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="w-full space-y-5"
+            >
+              <label
+                class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft flex flex-1 text-md"
+              >
+                End Date
+              </label>
+              <button
+                aria-controls="radix-:r7:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="font-productsans inline-flex items-center whitespace-nowrap rounded-[14px] ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed hover:bg-accent hover:text-accent-foreground w-full h-[54px] justify-between py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky px-11"
+                data-state="closed"
+                type="button"
+              >
+                <span
+                  class="text-gray-soft"
+                >
+                  Pick a date
+                </span>
+                <svg
+                  class="w-[23px] h-[27px]"
+                  fill="none"
+                  height="27px"
+                  style="color: rgb(156, 156, 156);"
+                  viewBox="0 0 23 27"
+                  width="23px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 24.469C0 25.866 1.104 27 2.464 27h18.072C21.896 27 23 25.866 23 24.469V10.125H0zm16.429-10.336c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632h-2.053a.626.626 0 0 1-.616-.633zm-6.572-6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.054c.339 0 .616.285.616.633v2.11a.627.627 0 0 1-.616.632h-2.054a.626.626 0 0 1-.616-.633zm-6.571-6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm0 6.75c0-.348.277-.633.616-.633h2.053c.34 0 .616.285.616.633v2.11a.626.626 0 0 1-.616.632H3.902a.626.626 0 0 1-.616-.633zm17.25-17.508H18.07V.844A.835.835 0 0 0 17.25 0h-1.643a.835.835 0 0 0-.821.844v2.531H8.214V.844A.835.835 0 0 0 7.393 0H5.75a.835.835 0 0 0-.821.844v2.531H2.464C1.104 3.375 0 4.509 0 5.906v2.532h23V5.906c0-1.397-1.104-2.531-2.464-2.531"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full space-y-5"
+        >
+          <label
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-md"
+          >
+            Description
+          </label>
+          <textarea
+            aria-describedby=":r8:-form-item-description"
+            aria-invalid="false"
+            class="flex min-h-[80px] w-full rounded-regular bg-blue-light py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50 h-[122px] px-9 rounded-[15px]"
+            id=":r8:-form-item"
+            name="description"
+            placeholder="Enter your description"
+          />
+        </div>
+        <div
+          class="w-full h-[70px]"
+        >
+          <button
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
