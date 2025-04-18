@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Constants
 import { USER_NAVIGATION_CONFIG } from '@/constants';
@@ -11,6 +12,9 @@ import { Avatar } from '../common';
 import NotificationBadge from '../NotificationBadge';
 import DropdownNotification from '../DropdownNotification';
 
+// Utils
+import { cn } from '@/utils';
+
 const Navbar = () => {
   const [active, setActive] = useState('Dashboard');
 
@@ -22,16 +26,21 @@ const Navbar = () => {
       {/* Center - Menu */}
       <div className="flex">
         {USER_NAVIGATION_CONFIG.map((item) => (
-          <button
-            key={item.title}
-            onClick={() => setActive(item.title)}
-            className={'relative w-[160px] py-[22px] text-lg'}
-          >
-            {item.title}
-            {active === item.title && (
-              <span className="absolute left-1/2 transform -translate-x-1/2 w-[160px] h-[5px] bg-secondary bottom-0 rounded-regular"></span>
-            )}
-          </button>
+          <Link key={item.title} to={item.path}>
+            <button
+              onClick={() => setActive(item.title)}
+              className={cn(
+                'relative w-[160px] py-[22px] text-lg',
+                item.title !== 'Dashboard' && 'cursor-not-allowed',
+              )}
+              disabled={item.title !== 'Dashboard'}
+            >
+              {item.title}
+              {active === item.title && (
+                <span className="absolute left-1/2 transform -translate-x-1/2 w-[160px] h-[5px] bg-secondary bottom-0 rounded-regular"></span>
+              )}
+            </button>
+          </Link>
         ))}
       </div>
 

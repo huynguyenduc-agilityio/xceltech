@@ -12,9 +12,12 @@ export const contactSchema = z.object({
   phone: requiredString('Phone Number 1').regex(REGEX.phone, {
     message: MESSAGES.VALIDATE.FIELD_VALID('phone'),
   }),
-  phoneNum2: requiredString('Phone Number 2').regex(REGEX.phone, {
-    message: MESSAGES.VALIDATE.FIELD_VALID('phone'),
-  }),
+  phoneNum2: z
+    .string()
+    .optional()
+    .refine((val) => !val || REGEX.phone.test(val), {
+      message: MESSAGES.VALIDATE.FIELD_VALID('phone'),
+    }),
   email: requiredString('Email').regex(REGEX.email, {
     message: MESSAGES.VALIDATE.FIELD_VALID('email address'),
   }),
@@ -70,10 +73,10 @@ export type FinancialFormValues = z.infer<typeof financialSchema>;
 export const educationSchema = z.object({
   name: requiredString('Name of Institution'),
   course: requiredString('Course'),
-  startDate: z.date(),
+  startDate: z.union([z.date(), z.string(), z.undefined()]).optional(),
   department: requiredString('Department'),
   location: requiredString('Location'),
-  endDate: z.date(),
+  endDate: z.union([z.date(), z.string(), z.undefined()]).optional(),
   description: z.string(),
 });
 

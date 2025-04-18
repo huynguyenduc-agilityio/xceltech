@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // Icons
 import { BellIcon } from '@/icons';
 
@@ -15,7 +17,12 @@ import { Button } from '../common';
 
 // Hooks
 import { useGetNotifications } from '@/hooks';
+
+// Utils
 import { formatDate } from '@/utils';
+
+// Constants
+import { USER_PAGE } from '@/constants';
 
 const DropdownNotification = () => {
   const { isNotificationLoading, notifications } = useGetNotifications();
@@ -47,19 +54,21 @@ const DropdownNotification = () => {
           <Fallback />
         ) : (
           notifications?.map(({ id, message, createdAt }) => (
-            <DropdownMenuItem
-              key={id}
-              className="flex justify-between p-4 border-b"
-            >
-              <div className="flex flex-col gap-2">
-                <p className="text-md text-slate-500 truncate max-w-[350px]">
-                  {message}
-                </p>
-                <p className="text-slate-500">
-                  {formatDate(new Date(createdAt))}
-                </p>
-              </div>
-            </DropdownMenuItem>
+            <Link to={`${USER_PAGE.LEAVE_RECALL}/${id}`}>
+              <DropdownMenuItem
+                key={id}
+                className="flex justify-between p-4 border-b"
+              >
+                <div className="flex flex-col gap-2">
+                  <p className="text-md text-slate-500 truncate max-w-[350px]">
+                    {message}
+                  </p>
+                  <p className="text-slate-500">
+                    {formatDate(new Date(createdAt))}
+                  </p>
+                </div>
+              </DropdownMenuItem>
+            </Link>
           ))
         )}
         <DropdownMenuSeparator />

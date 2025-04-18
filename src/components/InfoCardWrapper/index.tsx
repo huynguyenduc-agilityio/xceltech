@@ -7,12 +7,14 @@ interface InfoCardWrapperProps {
   titleContent: ReactNode;
   description?: ReactNode;
   onEdit: () => void;
+  onDelete?: () => void;
 }
 
 const InfoCardWrapper = ({
   titleContent,
   description,
   onEdit,
+  onDelete,
 }: InfoCardWrapperProps) => (
   <div className="flex justify-between px-11 py-7 bg-blue-light rounded-[15px]">
     <div className="space-y-2  w-full">
@@ -22,7 +24,11 @@ const InfoCardWrapper = ({
           <Button size="icon" className="hover:bg-primary/70" onClick={onEdit}>
             <PencilIcon size={20} />
           </Button>
-          <Button size="icon" className="bg-red-500 hover:bg-red-500/70">
+          <Button
+            size="icon"
+            className="bg-red-500 hover:bg-red-500/70"
+            onClick={onDelete}
+          >
             <TrashIcon size={20} />
           </Button>
         </div>

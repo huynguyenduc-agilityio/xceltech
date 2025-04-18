@@ -8,7 +8,7 @@ exports[`SideMenu component should match snapshot 1`] = `
 >
   <div
     aria-orientation="horizontal"
-    class="flex flex-col justify-start gap-5 min-w-[540px] h-full pl-4 pr-9 pt-9 pb-5 mr-[51px] rounded-[15px] bg-white"
+    class="flex flex-col justify-start gap-5 w-[50%] h-full px-6 pt-9 pb-5 mr-[51px] rounded-[15px] bg-white"
     data-orientation="horizontal"
     role="tablist"
     style="outline: none;"
@@ -144,6 +144,7 @@ exports[`SideMenu component should match snapshot 1`] = `
   >
     <div
       aria-labelledby="radix-:r0:-trigger-Personal Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="active"
       id="radix-:r0:-content-Personal Details"
@@ -155,6 +156,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     </div>
     <div
       aria-labelledby="radix-:r0:-trigger-Contact Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""
@@ -164,6 +166,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     />
     <div
       aria-labelledby="radix-:r0:-trigger-Next of kin Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""
@@ -173,6 +176,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     />
     <div
       aria-labelledby="radix-:r0:-trigger-Education Qualifications"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""
@@ -182,6 +186,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     />
     <div
       aria-labelledby="radix-:r0:-trigger-Guarantor Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""
@@ -191,6 +196,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     />
     <div
       aria-labelledby="radix-:r0:-trigger-Family Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""
@@ -200,6 +206,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     />
     <div
       aria-labelledby="radix-:r0:-trigger-Job Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""
@@ -209,6 +216,7 @@ exports[`SideMenu component should match snapshot 1`] = `
     />
     <div
       aria-labelledby="radix-:r0:-trigger-Financial Details"
+      class="h-full"
       data-orientation="horizontal"
       data-state="inactive"
       hidden=""

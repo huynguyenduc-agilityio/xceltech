@@ -6,13 +6,13 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { JOB_CATEGORY_OPTIONS, MESSAGES } from '@/constants';
 
 // Types
-import { IInfoUser, ToastStatus } from '@/types';
+import { IInfoUser, ToastStatus, UpdateProfileFormValues } from '@/types';
 
 // Hooks
 import { useGetJobs, useToast, useUpdateInfoUser } from '@/hooks';
 
 // Utils
-import { UpdateProfileFormValues, updateProfileSchema } from '@/utils';
+import { updateProfileSchema } from '@/utils';
 
 // Components
 import {
@@ -37,13 +37,13 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
   const { toast } = useToast();
   const { jobs = [], isJobsLoading } = useGetJobs();
   const { handleUpdateInfoUser, isUpdateInfoLoading } = useUpdateInfoUser();
+  console.log(initialValues);
 
   const {
     firstName = '',
     lastName = '',
     avatar,
-    job = { department: '', jobCategory: '', name: '' },
-    jobId,
+    job = { department: '', jobCategory: '', id: '' },
   } = initialValues || {};
 
   const defaultValues = {
@@ -51,9 +51,8 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
     lastName,
     avatar,
     department: job?.department || '',
-    jobTitle: job?.name || '',
     jobCategory: job?.jobCategory || '',
-    jobId,
+    jobId: job?.id,
   };
 
   const form = useForm<UpdateProfileFormValues>({
@@ -73,15 +72,12 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
   } = form;
 
   const onSubmit = async (data: UpdateProfileFormValues) => {
-    const selectedJob = jobs.find(
-      ({ value }: { value: string }) => value === data.jobTitle,
-    );
+    const selectedJob = jobs.find((job) => job.id === data.jobId);
 
     const payload: Partial<IInfoUser> = {
       firstName: data.firstName,
       lastName: data.lastName,
       job: {
-        name: data.jobTitle || '',
         department: data.department || '',
         jobCategory: data.jobCategory || '',
       },
@@ -99,13 +95,15 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
         status: ToastStatus.Success,
       });
 
+      reset(initialValues);
+
       onBack?.();
     } catch {
       toast({
         title: MESSAGES.COMMON.UPDATE_FAILED('Profile'),
         status: ToastStatus.Error,
       });
-    } finally {
+
       reset(getValues());
     }
   };
@@ -177,7 +175,7 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
           />
           <FormField
             control={control}
-            name="jobTitle"
+            name="jobId"
             render={({ field }) => (
               <FormItem>
                 <Label className="text-md">Job Title</Label>

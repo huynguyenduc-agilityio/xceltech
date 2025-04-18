@@ -1,8 +1,22 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+// Constants
+import { MESSAGES } from '@/constants';
+
 // Types
-import { IEmployeeEducationInfo } from '@/types';
+import {
+  EducationType,
+  IEmployeeEducationInfo,
+  MutationType,
+  ToastStatus,
+} from '@/types';
+
+// Hooks
+import { useEducationMutation, useToast } from '@/hooks';
+
+// Utils
+import { EducationFormValues, educationSchema, formatDate } from '@/utils';
 
 // Components
 import {
@@ -17,26 +31,36 @@ import {
   Textarea,
   TextField,
 } from '@/components';
-import { ADDITIONAL_EDUCATION_FIELD, BASE_EDUCATION_FIELD } from '@/constants';
 
-// Utils
-import { EducationFormValues, educationSchema } from '@/utils/schemas/employee';
-
-export interface IEducationForm {
+interface IEducationForm {
+  mode: MutationType;
+  section: EducationType;
   initialValues?: Partial<IEmployeeEducationInfo>;
   onBack?: () => void;
 }
 
-const EducationForm = ({ initialValues, onBack }: IEducationForm) => {
+const EducationForm = ({
+  initialValues = {},
+  mode,
+  section,
+  onBack,
+}: IEducationForm) => {
+  const { toast } = useToast();
+  const { handleEducationMutation, isEducationMutationLoading } =
+    useEducationMutation({
+      type: mode,
+    });
+
   const {
     name = '',
     course = '',
     department = '',
     description = '',
+    startDate,
     endDate,
     location = '',
-    startDate,
   } = initialValues || {};
+
   const defaultValues: IEmployeeEducationInfo = {
     name,
     course,
@@ -54,100 +78,163 @@ const EducationForm = ({ initialValues, onBack }: IEducationForm) => {
     defaultValues,
   });
 
-  const { control, handleSubmit } = form;
+  const {
+    control,
+    handleSubmit,
+    reset,
+    getValues,
+    formState: { isValid, isDirty, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: IEmployeeEducationInfo) => {
-    console.log('Form Data:', data);
-    onBack?.();
+  const isCreate = mode === MutationType.Create;
+
+  const onSubmit = async (data: IEmployeeEducationInfo) => {
+    const payload = {
+      ...data,
+      type: section,
+      startDate: formatDate(data.startDate || ''),
+      endDate: formatDate(data.endDate || ''),
+      ...(!isCreate && initialValues?.id ? { id: initialValues.id } : {}),
+    };
+
+    try {
+      await handleEducationMutation(payload);
+
+      toast({
+        status: ToastStatus.Success,
+        title: isCreate
+          ? MESSAGES.COMMON.ADD_SUCCESS('Education')
+          : MESSAGES.COMMON.UPDATE_SUCCESS('Education'),
+      });
+      onBack?.();
+
+      reset(initialValues);
+    } catch {
+      toast({
+        status: ToastStatus.Error,
+        title: isCreate
+          ? MESSAGES.COMMON.ADD_FAILED('Education')
+          : MESSAGES.COMMON.UPDATE_FAILED('Education'),
+      });
+
+      reset(getValues());
+    }
   };
+
+  const disableSubmit = !isDirty || !isValid || isSubmitting;
 
   return (
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full text-black-default space-y-10">
-          <div className="flex w-full items-start justify-between gap-9">
-            <div className="flex flex-col w-full gap-8">
-              {BASE_EDUCATION_FIELD.map(({ name, placeholder, label }) =>
-                name !== 'startDate' ? (
-                  <FormField
-                    key={name}
-                    control={control}
-                    name={name}
-                    render={({ field, fieldState: { error } }) => (
-                      <TextField
-                        label={label}
-                        variant="primary"
-                        className="space-y-5"
-                        labelClassName="text-md"
-                        inputClassName="h-[68px] px-12 rounded-[15px]"
-                        placeholder={placeholder}
-                        {...field}
-                        errorMessage={error?.message}
-                      />
-                    )}
+          <div className="space-y-8 mt-12">
+            <div className="flex items-start gap-9">
+              <FormField
+                control={control}
+                name="name"
+                render={({ field, fieldState: { error } }) => (
+                  <TextField
+                    label="Name of Institution"
+                    variant="primary"
+                    className="space-y-5"
+                    labelClassName="text-md"
+                    inputClassName="h-[68px] px-12 rounded-[15px]"
+                    placeholder="Enter your institution name"
+                    {...field}
+                    errorMessage={error?.message}
                   />
-                ) : (
-                  <FormField
-                    control={control}
-                    name={name}
-                    render={({ field: { value, onChange } }) => (
-                      <FormItem className="space-y-5">
-                        <Label className="flex flex-1 text-md">{label}</Label>
-                        <FormControl>
-                          <DatePicker
-                            date={value}
-                            onSelect={onChange}
-                            className="px-11"
-                          />
-                        </FormControl>
-                      </FormItem>
-                    )}
+                )}
+              />
+              <FormField
+                control={control}
+                name="department"
+                render={({ field, fieldState: { error } }) => (
+                  <TextField
+                    label="Department"
+                    variant="primary"
+                    className="space-y-5"
+                    labelClassName="text-md"
+                    inputClassName="h-[68px] px-12 rounded-[15px]"
+                    placeholder="Enter your department"
+                    {...field}
+                    errorMessage={error?.message}
                   />
-                ),
-              )}
+                )}
+              />
             </div>
-            <div className="flex flex-col w-full gap-8">
-              {ADDITIONAL_EDUCATION_FIELD.map(({ name, placeholder, label }) =>
-                name !== 'endDate' ? (
-                  <FormField
-                    key={name}
-                    control={control}
-                    name={name}
-                    render={({ field, fieldState: { error } }) => (
-                      <TextField
-                        label={label}
-                        variant="primary"
-                        className="space-y-5"
-                        labelClassName="text-md"
-                        inputClassName="h-[68px] px-12 rounded-[15px]"
-                        placeholder={placeholder}
-                        {...field}
-                        errorMessage={error?.message}
+            <div className="flex items-start gap-9">
+              <FormField
+                control={control}
+                name="course"
+                render={({ field, fieldState: { error } }) => (
+                  <TextField
+                    label="Course"
+                    variant="primary"
+                    className="space-y-5"
+                    labelClassName="text-md"
+                    inputClassName="h-[68px] px-12 rounded-[15px]"
+                    placeholder="Enter your course"
+                    {...field}
+                    errorMessage={error?.message}
+                  />
+                )}
+              />
+              <FormField
+                control={control}
+                name="location"
+                render={({ field, fieldState: { error } }) => (
+                  <TextField
+                    label="Location"
+                    variant="primary"
+                    className="space-y-5"
+                    labelClassName="text-md"
+                    inputClassName="h-[68px] px-12 rounded-[15px]"
+                    placeholder="Enter your location"
+                    {...field}
+                    errorMessage={error?.message}
+                  />
+                )}
+              />
+            </div>
+            <div className="flex items-start gap-9">
+              <FormField
+                control={control}
+                name="startDate"
+                render={({ field: { value, onChange } }) => (
+                  <FormItem className="space-y-5">
+                    <Label className="flex flex-1 text-md">Start Date</Label>
+                    <FormControl>
+                      <DatePicker
+                        date={value as Date}
+                        placeholder="Enter your start date"
+                        onSelect={onChange}
+                        className="px-11"
                       />
-                    )}
-                  />
-                ) : (
-                  <FormField
-                    control={control}
-                    name={name}
-                    render={({ field: { value, onChange } }) => (
-                      <FormItem className="space-y-5">
-                        <Label className="flex flex-1 text-md">{label}</Label>
-                        <FormControl>
-                          <DatePicker
-                            date={value}
-                            onSelect={onChange}
-                            className="px-11"
-                          />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-                ),
-              )}
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={control}
+                name="endDate"
+                render={({ field: { value, onChange } }) => (
+                  <FormItem className="space-y-5">
+                    <Label className="flex flex-1 text-md">End Date</Label>
+                    <FormControl>
+                      <DatePicker
+                        date={value as Date}
+                        placeholder="Enter your end date"
+                        onSelect={onChange}
+                        className="px-11"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
             </div>
           </div>
           <FormField
+            key={name}
             control={control}
             name="description"
             render={({ field }) => (
@@ -166,8 +253,13 @@ const EducationForm = ({ initialValues, onBack }: IEducationForm) => {
           />
 
           <div className="w-full h-[70px]">
-            <Button type="submit" className="w-[364px] bg-green-primary">
-              Update
+            <Button
+              type="submit"
+              className="w-[364px] bg-green-primary"
+              isLoading={isEducationMutationLoading}
+              disabled={disableSubmit}
+            >
+              {isCreate ? 'Submit' : 'Update'}
             </Button>
           </div>
         </div>

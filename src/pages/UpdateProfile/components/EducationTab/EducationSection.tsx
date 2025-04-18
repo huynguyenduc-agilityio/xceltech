@@ -1,23 +1,24 @@
 import { PlusIcon } from 'lucide-react';
 
 // Types
-import { IEmployeeEducationInfo } from '@/types';
+import { EducationType, IEmployeeEducationInfo } from '@/types';
 
 // Utils
 import { formatDateRange } from '@/utils';
+
+// Hooks
+import { useConfirm } from '@/hooks';
 
 // Components
 import { Button, InfoCardWrapper } from '@/components';
 
 interface EducationSectionProps {
   title: string;
-  section: 'academic' | 'professional';
+  section: EducationType;
   data: IEmployeeEducationInfo[];
-  onAdd: (section: 'academic' | 'professional') => void;
-  onEdit: (
-    section: 'academic' | 'professional',
-    data: IEmployeeEducationInfo,
-  ) => void;
+  onAdd: (section: EducationType) => void;
+  onEdit: (section: EducationType, data: IEmployeeEducationInfo) => void;
+  onDelete: (id?: string) => void;
 }
 
 const EducationSection = ({
@@ -26,7 +27,10 @@ const EducationSection = ({
   data,
   onAdd,
   onEdit,
+  onDelete,
 }: EducationSectionProps) => {
+  const confirm = useConfirm();
+
   return (
     <div>
       <h3 className="text-lg font-bold ml-4">{title}</h3>
@@ -54,10 +58,18 @@ const EducationSection = ({
             .filter(Boolean)
             .join(' ');
 
+          const handleDelete = () =>
+            confirm({
+              title: `Delete Education`,
+              confirmMessage: `Are you sure you want to delete this ${name}?`,
+              onConfirm: () => onDelete(id),
+            });
+
           return (
             <InfoCardWrapper
               key={id}
               onEdit={() => onEdit(section, item)}
+              onDelete={handleDelete}
               titleContent={
                 <div className="grid gap-2">
                   <h4 className="font-bold text-lg">{name}</h4>

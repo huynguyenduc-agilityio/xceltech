@@ -1,21 +1,14 @@
-import { END_POINTS } from '@/constants';
+import { END_POINTS, MESSAGES } from '@/constants';
 
-import { Documents, DocumentsForm } from '@/types';
+import { ErrorType } from '@/types';
 
 import { HttpClient } from '.';
 
 export const getListJobs = async () => {
-  return (await HttpClient.get(END_POINTS.JOB)).data;
+  try {
+    const response = await HttpClient.get(END_POINTS.JOB);
+    return response?.data ?? [];
+  } catch (error) {
+    throw new Error((error as ErrorType).detail || MESSAGES.COMMON.EMPTY_DATA);
+  }
 };
-
-export const getDocuments = async (): Promise<Documents[]> =>
-  (await HttpClient.get(END_POINTS.DOCUMENT_PROFILE)).data;
-
-export const uploadDocument = async (data: Partial<DocumentsForm>) =>
-  (
-    await HttpClient.post(`${END_POINTS.DOCUMENT_PROFILE}upload/`, data, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    })
-  ).data;

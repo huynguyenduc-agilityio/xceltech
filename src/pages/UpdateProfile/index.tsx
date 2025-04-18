@@ -1,3 +1,5 @@
+import { lazy, Suspense } from 'react';
+
 // Constants
 import { USER_PAGE } from '@/constants';
 
@@ -5,7 +7,7 @@ import { USER_PAGE } from '@/constants';
 import { useGetInfoUser } from '@/hooks';
 
 // Components
-import { Breadcrumb, ContactForm, NextOfKinForm, SideMenu } from '@/components';
+import { Breadcrumb, Fallback, NextOfKinForm, SideMenu } from '@/components';
 
 import {
   EducationTab,
@@ -16,6 +18,8 @@ import {
   PersonalDetailTab,
 } from './components';
 
+const ContactForm = lazy(() => import('@/components/Form/ContactForm'));
+
 const BREADCRUMB_ITEMS = [
   { label: 'Dashboard', href: USER_PAGE.DASHBOARD },
   { label: 'Update Profile' },
@@ -24,8 +28,6 @@ const BREADCRUMB_ITEMS = [
 const UpdateProfile = () => {
   const { userInfo } = useGetInfoUser();
 
-  const { name, department, lineManagement, description } = userInfo?.job || {};
-
   const TAB_LIST = [
     {
       label: 'Personal Details',
@@ -33,7 +35,11 @@ const UpdateProfile = () => {
     },
     {
       label: 'Contact Details',
-      content: <ContactForm />,
+      content: (
+        <Suspense fallback={<Fallback />}>
+          <ContactForm initialValues={userInfo} />
+        </Suspense>
+      ),
     },
     {
       label: 'Next of kin Details',
@@ -53,16 +59,7 @@ const UpdateProfile = () => {
     },
     {
       label: 'Job Details',
-      content: (
-        <JobDetailTab
-          jobInfo={{
-            name,
-            department,
-            lineManagement,
-            description,
-          }}
-        />
-      ),
+      content: <JobDetailTab />,
     },
     {
       label: 'Financial Details',

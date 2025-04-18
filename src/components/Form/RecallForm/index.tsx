@@ -23,7 +23,7 @@ import { LeaveRecallForm, StatusLeave, ToastStatus } from '@/types';
 import { formatDate, getDaysLeft } from '@/utils';
 
 // Hooks
-import { toast, useUpdateLeaveRecallRequest } from '@/hooks';
+import { useToast, useUpdateLeaveRecallRequest } from '@/hooks';
 
 // Constants
 import { MESSAGES } from '@/constants';
@@ -45,6 +45,7 @@ const RecallForm = ({ initialValues, onClose }: IRecallForm) => {
     reliefOfficerFirstName = '',
     reliefOfficerLastName = '',
   } = initialValues || {};
+  const { toast } = useToast();
 
   const defaultValues: LeaveRecallForm = {
     id,

@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, useRef } from 'react';
 import { FieldErrors } from 'react-hook-form';
 
 // Types
@@ -9,7 +9,7 @@ import { FormItem, FormMessage, Input, Button } from '@/components';
 
 export interface AdditionalFileUploadProps {
   name: string;
-  value?: File | string | null;
+  value?: File | null;
   errors?: FieldErrors<UploadFileForm>;
   onFileChange: (file: File | null) => void;
 }
@@ -21,7 +21,6 @@ const AdditionalFileUpload = ({
   onFileChange,
 }: AdditionalFileUploadProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const [fileUrl, setFileUrl] = useState<string | null>(null);
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
@@ -32,33 +31,6 @@ const AdditionalFileUpload = ({
   const handleOpenFile = () => {
     fileInputRef.current?.click();
   };
-
-  useEffect(() => {
-    if (value instanceof File) {
-      const url = URL.createObjectURL(value);
-
-      setFileUrl(url);
-
-      return () => {
-        URL.revokeObjectURL(url);
-      };
-    }
-
-    if (typeof value === 'string') {
-      setFileUrl(value);
-    }
-
-    if (!value) {
-      setFileUrl(null);
-    }
-  }, [value]);
-
-  const fileName =
-    typeof value === 'string'
-      ? (value.split('/').pop() ?? '')
-      : value instanceof File
-        ? value.name
-        : '';
 
   return (
     <FormItem>
@@ -74,13 +46,7 @@ const AdditionalFileUpload = ({
 
         <div className="absolute inset-0 flex items-center px-6 w-full h-full bg-blue-light rounded-[15px]">
           <span className="mr-[291px] text-md truncate text-black-smoky-">
-            {fileUrl ? (
-              <a href={fileUrl} target="_blank" rel="noopener noreferrer">
-                {fileName}
-              </a>
-            ) : (
-              ''
-            )}
+            {value ? value.name : ''}
           </span>
         </div>
 

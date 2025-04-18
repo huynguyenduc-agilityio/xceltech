@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Page
 import AdminSignIn from '..';
+import { MESSAGES } from '@/constants';
 
 let renderResult: RenderResult;
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const mockHandleLoginUser = jest.fn().mockResolvedValue({
     role: 'admin',
   },
 });
+const mockUseLogin = jest.fn();
 
 const Wrapper = ({ children }: { children: ReactNode }) => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
@@ -28,15 +30,17 @@ const Wrapper = ({ children }: { children: ReactNode }) => (
 
 jest.mock('@/hooks', () => ({
   ...jest.requireActual('@/hooks'),
-  useLogin: () => ({
-    handleLoginUser: mockHandleLoginUser,
-    isLoginLoading: false,
-    isLoginError: false,
-  }),
+  useLogin: () => mockUseLogin(),
 }));
 
 describe('AdminSignIn', () => {
   beforeEach(() => {
+    mockUseLogin.mockReturnValue({
+      handleLoginUser: mockHandleLoginUser,
+      isLoginLoading: false,
+      isLoginError: false,
+    });
+
     renderResult = render(
       <BrowserRouter>
         <Wrapper>
@@ -91,5 +95,23 @@ describe('AdminSignIn', () => {
 
       expect(getByText('Password is required!')).toBeInTheDocument();
     });
+  });
+
+  it('should show error message when authentication fails', async () => {
+    mockUseLogin.mockReturnValue({
+      handleLoginUser: jest.fn().mockRejectedValue(new Error('Failed')),
+      isLoginLoading: false,
+      isLoginError: true,
+    });
+
+    const { getByText } = render(
+      <BrowserRouter>
+        <Wrapper>
+          <AdminSignIn />
+        </Wrapper>
+      </BrowserRouter>,
+    );
+
+    expect(getByText(MESSAGES.AUTHENTICATION.LOGIN_FAILED)).toBeInTheDocument();
   });
 });

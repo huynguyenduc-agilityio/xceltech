@@ -1,8 +1,11 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+// Constants
+import { MESSAGES } from '@/constants';
+
 // Types
-import { IEmployeeContactInfo, IInfoUser } from '@/types';
+import { ToastStatus, IInfoUser } from '@/types';
 
 // Components
 import {
@@ -17,6 +20,9 @@ import {
   TextField,
 } from '@/components';
 
+// Hooks
+import { useToast, useUpdateInfoUser } from '@/hooks';
+
 // Utils
 import { ContactFormValues, contactSchema } from '@/utils/schemas/employee';
 
@@ -25,6 +31,9 @@ export interface IContactForm {
 }
 
 const ContactForm = ({ initialValues }: IContactForm) => {
+  const { toast } = useToast();
+  const { handleUpdateInfoUser, isUpdateInfoLoading } = useUpdateInfoUser();
+
   const {
     phone = '',
     email = '',
@@ -46,11 +55,45 @@ const ContactForm = ({ initialValues }: IContactForm) => {
     defaultValues,
   });
 
-  const { control, handleSubmit } = form;
+  const {
+    control,
+    handleSubmit,
+    reset,
+    getValues,
+    formState: { isValid, isDirty, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: IEmployeeContactInfo) => {
-    console.log('Form Data:', data);
+  const onSubmit = async (data: ContactFormValues) => {
+    const payload: Partial<IInfoUser> = {
+      phone: data.phone,
+      email: data.email,
+      contact: {
+        phoneNum2: data.phoneNum2,
+        cityOfResidence: data.cityOfResidence,
+        residentialAddress: data.residentialAddress,
+      },
+    };
+
+    try {
+      await handleUpdateInfoUser(payload);
+
+      toast({
+        status: ToastStatus.Success,
+        title: MESSAGES.COMMON.UPDATE_SUCCESS('Contact'),
+      });
+
+      reset(initialValues);
+    } catch {
+      toast({
+        status: ToastStatus.Error,
+        title: MESSAGES.COMMON.UPDATE_FAILED('Contact'),
+      });
+
+      reset(getValues());
+    }
   };
+
+  const disableSubmit = !isDirty || !isValid || isSubmitting;
 
   return (
     <Form {...form}>
@@ -143,7 +186,12 @@ const ContactForm = ({ initialValues }: IContactForm) => {
           )}
         />
         <div className="w-full h-[70px]">
-          <Button type="submit" className="w-[364px] bg-green-primary">
+          <Button
+            type="submit"
+            className="w-[364px] bg-green-primary"
+            disabled={disableSubmit}
+            isLoading={isUpdateInfoLoading}
+          >
             Update
           </Button>
         </div>

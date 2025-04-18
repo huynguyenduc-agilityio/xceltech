@@ -16,7 +16,7 @@ export const RELIEF_OFFICER_OPTIONS = [
 
 export const JOB_CATEGORY_OPTIONS = [
   { value: 'Full Time', label: 'Full Time' },
-  { value: 'Part Time', label: 'Part time' },
+  { value: 'Part Time', label: 'Part Time' },
 ];
 
 export const RELATIONSHIP_OPTIONS = [

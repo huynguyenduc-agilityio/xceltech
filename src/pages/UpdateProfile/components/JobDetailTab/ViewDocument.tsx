@@ -1,14 +1,8 @@
-// Components
 import { Button } from '@/components';
-
-// Types
-import { Documents } from '@/types';
-
-// Icons
 import { PdfIcon } from '@/icons';
 
 interface ViewDocumentsProps {
-  files?: Documents[];
+  files?: { name: string }[];
   onBackJob: () => void;
 }
 
@@ -28,18 +22,15 @@ const ViewDocument = ({ files = [], onBackJob }: ViewDocumentsProps) => {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-5 text-black-default">
             {files.map((doc) => (
-              <a
-                key={doc.documentFile}
-                href={doc.documentFile}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center w-full justify-center p-7 bg-blue-light rounded-lg hover:brightness-95 transition"
+              <div
+                key={doc.name}
+                className="flex flex-col items-center w-full justify-center p-7 bg-blue-light rounded-lg"
               >
                 <PdfIcon />
                 <p className="text-base text-center mt-5 truncate w-full overflow-hidden text-ellipsis whitespace-nowrap">
-                  {doc.documentFile.split('/').pop()}
+                  {doc.name}
                 </p>
-              </a>
+              </div>
             ))}
           </div>
           <div className="mt-14 text-center">

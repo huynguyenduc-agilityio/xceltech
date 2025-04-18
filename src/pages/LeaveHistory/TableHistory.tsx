@@ -34,15 +34,16 @@ import {
 
 // Hooks
 import {
-  toast,
   useGetLeaves,
   usePagination,
+  useToast,
   useUpdateStatusLeaveRequest,
 } from '@/hooks';
 
 const TableHistory = () => {
   const [filters, setFilters] = useState<FilterCriteria>();
   const [leaveData, setLeaveData] = useState<LeaveHistoryResponse>();
+  const { toast } = useToast();
 
   const {
     currentPage,

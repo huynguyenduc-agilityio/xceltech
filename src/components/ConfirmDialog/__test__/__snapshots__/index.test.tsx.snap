@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConfirmDialog components should match snapshot 1`] = `<DocumentFragment />`;
+exports[`ConfirmDialog should render snapshot successfully 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;

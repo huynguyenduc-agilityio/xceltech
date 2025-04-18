@@ -1,7 +1,7 @@
-import { render, RenderResult, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactNode } from 'react';
+import userEvent from '@testing-library/user-event';
+import { render, RenderResult, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Pages
 import LeaveHistory from '..';
@@ -9,30 +9,21 @@ import LeaveHistory from '..';
 // Mocks
 import { mockDataSource } from '@/__mocks__';
 
+// Constants
+import { MESSAGES } from '@/constants';
+
 let renderResult: RenderResult;
 const queryClient = new QueryClient();
-const mockLeaves = { results: mockDataSource, metaData: { totalCount: 1 } };
+
+const mockUseGetLeaves = jest.fn();
+const mockUsePagination = jest.fn();
+const mockUseUpdateStatusLeaveRequest = jest.fn();
 
 jest.mock('@/hooks', () => ({
   ...jest.requireActual('@/hooks'),
-  useGetLeaves: () => ({
-    leaves: mockLeaves,
-    isLeavesLoading: false,
-  }),
-
-  usePagination: () => ({
-    currentPage: 1,
-    pageSize: 10,
-    handleChangeLimit: jest.fn(),
-    handleChangePage: jest.fn(),
-    isDisableNext: false,
-    isDisablePrev: false,
-  }),
-
-  useUpdateStatusLeaveRequest: () => ({
-    isLoading: false,
-    handleUpdateStatus: jest.fn(),
-  }),
+  useGetLeaves: () => mockUseGetLeaves(),
+  usePagination: () => mockUsePagination(),
+  useUpdateStatusLeaveRequest: () => mockUseUpdateStatusLeaveRequest(),
 }));
 
 const Wrapper = ({ children }: { children: ReactNode }) => (
@@ -41,6 +32,28 @@ const Wrapper = ({ children }: { children: ReactNode }) => (
 
 describe('LeaveHistory', () => {
   beforeEach(() => {
+    mockUseGetLeaves.mockReturnValue({
+      leaves: {
+        results: mockDataSource,
+        metaData: { totalCount: mockDataSource.length },
+      },
+      isLeavesLoading: false,
+    });
+
+    mockUsePagination.mockReturnValue({
+      currentPage: 1,
+      pageSize: 10,
+      handleChangeLimit: jest.fn(),
+      handleChangePage: jest.fn(),
+      isDisableNext: false,
+      isDisablePrev: false,
+    });
+
+    mockUseUpdateStatusLeaveRequest.mockReturnValue({
+      isLoading: false,
+      handleUpdateStatus: jest.fn(),
+    });
+
     renderResult = render(
       <Wrapper>
         <LeaveHistory />
@@ -93,5 +106,32 @@ describe('LeaveHistory', () => {
     });
 
     expect(container).toBeInTheDocument();
+  });
+
+  it('should render empty state when there is no data', () => {
+    mockUseGetLeaves.mockReturnValue({
+      leaves: {
+        results: [],
+        metaData: { totalCount: 0 },
+      },
+      isLeavesLoading: false,
+    });
+
+    mockUsePagination.mockReturnValue({
+      currentPage: null,
+      pageSize: null,
+      handleChangeLimit: jest.fn(),
+      handleChangePage: jest.fn(),
+      isDisableNext: false,
+      isDisablePrev: false,
+    });
+
+    const { getByText } = render(
+      <Wrapper>
+        <LeaveHistory />
+      </Wrapper>,
+    );
+
+    expect(getByText(MESSAGES.COMMON.EMPTY_DATA)).toBeInTheDocument();
   });
 });

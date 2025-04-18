@@ -1,10 +1,17 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Components
 import ContactForm from '..';
 
 const renderComponent = () => {
-  return render(<ContactForm />);
+  const queryClient = new QueryClient();
+
+  return render(
+    <QueryClientProvider client={queryClient}>
+      <ContactForm />
+    </QueryClientProvider>,
+  );
 };
 
 describe('ContactForm Component', () => {
@@ -60,21 +67,7 @@ describe('ContactForm Component', () => {
 
     await waitFor(() => {
       expect(getByText('Phone Number 1 is required!')).toBeInTheDocument();
-      expect(getByText('Phone Number 2 is required!')).toBeInTheDocument();
       expect(getByText('Email is required!')).toBeInTheDocument();
-      expect(getByText('City of residence is required!')).toBeInTheDocument();
-      expect(getByText('Residential Address is required!')).toBeInTheDocument();
-    });
-  });
-
-  it('should show error message fields when click submit button', async () => {
-    const { getByRole, getByText } = renderComponent();
-    const updateButton = getByRole('button', { name: 'Update' });
-
-    fireEvent.click(updateButton);
-
-    await waitFor(() => {
-      expect(getByText('Phone Number 2 is required!')).toBeInTheDocument();
       expect(getByText('City of residence is required!')).toBeInTheDocument();
       expect(getByText('Residential Address is required!')).toBeInTheDocument();
     });

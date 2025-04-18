@@ -16,7 +16,8 @@ export interface IInfoUser
 }
 
 export interface IEmployeeJobInfo {
-  name: string;
+  id?: string;
+  name?: string;
   description?: string;
   department: string;
   lineManagement?: string;

@@ -8,7 +8,7 @@ interface ReasonRecallProps {
 
 const ReasonRecall = ({ reason, onClose }: ReasonRecallProps) => {
   return (
-    <div className="max-w-[500px] flex flex-col items-center gap-5">
+    <div className="max-w-[500px] min-w-96 flex flex-col items-center gap-5">
       <div className="flex flex-col items-center gap-3">
         <PhoneIcon />
         <h2 className="text-3xl font-bold text-black-soft">Leave Recall</h2>

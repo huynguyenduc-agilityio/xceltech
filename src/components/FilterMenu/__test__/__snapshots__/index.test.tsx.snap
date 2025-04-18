@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterMenu component should match snapshot 1`] = `
-<DocumentFragment>
+<div>
   <button
     aria-controls="radix-:r0:"
     aria-expanded="false"
@@ -38,5 +38,5 @@ exports[`FilterMenu component should match snapshot 1`] = `
       </defs>
     </svg>
   </button>
-</DocumentFragment>
+</div>
 `;

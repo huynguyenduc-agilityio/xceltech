@@ -10,3 +10,4 @@ export * from './leave';
 export * from './filter';
 export * from './error';
 export * from './notification';
+export * from './profile';

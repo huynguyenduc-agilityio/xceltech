@@ -7,7 +7,7 @@ import { Button } from '../common';
 import ActionsDropdown from '../ActionsDropdown';
 
 // Hooks
-import { toast, useExportLeaveFile } from '@/hooks';
+import { useExportLeaveFile, useToast } from '@/hooks';
 
 // Types
 import { ErrorType, ToastStatus } from '@/types';
@@ -17,6 +17,7 @@ import { FileType, MESSAGES } from '@/constants';
 
 const DropdownExport = () => {
   const { handleExportLeaveFile, isLoading } = useExportLeaveFile();
+  const { toast } = useToast();
 
   const handleClickExportFile = useCallback(
     async (type: FileType) => {
@@ -34,7 +35,7 @@ const DropdownExport = () => {
         });
       }
     },
-    [handleExportLeaveFile],
+    [handleExportLeaveFile, toast],
   );
 
   return (

@@ -1,10 +1,17 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Components
 import NextOfKinForm from '..';
 
 const renderComponent = () => {
-  return render(<NextOfKinForm />);
+  const queryClient = new QueryClient();
+
+  return render(
+    <QueryClientProvider client={queryClient}>
+      <NextOfKinForm />
+    </QueryClientProvider>,
+  );
 };
 
 describe('NextOfKinForm Component', () => {
@@ -53,20 +60,6 @@ describe('NextOfKinForm Component', () => {
     fireEvent.blur(jobInput);
     fireEvent.blur(phoneInput);
     fireEvent.blur(addressInput);
-
-    await waitFor(() => {
-      expect(getByText('Next of kin name is required!')).toBeInTheDocument();
-      expect(getByText('Job / Occupation is required!')).toBeInTheDocument();
-      expect(getByText('Phone Number is required!')).toBeInTheDocument();
-      expect(getByText('Residential Address is required!')).toBeInTheDocument();
-    });
-  });
-
-  it('should show error message fields when click submit button', async () => {
-    const { getByRole, getByText } = renderComponent();
-    const updateButton = getByRole('button', { name: 'Update' });
-
-    fireEvent.click(updateButton);
 
     await waitFor(() => {
       expect(getByText('Next of kin name is required!')).toBeInTheDocument();

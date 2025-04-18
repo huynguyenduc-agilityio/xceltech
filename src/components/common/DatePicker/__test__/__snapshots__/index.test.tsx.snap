@@ -10,7 +10,7 @@ exports[`DatePicker component should match snapshot 1`] = `
     data-state="closed"
     type="button"
   >
-    April 15th, 2025
+    March 18th, 2025
     <svg
       class="w-[23px] h-[27px]"
       fill="none"

@@ -52,9 +52,10 @@ export const jobsQueryKeys = {
   list: () => [{ ...jobsQueryKeys.lists()[0] }] as const,
 };
 
-export const documentsQueryKeys = {
-  all: [{ scope: 'documents' }] as const,
-
-  list: (userId?: string) =>
-    [{ ...documentsQueryKeys.all[0], userId, entity: 'list' }] as const,
+export const educationsQueryKeys = {
+  all: [{ scope: 'educations' }] as const,
+  list: () => [{ ...educationsQueryKeys.all[0], entity: 'list' }] as const,
+  details: () => [{ ...educationsQueryKeys.all[0], entity: 'detail' }] as const,
+  detail: (id?: string) =>
+    [{ ...educationsQueryKeys.details()[0], id }] as const,
 };

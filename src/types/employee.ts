@@ -26,19 +26,14 @@ export interface IEmployeeEducationInfo {
   department: string;
   course: string;
   location: string;
-  startDate?: Date;
-  endDate?: Date;
+  startDate?: Date | string;
+  endDate?: Date | string;
   description: string;
+  type?: EducationType;
+  user?: string;
 }
 
-export type DocumentsForm = {
-  offerLetter?: File | null;
-  birthCertificate?: File | null;
-  guarantorForm?: File | null;
-  degreeCertificate?: File | null;
-};
-
-export type Documents = {
-  documentFile: string;
-  documentType: string;
-};
+export enum EducationType {
+  Academic = 'Academic',
+  Professional = 'Professional',
+}

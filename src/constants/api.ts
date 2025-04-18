@@ -7,9 +7,9 @@ const END_POINTS = {
   USER_DETAIL: '/accounts/me/',
   LEAVES: '/leave-applications/',
   USER_LEAVES: '/leave-applications/users',
-  DOCUMENT_PROFILE: '/documents/',
   NOTIFICATIONS: '/notifications/',
   JOB: '/jobs/',
+  EDUCATIONS: '/educations/',
 };
 
 export { END_POINTS };

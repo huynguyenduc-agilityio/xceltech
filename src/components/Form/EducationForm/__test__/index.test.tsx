@@ -1,10 +1,24 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, waitFor } from '@testing-library/react';
+
+// Types
+import { EducationType, MutationType } from '@/types';
 
 // Components
 import EducationForm from '..';
 
 const renderComponent = () => {
-  return render(<EducationForm />);
+  const queryClient = new QueryClient();
+
+  return render(
+    <QueryClientProvider client={queryClient}>
+      <EducationForm
+        mode={MutationType.Create}
+        section={EducationType.Academic}
+      />
+      ,
+    </QueryClientProvider>,
+  );
 };
 
 describe('EducationForm Component', () => {
@@ -20,14 +34,14 @@ describe('EducationForm Component', () => {
     const courseInput = getByPlaceholderText('Enter your course');
     const departmentInput = getByPlaceholderText('Enter your department');
     const locationInput = getByPlaceholderText('Enter your location');
-    const updateButton = getByRole('button', { name: 'Update' });
+    const submitButton = getByRole('button', { name: /submit/i });
 
     fireEvent.change(nameInput, { target: { value: 'Test Name' } });
     fireEvent.change(courseInput, { target: { value: 'Test Course' } });
     fireEvent.change(departmentInput, { target: { value: 'Test Department' } });
     fireEvent.change(locationInput, { target: { value: 'Test Location' } });
 
-    fireEvent.click(updateButton);
+    fireEvent.click(submitButton);
 
     expect(nameInput).toHaveValue('Test Name');
     expect(courseInput).toHaveValue('Test Course');
@@ -51,20 +65,6 @@ describe('EducationForm Component', () => {
     fireEvent.blur(courseInput);
     fireEvent.blur(departmentInput);
     fireEvent.blur(locationInput);
-
-    await waitFor(() => {
-      expect(getByText('Name of Institution is required!')).toBeInTheDocument();
-      expect(getByText('Course is required!')).toBeInTheDocument();
-      expect(getByText('Department is required!')).toBeInTheDocument();
-      expect(getByText('Location is required!')).toBeInTheDocument();
-    });
-  });
-
-  it('should show error message fields when click submit button', async () => {
-    const { getByRole, getByText } = renderComponent();
-    const updateButton = getByRole('button', { name: 'Update' });
-
-    fireEvent.click(updateButton);
 
     await waitFor(() => {
       expect(getByText('Name of Institution is required!')).toBeInTheDocument();

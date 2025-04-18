@@ -16,7 +16,7 @@ type ITabsProps = {
 const SideMenu = ({ tabs }: ITabsProps) => {
   return (
     <Tabs defaultValue={tabs[0].label} className="w-full h-full flex">
-      <TabsList className="flex flex-col justify-start gap-5 min-w-[540px] h-full pl-4 pr-9 pt-9 pb-5 mr-[51px] rounded-[15px] bg-white">
+      <TabsList className="flex flex-col justify-start gap-5 w-[50%] h-full px-6 pt-9 pb-5 mr-[51px] rounded-[15px] bg-white">
         {tabs.map(({ label, content }) => (
           <TabsTrigger
             key={label}
@@ -33,7 +33,7 @@ const SideMenu = ({ tabs }: ITabsProps) => {
       </TabsList>
       <div className="w-full bg-white rounded-[15px]">
         {tabs.map(({ label, content }) => (
-          <TabsContent key={label} value={label}>
+          <TabsContent key={label} value={label} className="h-full">
             {content}
           </TabsContent>
         ))}

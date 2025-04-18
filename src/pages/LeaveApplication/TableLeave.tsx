@@ -34,6 +34,7 @@ import { useUser } from '@/stores';
 import {
   ActionsDropdown,
   Button,
+  DropdownExport,
   FilterMenu,
   Pagination,
   Status,
@@ -184,10 +185,7 @@ const TableLeave = () => {
             options={{ type: Object.values(LeaveType) }}
             onApply={handleApplyFilters}
           />
-          <Button className="w-[195px] h-14 bg-green-primary hover:bg-green-primary/90 shadow-md">
-            Export
-            <CircleDownIcon className="ml-4" />
-          </Button>
+          <DropdownExport />
         </div>
       </div>
 

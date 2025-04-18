@@ -20,12 +20,16 @@ const ImageUpload = ({ imageUrl = '', onImageChange }: TImageUploadProps) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
       if (file) {
+        if (preview?.startsWith('blob:')) {
+          URL.revokeObjectURL(preview);
+        }
+
         const previewURL = URL.createObjectURL(file);
         setPreview(previewURL);
         onImageChange(file);
       }
     },
-    [onImageChange],
+    [onImageChange, preview],
   );
 
   useEffect(() => {

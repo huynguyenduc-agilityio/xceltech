@@ -269,7 +269,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
               <option
                 value="Part Time"
               >
-                Part time
+                Part Time
               </option>
             </select>
           </div>
@@ -553,7 +553,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             <option
               value="Part Time"
             >
-              Part time
+              Part Time
             </option>
           </select>
         </div>

@@ -12,8 +12,6 @@ export const updateProfileSchema = z.object({
   lastName: requiredString('Last name'),
   avatar: z.union([z.instanceof(File), z.string(), z.null()]).optional(),
   department: requiredString('Department'),
-  jobTitle: requiredString('Job Title'),
+  jobId: requiredString('Job Title'),
   jobCategory: requiredString('Job Category'),
 });
-
-export type UpdateProfileFormValues = z.infer<typeof updateProfileSchema>;

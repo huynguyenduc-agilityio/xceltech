@@ -1,10 +1,7 @@
 import { lazy, Suspense, useState } from 'react';
 
 // Types
-import { IEmployeeJobInfo, ProfileTab } from '@/types';
-
-// Hooks
-import { useGetDocuments } from '@/hooks';
+import { ProfileTab } from '@/types';
 
 // Components
 import { Button, Fallback } from '@/components';
@@ -12,13 +9,7 @@ import { Button, Fallback } from '@/components';
 const UploadDocuments = lazy(() => import('./UploadDocument'));
 const ViewDocument = lazy(() => import('./ViewDocument'));
 
-type JobDetailTabProps = {
-  jobInfo?: Partial<IEmployeeJobInfo>;
-};
-
-const JobDetailTab = ({ jobInfo }: JobDetailTabProps) => {
-  const { documents, isDocumentsLoading } = useGetDocuments();
-
+const JobDetailTab = () => {
   const [activeTab, setActiveTab] = useState<ProfileTab>(ProfileTab.Job);
 
   const handleChangeJob = () => {
@@ -34,27 +25,34 @@ const JobDetailTab = ({ jobInfo }: JobDetailTabProps) => {
           <div className="text-center mt-6">
             <div className="flex flex-col text-xl">
               <span className="mb-6">Job Role</span>
-              <span className="text-2xl font-bold">{jobInfo?.name}</span>
+              <span className="text-2xl font-bold">UI UX Designer</span>
             </div>
-            <div className="flex items-start justify-center gap-36 mt-[52px] text-lg">
+            <div className="flex items-center justify-center gap-36 mt-[52px] text-lg">
               <div className="flex flex-col">
                 <span className="mb-6">Department</span>
-                <span className="text-2xl font-bold">
-                  {jobInfo?.department}
-                </span>
+                <span className="text-2xl font-bold">Design & Marketing</span>
               </div>
               <div className="flex flex-col">
                 <span className="mb-6">Line Manager</span>
-                <span className="text-2xl font-bold">
-                  {jobInfo?.lineManagement}
-                </span>
+                <span className="text-2xl font-bold">Mr Domino’s Pizza</span>
               </div>
             </div>
           </div>
 
           <div className="mt-14 text-center">
             <span className="text-xl font-bold mb-4">Job Description</span>
-            <p className="text-md text-left">{jobInfo?.description}</p>
+            <p className="text-md text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto at
+              enim vitae libero explicabo consequatur animi deleniti id tenetur
+              accusantium obcaecati, rem qui quo ex nihil tempora magni dolor
+              dicta.
+            </p>
+            <p className="text-md text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto at
+              enim vitae libero explicabo consequatur animi deleniti id tenetur
+              accusantium obcaecati, rem qui quo ex nihil tempora magni dolor
+              dicta.
+            </p>
           </div>
 
           <div className="flex gap-4 mt-8">
@@ -77,15 +75,15 @@ const JobDetailTab = ({ jobInfo }: JobDetailTabProps) => {
         </>
       )}
 
-      {activeTab === ProfileTab.Upload && !isDocumentsLoading && (
+      {activeTab === ProfileTab.Upload && (
         <Suspense fallback={<Fallback />}>
-          <UploadDocuments files={documents} onBackJob={handleChangeJob} />
+          <UploadDocuments onBackJob={handleChangeJob} />
         </Suspense>
       )}
 
-      {activeTab === ProfileTab.View && !isDocumentsLoading && (
+      {activeTab === ProfileTab.View && (
         <Suspense fallback={<Fallback />}>
-          <ViewDocument files={documents} onBackJob={handleChangeJob} />
+          <ViewDocument onBackJob={handleChangeJob} />
         </Suspense>
       )}
     </div>

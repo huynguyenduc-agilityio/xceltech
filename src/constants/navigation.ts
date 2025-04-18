@@ -9,11 +9,12 @@ import {
   UserGroupIcon,
   UserIcon,
 } from '@/icons';
+import { USER_PAGE } from './router';
 
 export const USER_NAVIGATION_CONFIG = [
   {
     title: 'Dashboard',
-    path: '',
+    path: USER_PAGE.DASHBOARD,
   },
   {
     title: 'Requests',

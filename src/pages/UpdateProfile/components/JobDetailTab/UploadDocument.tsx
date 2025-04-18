@@ -1,13 +1,7 @@
 import { useForm } from 'react-hook-form';
 
-// Constants
-import { MESSAGES } from '@/constants';
-
 // Types
-import { Documents, ToastStatus, UploadFileForm } from '@/types';
-
-// Hooks
-import { useToast, useUploadDocument } from '@/hooks';
+import { UploadFileForm } from '@/types';
 
 // Components
 import {
@@ -20,62 +14,32 @@ import {
   FormField,
 } from '@/components';
 
-const fileFields = [
-  { name: 'documents[offerLetter]', label: 'Upload Offer Letter' },
-  { name: 'documents[birthCertificate]', label: 'Upload Birth Certificate' },
-  { name: 'documents[guarantorForm]', label: 'Upload Guarantor’s Form' },
-  { name: 'documents[degreeCertificate]', label: 'Upload Degree Certificate' },
-];
-
 interface UploadDocumentsProps {
-  files?: Documents[];
   onBackJob: () => void;
 }
 
-const UploadDocuments = ({ files = [], onBackJob }: UploadDocumentsProps) => {
-  const { toast } = useToast();
-  const { handleUploadDocument, isUploadDocumentLoading } = useUploadDocument();
+const fileFields = [
+  { name: 'offerLetter', label: 'Upload Offer Letter' },
+  { name: 'birthCertificate', label: 'Upload Birth Certificate' },
+  { name: 'guarantorsForm', label: 'Upload Guarantor’s Form' },
+  { name: 'degreeCertificate', label: 'Upload Degree Certificate' },
+];
 
-  const defaultValues: UploadFileForm = Object.fromEntries(
-    fileFields.map(({ name }) => {
-      const matchedFile = files.find((f) => f.documentType === name);
-
-      return [name, matchedFile?.documentFile ?? null];
-    }),
-  ) as UploadFileForm;
-
+const UploadDocuments = ({ onBackJob }: UploadDocumentsProps) => {
   const form = useForm<UploadFileForm>({
-    defaultValues,
+    defaultValues: Object.fromEntries(
+      fileFields.map(({ name }) => [name, null]),
+    ),
   });
 
   const {
     control,
     handleSubmit,
-    formState: { errors, isValid, isDirty, isSubmitting },
+    formState: { errors },
   } = form;
 
-  const onSubmit = async (data: UploadFileForm) => {
-    const filteredData = Object.fromEntries(
-      Object.entries(data).filter(([, value]) => value !== null),
-    ) as UploadFileForm;
-
-    try {
-      await handleUploadDocument(filteredData);
-
-      toast({
-        title: MESSAGES.COMMON.UPLOAD_SUCCESS('Document'),
-        status: ToastStatus.Success,
-      });
-
-      if (isUploadDocumentLoading) {
-        onBackJob();
-      }
-    } catch {
-      toast({
-        title: MESSAGES.COMMON.UPLOAD_FAILED('Document'),
-        status: ToastStatus.Error,
-      });
-    }
+  const onSubmit = (data: UploadFileForm) => {
+    console.log('Uploaded Documents:', data);
   };
 
   return (
@@ -115,12 +79,7 @@ const UploadDocuments = ({ files = [], onBackJob }: UploadDocumentsProps) => {
           ))}
         </div>
         <div className="mt-[176px] text-center">
-          <Button
-            type="submit"
-            className="w-[347px] text-xl rounded-lg"
-            isLoading={isUploadDocumentLoading}
-            disabled={!isDirty || !isValid || isSubmitting}
-          >
+          <Button type="submit" className="w-[347px] text-xl rounded-lg">
             Upload Documents
           </Button>
         </div>

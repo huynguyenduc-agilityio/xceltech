@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Types
-import { IEmployeeNextOfKinInfo } from '@/types';
+import { IEmployeeNextOfKinInfo, ToastStatus } from '@/types';
 
 // Components
 import {
@@ -19,16 +19,22 @@ import {
 } from '@/components';
 
 // Constants
-import { RELATIONSHIP_OPTIONS } from '@/constants';
+import { MESSAGES, RELATIONSHIP_OPTIONS } from '@/constants';
 
 // Utils
 import { NextOfKinFormValues, nextOfKinSchema } from '@/utils/schemas/employee';
+
+// Hooks
+import { useToast, useUpdateInfoUser } from '@/hooks';
 
 export interface INextOfKinForm {
   initialValues?: Partial<IEmployeeNextOfKinInfo>;
 }
 
 const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
+  const { toast } = useToast();
+  const { handleUpdateInfoUser, isUpdateInfoLoading } = useUpdateInfoUser();
+
   const {
     name = '',
     job = '',
@@ -51,11 +57,39 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
     defaultValues,
   });
 
-  const { control, handleSubmit } = form;
+  const {
+    control,
+    handleSubmit,
+    reset,
+    getValues,
+    formState: { isValid, isDirty, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: IEmployeeNextOfKinInfo) => {
-    console.log('Form Data:', data);
+  const onSubmit = async (data: IEmployeeNextOfKinInfo) => {
+    const payload = {
+      kin: data,
+    };
+
+    try {
+      await handleUpdateInfoUser(payload);
+
+      toast({
+        status: ToastStatus.Success,
+        title: MESSAGES.COMMON.UPDATE_SUCCESS('Contact'),
+      });
+
+      reset(initialValues);
+    } catch {
+      toast({
+        status: ToastStatus.Error,
+        title: MESSAGES.COMMON.UPDATE_FAILED('Contact'),
+      });
+
+      reset(getValues());
+    }
   };
+
+  const disableSubmit = !isDirty || !isValid || isSubmitting;
 
   return (
     <Form {...form}>
@@ -151,7 +185,12 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
             )}
           />
           <div className="w-full h-[70px]">
-            <Button type="submit" className="w-[364px] bg-green-primary">
+            <Button
+              type="submit"
+              className="w-[364px] bg-green-primary"
+              disabled={disableSubmit}
+              isLoading={isUpdateInfoLoading}
+            >
               Update
             </Button>
           </div>

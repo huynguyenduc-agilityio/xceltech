@@ -69,6 +69,7 @@ const TableRecall = () => {
   const renderActionButton = (data: TDataSource) => {
     return (
       <Button
+        title="Recall"
         className={cn(
           'w-[154px] h-14 shadow-md bg-red-primary rounded-md',
           data.recallReason && 'w-14 rounded-full bg-transparent',

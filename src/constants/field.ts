@@ -1,4 +1,4 @@
-import { IEmployeeEducationInfo, IEmployeeGuarantor } from '@/types';
+import { IEmployeeGuarantor } from '@/types';
 
 type FormFieldKey<T> = Exclude<keyof T, 'id'>;
 
@@ -7,46 +7,6 @@ type BaseField<T> = {
   label: string;
   placeholder: string;
 };
-
-export const BASE_EDUCATION_FIELD: BaseField<
-  Pick<IEmployeeEducationInfo, 'name' | 'course' | 'startDate'>
->[] = [
-  {
-    name: 'name',
-    label: 'Name of Institution',
-    placeholder: 'Enter your institution name',
-  },
-  {
-    name: 'course',
-    label: 'Course',
-    placeholder: 'Enter your course',
-  },
-  {
-    name: 'startDate',
-    label: 'Start Date',
-    placeholder: 'Enter your start date',
-  },
-];
-
-export const ADDITIONAL_EDUCATION_FIELD: BaseField<
-  Pick<IEmployeeEducationInfo, 'department' | 'location' | 'endDate'>
->[] = [
-  {
-    name: 'department',
-    label: 'Department',
-    placeholder: 'Enter your department',
-  },
-  {
-    name: 'location',
-    label: 'Location',
-    placeholder: 'Enter your location',
-  },
-  {
-    name: 'endDate',
-    label: 'End Date',
-    placeholder: 'Enter your end date',
-  },
-];
 
 export const BASE_GUARANTOR_FIELD: BaseField<IEmployeeGuarantor>[] = [
   {

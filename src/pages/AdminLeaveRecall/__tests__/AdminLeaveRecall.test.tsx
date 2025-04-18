@@ -9,7 +9,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import userEvent from '@testing-library/user-event';
 
 // Mocks
-import { mockDataSource } from '@/__mocks__';
+import { mockDataRecall } from '@/__mocks__';
 
 // Constants
 import { MESSAGES } from '@/constants';
@@ -39,8 +39,8 @@ describe('AdminLeaveRecall', () => {
   beforeEach(() => {
     mockUseGetLeaves.mockReturnValue({
       leaves: {
-        results: mockDataSource,
-        metaData: { totalCount: mockDataSource.length },
+        results: mockDataRecall,
+        metaData: { totalCount: mockDataRecall.length },
       },
       isLeavesLoading: false,
     });
@@ -96,7 +96,7 @@ describe('AdminLeaveRecall', () => {
     });
 
     waitFor(async () => {
-      const recallButton = getByRole('button', { name: 'Recall' });
+      const recallButton = getByRole('button', { name: 'Initiate Recall' });
       await userEvent.click(recallButton);
     });
 
@@ -128,5 +128,21 @@ describe('AdminLeaveRecall', () => {
     );
 
     expect(getByText(MESSAGES.COMMON.EMPTY_DATA)).toBeInTheDocument();
+  });
+
+  it('should render RecallReason modal successfully', async () => {
+    const { getAllByRole, getByRole, getByText } = renderResult;
+
+    const actionButton = getAllByRole('button', { name: 'Recall' })[2];
+    await userEvent.click(actionButton);
+
+    waitFor(() => {
+      expect(getByText("Don't care")).toBeInTheDocument();
+      const closeButton = getByRole('button', { name: 'Close' });
+
+      fireEvent.click(closeButton);
+
+      expect(getByText("Don't care")).not.toBeInTheDocument();
+    });
   });
 });

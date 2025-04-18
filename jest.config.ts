@@ -41,7 +41,7 @@ const config: Config = {
     '<rootDir>/jest.setup.ts',
     '/.storybook/',
   ],
-  // collectCoverage: true,
+  collectCoverage: true,
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 
