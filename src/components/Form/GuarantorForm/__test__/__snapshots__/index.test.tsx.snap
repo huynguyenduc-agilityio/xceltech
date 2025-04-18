@@ -94,6 +94,7 @@ exports[`GuarantorForm Component should match snapshot 1`] = `
           >
             <button
               class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              disabled=""
               type="submit"
             >
               Update
@@ -193,6 +194,7 @@ exports[`GuarantorForm Component should match snapshot 1`] = `
         >
           <button
             class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            disabled=""
             type="submit"
           >
             Update

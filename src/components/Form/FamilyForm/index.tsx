@@ -1,8 +1,16 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+// Constants
+import { MESSAGES } from '@/constants';
+
 // Types
-import { IEmployeeFamilyInfo } from '@/types';
+import {
+  IEmployeeFamilyInfo,
+  MutationType,
+  ToastStatus,
+  FamilyFormValues,
+} from '@/types';
 
 // Components
 import {
@@ -18,14 +26,23 @@ import {
 } from '@/components';
 
 // Utils
-import { FamilyFormValues, familySchema } from '@/utils/schemas/employee';
+import { familySchema } from '@/utils/schemas/employee';
+
+// Hooks
+import { useFamilyMutation, useToast } from '@/hooks';
 
 export interface IFamilyForm {
+  mode: MutationType;
   initialValues?: Partial<IEmployeeFamilyInfo>;
   onBack?: () => void;
 }
 
-const FamilyForm = ({ initialValues, onBack }: IFamilyForm) => {
+const FamilyForm = ({ initialValues = {}, mode, onBack }: IFamilyForm) => {
+  const { toast } = useToast();
+  const { handleFamilyMutation, isFamilyMutationLoading } = useFamilyMutation({
+    type: mode,
+  });
+
   const {
     fullName = '',
     relationship = '',
@@ -46,16 +63,51 @@ const FamilyForm = ({ initialValues, onBack }: IFamilyForm) => {
     defaultValues,
   });
 
-  const { control, handleSubmit } = form;
+  const {
+    control,
+    handleSubmit,
+    reset,
+    getValues,
+    formState: { isValid, isDirty, isSubmitting },
+  } = form;
 
-  const onSubmit = (data: IEmployeeFamilyInfo) => {
-    console.log('Form Data:', data);
-    onBack?.();
+  const isCreate = mode === MutationType.Create;
+
+  const onSubmit = async (data: IEmployeeFamilyInfo) => {
+    const payload = {
+      ...data,
+      ...(!isCreate && initialValues?.id ? { id: initialValues.id } : {}),
+    };
+
+    try {
+      await handleFamilyMutation(payload);
+
+      toast({
+        status: ToastStatus.Success,
+        title: isCreate
+          ? MESSAGES.COMMON.ADD_SUCCESS('Family')
+          : MESSAGES.COMMON.UPDATE_SUCCESS('Family'),
+      });
+      onBack?.();
+
+      reset(initialValues);
+    } catch {
+      toast({
+        status: ToastStatus.Error,
+        title: isCreate
+          ? MESSAGES.COMMON.ADD_FAILED('Family')
+          : MESSAGES.COMMON.UPDATE_FAILED('Family'),
+      });
+
+      reset(getValues());
+    }
   };
+
+  const disableSubmit = !isDirty || !isValid || isSubmitting;
 
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full text-black-default space-y-10">
           <FormField
             control={control}
@@ -124,8 +176,13 @@ const FamilyForm = ({ initialValues, onBack }: IFamilyForm) => {
             )}
           />
           <div className="w-full h-[70px]">
-            <Button type="submit" className="w-[364px] bg-green-primary">
-              Update
+            <Button
+              type="submit"
+              className="w-[364px] bg-green-primary"
+              isLoading={isFamilyMutationLoading}
+              disabled={disableSubmit}
+            >
+              {isCreate ? 'Submit' : 'Update'}
             </Button>
           </div>
         </div>

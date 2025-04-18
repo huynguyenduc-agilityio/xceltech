@@ -12,13 +12,13 @@ import { useGetJobs } from '../useJob';
 
 const mockJobs: IEmployeeJobInfo[] = [
   {
-    id: '1',
+    id: '8k2N1KWS95Yu',
     name: 'Developer',
     department: '',
     jobCategory: '',
   },
   {
-    id: '2',
+    id: '1lH8Hv067Ajy',
     name: 'Designer',
     department: '',
     jobCategory: '',
@@ -45,8 +45,8 @@ describe('useGetJobs', () => {
     });
 
     expect(result.current.jobs).toEqual([
-      { id: '1', value: 'Developer', label: 'Developer' },
-      { id: '2', value: 'Designer', label: 'Designer' },
+      { id: '8k2N1KWS95Yu', value: '8k2N1KWS95Yu', label: 'Developer' },
+      { id: '1lH8Hv067Ajy', value: '1lH8Hv067Ajy', label: 'Designer' },
     ]);
     expect(result.current.isJobsLoading).toBe(false);
   });

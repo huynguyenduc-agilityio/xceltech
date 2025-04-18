@@ -15,7 +15,7 @@ const Status = ({ type = StatusLeave.Pending }: StatusProps) => {
   const statusClasses = {
     [StatusLeave.Pending]: 'bg-gray-500',
     [StatusLeave.Approved]: 'bg-green-primary',
-    [StatusLeave.Rejected]: 'bg-red-deep',
+    [StatusLeave.Rejected]: 'bg-red-600',
   };
 
   return (

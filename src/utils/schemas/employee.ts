@@ -25,8 +25,6 @@ export const contactSchema = z.object({
   residentialAddress: requiredString('Residential Address'),
 });
 
-export type ContactFormValues = z.infer<typeof contactSchema>;
-
 export const nextOfKinSchema = z.object({
   name: requiredString('Next of kin name'),
   job: requiredString('Job / Occupation'),
@@ -37,8 +35,6 @@ export const nextOfKinSchema = z.object({
   address: requiredString('Residential Address'),
 });
 
-export type NextOfKinFormValues = z.infer<typeof nextOfKinSchema>;
-
 export const guarantorSchema = z.object({
   name: requiredString('Guarantor name'),
   job: requiredString('Job Title / Occupation'),
@@ -46,8 +42,6 @@ export const guarantorSchema = z.object({
     message: MESSAGES.VALIDATE.FIELD_VALID('phone'),
   }),
 });
-
-export type GuarantorFormValues = z.infer<typeof guarantorSchema>;
 
 export const familySchema = z.object({
   fullName: requiredString('Full Name'),
@@ -58,17 +52,11 @@ export const familySchema = z.object({
   address: requiredString('Address'),
 });
 
-export type FamilyFormValues = z.infer<typeof familySchema>;
-
 export const financialSchema = z.object({
   bankName: requiredString('Bank Name'),
   accountName: requiredString('Account Name'),
-  accountNumber: z
-    .number()
-    .min(1, MESSAGES.VALIDATE.FIELD_REQUIRED('Account No')),
+  accountNo: z.number().min(1, MESSAGES.VALIDATE.FIELD_REQUIRED('Account No')),
 });
-
-export type FinancialFormValues = z.infer<typeof financialSchema>;
 
 export const educationSchema = z.object({
   name: requiredString('Name of Institution'),
@@ -79,5 +67,3 @@ export const educationSchema = z.object({
   endDate: z.union([z.date(), z.string(), z.undefined()]).optional(),
   description: z.string(),
 });
-
-export type EducationFormValues = z.infer<typeof educationSchema>;

@@ -25,7 +25,7 @@ const NotificationBadge = ({
       <div className="absolute -top-0 -right-2">
         <div
           className={cn(
-            'flex h-5 w-5 items-center justify-center rounded-full border border-white bg-red-primary text-white text-xs font-bold shadow-md',
+            'flex h-5 w-5 items-center justify-center rounded-full border border-white bg-red-600 text-white text-xs font-bold shadow-md',
             !icon && className,
           )}
         >
@@ -36,7 +36,7 @@ const NotificationBadge = ({
   ) : (
     <div
       className={cn(
-        'flex h-5 w-5 items-center justify-center rounded-full border border-white bg-red-primary text-white text-xs font-bold shadow-md',
+        'flex h-5 w-5 items-center justify-center rounded-full border border-white bg-red-600 text-white text-xs font-bold shadow-md',
         !icon && className,
       )}
     >

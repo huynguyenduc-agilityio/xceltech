@@ -28,6 +28,8 @@ const BREADCRUMB_ITEMS = [
 const UpdateProfile = () => {
   const { userInfo } = useGetInfoUser();
 
+  const { name, department, lineManagement, description } = userInfo?.job || {};
+
   const TAB_LIST = [
     {
       label: 'Personal Details',
@@ -59,7 +61,16 @@ const UpdateProfile = () => {
     },
     {
       label: 'Job Details',
-      content: <JobDetailTab />,
+      content: (
+        <JobDetailTab
+          jobInfo={{
+            name,
+            department,
+            lineManagement,
+            description,
+          }}
+        />
+      ),
     },
     {
       label: 'Financial Details',

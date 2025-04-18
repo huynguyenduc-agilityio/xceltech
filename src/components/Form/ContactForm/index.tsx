@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { MESSAGES } from '@/constants';
 
 // Types
-import { ToastStatus, IInfoUser } from '@/types';
+import { ToastStatus, IInfoUser, ContactFormValues } from '@/types';
 
 // Components
 import {
@@ -24,7 +24,7 @@ import {
 import { useToast, useUpdateInfoUser } from '@/hooks';
 
 // Utils
-import { ContactFormValues, contactSchema } from '@/utils/schemas/employee';
+import { contactSchema } from '@/utils/schemas/employee';
 
 export interface IContactForm {
   initialValues?: Partial<IInfoUser>;

@@ -1,35 +1,68 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { PlusIcon } from 'lucide-react';
 
-// Types
-import { IEmployeeFinancialInfo } from '@/types';
+// Constants
+import { MESSAGES } from '@/constants';
 
-// Mocks
-import { dummyFinancial } from '@/__mocks__';
+// Types
+import { IEmployeeFinancialInfo, MutationType, ToastStatus } from '@/types';
+
+// Hooks
+import {
+  useConfirm,
+  useDeleteFinancial,
+  useGetFinancials,
+  useToast,
+} from '@/hooks';
 
 // Components
-import { Button, FinancialForm, InfoCardWrapper } from '@/components';
+import { Button, Fallback, FinancialForm, InfoCardWrapper } from '@/components';
 
 type FormState = null | {
-  mode: 'add' | 'edit';
+  mode: MutationType;
   data?: IEmployeeFinancialInfo;
 };
 
 const FinancialTab = () => {
+  const { toast } = useToast();
+  const confirm = useConfirm();
   const [formState, setFormState] = useState<FormState>(null);
+  const { financials, isFinancialsLoading } = useGetFinancials();
+  const { handleDeleteFinancial, isDeleteLoading } = useDeleteFinancial();
 
   const handleAdd = () => {
-    setFormState({ mode: 'add' });
+    setFormState({ mode: MutationType.Create });
   };
 
   const handleEdit = (data: IEmployeeFinancialInfo) => {
-    setFormState({ mode: 'edit', data });
+    setFormState({ mode: MutationType.Edit, data });
   };
+
+  const handleDelete = useCallback(
+    async (id?: string) => {
+      try {
+        await handleDeleteFinancial(id!);
+
+        toast({
+          status: ToastStatus.Success,
+          title: MESSAGES.COMMON.DELETE_SUCCESS('Financial'),
+        });
+      } catch (error) {
+        toast({
+          status: ToastStatus.Error,
+          title: MESSAGES.COMMON.DELETE_FAILED('Financial'),
+        });
+      }
+    },
+    [handleDeleteFinancial, toast],
+  );
 
   const handleBack = () => setFormState(null);
 
   if (formState) {
     const { mode, data } = formState;
+    const isUpdate = mode === MutationType.Edit;
+
     return (
       <div className="w-full px-8 py-16">
         <h2 className="text-lg font-bold mb-6">
@@ -41,10 +74,11 @@ const FinancialTab = () => {
           >
             Financial Details
           </Button>{' '}
-          / {mode === 'edit' ? 'Edit Financial' : 'View Financial Details'}
+          / {isUpdate ? 'Edit Financial' : 'View Financial Details'}
         </h2>
         <FinancialForm
-          initialValues={mode === 'edit' ? data : {}}
+          mode={mode}
+          initialValues={isUpdate ? data : {}}
           onBack={handleBack}
         />
       </div>
@@ -52,36 +86,52 @@ const FinancialTab = () => {
   }
 
   return (
-    <div className="w-full px-8 py-16 grid gap-9">
-      <h3 className="text-lg font-bold ml-4">Financial Details</h3>
-      <div className="grid gap-3 mt-6">
-        {dummyFinancial.map((data) => {
-          const { id, accountName, accountNumber, bankName } = data;
+    <div className="relative w-full h-full px-8 py-16">
+      {(isFinancialsLoading || isDeleteLoading) && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-white/60">
+          <Fallback />
+        </div>
+      )}
 
-          return (
-            <InfoCardWrapper
-              key={id}
-              onEdit={() => handleEdit(data)}
-              titleContent={
-                <div className="space-y-2">
-                  <p className="text-xl font-bold">
-                    {accountNumber} | {accountName}
-                  </p>
-                  <span className="text-xl">
-                    <span className="font-bold">{bankName}</span> | Savings
-                    Account
-                  </span>
-                </div>
-              }
-            />
-          );
-        })}
-        <Button
-          className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
-          onClick={handleAdd}
-        >
-          <PlusIcon width={26} height={26} className="text-black-muted" />
-        </Button>
+      <div className="grid gap-9">
+        <h3 className="text-lg font-bold ml-4">Financial Details</h3>
+        <div className="grid gap-3 mt-6">
+          {financials?.map((data) => {
+            const { id, accountName, accountNo, bankName } = data;
+
+            const onDelete = () =>
+              confirm({
+                title: `Delete Financial`,
+                confirmMessage: `Are you sure you want to delete this ${bankName}?`,
+                onConfirm: () => handleDelete(id),
+              });
+
+            return (
+              <InfoCardWrapper
+                key={id}
+                onEdit={() => handleEdit(data)}
+                onDelete={onDelete}
+                titleContent={
+                  <div className="space-y-2">
+                    <p className="text-xl font-bold">
+                      {accountNo} | {accountName}
+                    </p>
+                    <span className="text-xl">
+                      <span className="font-bold">{bankName}</span> | Savings
+                      Account
+                    </span>
+                  </div>
+                }
+              />
+            );
+          })}
+          <Button
+            className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
+            onClick={handleAdd}
+          >
+            <PlusIcon width={26} height={26} className="text-black-muted" />
+          </Button>
+        </div>
       </div>
     </div>
   );

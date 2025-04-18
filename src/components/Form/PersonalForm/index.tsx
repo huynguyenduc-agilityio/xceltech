@@ -37,7 +37,6 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
   const { toast } = useToast();
   const { jobs = [], isJobsLoading } = useGetJobs();
   const { handleUpdateInfoUser, isUpdateInfoLoading } = useUpdateInfoUser();
-  console.log(initialValues);
 
   const {
     firstName = '',
@@ -52,7 +51,7 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
     avatar,
     department: job?.department || '',
     jobCategory: job?.jobCategory || '',
-    jobId: job?.id,
+    id: job?.id,
   };
 
   const form = useForm<UpdateProfileFormValues>({
@@ -72,16 +71,16 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
   } = form;
 
   const onSubmit = async (data: UpdateProfileFormValues) => {
-    const selectedJob = jobs.find((job) => job.id === data.jobId);
+    const selectedJob = jobs.find((job) => job.id === data.id);
 
     const payload: Partial<IInfoUser> = {
       firstName: data.firstName,
       lastName: data.lastName,
       job: {
+        ...(selectedJob && { id: selectedJob.id }),
         department: data.department || '',
         jobCategory: data.jobCategory || '',
       },
-      ...(selectedJob && { jobId: selectedJob.id }),
       ...(data.avatar &&
         data.avatar instanceof File &&
         typeof data.avatar !== 'string' && { avatar: data.avatar }),
@@ -175,7 +174,7 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
           />
           <FormField
             control={control}
-            name="jobId"
+            name="id"
             render={({ field }) => (
               <FormItem>
                 <Label className="text-md">Job Title</Label>

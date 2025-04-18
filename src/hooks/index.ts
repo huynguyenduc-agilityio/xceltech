@@ -7,4 +7,8 @@ export * from './useAccount';
 export * from './usePagination';
 export * from './useNotification';
 export * from './useJob';
+export * from './useDocument';
 export * from './useEducation';
+export * from './useGuarantor';
+export * from './useFamily';
+export * from './useFinancial';

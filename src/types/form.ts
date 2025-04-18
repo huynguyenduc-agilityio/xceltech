@@ -1,5 +1,5 @@
 export interface UploadFileForm {
-  [key: string]: File | null;
+  [key: string]: File | string | null;
 }
 
 export type TField<T> = {

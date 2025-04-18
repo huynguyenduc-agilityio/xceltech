@@ -26,6 +26,16 @@ export const mockDataSource = [
     type: 'Maternity',
     reason: 'Child Care',
   },
+  {
+    id: '4',
+    employeeName: 'Jane Smith',
+    durations: '2 days',
+    startDate: '2024-04-20',
+    endDate: '2024-04-21',
+    type: 'Casual',
+    reason: 'Personal',
+    status: 'Pending',
+  },
 ];
 
 export const mockDataRecallNotifications = [

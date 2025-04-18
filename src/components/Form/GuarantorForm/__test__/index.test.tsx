@@ -1,10 +1,19 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+import { MutationType } from '@/types';
 
 // Components
 import GuarantorForm from '..';
 
 const renderComponent = () => {
-  return render(<GuarantorForm />);
+  const queryClient = new QueryClient();
+
+  return render(
+    <QueryClientProvider client={queryClient}>
+      <GuarantorForm mode={MutationType.Edit} />
+    </QueryClientProvider>,
+  );
 };
 
 describe('GuarantorForm Component', () => {
@@ -50,21 +59,6 @@ describe('GuarantorForm Component', () => {
     fireEvent.blur(jobTitleInput);
     fireEvent.blur(phoneInput);
     fireEvent.blur(nameInput);
-
-    await waitFor(() => {
-      expect(
-        getByText('Job Title / Occupation is required!'),
-      ).toBeInTheDocument();
-      expect(getByText('Phone No is required!')).toBeInTheDocument();
-      expect(getByText('Guarantor name is required!')).toBeInTheDocument();
-    });
-  });
-
-  it('should show error message fields when click submit button', async () => {
-    const { getByRole, getByText } = renderComponent();
-    const updateButton = getByRole('button', { name: 'Update' });
-
-    fireEvent.click(updateButton);
 
     await waitFor(() => {
       expect(

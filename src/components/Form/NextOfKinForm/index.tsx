@@ -2,7 +2,11 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Types
-import { IEmployeeNextOfKinInfo, ToastStatus } from '@/types';
+import {
+  IEmployeeNextOfKinInfo,
+  ToastStatus,
+  NextOfKinFormValues,
+} from '@/types';
 
 // Components
 import {
@@ -22,7 +26,7 @@ import {
 import { MESSAGES, RELATIONSHIP_OPTIONS } from '@/constants';
 
 // Utils
-import { NextOfKinFormValues, nextOfKinSchema } from '@/utils/schemas/employee';
+import { nextOfKinSchema } from '@/utils/schemas/employee';
 
 // Hooks
 import { useToast, useUpdateInfoUser } from '@/hooks';

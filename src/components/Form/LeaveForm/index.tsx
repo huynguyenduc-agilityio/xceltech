@@ -62,7 +62,6 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
   const { leaveAccounts, isLeaveAccountsLoading } = useGetLeaveAccounts(userId);
 
   const { handleLeaveMutation, isLeaveMutationLoading } = useLeaveMutation({
-    userId,
     type: leaveIdParam ? MutationType.Edit : MutationType.Create,
   });
 

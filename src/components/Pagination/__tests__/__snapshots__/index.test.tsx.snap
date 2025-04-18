@@ -27,6 +27,7 @@ exports[`Pagination render should match snapshot 1`] = `
           aria-autocomplete="none"
           aria-controls="radix-:r0:"
           aria-expanded="false"
+          aria-label="Select"
           class="font-productsans flex h-full items-center justify-between px-3 py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-white border border-gray-dark rounded-md w-fit"
           data-state="closed"
           dir="ltr"

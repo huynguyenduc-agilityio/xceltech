@@ -65,12 +65,12 @@ export const dummyFamily: IEmployeeFamilyInfo[] = [
 // Dummy data Financial
 export const dummyFinancial: IEmployeeFinancialInfo[] = [
   {
-    accountNumber: 100013455451,
+    accountNo: 100013455451,
     accountName: 'John Doe',
     bankName: 'CBE',
   },
   {
-    accountNumber: 100055563301,
+    accountNo: 100055563301,
     accountName: 'Doe Johnn',
     bankName: 'Awash Bank',
   },

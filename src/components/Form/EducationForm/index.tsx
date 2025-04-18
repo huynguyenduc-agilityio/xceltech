@@ -10,13 +10,14 @@ import {
   IEmployeeEducationInfo,
   MutationType,
   ToastStatus,
+  EducationFormValues,
 } from '@/types';
 
 // Hooks
 import { useEducationMutation, useToast } from '@/hooks';
 
 // Utils
-import { EducationFormValues, educationSchema, formatDate } from '@/utils';
+import { educationSchema, formatDate } from '@/utils';
 
 // Components
 import {

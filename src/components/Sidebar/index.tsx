@@ -39,14 +39,14 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
 
           <NavCollapse />
           <div className="mt-12 mb-3 px-4">
-            <button className="flex items-center justify-center py-4 bg-red-primary rounded-[14px] w-full">
+            <button className="flex items-center justify-center py-4 bg-red-600 rounded-[14px] w-full">
               <LogoutIcon className="mr-3" />
               <p className="text-md font-bold">Logout</p>
             </button>
           </div>
         </div>
 
-        <img src="/public/assets/images/footerNav.webp" />
+        <img src="/public/assets/images/footerNav.webp" alt="Footer Nav" />
       </nav>
 
       {/* Body Content */}

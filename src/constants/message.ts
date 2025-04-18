@@ -6,6 +6,8 @@ const COMMON = {
   UPDATE_FAILED: (fieldName: string) => `Failed to update ${fieldName}.`,
   DELETE_SUCCESS: (fieldName: string) => `${fieldName} deleted successfully!`,
   DELETE_FAILED: (fieldName: string) => `Failed to delete ${fieldName}.`,
+  UPLOAD_SUCCESS: (fieldName: string) => `${fieldName} uploaded successfully.`,
+  UPLOAD_FAILED: (fieldName: string) => `Failed to uploaded ${fieldName}.`,
   EMPTY_DATA: 'No data found',
   LEAVE_REQUEST_SUCCESS: 'Leave request successfully!',
   LEAVE_REQUEST_FAILED: 'Leave request failed!',
@@ -13,6 +15,8 @@ const COMMON = {
   RECALL_REQUEST_FAILED: 'Recall request failed!',
   EXPORT_SUCCESS: 'File exported successfully!',
   EXPORT_FAILED: 'Failed to export file.',
+  DOWNLOAD_SUCCESS: 'File download successfully!',
+  DOWNLOAD_FAILED: 'Failed to download file.',
 };
 
 const VALIDATE = {

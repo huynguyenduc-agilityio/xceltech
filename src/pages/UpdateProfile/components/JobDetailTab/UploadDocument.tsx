@@ -1,7 +1,16 @@
 import { useForm } from 'react-hook-form';
 
+// Constants
+import { MESSAGES } from '@/constants';
+
 // Types
-import { UploadFileForm } from '@/types';
+import { Documents, MutationType, ToastStatus, UploadFileForm } from '@/types';
+
+// Hooks
+import { useToast, useDocumentMutation } from '@/hooks';
+
+// Utils
+import { snakeToCamel } from '@/utils';
 
 // Components
 import {
@@ -14,32 +23,72 @@ import {
   FormField,
 } from '@/components';
 
-interface UploadDocumentsProps {
-  onBackJob: () => void;
-}
-
 const fileFields = [
   { name: 'offerLetter', label: 'Upload Offer Letter' },
   { name: 'birthCertificate', label: 'Upload Birth Certificate' },
-  { name: 'guarantorsForm', label: 'Upload Guarantor’s Form' },
+  { name: 'guarantorForm', label: 'Upload Guarantor’s Form' },
   { name: 'degreeCertificate', label: 'Upload Degree Certificate' },
 ];
 
-const UploadDocuments = ({ onBackJob }: UploadDocumentsProps) => {
+interface UploadDocumentsProps {
+  files?: Documents[];
+  onBackJob: () => void;
+}
+
+const UploadDocuments = ({ files = [], onBackJob }: UploadDocumentsProps) => {
+  const { toast } = useToast();
+  const { handleDocumentMutation, isDocumentMutationLoading } =
+    useDocumentMutation({
+      type: files.length ? MutationType.Edit : MutationType.Create,
+    });
+
+  const defaultValues: UploadFileForm = files.reduce(
+    (acc, { documentType, documentFile }) => {
+      const camelKey = snakeToCamel(documentType);
+
+      acc[camelKey] = documentFile;
+
+      return acc;
+    },
+    {} as UploadFileForm,
+  );
+
   const form = useForm<UploadFileForm>({
-    defaultValues: Object.fromEntries(
-      fileFields.map(({ name }) => [name, null]),
-    ),
+    defaultValues,
   });
 
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid, isDirty, isSubmitting },
   } = form;
 
-  const onSubmit = (data: UploadFileForm) => {
-    console.log('Uploaded Documents:', data);
+  const onSubmit = async (data: UploadFileForm) => {
+    const filteredData = Object.fromEntries(
+      Object.entries(data).filter(([, value]) => value instanceof File),
+    ) as UploadFileForm;
+
+    const payload = {
+      documents: {
+        ...filteredData,
+      },
+    };
+
+    try {
+      await handleDocumentMutation(payload);
+
+      toast({
+        title: MESSAGES.COMMON.UPLOAD_SUCCESS('Document'),
+        status: ToastStatus.Success,
+      });
+
+      onBackJob();
+    } catch {
+      toast({
+        title: MESSAGES.COMMON.UPLOAD_FAILED('Document'),
+        status: ToastStatus.Error,
+      });
+    }
   };
 
   return (
@@ -79,7 +128,12 @@ const UploadDocuments = ({ onBackJob }: UploadDocumentsProps) => {
           ))}
         </div>
         <div className="mt-[176px] text-center">
-          <Button type="submit" className="w-[347px] text-xl rounded-lg">
+          <Button
+            type="submit"
+            className="w-[347px] text-xl rounded-lg"
+            isLoading={isDocumentMutationLoading}
+            disabled={!isDirty || !isValid || isSubmitting}
+          >
             Upload Documents
           </Button>
         </div>

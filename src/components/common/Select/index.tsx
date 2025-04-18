@@ -174,6 +174,7 @@ const Select = React.forwardRef<
       {...props}
     >
       <SelectTrigger
+        aria-label="Select"
         ref={ref}
         className={cn(className, isError && 'bg-red-100')}
       >

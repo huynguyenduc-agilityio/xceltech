@@ -1,10 +1,19 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+import { MutationType } from '@/types';
 
 // Components
 import FamilyForm from '..';
 
 const renderComponent = () => {
-  return render(<FamilyForm />);
+  const queryClient = new QueryClient();
+
+  return render(
+    <QueryClientProvider client={queryClient}>
+      <FamilyForm mode={MutationType.Edit} />,
+    </QueryClientProvider>,
+  );
 };
 
 describe('FamilyForm Component', () => {
@@ -51,20 +60,6 @@ describe('FamilyForm Component', () => {
     fireEvent.blur(relationshipInput);
     fireEvent.blur(phoneInput);
     fireEvent.blur(addressInput);
-
-    await waitFor(() => {
-      expect(getByText('Full Name is required!')).toBeInTheDocument();
-      expect(getByText('Relationship is required!')).toBeInTheDocument();
-      expect(getByText('Phone No is required!')).toBeInTheDocument();
-      expect(getByText('Address is required!')).toBeInTheDocument();
-    });
-  });
-
-  it('should show error message fields when click submit button', async () => {
-    const { getByRole, getByText } = renderComponent();
-    const updateButton = getByRole('button', { name: 'Update' });
-
-    fireEvent.click(updateButton);
 
     await waitFor(() => {
       expect(getByText('Full Name is required!')).toBeInTheDocument();

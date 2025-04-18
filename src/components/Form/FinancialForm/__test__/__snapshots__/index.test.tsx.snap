@@ -5,9 +5,7 @@ exports[`FinancialForm Component should match snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <form
-        class=""
-      >
+      <form>
         <div
           class="h-[741px] flex flex-col justify-between"
         >
@@ -63,7 +61,7 @@ exports[`FinancialForm Component should match snapshot 1`] = `
                     class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
                     data-testid="input-element"
                     id=":r1:-form-item"
-                    name="accountNumber"
+                    name="accountNo"
                     placeholder="Enter your account number"
                     type="number"
                     value="0"
@@ -103,6 +101,7 @@ exports[`FinancialForm Component should match snapshot 1`] = `
           >
             <button
               class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[587px] bg-green-primary rounded-lg"
+              disabled=""
               type="submit"
             >
               Update Account Details
@@ -113,9 +112,7 @@ exports[`FinancialForm Component should match snapshot 1`] = `
     </div>
   </body>,
   "container": <div>
-    <form
-      class=""
-    >
+    <form>
       <div
         class="h-[741px] flex flex-col justify-between"
       >
@@ -171,7 +168,7 @@ exports[`FinancialForm Component should match snapshot 1`] = `
                   class="font-productsans flex w-full py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[68px] px-12 rounded-[15px]"
                   data-testid="input-element"
                   id=":r1:-form-item"
-                  name="accountNumber"
+                  name="accountNo"
                   placeholder="Enter your account number"
                   type="number"
                   value="0"
@@ -211,6 +208,7 @@ exports[`FinancialForm Component should match snapshot 1`] = `
         >
           <button
             class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[587px] bg-green-primary rounded-lg"
+            disabled=""
             type="submit"
           >
             Update Account Details

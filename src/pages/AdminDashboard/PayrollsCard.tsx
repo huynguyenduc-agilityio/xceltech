@@ -26,6 +26,7 @@ const PayrollsCard = () => (
           <div className="flex flex-col items-center gap-1 w-[169px]">
             <p className="text-xs font-bold">{status}</p>
             <Progress
+              aria-label="Progress"
               value={value}
               className={cn(
                 'h-4 rounded-2xl bg-secondary',

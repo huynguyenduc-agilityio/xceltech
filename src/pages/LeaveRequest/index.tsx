@@ -26,7 +26,7 @@ const LeaveRequest = () => {
   const BREADCRUMB_ITEMS = [
     { label: 'Dashboard', href: USER_PAGE.DASHBOARD },
     { label: 'Apply for Leave', href: USER_PAGE.LEAVE },
-    { label: `${LEAVE_TYPE_FORM[leaveType.toUpperCase()]} Leave` },
+    { label: `${LEAVE_TYPE_FORM[leaveType?.toUpperCase()]} Leave` },
   ];
 
   return (

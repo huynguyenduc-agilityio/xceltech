@@ -26,6 +26,7 @@ const CandidatesCard = () => (
           <div className="flex flex-col items-center gap-1">
             <p className="text-xs font-bold">View</p>
             <Button
+              aria-label="View"
               size="sm"
               variant="secondary"
               className="w-9 h-9 rounded-[20px] text-base bg-green-primary"

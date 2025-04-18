@@ -27,6 +27,7 @@ const EmployeesCard = () => (
             <div className="flex flex-col items-center gap-1">
               <p className="text-xs font-bold">View</p>
               <Button
+                aria-label="View"
                 size="sm"
                 variant="secondary"
                 className="w-9 h-8 rounded-md text-base bg-green-primary"
@@ -37,6 +38,7 @@ const EmployeesCard = () => (
             <div className="flex flex-col items-center gap-1">
               <p className="text-xs font-bold">Download</p>
               <Button
+                aria-label="Download"
                 size="sm"
                 variant="secondary"
                 className="w-9 h-8 rounded-md text-base bg-primary"

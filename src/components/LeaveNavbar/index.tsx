@@ -22,7 +22,7 @@ const LeaveNavbar = () => {
             <Button
               className={cn(
                 'w-full h-[70px]',
-                isFocused && 'bg-secondary text-white',
+                isFocused && 'bg-secondary text-black',
               )}
               key={path}
             >

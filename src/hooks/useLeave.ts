@@ -20,16 +20,12 @@ import {
 } from '@/services';
 
 interface UseLeaveMutationProps {
-  userId: string;
   type: MutationType;
 }
 
-export const useGetLeaves = (
-  { page, limit, filters }: Omit<TQueryKey, 'userId'>,
-  userId?: string,
-) => {
+export const useGetLeaves = ({ page, limit, filters }: TQueryKey) => {
   const { data: leaves, isFetching: isLeavesLoading } = useQuery({
-    queryKey: leavesQueryKeys.list({ userId, page, limit, filters }),
+    queryKey: leavesQueryKeys.list({ page, limit, filters }),
     queryFn: getLeaveHistory,
   });
 
@@ -38,7 +34,7 @@ export const useGetLeaves = (
 
 export const useGetLeave = (id?: string) => {
   const { data: leave, isFetching: isLeaveLoading } = useQuery({
-    queryKey: [...leavesQueryKeys.detail(id, '')] as const,
+    queryKey: [...leavesQueryKeys.detail(id)] as const,
     queryFn: getLeave,
     enabled: !!id,
   });
@@ -46,7 +42,7 @@ export const useGetLeave = (id?: string) => {
   return { leave, isLeaveLoading };
 };
 
-export const useLeaveMutation = ({ userId, type }: UseLeaveMutationProps) => {
+export const useLeaveMutation = ({ type }: UseLeaveMutationProps) => {
   const queryClient = useQueryClient();
 
   const mutationFn = type === MutationType.Create ? addLeave : editLeave;
@@ -58,14 +54,11 @@ export const useLeaveMutation = ({ userId, type }: UseLeaveMutationProps) => {
     mutationFn,
     onSuccess: (response) => {
       queryClient.invalidateQueries({
-        queryKey: leavesQueryKeys.lists(userId),
+        queryKey: leavesQueryKeys.lists(),
       });
 
       if (response.id) {
-        queryClient.setQueryData(
-          leavesQueryKeys.detail(response.id, userId),
-          response,
-        );
+        queryClient.setQueryData(leavesQueryKeys.detail(response.id), response);
       }
     },
   });
@@ -73,7 +66,7 @@ export const useLeaveMutation = ({ userId, type }: UseLeaveMutationProps) => {
   return { handleLeaveMutation, isLeaveMutationLoading };
 };
 
-export const useDeleteUserLeave = (userId: string) => {
+export const useDeleteUserLeave = () => {
   const queryClient = useQueryClient();
 
   const { mutateAsync: handleDeleteUserLeave, isPending: isDeleteUserLoading } =
@@ -81,7 +74,7 @@ export const useDeleteUserLeave = (userId: string) => {
       mutationFn: (id: string) => deleteLeaveHistory(id),
       onSuccess: () =>
         queryClient.invalidateQueries({
-          queryKey: leavesQueryKeys.lists(userId),
+          queryKey: leavesQueryKeys.lists(),
         }),
     });
 

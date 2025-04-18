@@ -1,39 +1,51 @@
-export interface IEmployeeFamilyInfo {
-  id?: string;
-  fullName: string;
-  relationship: string;
-  phone: string;
-  address: string;
-}
+import { z } from 'zod';
 
-export interface IEmployeeGuarantor {
-  id?: string;
-  name: string;
-  job: string;
-  phone: string;
-}
+import {
+  educationSchema,
+  familySchema,
+  financialSchema,
+  guarantorSchema,
+} from '@/utils';
 
-export interface IEmployeeFinancialInfo {
-  id?: string;
-  bankName: string;
-  accountNumber: number;
-  accountName: string;
-}
+export type EducationFormValues = z.infer<typeof educationSchema>;
+export type GuarantorFormValues = z.infer<typeof guarantorSchema>;
+export type FamilyFormValues = z.infer<typeof familySchema>;
+export type FinancialFormValues = z.infer<typeof financialSchema>;
 
-export interface IEmployeeEducationInfo {
+export interface IEmployeeEducationInfo extends EducationFormValues {
   id?: string;
-  name: string;
-  department: string;
-  course: string;
-  location: string;
   startDate?: Date | string;
   endDate?: Date | string;
-  description: string;
   type?: EducationType;
-  user?: string;
 }
 
 export enum EducationType {
   Academic = 'Academic',
   Professional = 'Professional',
 }
+
+export interface IEmployeeGuarantor extends GuarantorFormValues {
+  id?: string;
+}
+
+export interface IEmployeeFamilyInfo extends FamilyFormValues {
+  id?: string;
+}
+
+export interface IEmployeeFinancialInfo extends FinancialFormValues {
+  id?: string;
+}
+
+export type DocumentsForm = {
+  documents: {
+    offerLetter?: File | null;
+    birthCertificate?: File | null;
+    guarantorForm?: File | null;
+    degreeCertificate?: File | null;
+  };
+};
+
+export type Documents = {
+  documentFile: string;
+  documentType: string;
+};

@@ -14,3 +14,6 @@ export const processTableData = (
         : data[column.key as keyof typeof data],
     })),
   }));
+
+export const snakeToCamel = (str: string): string =>
+  str.replace(/_([a-z])/g, (_, char) => char.toUpperCase());

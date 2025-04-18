@@ -27,9 +27,6 @@ import {
 // Icons
 import { CircleDownIcon } from '@/icons';
 
-// Stores
-import { useUser } from '@/stores';
-
 // Components
 import {
   ActionsDropdown,
@@ -57,18 +54,12 @@ const TableLeave = () => {
     isDisablePrev,
   } = usePagination(leaveData?.metaData.totalCount);
 
-  const authUser = useUser();
-  const { id: userId = '' } = authUser?.user || {};
-
-  const { leaves, isLeavesLoading } = useGetLeaves(
-    {
-      page: currentPage,
-      limit: pageSize,
-      filters: { ...filters },
-    },
-    userId,
-  );
-  const { handleDeleteUserLeave } = useDeleteUserLeave(userId);
+  const { leaves, isLeavesLoading } = useGetLeaves({
+    page: currentPage,
+    limit: pageSize,
+    filters: { ...filters },
+  });
+  const { handleDeleteUserLeave } = useDeleteUserLeave();
 
   const handleApplyFilters = (filters: FilterCriteria) => {
     setFilters(filters);

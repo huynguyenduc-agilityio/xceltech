@@ -1,35 +1,68 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { PlusIcon } from 'lucide-react';
 
-// Types
-import { IEmployeeGuarantor } from '@/types';
+// Constants
+import { MESSAGES } from '@/constants';
 
-// Mocks
-import { dummyGuarantors } from '@/__mocks__';
+// Types
+import { IEmployeeGuarantor, MutationType, ToastStatus } from '@/types';
+
+// Hooks
+import {
+  useConfirm,
+  useDeleteGuarantor,
+  useGetGuarantors,
+  useToast,
+} from '@/hooks';
 
 // Components
-import { Button, GuarantorForm, InfoCardWrapper } from '@/components';
+import { Button, Fallback, GuarantorForm, InfoCardWrapper } from '@/components';
 
 type FormState = null | {
-  mode: 'add' | 'edit';
+  mode: MutationType;
   data?: IEmployeeGuarantor;
 };
 
 const GuarantorTab = () => {
+  const { toast } = useToast();
+  const confirm = useConfirm();
   const [formState, setFormState] = useState<FormState>(null);
+  const { guarantors, isGuarantorsLoading } = useGetGuarantors();
+  const { handleDeleteGuarantor, isDeleteLoading } = useDeleteGuarantor();
 
   const handleAdd = () => {
-    setFormState({ mode: 'add' });
+    setFormState({ mode: MutationType.Create });
   };
 
   const handleEdit = (data: IEmployeeGuarantor) => {
-    setFormState({ mode: 'edit', data });
+    setFormState({ mode: MutationType.Edit, data });
   };
+
+  const handleDelete = useCallback(
+    async (id?: string) => {
+      try {
+        await handleDeleteGuarantor(id!);
+
+        toast({
+          status: ToastStatus.Success,
+          title: MESSAGES.COMMON.DELETE_SUCCESS('Guarantor'),
+        });
+      } catch (error) {
+        toast({
+          status: ToastStatus.Error,
+          title: MESSAGES.COMMON.DELETE_FAILED('Guarantor'),
+        });
+      }
+    },
+    [handleDeleteGuarantor, toast],
+  );
 
   const handleBack = () => setFormState(null);
 
   if (formState) {
     const { mode, data } = formState;
+    const isUpdate = mode === MutationType.Edit;
+
     return (
       <div className="w-full px-8 py-16">
         <h2 className="text-lg font-bold mb-6">
@@ -41,10 +74,11 @@ const GuarantorTab = () => {
           >
             Guarantor Details
           </Button>{' '}
-          / {mode === 'edit' ? 'Edit Guarantor' : 'View Guarantor Details'}
+          / {isUpdate ? 'Edit Guarantor' : 'View Guarantor Details'}
         </h2>
         <GuarantorForm
-          initialValues={mode === 'edit' ? data : {}}
+          mode={mode}
+          initialValues={isUpdate ? data : {}}
           onBack={handleBack}
         />
       </div>
@@ -52,33 +86,49 @@ const GuarantorTab = () => {
   }
 
   return (
-    <div className="w-full px-8 py-16 grid gap-9">
-      <h3 className="text-lg font-bold ml-4">Guarantor Details</h3>
-      <div className="grid gap-3 mt-6">
-        {dummyGuarantors.map((guarantor) => {
-          const { id, name, job, phone } = guarantor;
+    <div className="relative w-full h-full px-8 py-16">
+      {(isGuarantorsLoading || isDeleteLoading) && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-white/60">
+          <Fallback />
+        </div>
+      )}
 
-          return (
-            <InfoCardWrapper
-              key={id}
-              onEdit={() => handleEdit(guarantor)}
-              titleContent={
-                <div className="grid gap-2">
-                  <h4 className="font-bold text-lg">{name}</h4>
-                  <p className="text-sm">
-                    {job} - {phone}
-                  </p>
-                </div>
-              }
-            />
-          );
-        })}
-        <Button
-          className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
-          onClick={handleAdd}
-        >
-          <PlusIcon width={26} height={26} className="text-black-muted" />
-        </Button>
+      <div className="grid gap-9">
+        <h3 className="text-lg font-bold ml-4">Guarantor Details</h3>
+        <div className="grid gap-3 mt-6">
+          {guarantors?.map((guarantor) => {
+            const { id, name, job, phone } = guarantor;
+
+            const onDelete = () =>
+              confirm({
+                title: `Delete Guarantor`,
+                confirmMessage: `Are you sure you want to delete this ${name}?`,
+                onConfirm: () => handleDelete(id),
+              });
+
+            return (
+              <InfoCardWrapper
+                key={id}
+                onEdit={() => handleEdit(guarantor)}
+                onDelete={onDelete}
+                titleContent={
+                  <div className="grid gap-2">
+                    <h4 className="font-bold text-lg">{name}</h4>
+                    <p className="text-sm">
+                      {job} - {phone}
+                    </p>
+                  </div>
+                }
+              />
+            );
+          })}
+          <Button
+            className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
+            onClick={handleAdd}
+          >
+            <PlusIcon width={26} height={26} className="text-black-muted" />
+          </Button>
+        </div>
       </div>
     </div>
   );
