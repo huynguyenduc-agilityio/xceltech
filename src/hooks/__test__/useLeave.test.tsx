@@ -45,7 +45,7 @@ describe('Leave Hooks', () => {
     (services.getLeaveHistory as jest.Mock).mockResolvedValue(mockLeaveList);
 
     const { result } = renderHook(
-      () => useGetLeaves({ page: 1, limit: 10, filters: {} }, 'user123'),
+      () => useGetLeaves({ page: 1, limit: 10, filters: {} }),
       {
         wrapper: createWrapper(),
       },
@@ -80,7 +80,7 @@ describe('Leave Hooks', () => {
     (services.addLeave as jest.Mock).mockResolvedValue(mockLeave);
 
     const { result } = renderHook(
-      () => useLeaveMutation({ userId: 'user123', type: MutationType.Create }),
+      () => useLeaveMutation({ type: MutationType.Create }),
       {
         wrapper: createWrapper(),
       },
@@ -97,7 +97,7 @@ describe('Leave Hooks', () => {
     });
 
     const { result } = renderHook(
-      () => useLeaveMutation({ userId: 'user123', type: MutationType.Edit }),
+      () => useLeaveMutation({ type: MutationType.Edit }),
       {
         wrapper: createWrapper(),
       },
@@ -115,7 +115,7 @@ describe('Leave Hooks', () => {
       success: true,
     });
 
-    const { result } = renderHook(() => useDeleteUserLeave('user123'), {
+    const { result } = renderHook(() => useDeleteUserLeave(), {
       wrapper: createWrapper(),
     });
 

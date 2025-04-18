@@ -47,7 +47,6 @@ describe('leaveService', () => {
         {
           page: 1,
           limit: 10,
-          userId: '123',
           entity: 'list',
           scope: 'leaves',
         },
@@ -75,7 +74,6 @@ describe('leaveService', () => {
           id: '123',
           entity: 'detail',
           scope: 'leaves',
-          userId: '123',
         },
       ],
       client: {} as unknown as QueryClient,
