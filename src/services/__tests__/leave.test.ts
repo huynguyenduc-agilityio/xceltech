@@ -99,7 +99,7 @@ describe('leaveService', () => {
 
   it('should edit leave', async () => {
     const mockLeave = { id: '321', reason: 'Updated Leave' };
-    mock.onPut(`${END_POINTS.LEAVES}321/`).reply(200, mockLeave);
+    mock.onPatch(`${END_POINTS.LEAVES}321/`).reply(200, mockLeave);
 
     const result = await editLeave({ id: '321', reason: 'Updated Leave' });
 

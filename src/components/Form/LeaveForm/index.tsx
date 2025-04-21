@@ -75,13 +75,11 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
     startDate = nextDate,
     endDate = nextDate,
     durations = 1,
-    documentPath: rawDocumentPath,
+    documentPath,
     resumptionDate = dayAfterNext,
     reason = '',
     reliefOfficer = '',
   } = initialValues ?? {};
-
-  const documentPath = rawDocumentPath ?? undefined;
 
   const defaultValues: LeaveRequestFormValues = {
     type,
@@ -224,6 +222,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
                     <Label className="flex flex-1">Start Date</Label>
                     <FormControl>
                       <DatePicker
+                        disabledRange={(date) => date < new Date()}
                         date={field.value}
                         onSelect={(date) => {
                           field.onChange(date);
@@ -249,6 +248,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
                     <Label className="flex flex-1">End Date</Label>
                     <FormControl>
                       <DatePicker
+                        disabledRange={(date) => date < new Date(startDate)}
                         date={field.value}
                         onSelect={(date) => {
                           field.onChange(date);
@@ -292,6 +292,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
                     <FormControl>
                       <DatePicker
                         date={field.value}
+                        disabledRange={(date) => date < new Date(endDate)}
                         onSelect={(date) => {
                           field.onChange(date);
                           field.onBlur();
@@ -330,7 +331,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
               <FormItem>
                 <Label>Attach handover document (pdf, jpg, png, docx)</Label>
                 <DocumentUpload
-                  fileUrl={field.value}
+                  value={field.value}
                   onFileChange={field.onChange}
                 />
                 <FormMessage>{error?.message}</FormMessage>

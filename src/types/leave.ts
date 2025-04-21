@@ -51,7 +51,7 @@ export type LeaveRequestForm = {
   id?: string;
   type: string;
   durations: number;
-  documentPath?: File | null;
+  documentPath?: File | string | null;
   startDate: Date | string;
   endDate: Date | string;
   resumptionDate: Date | string;

@@ -5,10 +5,27 @@ import { useGetInfoUser } from '@/hooks';
 import UpdateProfile from '..';
 
 jest.mock('@/hooks', () => ({
+  ...jest.requireActual('@/hooks'),
   useGetInfoUser: jest.fn(),
+  useUpdateInfoUser: jest.fn(() => ({
+    handleUpdateInfoUser: jest.fn(),
+    isUpdateInfoLoading: false,
+  })),
+  useToast: jest.fn(() => ({
+    success: jest.fn(),
+    error: jest.fn(),
+  })),
 }));
 
-jest.mock('@/components/Form/ContactForm', () => () => <div>ContactForm</div>);
+jest.mock('@/components/Form/ContactForm', () => ({
+  __esModule: true,
+  default: () => <div>ContactForm</div>,
+}));
+
+jest.mock('@/components/Form/NextOfKinForm', () => ({
+  __esModule: true,
+  default: () => <div>NextOfKinForm</div>,
+}));
 
 jest.mock('@/components', () => {
   const originalModule = jest.requireActual('@/components');
@@ -33,7 +50,6 @@ jest.mock('@/components', () => {
       </div>
     ),
     Fallback: () => <div>Loading...</div>,
-    NextOfKinForm: () => <div>NextOfKinForm</div>,
   };
 });
 

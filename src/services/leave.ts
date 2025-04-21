@@ -36,7 +36,7 @@ export const getLeave = async ({
 
 export const addLeave = async (data: Partial<LeaveRequestForm>) =>
   (
-    await HttpClient.post(`${END_POINTS.LEAVES}`, data, {
+    await HttpClient.post(END_POINTS.LEAVES, data, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -45,7 +45,7 @@ export const addLeave = async (data: Partial<LeaveRequestForm>) =>
 
 export const editLeave = async (data: Partial<LeaveRequestForm>) =>
   (
-    await HttpClient.put(`${END_POINTS.LEAVES}${data.id}/`, data, {
+    await HttpClient.patch(`${END_POINTS.LEAVES}${data.id}/`, data, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },

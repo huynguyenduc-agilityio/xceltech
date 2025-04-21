@@ -21,12 +21,18 @@ const InfoCardWrapper = ({
       <div className="flex justify-between items-start gap-6">
         {titleContent}
         <div className="flex gap-2">
-          <Button size="icon" className="hover:bg-primary/70" onClick={onEdit}>
+          <Button
+            title="update-card"
+            size="icon"
+            className="hover:bg-primary/70"
+            onClick={onEdit}
+          >
             <PencilIcon size={20} />
           </Button>
           <Button
             size="icon"
             className="bg-red-500 hover:bg-red-500/70"
+            title="delete-card"
             onClick={onDelete}
           >
             <TrashIcon size={20} />

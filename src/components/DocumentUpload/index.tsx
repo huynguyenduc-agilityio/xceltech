@@ -1,13 +1,15 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { Button, Input, Label } from '../common';
 
 export interface DocumentUploadProps {
-  fileUrl?: File | null;
+  value?: File | string | null;
   onFileChange: (file: File) => void;
 }
 
-const DocumentUpload = ({ fileUrl, onFileChange }: DocumentUploadProps) => {
+const DocumentUpload = ({ value, onFileChange }: DocumentUploadProps) => {
+  const [fileUrl, setFileUrl] = useState<string | null>(null);
+
   const handleFileChange = useCallback(
     async (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
@@ -18,6 +20,33 @@ const DocumentUpload = ({ fileUrl, onFileChange }: DocumentUploadProps) => {
     },
     [onFileChange],
   );
+
+  useEffect(() => {
+    if (value instanceof File) {
+      const url = URL.createObjectURL(value);
+
+      setFileUrl(url);
+
+      return () => {
+        URL.revokeObjectURL(url);
+      };
+    }
+
+    if (typeof value === 'string') {
+      setFileUrl(value);
+    }
+
+    if (!value) {
+      setFileUrl(null);
+    }
+  }, [value]);
+
+  const fileName =
+    typeof value === 'string'
+      ? (value.split('/').pop() ?? '')
+      : value instanceof File
+        ? value.name
+        : '';
 
   return (
     <div className="relative flex items-center h-[54px]">
@@ -38,7 +67,13 @@ const DocumentUpload = ({ fileUrl, onFileChange }: DocumentUploadProps) => {
       />
       <div className="absolute flex items-center px-6 w-full h-full bg-blue-light rounded-regular">
         <span className="ml-[254px] text-md truncate text-black-smoky-">
-          {fileUrl?.name}
+          {fileUrl ? (
+            <a href={fileUrl} target="_blank" rel="noopener noreferrer">
+              {fileName}
+            </a>
+          ) : (
+            ''
+          )}
         </span>
       </div>
     </div>

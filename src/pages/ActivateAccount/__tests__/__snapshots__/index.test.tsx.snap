@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActivateAccount renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center justify-center h-screen bg-gray-100"
+  >
+    <div
+      class="text-center bg-white p-8 rounded-lg shadow-lg"
+    >
+      <div
+        class="flex items-center gap-4"
+      >
+        <svg
+          class="lucide lucide-circle-check mx-auto text-black-default w-12 h-12"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <path
+            d="m9 12 2 2 4-4"
+          />
+        </svg>
+        <h1
+          class="text-2xl font-bold"
+        >
+          Activate your account
+        </h1>
+      </div>
+      <p
+        class="text-lg mt-8"
+      >
+        Click the button below
+      </p>
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary w-[150px] h-[54px] text-lg mt-4 py-3"
+      >
+        ACTIVATE
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -48,7 +48,7 @@ const UserDashboard = () => {
             </Button>
           </Link>
 
-          <img src="/public/assets/images/arrow.webp" />
+          <img src="/assets/images/arrow.webp" />
         </div>
       </div>
 

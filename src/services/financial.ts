@@ -34,7 +34,9 @@ export const editFinancial = async (data: Partial<IEmployeeFinancialInfo>) => {
     return (await HttpClient.patch(`${END_POINTS.FINANCIALS}${id}/`, payload))
       .data;
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.UPDATE_FAILED('Financial'),
+    );
   }
 };
 
@@ -42,6 +44,8 @@ export const deleteFinancial = async (id: string) => {
   try {
     return await HttpClient.delete(`${END_POINTS.FINANCIALS}${id}/`);
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.DELETE_FAILED('Financial'),
+    );
   }
 };

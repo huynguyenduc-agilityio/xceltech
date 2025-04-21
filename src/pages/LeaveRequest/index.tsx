@@ -21,6 +21,7 @@ const LeaveRequest = () => {
     resumptionDate,
     reason,
     reliefOfficer,
+    documentPath,
   } = leaveDetail || {};
 
   const BREADCRUMB_ITEMS = [
@@ -49,6 +50,7 @@ const LeaveRequest = () => {
                     resumptionDate: new Date(resumptionDate),
                     reason,
                     reliefOfficer,
+                    documentPath,
                   }
                 : {}
             }

@@ -95,12 +95,12 @@ const UploadDocuments = ({ files = [], onBackJob }: UploadDocumentsProps) => {
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="">
         <h2 className="text-lg font-bold mb-[50px]">
-          <span
+          <Button
             className="cursor-pointer hover:text-secondary"
             onClick={onBackJob}
           >
             Job Details
-          </span>{' '}
+          </Button>{' '}
           / Upload Documents
         </h2>
 

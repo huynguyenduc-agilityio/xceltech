@@ -31,7 +31,9 @@ export const editEducation = async (data: Partial<IEmployeeEducationInfo>) => {
     return (await HttpClient.patch(`${END_POINTS.EDUCATIONS}${id}/`, payload))
       .data;
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.UPDATE_FAILED('Education'),
+    );
   }
 };
 
@@ -39,6 +41,8 @@ export const deleteEducation = async (id: string) => {
   try {
     return await HttpClient.delete(`${END_POINTS.EDUCATIONS}${id}/`);
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.DELETE_FAILED('Education'),
+    );
   }
 };

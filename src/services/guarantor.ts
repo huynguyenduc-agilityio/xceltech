@@ -31,7 +31,9 @@ export const editGuarantor = async (data: Partial<IEmployeeGuarantor>) => {
     return (await HttpClient.patch(`${END_POINTS.GUARANTORS}${id}/`, payload))
       .data;
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.UPDATE_FAILED('Guarantor'),
+    );
   }
 };
 
@@ -39,6 +41,8 @@ export const deleteGuarantor = async (id: string) => {
   try {
     return await HttpClient.delete(`${END_POINTS.GUARANTORS}${id}/`);
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.DELETE_FAILED('Guarantor'),
+    );
   }
 };

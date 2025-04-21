@@ -56,7 +56,7 @@ exports[`UserDashboard renders correctly and matches snapshot 1`] = `
         </button>
       </a>
       <img
-        src="/public/assets/images/arrow.webp"
+        src="/assets/images/arrow.webp"
       />
     </div>
   </div>

@@ -124,6 +124,7 @@ const FamilyTab = () => {
             );
           })}
           <Button
+            title="add-family-button"
             className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
             onClick={handleAdd}
           >

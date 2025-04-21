@@ -46,6 +46,31 @@ describe('UserDashboard', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('handles undefined userInfo gracefully', () => {
+    (useGetInfoUser as jest.Mock).mockReturnValue({
+      userInfo: undefined,
+    });
+
+    renderWithRouter(<UserDashboard />);
+
+    const spans = screen.queryAllByText((content, element) => {
+      return element?.tagName.toLowerCase() === 'span' && content.trim() === '';
+    });
+
+    expect(spans.length).toBeGreaterThan(0);
+  });
+
+  it('handles empty userInfo object', () => {
+    (useGetInfoUser as jest.Mock).mockReturnValue({
+      userInfo: {},
+    });
+
+    const { container } = renderWithRouter(<UserDashboard />);
+
+    expect(container).toBeInTheDocument();
+    expect(screen.queryByText('Software Engineer')).not.toBeInTheDocument();
+  });
+
   it('displays user information correctly', () => {
     renderWithRouter(<UserDashboard />);
     expect(screen.getByText('John Doe')).toBeInTheDocument();

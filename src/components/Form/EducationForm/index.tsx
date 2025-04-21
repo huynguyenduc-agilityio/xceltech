@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
@@ -123,6 +123,8 @@ const EducationForm = ({
   };
 
   const disableSubmit = !isDirty || !isValid || isSubmitting;
+  const startDateValue = useWatch({ control, name: 'startDate' }) as Date;
+  const endDateValue = useWatch({ control, name: 'endDate' }) as Date;
 
   return (
     <Form {...form}>
@@ -207,6 +209,7 @@ const EducationForm = ({
                     <FormControl>
                       <DatePicker
                         date={value as Date}
+                        disabledRange={(date) => date > endDateValue}
                         placeholder="Enter your start date"
                         onSelect={onChange}
                         className="px-11"
@@ -224,6 +227,7 @@ const EducationForm = ({
                     <FormControl>
                       <DatePicker
                         date={value as Date}
+                        disabledRange={(date) => date < startDateValue}
                         placeholder="Enter your end date"
                         onSelect={onChange}
                         className="px-11"

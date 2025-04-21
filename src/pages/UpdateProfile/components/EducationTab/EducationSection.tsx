@@ -81,6 +81,7 @@ const EducationSection = ({
           );
         })}
         <Button
+          title="add-education-button"
           className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
           onClick={() => onAdd(section)}
         >

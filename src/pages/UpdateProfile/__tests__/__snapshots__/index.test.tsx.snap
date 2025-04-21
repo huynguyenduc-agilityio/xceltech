@@ -41,7 +41,7 @@ exports[`UpdateProfile should match snapshot 1`] = `
         </h2>
         <div>
           <div>
-            NextOfKinForm
+            Loading...
           </div>
         </div>
       </section>

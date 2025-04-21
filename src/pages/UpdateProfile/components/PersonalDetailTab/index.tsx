@@ -13,7 +13,7 @@ import { getInitialsAvatar } from '@/utils';
 import { Avatar, Button, PersonalForm } from '@/components';
 
 type PersonalTabProps = {
-  userInfo?: IInfoUser;
+  userInfo?: Partial<IInfoUser>;
 };
 
 const PersonalDetailTab = ({ userInfo }: PersonalTabProps) => {
@@ -76,12 +76,14 @@ const PersonalDetailTab = ({ userInfo }: PersonalTabProps) => {
       ) : (
         <div className="w-full p-11 text-black-default">
           <h2 className="text-lg font-bold mb-[50px]">
-            <span
+            <Button
+              variant="ghost"
+              size="fit"
               className="cursor-pointer hover:text-secondary"
               onClick={toggleEdit}
             >
               Job Details
-            </span>{' '}
+            </Button>{' '}
             / Upload Documents
           </h2>
           <PersonalForm initialValues={userInfo} onBack={toggleEdit} />

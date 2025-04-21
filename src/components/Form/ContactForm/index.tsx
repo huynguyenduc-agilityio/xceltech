@@ -81,14 +81,12 @@ const ContactForm = ({ initialValues }: IContactForm) => {
         status: ToastStatus.Success,
         title: MESSAGES.COMMON.UPDATE_SUCCESS('Contact'),
       });
-
-      reset(initialValues);
     } catch {
       toast({
         status: ToastStatus.Error,
         title: MESSAGES.COMMON.UPDATE_FAILED('Contact'),
       });
-
+    } finally {
       reset(getValues());
     }
   };

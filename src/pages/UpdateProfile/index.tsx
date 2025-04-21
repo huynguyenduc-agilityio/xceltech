@@ -7,7 +7,7 @@ import { USER_PAGE } from '@/constants';
 import { useGetInfoUser } from '@/hooks';
 
 // Components
-import { Breadcrumb, Fallback, NextOfKinForm, SideMenu } from '@/components';
+import { Breadcrumb, Fallback, SideMenu } from '@/components';
 
 import {
   EducationTab,
@@ -19,6 +19,7 @@ import {
 } from './components';
 
 const ContactForm = lazy(() => import('@/components/Form/ContactForm'));
+const NextOfKinForm = lazy(() => import('@/components/Form/NextOfKinForm'));
 
 const BREADCRUMB_ITEMS = [
   { label: 'Dashboard', href: USER_PAGE.DASHBOARD },
@@ -45,7 +46,11 @@ const UpdateProfile = () => {
     },
     {
       label: 'Next of kin Details',
-      content: <NextOfKinForm />,
+      content: (
+        <Suspense fallback={<Fallback />}>
+          <NextOfKinForm initialValues={userInfo?.kin} />
+        </Suspense>
+      ),
     },
     {
       label: 'Education Qualifications',

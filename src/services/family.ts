@@ -32,7 +32,9 @@ export const editFamily = async (data: Partial<IEmployeeFamilyInfo>) => {
     return (await HttpClient.patch(`${END_POINTS.FAMILIES}${id}/`, payload))
       .data;
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.UPDATE_FAILED('Family'),
+    );
   }
 };
 
@@ -40,6 +42,8 @@ export const deleteFamily = async (id: string) => {
   try {
     return await HttpClient.delete(`${END_POINTS.FAMILIES}${id}/`);
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.DELETE_FAILED('Family'),
+    );
   }
 };

@@ -116,7 +116,7 @@ const FinancialTab = () => {
                     <p className="text-xl font-bold">
                       {accountNo} | {accountName}
                     </p>
-                    <span className="text-xl">
+                    <span data-testid="bank-info" className="text-xl">
                       <span className="font-bold">{bankName}</span> | Savings
                       Account
                     </span>
@@ -126,6 +126,7 @@ const FinancialTab = () => {
             );
           })}
           <Button
+            title="add-financial-button"
             className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
             onClick={handleAdd}
           >

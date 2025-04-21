@@ -32,7 +32,7 @@ export const nextOfKinSchema = z.object({
     message: MESSAGES.VALIDATE.FIELD_VALID('phone'),
   }),
   relationship: requiredString('Relationship'),
-  address: requiredString('Residential Address'),
+  residentialAddress: requiredString('Residential Address'),
 });
 
 export const guarantorSchema = z.object({
@@ -55,7 +55,10 @@ export const familySchema = z.object({
 export const financialSchema = z.object({
   bankName: requiredString('Bank Name'),
   accountName: requiredString('Account Name'),
-  accountNo: z.number().min(1, MESSAGES.VALIDATE.FIELD_REQUIRED('Account No')),
+  accountNo: z.preprocess(
+    (val) => Number(val),
+    z.number().min(1, MESSAGES.VALIDATE.FIELD_REQUIRED('Account No')),
+  ),
 });
 
 export const educationSchema = z.object({

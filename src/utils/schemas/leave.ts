@@ -14,11 +14,15 @@ export const leaveRequestSchema = z
     startDate: z.date(),
     endDate: z.date(),
     documentPath: z
-      .instanceof(File)
-      .refine((file) => REGEX.leaveFile.test(file.name), {
-        message: MESSAGES.LEAVE_REQUEST.INVALID_FILE_TYPE,
-      })
+      .union([
+        z.instanceof(File).refine((file) => REGEX.leaveFile.test(file.name), {
+          message: MESSAGES.LEAVE_REQUEST.INVALID_FILE_TYPE,
+        }),
+        z.string(),
+        z.null(),
+      ])
       .optional(),
+
     durations: z.preprocess(
       (val) => Number(val),
       z.number().min(1, MESSAGES.LEAVE_REQUEST.INVALID_DURATION),

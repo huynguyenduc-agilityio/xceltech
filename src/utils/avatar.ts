@@ -23,5 +23,5 @@ export const getInitialsAvatar = (name: string) => {
     return `${firstInitial} ${secondInitial}`;
   }
 
-  return words[0][0]?.toUpperCase();
+  return words[0][0]?.toUpperCase() ?? '';
 };

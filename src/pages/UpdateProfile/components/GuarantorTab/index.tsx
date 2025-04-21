@@ -123,6 +123,7 @@ const GuarantorTab = () => {
             );
           })}
           <Button
+            title="add-guarantor"
             className="w-full h-[50px] bg-black-default/25 hover:opacity-60 transition-opacity"
             onClick={handleAdd}
           >

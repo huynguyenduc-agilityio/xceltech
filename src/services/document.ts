@@ -1,5 +1,5 @@
 // Constants
-import { END_POINTS } from '@/constants';
+import { END_POINTS, MESSAGES } from '@/constants';
 
 // Types
 import { Documents, DocumentsForm, ErrorType } from '@/types';
@@ -35,6 +35,8 @@ export const downloadAllDocuments = async () => {
       })
     ).data;
   } catch (error) {
-    throw new Error((error as ErrorType).detail);
+    throw new Error(
+      (error as ErrorType).detail || MESSAGES.COMMON.EXPORT_FAILED,
+    );
   }
 };

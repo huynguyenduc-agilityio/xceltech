@@ -43,14 +43,14 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
     name = '',
     job = '',
     phone = '',
-    address = '',
+    residentialAddress = '',
     relationship = '',
   } = initialValues || {};
   const defaultValues: IEmployeeNextOfKinInfo = {
     name,
     job,
     phone,
-    address,
+    residentialAddress,
     relationship,
   };
 
@@ -81,14 +81,12 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
         status: ToastStatus.Success,
         title: MESSAGES.COMMON.UPDATE_SUCCESS('Contact'),
       });
-
-      reset(initialValues);
     } catch {
       toast({
         status: ToastStatus.Error,
         title: MESSAGES.COMMON.UPDATE_FAILED('Contact'),
       });
-
+    } finally {
       reset(getValues());
     }
   };
@@ -162,7 +160,7 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
                       option={RELATIONSHIP_OPTIONS}
                       placeholder="Select your relationship"
                       className="bg-blue-light h-[68px] px-12 rounded-[15px]"
-                      onChange={field.onChange}
+                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -173,7 +171,7 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
 
           <FormField
             control={control}
-            name="address"
+            name="residentialAddress"
             render={({ field }) => (
               <FormItem>
                 <Label className="text-md">Residential Address</Label>

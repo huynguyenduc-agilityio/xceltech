@@ -141,12 +141,10 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
               </button>
               <select
                 aria-hidden="true"
+                name="relationship"
                 style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
                 tabindex="-1"
               >
-                <option
-                  value=""
-                />
                 <option
                   value="relative"
                 >
@@ -173,7 +171,7 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
               aria-invalid="false"
               class="flex min-h-[80px] w-full rounded-regular bg-blue-light py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50 h-[122px] px-9 rounded-[15px]"
               id=":r5:-form-item"
-              name="address"
+              name="residentialAddress"
               placeholder="Enter your address"
             />
           </div>
@@ -329,12 +327,10 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
             </button>
             <select
               aria-hidden="true"
+              name="relationship"
               style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
               tabindex="-1"
             >
-              <option
-                value=""
-              />
               <option
                 value="relative"
               >
@@ -361,7 +357,7 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
             aria-invalid="false"
             class="flex min-h-[80px] w-full rounded-regular bg-blue-light py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none resize-none disabled:cursor-not-allowed disabled:opacity-50 h-[122px] px-9 rounded-[15px]"
             id=":r5:-form-item"
-            name="address"
+            name="residentialAddress"
             placeholder="Enter your address"
           />
         </div>
