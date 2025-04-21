@@ -13,7 +13,8 @@ exports[`AdditionalFileUpload component should match snapshot 1`] = `
         autocomplete="off"
         class="font-productsans w-full px-5 py-4 text-lg text-black-smoky placeholder:text-gray-soft outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-blue-light h-[54px] hidden"
         data-testid="input-element"
-        id="file-upload-test"
+        id="file-upload-file"
+        title="Upload Additional File"
         type="file"
       />
       <div

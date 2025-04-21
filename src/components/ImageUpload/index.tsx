@@ -19,12 +19,14 @@ const ImageUpload = ({ imageUrl = '', onImageChange }: TImageUploadProps) => {
   const handleImageChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
+
       if (file) {
         if (preview?.startsWith('blob:')) {
           URL.revokeObjectURL(preview);
         }
 
         const previewURL = URL.createObjectURL(file);
+
         setPreview(previewURL);
         onImageChange(file);
       }
@@ -63,6 +65,7 @@ const ImageUpload = ({ imageUrl = '', onImageChange }: TImageUploadProps) => {
                 />
               ) : (
                 <Button
+                  title="Button Upload Image"
                   type="button"
                   className="w-full h-full"
                   variant="ghost"
@@ -79,6 +82,7 @@ const ImageUpload = ({ imageUrl = '', onImageChange }: TImageUploadProps) => {
 
               <Input
                 type="file"
+                title="Upload Image"
                 ref={imageInputRef}
                 className="hidden"
                 onChange={handleImageChange}

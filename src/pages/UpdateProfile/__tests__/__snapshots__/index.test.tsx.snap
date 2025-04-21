@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateProfile should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col gap-11"
+  >
+    <div
+      class="flex items-center w-full px-[62px] py-8 bg-white"
+    >
+      <nav
+        aria-label="Breadcrumb"
+      >
+        Breadcrumb
+      </nav>
+    </div>
+    <div>
+      <section>
+        <h2>
+          Personal Details
+        </h2>
+        <div>
+          <div>
+            PersonalDetailTab - John Doe
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Contact Details
+        </h2>
+        <div>
+          <div>
+            Loading...
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Next of kin Details
+        </h2>
+        <div>
+          <div>
+            NextOfKinForm
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Education Qualifications
+        </h2>
+        <div>
+          <div>
+            EducationTab
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Guarantor Details
+        </h2>
+        <div>
+          <div>
+            GuarantorTab
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Family Details
+        </h2>
+        <div>
+          <div>
+            FamilyTab
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Job Details
+        </h2>
+        <div>
+          <div>
+            JobDetailTab - Developer
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Financial Details
+        </h2>
+        <div>
+          <div>
+            FinancialTab
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;

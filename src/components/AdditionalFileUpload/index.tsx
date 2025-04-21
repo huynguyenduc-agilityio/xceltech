@@ -64,6 +64,7 @@ const AdditionalFileUpload = ({
     <FormItem>
       <div className="relative flex items-center h-[68px]">
         <Input
+          title="Upload Additional File"
           ref={fileInputRef}
           id={`file-upload-${name}`}
           type="file"
