@@ -13,7 +13,7 @@ const UserSignIn = () => {
         {/* Right Section */}
         <div className="w-1/2 bg-primary text-white flex flex-col pl-12 justify-end relative">
           <img
-            src="/assets/images/signinImage.webp"
+            src="/public/assets/images/signinImage.webp"
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
           />

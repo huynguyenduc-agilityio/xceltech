@@ -53,9 +53,9 @@ exports[`AdminDashboard should render successfully 1`] = `
               class="flex items-center gap-6"
             >
               <img
-                alt="/assets/images/accessBank.webp"
+                alt="/public/assets/images/accessBank.webp"
                 class="w-14 h-11"
-                src="/assets/images/accessBank.webp"
+                src="/public/assets/images/accessBank.webp"
               />
               <div>
                 <p
@@ -81,9 +81,9 @@ exports[`AdminDashboard should render successfully 1`] = `
               class="flex items-center gap-6"
             >
               <img
-                alt="/assets/images/payStack.webp"
+                alt="/public/assets/images/payStack.webp"
                 class="w-14 h-11"
-                src="/assets/images/payStack.webp"
+                src="/public/assets/images/payStack.webp"
               />
               <div>
                 <p
@@ -109,9 +109,9 @@ exports[`AdminDashboard should render successfully 1`] = `
               class="flex items-center gap-6"
             >
               <img
-                alt="/assets/images/tpay.webp"
+                alt="/public/assets/images/tpay.webp"
                 class="w-14 h-11"
-                src="/assets/images/tpay.webp"
+                src="/public/assets/images/tpay.webp"
               />
               <div>
                 <p
@@ -171,7 +171,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Aman"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngMan.webp"
+                src="/public/assets/images/youngMan.webp"
               />
               <div>
                 <p
@@ -268,7 +268,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Gelila"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngGirl.webp"
+                src="/public/assets/images/youngGirl.webp"
               />
               <div>
                 <p
@@ -365,7 +365,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Biruk"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/oldMan.webp"
+                src="/public/assets/images/oldMan.webp"
               />
               <div>
                 <p
@@ -494,7 +494,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Feven Tesfaye"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngMan.webp"
+                src="/public/assets/images/youngMan.webp"
               />
               <div>
                 <p
@@ -550,7 +550,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Yanet mekuriya"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngGirl.webp"
+                src="/public/assets/images/youngGirl.webp"
               />
               <div>
                 <p
@@ -606,7 +606,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Aman beyene"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngMan.webp"
+                src="/public/assets/images/youngMan.webp"
               />
               <div>
                 <p
@@ -694,7 +694,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Aman"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngMan.webp"
+                src="/public/assets/images/youngMan.webp"
               />
               <div>
                 <p
@@ -749,7 +749,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Gelila"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/youngGirl.webp"
+                src="/public/assets/images/youngGirl.webp"
               />
               <div>
                 <p
@@ -804,7 +804,7 @@ exports[`AdminDashboard should render successfully 1`] = `
               <img
                 alt="Biruk"
                 class="w-[52px] h-[49px]"
-                src="/assets/images/oldMan.webp"
+                src="/public/assets/images/oldMan.webp"
               />
               <div>
                 <p
