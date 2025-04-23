@@ -26,7 +26,7 @@ exports[`NotFound Page should match snapshot 1`] = `
             href="/user/dashboard"
           >
             <button
-              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary h-[70px] px-6 py-3 mt-10 transition"
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white h-[70px] px-6 py-3 mt-10 transition"
             >
               Back to Dashboard
             </button>
@@ -57,7 +57,7 @@ exports[`NotFound Page should match snapshot 1`] = `
           href="/user/dashboard"
         >
           <button
-            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary h-[70px] px-6 py-3 mt-10 transition"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white h-[70px] px-6 py-3 mt-10 transition"
           >
             Back to Dashboard
           </button>

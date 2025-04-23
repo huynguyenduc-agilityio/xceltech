@@ -38,11 +38,7 @@ const FinancialForm = ({
       type: mode,
     });
 
-  const {
-    accountName = '',
-    bankName = '',
-    accountNo = 0,
-  } = initialValues || {};
+  const { accountName = '', bankName = '', accountNo = 0 } = initialValues;
   const defaultValues: IEmployeeFinancialInfo = {
     bankName,
     accountNo,
@@ -73,7 +69,9 @@ const FinancialForm = ({
     };
 
     try {
-      await handleFinancialMutation(payload);
+      await handleFinancialMutation(
+        payload as unknown as IEmployeeFinancialInfo,
+      );
 
       toast({
         status: ToastStatus.Success,

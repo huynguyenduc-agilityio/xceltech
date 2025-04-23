@@ -48,7 +48,7 @@ const FamilyForm = ({ initialValues = {}, mode, onBack }: IFamilyForm) => {
     relationship = '',
     phone = '',
     address = '',
-  } = initialValues || {};
+  } = initialValues;
   const defaultValues: IEmployeeFamilyInfo = {
     fullName,
     relationship,

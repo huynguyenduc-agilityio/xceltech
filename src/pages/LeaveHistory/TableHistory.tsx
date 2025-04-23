@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 // Constants
 import {
@@ -43,7 +44,15 @@ import {
 const TableHistory = () => {
   const [filters, setFilters] = useState<FilterCriteria>();
   const [leaveData, setLeaveData] = useState<LeaveHistoryResponse>();
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
+
+  const query = {
+    ...filters,
+    ...(searchParams.get('search') && {
+      employeeName: searchParams.get('search') || '',
+    }),
+  };
 
   const {
     currentPage,
@@ -55,15 +64,15 @@ const TableHistory = () => {
   } = usePagination(leaveData?.metaData.totalCount);
 
   const { leaves, isLeavesLoading } = useGetLeaves({
-    page: currentPage,
+    page: query.employeeName ? DEFAULT_CURRENT_PAGE : currentPage,
     limit: pageSize,
-    filters: { ...filters },
+    filters: query,
   });
 
   const { handleUpdateStatus } = useUpdateStatusLeaveRequest({
-    page: currentPage,
+    page: query.employeeName ? DEFAULT_CURRENT_PAGE : currentPage,
     limit: pageSize,
-    filters: { ...filters },
+    filters: query,
   });
 
   const handleApplyFilters = (filters: FilterCriteria) => {
@@ -100,10 +109,12 @@ const TableHistory = () => {
       <ActionsDropdown
         items={[
           {
+            key: 'approve',
             label: 'Approved',
             onClick: () => handleActionsLeave(id, StatusLeave.Approved),
           },
           {
+            key: 'reject',
             label: 'Rejected',
             onClick: () => handleActionsLeave(id, StatusLeave.Rejected),
           },

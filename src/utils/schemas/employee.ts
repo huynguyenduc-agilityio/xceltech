@@ -68,5 +68,5 @@ export const educationSchema = z.object({
   department: requiredString('Department'),
   location: requiredString('Location'),
   endDate: z.union([z.date(), z.string(), z.undefined()]).optional(),
-  description: z.string(),
+  description: requiredString('Description'),
 });

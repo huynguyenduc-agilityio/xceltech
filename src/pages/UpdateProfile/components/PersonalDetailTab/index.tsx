@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 // Icons
 import { EditIcon } from '@/icons';
@@ -16,12 +16,16 @@ type PersonalTabProps = {
   userInfo?: Partial<IInfoUser>;
 };
 
+const DashLine = () => (
+  <div className="w-8 h-[3px] bg-black-default inline-block" />
+);
+
 const PersonalDetailTab = ({ userInfo }: PersonalTabProps) => {
   const [activeEdit, setActiveEdit] = useState(false);
 
   const { firstName = '', lastName = '', avatar = '', job } = userInfo || {};
 
-  const toggleEdit = useCallback(() => setActiveEdit((prev) => !prev), []);
+  const toggleEdit = () => setActiveEdit((prev) => !prev);
 
   return (
     <>
@@ -48,7 +52,10 @@ const PersonalDetailTab = ({ userInfo }: PersonalTabProps) => {
 
           {/* Employee Info */}
           {[
-            { label: 'Employee Name', value: `${firstName} ${lastName}` },
+            {
+              label: 'Employee Name',
+              value: `${firstName} ${lastName}`.trim() || undefined,
+            },
             { label: 'Department', value: job?.department },
           ].map(({ label, value }) => (
             <div
@@ -56,7 +63,9 @@ const PersonalDetailTab = ({ userInfo }: PersonalTabProps) => {
               className="flex flex-col mt-9 text-black-default text-lg"
             >
               <span className="mb-4">{label}</span>
-              <span className="text-2xl font-bold">{value}</span>
+              <span className="text-2xl font-bold">
+                {value ? value : <DashLine />}
+              </span>
             </div>
           ))}
 
@@ -68,7 +77,9 @@ const PersonalDetailTab = ({ userInfo }: PersonalTabProps) => {
             ].map(({ label, value }) => (
               <div key={label} className="flex flex-col">
                 <span className="mb-4">{label}</span>
-                <span className="text-2xl font-bold">{value}</span>
+                <span className="text-2xl font-bold">
+                  {value ? value : <DashLine />}
+                </span>
               </div>
             ))}
           </div>

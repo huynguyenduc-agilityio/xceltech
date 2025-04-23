@@ -96,7 +96,7 @@ const AdditionalFileUpload = ({
       </div>
 
       {errors?.file && (
-        <FormMessage className="">
+        <FormMessage>
           <div className="flex flex-col gap-4 text-red-500 text-sm">
             <p>{errors.file.message}</p>
             <p>Please select again!!!</p>

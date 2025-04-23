@@ -12,6 +12,6 @@ export const updateProfileSchema = z.object({
   lastName: requiredString('Last name'),
   avatar: z.union([z.instanceof(File), z.string(), z.null()]).optional(),
   department: requiredString('Department'),
-  id: requiredString('Job Title'),
-  jobCategory: requiredString('Job Category'),
+  id: z.string(),
+  jobCategory: z.string(),
 });

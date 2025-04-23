@@ -109,10 +109,12 @@ const TableLeave = () => {
       <ActionsDropdown
         items={[
           {
+            key: 'edit',
             label: 'Edit',
             onClick: () => navigate(`${USER_PAGE.LEAVE}/${leaveType}/${id}`),
           },
           {
+            key: 'delete',
             label: 'Delete',
             onClick: onDelete,
           },

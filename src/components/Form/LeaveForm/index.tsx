@@ -248,7 +248,9 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
                     <Label className="flex flex-1">End Date</Label>
                     <FormControl>
                       <DatePicker
-                        disabledRange={(date) => date < new Date(startDate)}
+                        disabledRange={(date) =>
+                          date < new Date(startDateValue)
+                        }
                         date={field.value}
                         onSelect={(date) => {
                           field.onChange(date);
@@ -292,7 +294,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
                     <FormControl>
                       <DatePicker
                         date={field.value}
-                        disabledRange={(date) => date < new Date(endDate)}
+                        disabledRange={(date) => date < new Date(endDateValue)}
                         onSelect={(date) => {
                           field.onChange(date);
                           field.onBlur();

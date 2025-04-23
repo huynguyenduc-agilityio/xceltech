@@ -30,7 +30,7 @@ export interface IContactForm {
   initialValues?: Partial<IInfoUser>;
 }
 
-const ContactForm = ({ initialValues }: IContactForm) => {
+const ContactForm = ({ initialValues = {} }: IContactForm) => {
   const { toast } = useToast();
   const { handleUpdateInfoUser, isUpdateInfoLoading } = useUpdateInfoUser();
 
@@ -38,7 +38,7 @@ const ContactForm = ({ initialValues }: IContactForm) => {
     phone = '',
     email = '',
     contact = { phoneNum2: '', cityOfResidence: '', residentialAddress: '' },
-  } = initialValues || {};
+  } = initialValues;
 
   const defaultValues = {
     phone,

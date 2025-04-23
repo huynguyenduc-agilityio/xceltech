@@ -5,7 +5,7 @@ exports[`ActionsDropdown component should match snapshot 1`] = `
   <button
     aria-expanded="false"
     aria-haspopup="menu"
-    class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+    class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white py-6 w-[195px] h-14 shadow-md"
     data-state="closed"
     id="radix-:r0:"
     type="button"

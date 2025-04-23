@@ -22,10 +22,41 @@ import { useGetNotifications } from '@/hooks';
 import { formatDate } from '@/utils';
 
 // Constants
-import { USER_PAGE } from '@/constants';
+import { MESSAGES, USER_PAGE } from '@/constants';
+import { useMemo } from 'react';
 
 const DropdownNotification = () => {
   const { isNotificationLoading, notifications } = useGetNotifications();
+
+  const renderListNotification = useMemo(() => {
+    return notifications?.length ? (
+      notifications?.map(({ id, message, createdAt }) => (
+        <Link to={`${USER_PAGE.LEAVE_RECALL}/${id}`}>
+          <DropdownMenuItem
+            key={id}
+            className="flex justify-between p-4 border-b"
+          >
+            <div className="flex flex-col gap-2">
+              <p className="text-md text-slate-500 truncate max-w-[350px]">
+                {message}
+              </p>
+              <p className="text-slate-500">
+                {formatDate(new Date(createdAt))}
+              </p>
+            </div>
+          </DropdownMenuItem>
+        </Link>
+      ))
+    ) : (
+      <DropdownMenuItem className="flex justify-between p-4 border-b">
+        <div className="flex w-full justify-between items-center flex-col gap-2">
+          <p className="text-md text-black-default truncate max-w-[350px]">
+            {MESSAGES.COMMON.EMPTY_DATA}
+          </p>
+        </div>
+      </DropdownMenuItem>
+    );
+  }, [notifications]);
 
   return (
     <DropdownMenu>
@@ -50,27 +81,7 @@ const DropdownNotification = () => {
           Recall Notification
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        {isNotificationLoading ? (
-          <Fallback />
-        ) : (
-          notifications?.map(({ id, message, createdAt }) => (
-            <Link to={`${USER_PAGE.LEAVE_RECALL}/${id}`}>
-              <DropdownMenuItem
-                key={id}
-                className="flex justify-between p-4 border-b"
-              >
-                <div className="flex flex-col gap-2">
-                  <p className="text-md text-slate-500 truncate max-w-[350px]">
-                    {message}
-                  </p>
-                  <p className="text-slate-500">
-                    {formatDate(new Date(createdAt))}
-                  </p>
-                </div>
-              </DropdownMenuItem>
-            </Link>
-          ))
-        )}
+        {isNotificationLoading ? <Fallback /> : renderListNotification}
         <DropdownMenuSeparator />
       </DropdownMenuContent>
     </DropdownMenu>

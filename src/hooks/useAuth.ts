@@ -39,9 +39,12 @@ export const useLogin = () => {
           path === AUTHENTICATION_PAGE.ADMIN_SIGN_IN;
 
         const isUser =
-          [RoleAuthentication.Employee, RoleAuthentication.Candidate].includes(
-            role as RoleAuthentication,
-          ) && path === AUTHENTICATION_PAGE.USER_SIGN_IN;
+          [
+            RoleAuthentication.Employee,
+            RoleAuthentication.Candidate,
+            RoleAuthentication.Admin,
+          ].includes(role as RoleAuthentication) &&
+          path === AUTHENTICATION_PAGE.USER_SIGN_IN;
 
         if (isAdmin) {
           setUser(data);

@@ -56,7 +56,7 @@ exports[`LeaveHistory should render successfully 1`] = `
           <button
             aria-expanded="false"
             aria-haspopup="menu"
-            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary py-6 w-[195px] h-14 bg-green-primary hover:bg-green-primary/90 shadow-md"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white py-6 w-[195px] h-14 bg-green-primary hover:bg-green-primary/90 shadow-md"
             data-state="closed"
             id="radix-:r1:"
             type="button"
@@ -195,7 +195,7 @@ exports[`LeaveHistory should render successfully 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white py-6 w-[195px] h-14 shadow-md"
                   data-state="closed"
                   disabled=""
                   id="radix-:r8:"
@@ -283,7 +283,7 @@ exports[`LeaveHistory should render successfully 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white py-6 w-[195px] h-14 shadow-md"
                   data-state="closed"
                   disabled=""
                   id="radix-:ra:"
@@ -371,7 +371,7 @@ exports[`LeaveHistory should render successfully 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white py-6 w-[195px] h-14 shadow-md"
                   data-state="closed"
                   disabled=""
                   id="radix-:rc:"
@@ -459,7 +459,7 @@ exports[`LeaveHistory should render successfully 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary py-6 w-[195px] h-14 shadow-md"
+                  class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white py-6 w-[195px] h-14 shadow-md"
                   data-state="closed"
                   id="radix-:re:"
                   type="button"
@@ -523,11 +523,11 @@ exports[`LeaveHistory should render successfully 1`] = `
               aria-autocomplete="none"
               aria-controls="radix-:r3:"
               aria-expanded="false"
-              aria-label="Select"
               class="font-productsans flex h-full items-center justify-between px-3 py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-white border border-gray-dark rounded-md w-fit"
               data-state="closed"
               dir="ltr"
               role="combobox"
+              title="Select"
               type="button"
             >
               <span

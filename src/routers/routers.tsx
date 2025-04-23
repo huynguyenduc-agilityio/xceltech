@@ -30,6 +30,7 @@ import {
 
 // Component
 import { AuthorizeRoute } from './components/authorizeRoute';
+import { DynamicAuthorizeRoute } from './components/dynamicAuthorizeRoute';
 
 export const AUTH_ROUTES: RouteObject[] = [
   { path: AUTHENTICATION_PAGE.USER_SIGN_IN, element: <UserSignIn /> },
@@ -41,14 +42,7 @@ export const AUTH_ROUTES: RouteObject[] = [
 export const USER_ROUTES: RouteObject[] = [
   {
     path: USER_PAGE.ROOT,
-    element: (
-      <AuthorizeRoute
-        redirectPath={AUTHENTICATION_PAGE.USER_SIGN_IN}
-        allowedRoles={
-          RoleAuthentication.Employee || RoleAuthentication.Candidate
-        }
-      />
-    ),
+    element: <DynamicAuthorizeRoute />,
     children: [
       {
         path: USER_PAGE.ROOT,

@@ -42,14 +42,17 @@ const DropdownExport = () => {
     <ActionsDropdown
       items={[
         {
+          key: 'pdf',
           label: 'PDF',
           onClick: () => handleClickExportFile(FileType.Pdf),
         },
         {
+          key: 'csv',
           label: 'CSV',
           onClick: () => handleClickExportFile(FileType.Csv),
         },
         {
+          key: 'excel',
           label: 'Excel',
           onClick: () => handleClickExportFile(FileType.Excel),
         },

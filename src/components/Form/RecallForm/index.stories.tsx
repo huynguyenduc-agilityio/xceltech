@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 // Components
 import RecallForm from '.';
+
+const queryClient = new QueryClient();
 
 const meta = {
   title: 'Components/RecallForm',
@@ -11,9 +15,11 @@ const meta = {
   },
   tags: ['autodocs'],
   render: (args) => (
-    <div className="flex justify-center p-9 bg-blue-light">
-      <RecallForm {...args} />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="flex justify-center p-9 bg-blue-light">
+        <RecallForm {...args} />
+      </div>
+    </QueryClientProvider>
   ),
 } satisfies Meta<typeof RecallForm>;
 

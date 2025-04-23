@@ -1,8 +1,23 @@
+import userEvent from '@testing-library/user-event';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Components
 import NextOfKinForm from '..';
+
+// Hooks
+import { useToast, useUpdateInfoUser } from '@/hooks';
+
+const mockHandleUpdateInfoUser = jest.fn();
+const mockHandleUpdateInfoUserError = jest
+  .fn()
+  .mockRejectedValue(new Error('Network error'));
+const mockToast = jest.fn();
+
+jest.mock('@/hooks', () => ({
+  useToast: jest.fn(),
+  useUpdateInfoUser: jest.fn(),
+}));
 
 const renderComponent = () => {
   const queryClient = new QueryClient();
@@ -15,32 +30,84 @@ const renderComponent = () => {
 };
 
 describe('NextOfKinForm Component', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    (useToast as jest.Mock).mockReturnValue({ toast: mockToast });
+    (useUpdateInfoUser as jest.Mock).mockReturnValue({
+      isFamilyMutationLoading: false,
+      handleUpdateInfoUser: mockHandleUpdateInfoUser,
+    });
+  });
+
   it('should match snapshot', () => {
     const container = renderComponent();
 
     expect(container).toMatchSnapshot();
   });
 
-  it('handle input value change and form submit', () => {
-    const { getByPlaceholderText, getByRole } = renderComponent();
+  it('handle input value change and form submit', async () => {
+    const { getByPlaceholderText, container, getByRole } = renderComponent();
 
     const nameInput = getByPlaceholderText('Enter your next of kin name');
     const jobInput = getByPlaceholderText('Enter your job / occupation');
     const phoneInput = getByPlaceholderText('Enter your phone number');
     const addressInput = getByPlaceholderText('Enter your address');
+    const relationshipSelect = container.querySelector(
+      'select[name="relationship"]',
+    ) as HTMLSelectElement;
+
     const submitButton = getByRole('button', { name: 'Update' });
 
     fireEvent.change(nameInput, { target: { value: 'John Doe' } });
     fireEvent.change(jobInput, { target: { value: 'Software Engineer' } });
-    fireEvent.change(phoneInput, { target: { value: '1234567890' } });
+    fireEvent.change(phoneInput, { target: { value: '0987654321' } });
     fireEvent.change(addressInput, { target: { value: '123 Main Street' } });
 
-    fireEvent.click(submitButton);
+    fireEvent.change(relationshipSelect, {
+      target: { value: 'relative' },
+    });
 
-    expect(nameInput).toHaveValue('John Doe');
-    expect(jobInput).toHaveValue('Software Engineer');
-    expect(phoneInput).toHaveValue('1234567890');
-    expect(addressInput).toHaveValue('123 Main Street');
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      expect(mockHandleUpdateInfoUser).toHaveBeenCalled();
+    });
+  });
+
+  it('handles form submit error gracefully', async () => {
+    (useUpdateInfoUser as jest.Mock).mockReturnValue({
+      isLoading: false,
+      handleUpdateInfoUser: mockHandleUpdateInfoUserError,
+    });
+
+    const { getByPlaceholderText, container, getByRole } = renderComponent();
+
+    const nameInput = getByPlaceholderText('Enter your next of kin name');
+    const jobInput = getByPlaceholderText('Enter your job / occupation');
+    const phoneInput = getByPlaceholderText('Enter your phone number');
+    const addressInput = getByPlaceholderText('Enter your address');
+    const relationshipSelect = container.querySelector(
+      'select[name="relationship"]',
+    ) as HTMLSelectElement;
+
+    const submitButton = getByRole('button', { name: 'Update' });
+
+    fireEvent.change(nameInput, { target: { value: 'John Doe' } });
+    fireEvent.change(jobInput, { target: { value: 'Software Engineer' } });
+    fireEvent.change(phoneInput, { target: { value: '0987654321' } });
+    fireEvent.change(addressInput, { target: { value: '123 Main Street' } });
+
+    fireEvent.mouseDown(relationshipSelect);
+
+    fireEvent.change(relationshipSelect, {
+      target: { value: 'relative' },
+    });
+
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      expect(mockToast).toHaveBeenCalled();
+    });
   });
 
   it('should show error message fields', async () => {

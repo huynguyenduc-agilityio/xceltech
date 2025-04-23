@@ -24,7 +24,7 @@ const meta = {
           <DialogTitle>Create Leave</DialogTitle>
           <DialogDescription>Do you want to create leave?</DialogDescription>
         </DialogHeader>
-        <DialogFooter className="">
+        <DialogFooter>
           <Button variant="outline" className="text-sm h-fit px-4 py-2">
             Cancel
           </Button>

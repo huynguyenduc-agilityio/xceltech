@@ -78,8 +78,8 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
       lastName: data.lastName,
       job: {
         ...(selectedJob && { id: selectedJob.id }),
-        department: data.department || '',
-        jobCategory: data.jobCategory || '',
+        department: data.department,
+        jobCategory: data.jobCategory,
       },
       ...(data.avatar &&
         data.avatar instanceof File &&
@@ -166,7 +166,7 @@ const PersonalForm = ({ initialValues, onBack }: IPersonalForm) => {
                 className="space-y-5"
                 labelClassName="text-md"
                 inputClassName="h-[68px] px-12 rounded-[15px]"
-                placeholder="Enter your last name"
+                placeholder="Enter your department"
                 {...field}
                 errorMessage={error?.message}
               />

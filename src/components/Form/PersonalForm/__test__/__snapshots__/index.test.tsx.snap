@@ -158,7 +158,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
                 data-testid="input-element"
                 id=":r3:-form-item"
                 name="department"
-                placeholder="Enter your last name"
+                placeholder="Enter your department"
                 value=""
               />
             </div>
@@ -175,14 +175,12 @@ exports[`PersonalForm Component should match snapshot 1`] = `
               aria-autocomplete="none"
               aria-controls="radix-:r5:"
               aria-expanded="false"
-              aria-label="Select"
               class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
-              data-disabled=""
               data-placeholder=""
               data-state="closed"
               dir="ltr"
-              disabled=""
               role="combobox"
+              title="Select"
               type="button"
             >
               <span
@@ -210,11 +208,26 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             </button>
             <select
               aria-hidden="true"
-              disabled=""
               name="id"
               style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
               tabindex="-1"
-            />
+            >
+              <option
+                value="1"
+              >
+                Sales Executive
+              </option>
+              <option
+                value="2"
+              >
+                User Experience Designer
+              </option>
+              <option
+                value="3"
+              >
+                Product Manager
+              </option>
+            </select>
           </div>
           <div
             class="space-y-2 w-full"
@@ -228,12 +241,12 @@ exports[`PersonalForm Component should match snapshot 1`] = `
               aria-autocomplete="none"
               aria-controls="radix-:r7:"
               aria-expanded="false"
-              aria-label="Select"
               class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
               data-placeholder=""
               data-state="closed"
               dir="ltr"
               role="combobox"
+              title="Select"
               type="button"
             >
               <span
@@ -281,7 +294,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             class="w-full h-[70px]"
           >
             <button
-              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white h-[70px] py-6 w-[364px] bg-green-primary"
               disabled=""
               type="submit"
             >
@@ -446,7 +459,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
               data-testid="input-element"
               id=":r3:-form-item"
               name="department"
-              placeholder="Enter your last name"
+              placeholder="Enter your department"
               value=""
             />
           </div>
@@ -463,14 +476,12 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             aria-autocomplete="none"
             aria-controls="radix-:r5:"
             aria-expanded="false"
-            aria-label="Select"
             class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
-            data-disabled=""
             data-placeholder=""
             data-state="closed"
             dir="ltr"
-            disabled=""
             role="combobox"
+            title="Select"
             type="button"
           >
             <span
@@ -498,11 +509,26 @@ exports[`PersonalForm Component should match snapshot 1`] = `
           </button>
           <select
             aria-hidden="true"
-            disabled=""
             name="id"
             style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
             tabindex="-1"
-          />
+          >
+            <option
+              value="1"
+            >
+              Sales Executive
+            </option>
+            <option
+              value="2"
+            >
+              User Experience Designer
+            </option>
+            <option
+              value="3"
+            >
+              Product Manager
+            </option>
+          </select>
         </div>
         <div
           class="space-y-2 w-full"
@@ -516,12 +542,12 @@ exports[`PersonalForm Component should match snapshot 1`] = `
             aria-autocomplete="none"
             aria-controls="radix-:r7:"
             aria-expanded="false"
-            aria-label="Select"
             class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
             data-placeholder=""
             data-state="closed"
             dir="ltr"
             role="combobox"
+            title="Select"
             type="button"
           >
             <span
@@ -569,7 +595,7 @@ exports[`PersonalForm Component should match snapshot 1`] = `
           class="w-full h-[70px]"
         >
           <button
-            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white h-[70px] py-6 w-[364px] bg-green-primary"
             disabled=""
             type="submit"
           >

@@ -11,6 +11,13 @@ import {
 } from '@/icons';
 import { USER_PAGE } from './router';
 
+export const PATH_LEAVE = {
+  LEAVE_HISTORY: 'leave-management/leave-history',
+  LEAVE_RECALL: 'leave-management/leave-recall',
+  LEAVE_SETTINGS: 'leave-management/leave-settings',
+  RELIEF_OFFICERS: 'leave-management/relief-officers',
+};
+
 export const USER_NAVIGATION_CONFIG = [
   {
     title: 'Dashboard',
@@ -105,18 +112,18 @@ export const ADMIN_NAVIGATION_CONFIG = [
 export const LEAVE_NAVIGATION = [
   {
     title: 'Leave Settings',
-    path: 'leave-management/leave-settings',
+    path: PATH_LEAVE.LEAVE_SETTINGS,
   },
   {
     title: 'Leave Recall',
-    path: 'leave-management/leave-recall',
+    path: PATH_LEAVE.LEAVE_RECALL,
   },
   {
     title: 'Leave History',
-    path: 'leave-management/leave-history',
+    path: PATH_LEAVE.LEAVE_HISTORY,
   },
   {
     title: 'Relief Officers',
-    path: 'leave-management/relief-officers',
+    path: PATH_LEAVE.RELIEF_OFFICERS,
   },
 ];

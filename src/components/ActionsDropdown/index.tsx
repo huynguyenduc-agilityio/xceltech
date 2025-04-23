@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { cn } from '@/utils';
 
 import {
@@ -9,7 +11,12 @@ import {
 
 export interface ActionsDropdownProps {
   children: React.ReactNode;
-  items: { label: string; onClick?: () => void; disabled?: boolean }[];
+  items: {
+    key: string;
+    label: ReactNode;
+    onClick?: () => void;
+    disabled?: boolean;
+  }[];
   className?: string;
   itemClassName?: string;
 }
@@ -26,7 +33,7 @@ const ActionsDropdown = ({
       <DropdownMenuContent className={cn(className)}>
         {items.map((item) => (
           <DropdownMenuItem
-            key={item.label}
+            key={item.key}
             onClick={item.onClick}
             disabled={item.disabled}
             className={cn(itemClassName)}

@@ -1,8 +1,8 @@
-import TableSettings from './TableHistory';
+import TableHistory from './TableHistory';
 
 const LeaveHistory = () => (
   <div className="bg-white p-12 mt-8 rounded-3xl">
-    <TableSettings />
+    <TableHistory />
   </div>
 );
 

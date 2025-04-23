@@ -38,7 +38,7 @@ const GuarantorForm = ({
       type: mode,
     });
 
-  const { name = '', job = '', phone = '' } = initialValues || {};
+  const { name = '', job = '', phone = '' } = initialValues;
   const defaultValues: IEmployeeGuarantor = {
     name,
     job,
@@ -96,7 +96,7 @@ const GuarantorForm = ({
 
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full text-black-default space-y-10">
           {BASE_GUARANTOR_FIELD.map(({ name, label, placeholder }) => (
             <FormField

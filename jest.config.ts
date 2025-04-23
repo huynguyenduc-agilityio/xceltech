@@ -39,6 +39,8 @@ const config: Config = {
     '<rootDir>/vite.config.ts',
     '<rootDir>/jest.config.ts',
     '<rootDir>/jest.setup.ts',
+    '<rootDir>/tailwind.config.ts',
+    '<rootDir>/src/pages/UpdateProfile/components/index.ts',
     '/.storybook/',
   ],
   collectCoverage: true,

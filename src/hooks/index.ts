@@ -12,3 +12,4 @@ export * from './useEducation';
 export * from './useGuarantor';
 export * from './useFamily';
 export * from './useFinancial';
+export * from './useDebounce';

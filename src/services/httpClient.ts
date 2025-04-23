@@ -23,11 +23,10 @@ const httpClient = axios.create({
 httpClient.interceptors.request.use(
   (config) => {
     const authToken = localStorage.getItem(USER_KEY);
+    const parsedData = authToken && JSON.parse(authToken);
+    const token = parsedData?.state?.authUser?.access;
 
-    if (authToken) {
-      const parsedData = JSON.parse(authToken);
-      const token = parsedData?.state?.authUser.access;
-
+    if (token) {
       const { exp = 0 } = jwtDecode(token);
 
       // Convert the expiration time in milliseconds before 60 seconds

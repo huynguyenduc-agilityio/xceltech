@@ -9,13 +9,19 @@ import { Button } from '../common';
 
 const defaultProps = {
   items: [
-    { label: 'Approve', onClick: () => console.log('Approved') },
     {
+      key: 'approve',
+      label: 'Approve',
+      onClick: () => console.log('Approved'),
+    },
+    {
+      key: 'decline',
       label: 'Decline',
       onClick: () => console.log('Declined'),
       disabled: true,
     },
     {
+      key: 'view',
       label: 'View Details',
       onClick: () => console.log('View Details'),
     },

@@ -5,9 +5,7 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <form
-        class=""
-      >
+      <form>
         <div
           class="w-full px-10 py-16 text-black-default space-y-10"
         >
@@ -108,12 +106,12 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
                 aria-autocomplete="none"
                 aria-controls="radix-:r4:"
                 aria-expanded="false"
-                aria-label="Select"
                 class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
                 data-placeholder=""
                 data-state="closed"
                 dir="ltr"
                 role="combobox"
+                title="Select"
                 type="button"
               >
                 <span
@@ -179,7 +177,7 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
             class="w-full h-[70px]"
           >
             <button
-              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+              class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white h-[70px] py-6 w-[364px] bg-green-primary"
               disabled=""
               type="submit"
             >
@@ -191,9 +189,7 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
     </div>
   </body>,
   "container": <div>
-    <form
-      class=""
-    >
+    <form>
       <div
         class="w-full px-10 py-16 text-black-default space-y-10"
       >
@@ -294,12 +290,12 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
               aria-autocomplete="none"
               aria-controls="radix-:r4:"
               aria-expanded="false"
-              aria-label="Select"
               class="font-productsans flex w-full items-center justify-between border border-input py-2 text-lg ring-offset-background data-[placeholder]:text-gray-soft focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 bg-blue-light h-[68px] px-12 rounded-[15px]"
               data-placeholder=""
               data-state="closed"
               dir="ltr"
               role="combobox"
+              title="Select"
               type="button"
             >
               <span
@@ -365,7 +361,7 @@ exports[`NextOfKinForm Component should match snapshot 1`] = `
           class="w-full h-[70px]"
         >
           <button
-            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white disabled:hover:bg-primary h-[70px] py-6 w-[364px] bg-green-primary"
+            class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed text-white h-[70px] py-6 w-[364px] bg-green-primary"
             disabled=""
             type="submit"
           >

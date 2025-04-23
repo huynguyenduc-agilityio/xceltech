@@ -48,7 +48,7 @@ const UserDashboard = () => {
             </Button>
           </Link>
 
-          <img src="/assets/images/arrow.webp" />
+          <img alt="profile-icon" src="/assets/images/arrow.webp" />
         </div>
       </div>
 

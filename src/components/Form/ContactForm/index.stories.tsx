@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Components
 import ContactForm from '.';
+
+const queryClient = new QueryClient();
 
 const meta = {
   title: 'Components/ContactForm',
@@ -11,13 +14,15 @@ const meta = {
   },
   tags: ['autodocs'],
   render: () => (
-    <div className="flex items-center justify-center w-screen py-20 bg-blue-light">
-      <div className="bg-white w-[988px] rounded-[15px]">
-        <div className="p-10">
-          <ContactForm />
+    <QueryClientProvider client={queryClient}>
+      <div className="flex items-center justify-center w-screen py-20 bg-blue-light">
+        <div className="bg-white w-[988px] rounded-[15px]">
+          <div className="p-10">
+            <ContactForm />
+          </div>
         </div>
       </div>
-    </div>
+    </QueryClientProvider>
   ),
 } satisfies Meta<typeof ContactForm>;
 

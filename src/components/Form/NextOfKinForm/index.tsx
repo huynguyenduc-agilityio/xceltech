@@ -95,7 +95,7 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full px-10 py-16 text-black-default space-y-10">
           <div className="flex items-start gap-14">
             <FormField
@@ -161,6 +161,7 @@ const NextOfKinForm = ({ initialValues }: INextOfKinForm) => {
                       placeholder="Select your relationship"
                       className="bg-blue-light h-[68px] px-12 rounded-[15px]"
                       {...field}
+                      onChange={field.onChange}
                     />
                   </FormControl>
                   <FormMessage />

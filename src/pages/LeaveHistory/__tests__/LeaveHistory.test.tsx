@@ -26,6 +26,11 @@ jest.mock('@/hooks', () => ({
   useUpdateStatusLeaveRequest: () => mockUseUpdateStatusLeaveRequest(),
 }));
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useSearchParams: () => [new URLSearchParams()],
+}));
+
 const Wrapper = ({ children }: { children: ReactNode }) => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 );

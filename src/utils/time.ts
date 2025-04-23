@@ -16,8 +16,8 @@ export const formatDateRange = (
   const { fullMonth = false } = options || {};
   const format = fullMonth ? 'MMMM YYYY' : 'MMM YYYY';
 
-  const start = moment(startDate).format(format);
-  const end = moment(endDate).format(format);
+  const start = startDate ? moment(startDate).format(format) : 'Invalid date';
+  const end = endDate ? moment(endDate).format(format) : 'Invalid date';
 
   return `${start} - ${end}`;
 };

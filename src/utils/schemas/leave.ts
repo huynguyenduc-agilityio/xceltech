@@ -58,18 +58,6 @@ export const leaveRequestSchema = z
       message: MESSAGES.LEAVE_REQUEST.INVALID_END_DATE,
       path: ['endDate'],
     },
-  )
-  .refine(
-    (data) => {
-      const expectedResumptionDate = new Date(data.endDate);
-      expectedResumptionDate.setDate(expectedResumptionDate.getDate() + 1);
-
-      return data.resumptionDate.getTime() === expectedResumptionDate.getTime();
-    },
-    {
-      message: MESSAGES.LEAVE_REQUEST.INVALID_RESUMPTION_DATE,
-      path: ['resumptionDate'],
-    },
   );
 
 export type LeaveRequestFormValues = z.infer<typeof leaveRequestSchema>;

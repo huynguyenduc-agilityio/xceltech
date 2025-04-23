@@ -8,8 +8,6 @@ export const downloadBlobFile = (data: BlobPart, filename: string) => {
   document.body.appendChild(link);
   link.click();
 
-  link.onload = () => {
-    URL.revokeObjectURL(fileURL);
-    document.body.removeChild(link);
-  };
+  URL.revokeObjectURL(fileURL);
+  document.body.removeChild(link);
 };

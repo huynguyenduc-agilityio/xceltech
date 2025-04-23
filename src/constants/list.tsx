@@ -21,6 +21,7 @@ import { USER_PAGE } from './router';
 // Define mock data for progress leave list
 export const PROGRESS_LEAVE_ITEMS = [
   {
+    key: 'annual',
     value: 16,
     title: (
       <div className="flex items-center justify-between mb-3">
@@ -30,6 +31,7 @@ export const PROGRESS_LEAVE_ITEMS = [
     ),
   },
   {
+    key: 'sick',
     value: 0,
     title: (
       <div className="flex items-center justify-between mb-3">
@@ -39,6 +41,7 @@ export const PROGRESS_LEAVE_ITEMS = [
     ),
   },
   {
+    key: 'compassionate',
     value: 60,
     title: (
       <div className="flex items-center justify-between mb-3">

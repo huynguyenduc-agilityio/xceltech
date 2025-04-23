@@ -44,7 +44,7 @@ exports[`ActivateAccount renders correctly and matches snapshot 1`] = `
         Click the button below
       </p>
       <button
-        class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white disabled:hover:bg-primary w-[150px] h-[54px] text-lg mt-4 py-3"
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-white w-[150px] h-[54px] text-lg mt-4 py-3"
       >
         ACTIVATE
       </button>

@@ -69,7 +69,7 @@ describe('Button component', () => {
     );
 
     expect(screen.getByTestId('outline-button')).toHaveClass(
-      'border-[3px] border-primary text-primary bg-background hover:bg-accent',
+      'border-[3px] border-primary text-primary bg-background',
     );
     expect(screen.getByTestId('secondary-button')).toHaveClass(
       'bg-secondary text-black-default hover:bg-secondary/80',

@@ -60,7 +60,7 @@ const EducationForm = ({
     startDate,
     endDate,
     location = '',
-  } = initialValues || {};
+  } = initialValues;
 
   const defaultValues: IEmployeeEducationInfo = {
     name,

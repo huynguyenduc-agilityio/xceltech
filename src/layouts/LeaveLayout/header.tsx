@@ -1,23 +1,42 @@
+import { useDeferredValue } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+
+// Components
 import { Button, NotificationBadge, SearchBar } from '@/components';
 
 // Icons
 import { BellIcon, HamburgerIcon, MailIcon, WrenchIcon } from '@/icons';
 
-interface HeaderProps {
-  onChange?: (value: string) => void;
-}
+// Constants
+import { ADMIN_PAGE } from '@/constants';
 
-const HeaderLayout = ({ onChange }: HeaderProps) => {
-  const handleSearch = (value: string) => {
-    onChange?.(value);
-  };
+// Hooks
+import { useDebounce } from '@/hooks';
+
+const HeaderLayout = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const deferredQuery = useDeferredValue(searchParams.get('search'));
+  const navigate = useNavigate();
+
+  const handleSearch = useDebounce((value: string) => {
+    const newSearchParams = new URLSearchParams(searchParams.toString());
+
+    if (value.trim()) {
+      newSearchParams.set('search', value);
+    } else {
+      newSearchParams.delete('search');
+    }
+
+    setSearchParams(newSearchParams);
+    navigate(`${ADMIN_PAGE.LEAVE_HISTORY}?${newSearchParams.toString()}`);
+  });
 
   return (
     <div className="flex w-full items-center justify-between px-[47px] py-[60px]">
       <Button variant="ghost" size="icon" aria-label="toggle menu">
         <HamburgerIcon />
       </Button>
-      <SearchBar onChange={handleSearch} />
+      <SearchBar defaultValue={deferredQuery || ''} onChange={handleSearch} />
       <div className="flex items-center space-x-7">
         <NotificationBadge
           count={13}

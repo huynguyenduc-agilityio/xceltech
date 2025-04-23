@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 // Components
 import Sidebar from '.';
+
+const queryClient = new QueryClient();
 
 const meta = {
   title: 'Components/Sidebar',
@@ -11,6 +15,13 @@ const meta = {
   },
 
   tags: ['autodocs'],
+  render: (args) => (
+    <QueryClientProvider client={queryClient}>
+      <div className="flex justify-center p-9 bg-blue-light">
+        <Sidebar {...args} />
+      </div>
+    </QueryClientProvider>
+  ),
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;

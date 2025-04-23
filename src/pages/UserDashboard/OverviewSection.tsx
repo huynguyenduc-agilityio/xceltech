@@ -16,8 +16,13 @@ const OverviewSection = () => {
       {/* Available Leave Days */}
       <OverviewCard title="Available Leave Days">
         <div className="flex flex-col gap-7">
-          {PROGRESS_LEAVE_ITEMS.map(({ title, value }, index) => (
-            <Progress key={index} value={value} indicatorContent={title} />
+          {PROGRESS_LEAVE_ITEMS.map(({ key, title, value }) => (
+            <Progress
+              key={key}
+              aria-label={`Progress ${value}`}
+              value={value}
+              indicatorContent={title}
+            />
           ))}
         </div>
       </OverviewCard>

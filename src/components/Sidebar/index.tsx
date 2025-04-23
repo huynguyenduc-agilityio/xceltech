@@ -1,4 +1,17 @@
 import { ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+// Constants
+import { AUTHENTICATION_PAGE } from '@/constants';
+
+// Stores
+import { useUserActions } from '@/stores';
+
+// Hooks
+import { useGetInfoUser } from '@/hooks';
+
+// Utils
+import { getInitialsAvatar } from '@/utils';
 
 // Icons
 import { LogoIcon, LogoutIcon } from '@/icons';
@@ -7,13 +20,17 @@ import { LogoIcon, LogoutIcon } from '@/icons';
 import NavCollapse from './NavCollapse';
 import { Avatar } from '../common';
 
-// Hooks
-import { useGetInfoUser } from '@/hooks';
-
 const Sidebar = ({ children }: { children: ReactNode }) => {
+  const navigate = useNavigate();
   const { userInfo } = useGetInfoUser();
+  const { clearUser } = useUserActions();
 
-  const { firstName = '', lastName = '', role } = userInfo || {};
+  const { firstName = '', lastName = '', avatar, role } = userInfo || {};
+
+  const handleClickLogoutBtn = () => {
+    clearUser();
+    navigate(AUTHENTICATION_PAGE.ADMIN_SIGN_IN);
+  };
 
   return (
     <div className="flex min-h-screen w-full">
@@ -25,7 +42,8 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
           <div className="flex items-center mt-[47px] mb-[44px] px-4">
             <div className="w-[112px] h-[112px] p-2 rounded-full border-2 border-white">
               <Avatar
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtXo0VK1WnuWrlK1tOXQizpHNhvqSJ9hUnQ&s"
+                src={avatar as string}
+                fallback={getInitialsAvatar(`${firstName} ${lastName}`)}
                 size="100%"
               />
             </div>
@@ -39,7 +57,10 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
 
           <NavCollapse />
           <div className="mt-12 mb-3 px-4">
-            <button className="flex items-center justify-center py-4 bg-red-600 rounded-[14px] w-full">
+            <button
+              className="flex items-center justify-center py-4 bg-red-600 rounded-[14px] w-full"
+              onClick={handleClickLogoutBtn}
+            >
               <LogoutIcon className="mr-3" />
               <p className="text-md font-bold">Logout</p>
             </button>

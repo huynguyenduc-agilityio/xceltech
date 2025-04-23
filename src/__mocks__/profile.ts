@@ -75,3 +75,21 @@ export const dummyFinancial: IEmployeeFinancialInfo[] = [
     bankName: 'Awash Bank',
   },
 ];
+
+export const mockDataJobs = [
+  {
+    id: '1',
+    label: 'Sales Executive',
+    value: '1',
+  },
+  {
+    id: '2',
+    label: 'User Experience Designer',
+    value: '2',
+  },
+  {
+    id: '3',
+    label: 'Product Manager',
+    value: '3',
+  },
+];

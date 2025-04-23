@@ -8,6 +8,7 @@ import { useGetDocuments } from '@/hooks';
 
 // Components
 import { Button, Fallback } from '@/components';
+import { cn } from '@/utils';
 
 const UploadDocuments = lazy(() => import('./UploadDocument'));
 const ViewDocument = lazy(() => import('./ViewDocument'));
@@ -15,6 +16,10 @@ const ViewDocument = lazy(() => import('./ViewDocument'));
 type JobDetailTabProps = {
   jobInfo?: Partial<IEmployeeJobInfo>;
 };
+
+const DashLine = () => (
+  <div className="w-8 h-[3px] bg-black-default inline-block" />
+);
 
 const JobDetailTab = ({ jobInfo }: JobDetailTabProps) => {
   const { documents, isDocumentsLoading } = useGetDocuments();
@@ -34,19 +39,25 @@ const JobDetailTab = ({ jobInfo }: JobDetailTabProps) => {
           <div className="text-center mt-6">
             <div className="flex flex-col text-xl">
               <span className="mb-6">Job Role</span>
-              <span className="text-2xl font-bold">{jobInfo?.name}</span>
+              <span className="text-2xl font-bold">
+                {jobInfo?.name ? jobInfo?.name : <DashLine />}
+              </span>
             </div>
             <div className="flex items-start justify-center gap-36 mt-[52px] text-lg">
               <div className="flex flex-col">
                 <span className="mb-6">Department</span>
                 <span className="text-2xl font-bold">
-                  {jobInfo?.department}
+                  {jobInfo?.department ? jobInfo?.department : <DashLine />}
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="mb-6">Line Manager</span>
                 <span className="text-2xl font-bold">
-                  {jobInfo?.lineManagement}
+                  {jobInfo?.lineManagement ? (
+                    jobInfo?.lineManagement
+                  ) : (
+                    <DashLine />
+                  )}
                 </span>
               </div>
             </div>
@@ -54,7 +65,15 @@ const JobDetailTab = ({ jobInfo }: JobDetailTabProps) => {
 
           <div className="mt-14 text-center">
             <span className="text-xl font-bold mb-4">Job Description</span>
-            <p className="text-md text-left">{jobInfo?.description}</p>
+            <p
+              className={cn(
+                jobInfo?.description
+                  ? 'text-left text-md'
+                  : 'text-2xl font-bold',
+              )}
+            >
+              {jobInfo?.description ? jobInfo?.description : <DashLine />}
+            </p>
           </div>
 
           <div className="flex gap-4 mt-8">

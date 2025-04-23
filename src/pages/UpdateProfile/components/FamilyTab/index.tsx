@@ -81,7 +81,7 @@ const FamilyTab = () => {
   }
 
   return (
-    <div className="relative w-full h-full px-8 py-16">
+    <div className="relative w-full h-[820px] overflow-auto px-8 py-16">
       {(isFamiliesLoading || isDeleteLoading) && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-white/60">
           <Fallback />
