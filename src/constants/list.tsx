@@ -168,21 +168,21 @@ export const DASHBOARD_TILE_ITEMS = [
 export const DASHBOARD_APPLY_JOBS = [
   {
     id: 1,
-    image: '/public/assets/images/accessBank.webp',
+    image: '/assets/images/accessBank.webp',
     title: 'Sales Executive',
     company: 'Access Bank',
     date: '20mins ago',
   },
   {
     id: 2,
-    image: '/public/assets/images/payStack.webp',
+    image: '/assets/images/payStack.webp',
     title: 'User Experience Designer',
     company: 'Paystack',
     date: '20mins ago',
   },
   {
     id: 3,
-    image: '/public/assets/images/tpay.webp',
+    image: '/assets/images/tpay.webp',
     title: 'Product Manager',
     company: 'T-Pay',
     date: '20mins ago',
@@ -192,19 +192,19 @@ export const DASHBOARD_APPLY_JOBS = [
 export const DASHBOARD_EMPLOYEES = [
   {
     id: 1,
-    image: '/public/assets/images/youngMan.webp',
+    image: '/assets/images/youngMan.webp',
     name: 'Aman',
     role: 'Product Manager',
   },
   {
     id: 2,
-    image: '/public/assets/images/youngGirl.webp',
+    image: '/assets/images/youngGirl.webp',
     name: 'Gelila',
     role: 'Sales Executive',
   },
   {
     id: 3,
-    image: '/public/assets/images/oldMan.webp',
+    image: '/assets/images/oldMan.webp',
     name: 'Biruk',
     role: 'UI UX Designer',
   },
@@ -213,19 +213,19 @@ export const DASHBOARD_EMPLOYEES = [
 export const DASHBOARD_CANDIDATES = [
   {
     id: 1,
-    image: '/public/assets/images/youngMan.webp',
+    image: '/assets/images/youngMan.webp',
     name: 'Feven Tesfaye',
     job: ' backend Engineer',
   },
   {
     id: 2,
-    image: '/public/assets/images/youngGirl.webp',
+    image: '/assets/images/youngGirl.webp',
     name: 'Yanet mekuriya',
     job: 'Sales',
   },
   {
     id: 3,
-    image: '/public/assets/images/youngMan.webp',
+    image: '/assets/images/youngMan.webp',
     name: 'Aman beyene',
     job: 'Product Manager',
   },
@@ -234,7 +234,7 @@ export const DASHBOARD_CANDIDATES = [
 export const DASHBOARD_PAYROLLS = [
   {
     id: 1,
-    image: '/public/assets/images/youngMan.webp',
+    image: '/assets/images/youngMan.webp',
     name: 'Aman',
     salary: '30,000 Birr',
     status: 'Paid',
@@ -242,7 +242,7 @@ export const DASHBOARD_PAYROLLS = [
   },
   {
     id: 2,
-    image: '/public/assets/images/youngGirl.webp',
+    image: '/assets/images/youngGirl.webp',
     name: 'Gelila',
     salary: '50,000 Birr',
     status: 'Processing',
@@ -250,7 +250,7 @@ export const DASHBOARD_PAYROLLS = [
   },
   {
     id: 3,
-    image: '/public/assets/images/oldMan.webp',
+    image: '/assets/images/oldMan.webp',
     name: 'Biruk',
     salary: '40,000 Birr',
     status: 'Processing',

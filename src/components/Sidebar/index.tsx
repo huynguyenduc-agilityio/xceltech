@@ -67,7 +67,7 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
 
-        <img src="/public/assets/images/footerNav.webp" alt="Footer Nav" />
+        <img src="/assets/images/footerNav.webp" alt="Footer Nav" />
       </nav>
 
       {/* Body Content */}

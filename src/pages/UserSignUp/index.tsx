@@ -16,7 +16,7 @@ const UserSignUp = () => {
             <LogoIcon />
           </div>
           <img
-            src="/public/assets/images/registerImage.webp"
+            src="/assets/images/registerImage.webp"
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
