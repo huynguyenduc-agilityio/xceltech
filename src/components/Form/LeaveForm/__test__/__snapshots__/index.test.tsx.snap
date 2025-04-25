@@ -71,7 +71,7 @@ exports[`LeaveForm Component should match snapshot 1`] = `
           class="space-y-2 w-full"
         >
           <label
-            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1 mb-3"
           >
             Start Date
           </label>
@@ -85,7 +85,7 @@ exports[`LeaveForm Component should match snapshot 1`] = `
           class="space-y-2 w-full"
         >
           <label
-            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1 mb-3"
           >
             End Date
           </label>
@@ -131,7 +131,7 @@ exports[`LeaveForm Component should match snapshot 1`] = `
           class="space-y-2 w-full"
         >
           <label
-            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1"
+            class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-black-soft text-xl flex flex-1 mb-3"
           >
             Resumption Date
           </label>

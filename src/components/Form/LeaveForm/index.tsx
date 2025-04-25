@@ -223,7 +223,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
 
                 return (
                   <FormItem>
-                    <Label className="flex flex-1">Start Date</Label>
+                    <Label className="flex flex-1 mb-3">Start Date</Label>
                     <FormControl>
                       <DatePicker
                         disabledRange={(date) => date < new Date()}
@@ -249,7 +249,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
 
                 return (
                   <FormItem>
-                    <Label className="flex flex-1">End Date</Label>
+                    <Label className="flex flex-1 mb-3">End Date</Label>
                     <FormControl>
                       <DatePicker
                         disabledRange={(date) =>
@@ -294,7 +294,7 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
 
                 return (
                   <FormItem>
-                    <Label className="flex flex-1">Resumption Date</Label>
+                    <Label className="flex flex-1 mb-3">Resumption Date</Label>
                     <FormControl>
                       <DatePicker
                         date={field.value}
