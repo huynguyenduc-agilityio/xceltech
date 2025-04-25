@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Constants
 import { LEAVE_NAVIGATION, PATH_LEAVE } from '@/constants';
@@ -11,6 +11,7 @@ import { cn } from '@/utils';
 
 const LeaveNavbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <nav className="flex items-center justify-between px-4 py-2 w-full gap-8 mt-8">
@@ -20,18 +21,17 @@ const LeaveNavbar = () => {
           path !== PATH_LEAVE.LEAVE_RECALL && path !== PATH_LEAVE.LEAVE_HISTORY;
 
         return (
-          <Link key={path} to={path} className="w-full">
-            <Button
-              disabled={isDisabled}
-              className={cn(
-                'w-full h-[70px]',
-                isFocused && 'bg-secondary text-black',
-              )}
-              key={path}
-            >
-              {title}
-            </Button>
-          </Link>
+          <Button
+            disabled={isDisabled}
+            className={cn(
+              'w-full h-[70px]',
+              isFocused && 'bg-secondary text-black',
+            )}
+            key={path}
+            onClick={() => navigate(path)}
+          >
+            {title}
+          </Button>
         );
       })}
     </nav>

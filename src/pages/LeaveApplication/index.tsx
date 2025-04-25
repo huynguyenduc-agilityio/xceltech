@@ -1,8 +1,11 @@
 // Constants
-import { LEAVE_TILE_ITEMS, USER_PAGE } from '@/constants';
+import { USER_PAGE } from '@/constants';
 
 // Icons
 import { BookIcon } from '@/icons';
+
+// Mocks
+import { LEAVE_TILE_ITEMS } from '@/__mocks__';
 
 // Components
 import { Breadcrumb, Carousel } from '@/components';

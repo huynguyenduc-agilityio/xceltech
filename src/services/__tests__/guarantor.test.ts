@@ -31,21 +31,21 @@ describe('guarantorService', () => {
       },
     ];
 
-    mock.onGet(END_POINTS.GUARANTORS).reply(200, mockData);
+    mock.onGet(END_POINTS.USER_PROFILE.GUARANTORS).reply(200, mockData);
 
     const result = await getListGuarantors();
     expect(result).toEqual(mockData);
   });
 
   it('should return empty array when response is null', async () => {
-    mock.onGet(END_POINTS.GUARANTORS).reply(200, null);
+    mock.onGet(END_POINTS.USER_PROFILE.GUARANTORS).reply(200, null);
 
     const result = await getListGuarantors();
     expect(result).toEqual([]);
   });
 
   it('should throw error when getListGuarantors fails', async () => {
-    mock.onGet(END_POINTS.GUARANTORS).reply(500, {
+    mock.onGet(END_POINTS.USER_PROFILE.GUARANTORS).reply(500, {
       detail: 'Server Error',
     });
 
@@ -61,14 +61,14 @@ describe('guarantorService', () => {
 
     const mockResponse = { id: '2', ...guarantor };
 
-    mock.onPost(END_POINTS.GUARANTORS).reply(201, mockResponse);
+    mock.onPost(END_POINTS.USER_PROFILE.GUARANTORS).reply(201, mockResponse);
 
     const result = await addGuarantor(guarantor);
     expect(result).toEqual(mockResponse);
   });
 
   it('should throw error when addGuarantor fails', async () => {
-    mock.onPost(END_POINTS.GUARANTORS).reply(400, {
+    mock.onPost(END_POINTS.USER_PROFILE.GUARANTORS).reply(400, {
       detail: 'Invalid data',
     });
 
@@ -87,7 +87,7 @@ describe('guarantorService', () => {
     };
 
     mock
-      .onPatch(`${END_POINTS.GUARANTORS}${guarantor.id}/`)
+      .onPatch(`${END_POINTS.USER_PROFILE.GUARANTORS}${guarantor.id}/`)
       .reply(200, mockResponse);
 
     const result = await editGuarantor(guarantor);
@@ -95,7 +95,7 @@ describe('guarantorService', () => {
   });
 
   it('should throw error when editGuarantor fails', async () => {
-    mock.onPatch(`${END_POINTS.GUARANTORS}3/`).reply(400, {
+    mock.onPatch(`${END_POINTS.USER_PROFILE.GUARANTORS}3/`).reply(400, {
       detail: 'Update failed',
     });
 
@@ -105,14 +105,14 @@ describe('guarantorService', () => {
   });
 
   it('should delete guarantor successfully', async () => {
-    mock.onDelete(`${END_POINTS.GUARANTORS}3/`).reply(204);
+    mock.onDelete(`${END_POINTS.USER_PROFILE.GUARANTORS}3/`).reply(204);
 
     const response = await deleteGuarantor('3');
     expect(response.status).toBe(204);
   });
 
   it('should throw error when deleteGuarantor fails', async () => {
-    mock.onDelete(`${END_POINTS.GUARANTORS}3/`).reply(404, {
+    mock.onDelete(`${END_POINTS.USER_PROFILE.GUARANTORS}3/`).reply(404, {
       detail: 'Not found',
     });
 

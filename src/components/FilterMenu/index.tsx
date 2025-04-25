@@ -12,12 +12,14 @@ import { Button, Checkbox, PopoverContainer } from '../common';
 export interface FilterMenuProps {
   options: FilterCriteria;
   selectedValues?: FilterCriteria;
+  isDisabled?: boolean;
   onApply: (filter: FilterCriteria) => void;
 }
 
 const FilterMenu = ({
   options,
   selectedValues = {},
+  isDisabled = false,
   onApply,
 }: FilterMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +58,7 @@ const FilterMenu = ({
 
   return (
     <PopoverContainer
-      isOpen={isOpen}
+      isOpen={!isDisabled && isOpen}
       onOpenChange={setIsOpen}
       trigger={
         <Button
@@ -64,6 +66,7 @@ const FilterMenu = ({
           variant="ghost"
           size="icon"
           className="p-2"
+          disabled={isDisabled}
         >
           <FilterIcon />
         </Button>

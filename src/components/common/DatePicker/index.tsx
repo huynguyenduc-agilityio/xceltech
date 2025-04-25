@@ -11,6 +11,7 @@ import { cn } from '@/utils';
 import { Button } from '../Button';
 import { PopoverContainer } from '../Popover';
 import { Calendar } from '../Calendar';
+import { useState } from 'react';
 
 export interface DatePickerProps {
   isDisabled?: boolean;
@@ -32,11 +33,21 @@ const DatePicker = ({
   onSelect,
   ...props
 }: DatePickerProps) => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleSelect = (selectedDate: Date | undefined) => {
+    onSelect(selectedDate);
+    setOpen(false);
+  };
+
   return (
     <PopoverContainer
+      isOpen={open}
+      onOpenChange={setOpen}
       trigger={
         <Button
           type="button"
+          aria-label="pick-a-date"
           variant="ghost"
           className={cn(
             'w-full h-[54px] justify-between px-5 py-4 text-lg rounded-regular font-normal bg-blue-light text-black-smoky',
@@ -57,9 +68,9 @@ const DatePicker = ({
         <Calendar
           mode="single"
           selected={date}
-          onSelect={onSelect}
           initialFocus
           disabled={disabledRange}
+          onSelect={handleSelect}
           {...props}
         />
       }

@@ -1,5 +1,6 @@
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { PlusIcon } from 'lucide-react';
+import isEqual from 'react-fast-compare';
 
 import { Avatar, Button, Input, FormField, FormItem } from '../common';
 
@@ -96,4 +97,4 @@ const ImageUpload = ({ imageUrl = '', onImageChange }: TImageUploadProps) => {
   );
 };
 
-export default memo(ImageUpload);
+export default memo(ImageUpload, isEqual);

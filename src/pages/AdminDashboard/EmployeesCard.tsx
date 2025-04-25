@@ -1,7 +1,7 @@
 import { Button, OverviewCard } from '@/components';
 
 // Constants
-import { DASHBOARD_EMPLOYEES } from '@/constants';
+import { DASHBOARD_EMPLOYEES } from '@/__mocks__';
 
 // Icons
 import { DownloadIcon, EyeIcon } from '@/icons';

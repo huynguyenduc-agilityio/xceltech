@@ -91,42 +91,45 @@ const TableLeave = () => {
     }
   }, [leaves]);
 
-  const renderActionsDropdown = ({ id, status, type }: TDataSource) => {
-    const isDisabled = status !== StatusLeave.Pending;
-    const leaveType =
-      type === LeaveType.Casual
-        ? LeaveFormEnum.Compassionate
-        : (type as string).toLowerCase();
+  const renderActionsDropdown = useCallback(
+    ({ id, status, type }: TDataSource) => {
+      const isDisabled = status !== StatusLeave.Pending;
+      const leaveType =
+        type === LeaveType.Casual
+          ? LeaveFormEnum.Compassionate
+          : (type as string).toLowerCase();
 
-    const onDelete = () =>
-      confirm({
-        title: `Delete leave`,
-        confirmMessage: `Are you sure you want to delete this leave?`,
-        onConfirm: () => handleDelete(id),
-      });
+      const onDelete = () =>
+        confirm({
+          title: `Delete leave`,
+          confirmMessage: `Are you sure you want to delete this leave?`,
+          onConfirm: () => handleDelete(id),
+        });
 
-    return (
-      <ActionsDropdown
-        items={[
-          {
-            key: 'edit',
-            label: 'Edit',
-            onClick: () => navigate(`${USER_PAGE.LEAVE}/${leaveType}/${id}`),
-          },
-          {
-            key: 'delete',
-            label: 'Delete',
-            onClick: onDelete,
-          },
-        ]}
-      >
-        <Button disabled={isDisabled} className="w-[195px] h-14 shadow-md">
-          Action
-          <CircleDownIcon className="ml-4" />
-        </Button>
-      </ActionsDropdown>
-    );
-  };
+      return (
+        <ActionsDropdown
+          items={[
+            {
+              key: 'edit',
+              label: 'Edit',
+              onClick: () => navigate(`${USER_PAGE.LEAVE}/${leaveType}/${id}`),
+            },
+            {
+              key: 'delete',
+              label: 'Delete',
+              onClick: onDelete,
+            },
+          ]}
+        >
+          <Button disabled={isDisabled} className="w-[195px] h-14 shadow-md">
+            Action
+            <CircleDownIcon className="ml-4" />
+          </Button>
+        </ActionsDropdown>
+      );
+    },
+    [confirm, handleDelete, navigate],
+  );
 
   const renderColumns = [
     {
@@ -169,6 +172,8 @@ const TableLeave = () => {
     },
   ];
 
+  const isDisableAction = isLeavesLoading || !leaves?.results.length;
+
   return (
     <div className="mt-[97px]">
       <div className="flex justify-between px-5 py-6">
@@ -176,9 +181,10 @@ const TableLeave = () => {
         <div className="flex items-center gap-14">
           <FilterMenu
             options={{ type: Object.values(LeaveType) }}
+            isDisabled={isLeavesLoading}
             onApply={handleApplyFilters}
           />
-          <DropdownExport />
+          <DropdownExport isDisable={isDisableAction} />
         </div>
       </div>
 

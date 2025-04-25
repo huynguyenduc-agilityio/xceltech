@@ -45,16 +45,11 @@ exports[`UserDashboard renders correctly and matches snapshot 1`] = `
     <div
       class="flex items-center gap-8"
     >
-      <a
-        data-discover="true"
-        href="/user/dashboard/update-profile"
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 py-6 w-[252px] h-[65px] text-xl"
       >
-        <button
-          class="font-productsans inline-flex items-center justify-center whitespace-nowrap rounded-[14px] font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-secondary text-black-default hover:bg-secondary/80 py-6 w-[252px] h-[65px] text-xl"
-        >
-          Edit Profile
-        </button>
-      </a>
+        Edit Profile
+      </button>
       <img
         alt="profile-icon"
         src="/assets/images/arrow.webp"
@@ -72,17 +67,11 @@ exports[`UserDashboard renders correctly and matches snapshot 1`] = `
     <div
       class="mt-[30px] flex gap-6"
     >
-      <a
-        class="w-full"
-        data-discover="true"
-        href="/user/dashboard/leave"
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed h-[70px] w-full py-4 text-xl rounded-full bg-white text-black-soft shadow-lg shadow-black-default/15 hover:bg-secondary transition-all"
       >
-        <button
-          class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed h-[70px] w-full py-4 text-xl rounded-full bg-white text-black-soft shadow-lg shadow-black-default/15 hover:bg-secondary transition-all"
-        >
-          Apply for Leave
-        </button>
-      </a>
+        Apply for Leave
+      </button>
       <button
         class="font-productsans inline-flex items-center justify-center whitespace-nowrap font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:cursor-not-allowed bg-primary text-white h-[70px] w-full py-4 text-xl rounded-full disabled:bg-white disabled:opacity-100 disabled:text-black-soft disabled:hover:bg-white"
         disabled=""
@@ -131,6 +120,8 @@ exports[`UserDashboard renders correctly and matches snapshot 1`] = `
         </span>
         <button
           aria-label="More options"
+          class="disabled:cursor-not-allowed"
+          disabled=""
         >
           <svg
             fill="none"
@@ -265,6 +256,8 @@ exports[`UserDashboard renders correctly and matches snapshot 1`] = `
         </span>
         <button
           aria-label="More options"
+          class="disabled:cursor-not-allowed"
+          disabled=""
         >
           <svg
             fill="none"
@@ -457,6 +450,8 @@ exports[`UserDashboard renders correctly and matches snapshot 1`] = `
         </span>
         <button
           aria-label="More options"
+          class="disabled:cursor-not-allowed"
+          disabled=""
         >
           <svg
             fill="none"

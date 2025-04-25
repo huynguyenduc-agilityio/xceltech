@@ -13,7 +13,11 @@ const OverviewCard = ({ title, children }: OverviewCardProps) => {
     <div className="h-full p-10 rounded-regular bg-white">
       <div className="flex items-center justify-between mb-6">
         <span className="text-2xl font-bold">{title}</span>
-        <button aria-label="More options">
+        <button
+          aria-label="More options"
+          disabled
+          className="disabled:cursor-not-allowed"
+        >
           <KebabIcon />
         </button>
       </div>

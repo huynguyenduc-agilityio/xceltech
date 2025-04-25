@@ -15,7 +15,7 @@ import { ErrorType, ToastStatus } from '@/types';
 // Constants
 import { FileType, MESSAGES } from '@/constants';
 
-const DropdownExport = () => {
+const DropdownExport = ({ isDisable }: { isDisable?: boolean }) => {
   const { handleExportLeaveFile, isLoading } = useExportLeaveFile();
   const { toast } = useToast();
 
@@ -40,6 +40,7 @@ const DropdownExport = () => {
 
   return (
     <ActionsDropdown
+      disabled={isDisable || isLoading}
       items={[
         {
           key: 'pdf',
@@ -59,10 +60,7 @@ const DropdownExport = () => {
       ]}
       itemClassName="bg-white text-black-default border-b border-b-gray-200 hover:bg-gray-100"
     >
-      <Button
-        className="w-[195px] h-14 bg-green-primary hover:bg-green-primary/90 shadow-md"
-        isLoading={isLoading}
-      >
+      <Button className="w-[195px] h-14 bg-green-primary hover:bg-green-primary/90 shadow-md">
         Export
         <CircleDownIcon className="ml-4" />
       </Button>

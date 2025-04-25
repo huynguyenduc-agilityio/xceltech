@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
 
 // Constants
@@ -8,29 +9,30 @@ import {
   USER_PAGE,
 } from '@/constants';
 
-// Layouts
-import { AdminLayout, LeaveLayout, UserLayout } from '@/layouts';
+// Routers
+import { AuthorizeRoute } from './authorizeRoute';
+import { DynamicAuthorizeRoute } from './dynamicAuthorizeRoute';
 
-// Pages
-import {
-  ActivateAccount,
-  AdminDashboard,
-  LeaveApplication,
-  AdminSignIn,
-  UpdateProfile,
-  UserDashboard,
-  UserSignIn,
-  UserSignUp,
-  LeaveRequest,
-  AdminLeave,
-  LeaveHistory,
-  AdminLeaveRecall,
-  LeaveRecall,
-} from '@/pages';
+// Lazy Layout
+const AdminLayout = lazy(() => import('@/layouts/AdminLayout'));
+const LeaveLayout = lazy(() => import('@/layouts/LeaveLayout'));
+const UserLayout = lazy(() => import('@/layouts/UserLayout'));
 
-// Component
-import { AuthorizeRoute } from './components/authorizeRoute';
-import { DynamicAuthorizeRoute } from './components/dynamicAuthorizeRoute';
+// Lazy Pages
+const ActivateAccount = lazy(() => import('@/pages/ActivateAccount'));
+const AdminDashboard = lazy(() => import('@/pages/AdminDashboard'));
+const LeaveApplication = lazy(() => import('@/pages/LeaveApplication'));
+const AdminSignIn = lazy(() => import('@/pages/AdminSignIn'));
+const UpdateProfile = lazy(() => import('@/pages/UpdateProfile'));
+const UserDashboard = lazy(() => import('@/pages/UserDashboard'));
+const UserSignIn = lazy(() => import('@/pages/UserSignIn'));
+const UserSignUp = lazy(() => import('@/pages/UserSignUp'));
+const LeaveRequest = lazy(() => import('@/pages/LeaveRequest'));
+const AdminLeave = lazy(() => import('@/pages/AdminLeave'));
+const LeaveHistory = lazy(() => import('@/pages/LeaveHistory'));
+const AdminLeaveRecall = lazy(() => import('@/pages/AdminLeaveRecall'));
+const LeaveRecall = lazy(() => import('@/pages/LeaveRecall'));
+const InternalServerError = lazy(() => import('@/pages/InternalServerError'));
 
 export const AUTH_ROUTES: RouteObject[] = [
   { path: AUTHENTICATION_PAGE.USER_SIGN_IN, element: <UserSignIn /> },
@@ -43,6 +45,7 @@ export const USER_ROUTES: RouteObject[] = [
   {
     path: USER_PAGE.ROOT,
     element: <DynamicAuthorizeRoute />,
+    errorElement: <InternalServerError path={USER_PAGE.DASHBOARD} />,
     children: [
       {
         path: USER_PAGE.ROOT,
@@ -69,6 +72,7 @@ export const ADMIN_ROUTES: RouteObject[] = [
         allowedRoles={RoleAuthentication.Admin}
       />
     ),
+    errorElement: <InternalServerError path={ADMIN_PAGE.DASHBOARD} />,
     children: [
       {
         path: ADMIN_PAGE.ROOT,

@@ -11,7 +11,7 @@ export const getListFinancials = async (): Promise<
   IEmployeeFinancialInfo[]
 > => {
   try {
-    const response = await HttpClient.get(END_POINTS.FINANCIALS);
+    const response = await HttpClient.get(END_POINTS.USER_PROFILE.FINANCIALS);
 
     return response?.data ?? [];
   } catch (error) {
@@ -21,7 +21,9 @@ export const getListFinancials = async (): Promise<
 
 export const addFinancial = async (data: Partial<IEmployeeFinancialInfo>) => {
   try {
-    return (await HttpClient.post(`${END_POINTS.FINANCIALS}`, data)).data;
+    return (
+      await HttpClient.post(`${END_POINTS.USER_PROFILE.FINANCIALS}`, data)
+    ).data;
   } catch (error) {
     throw new Error((error as ErrorType).detail);
   }
@@ -31,8 +33,12 @@ export const editFinancial = async (data: Partial<IEmployeeFinancialInfo>) => {
   try {
     const { id, ...payload } = data;
 
-    return (await HttpClient.patch(`${END_POINTS.FINANCIALS}${id}/`, payload))
-      .data;
+    return (
+      await HttpClient.patch(
+        `${END_POINTS.USER_PROFILE.FINANCIALS}${id}/`,
+        payload,
+      )
+    ).data;
   } catch (error) {
     throw new Error(
       (error as ErrorType).detail || MESSAGES.COMMON.UPDATE_FAILED('Financial'),
@@ -42,7 +48,9 @@ export const editFinancial = async (data: Partial<IEmployeeFinancialInfo>) => {
 
 export const deleteFinancial = async (id: string) => {
   try {
-    return await HttpClient.delete(`${END_POINTS.FINANCIALS}${id}/`);
+    return await HttpClient.delete(
+      `${END_POINTS.USER_PROFILE.FINANCIALS}${id}/`,
+    );
   } catch (error) {
     throw new Error(
       (error as ErrorType).detail || MESSAGES.COMMON.DELETE_FAILED('Financial'),

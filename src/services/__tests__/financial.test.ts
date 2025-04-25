@@ -31,21 +31,21 @@ describe('financialService', () => {
       },
     ];
 
-    mock.onGet(END_POINTS.FINANCIALS).reply(200, mockData);
+    mock.onGet(END_POINTS.USER_PROFILE.FINANCIALS).reply(200, mockData);
 
     const result = await getListFinancials();
     expect(result).toEqual(mockData);
   });
 
   it('should return empty array when response is null', async () => {
-    mock.onGet(END_POINTS.FINANCIALS).reply(200, null);
+    mock.onGet(END_POINTS.USER_PROFILE.FINANCIALS).reply(200, null);
 
     const result = await getListFinancials();
     expect(result).toEqual([]);
   });
 
   it('should throw error when getListFinancials fails', async () => {
-    mock.onGet(END_POINTS.FINANCIALS).reply(500, {
+    mock.onGet(END_POINTS.USER_PROFILE.FINANCIALS).reply(500, {
       detail: 'Server Error',
     });
 
@@ -61,14 +61,14 @@ describe('financialService', () => {
 
     const mockResponse = { id: '2', ...financial };
 
-    mock.onPost(END_POINTS.FINANCIALS).reply(201, mockResponse);
+    mock.onPost(END_POINTS.USER_PROFILE.FINANCIALS).reply(201, mockResponse);
 
     const result = await addFinancial(financial);
     expect(result).toEqual(mockResponse);
   });
 
   it('should throw error when addFinancial fails', async () => {
-    mock.onPost(END_POINTS.FINANCIALS).reply(400, {
+    mock.onPost(END_POINTS.USER_PROFILE.FINANCIALS).reply(400, {
       detail: 'Invalid data',
     });
 
@@ -87,7 +87,7 @@ describe('financialService', () => {
     };
 
     mock
-      .onPatch(`${END_POINTS.FINANCIALS}${financial.id}/`)
+      .onPatch(`${END_POINTS.USER_PROFILE.FINANCIALS}${financial.id}/`)
       .reply(200, mockResponse);
 
     const result = await editFinancial(financial);
@@ -95,7 +95,7 @@ describe('financialService', () => {
   });
 
   it('should throw error when editFinancial fails', async () => {
-    mock.onPatch(`${END_POINTS.FINANCIALS}3/`).reply(400, {
+    mock.onPatch(`${END_POINTS.USER_PROFILE.FINANCIALS}3/`).reply(400, {
       detail: 'Update failed',
     });
 
@@ -105,14 +105,14 @@ describe('financialService', () => {
   });
 
   it('should delete financial successfully', async () => {
-    mock.onDelete(`${END_POINTS.FINANCIALS}3/`).reply(204);
+    mock.onDelete(`${END_POINTS.USER_PROFILE.FINANCIALS}3/`).reply(204);
 
     const response = await deleteFinancial('3');
     expect(response.status).toBe(204);
   });
 
   it('should throw error when deleteFinancial fails', async () => {
-    mock.onDelete(`${END_POINTS.FINANCIALS}3/`).reply(404, {
+    mock.onDelete(`${END_POINTS.USER_PROFILE.FINANCIALS}3/`).reply(404, {
       detail: 'Not found',
     });
 

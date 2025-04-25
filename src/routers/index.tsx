@@ -1,7 +1,5 @@
+import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-
-// Pages
-import { NotFound } from '@/pages';
 
 import {
   ADMIN_ROUTES,
@@ -9,6 +7,8 @@ import {
   DEFAULT_ROUTE,
   USER_ROUTES,
 } from './routers';
+
+const NotFound = lazy(() => import('@/pages/NotFound'));
 
 export const router = createBrowserRouter([
   DEFAULT_ROUTE,

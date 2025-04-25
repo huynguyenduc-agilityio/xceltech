@@ -20,7 +20,7 @@ describe('profileService', () => {
   it('should get info user successfully', async () => {
     const mockResponse = [{ id: 1, firstName: 'John', lastName: 'Doe' }];
 
-    mock.onGet(END_POINTS.USER_DETAIL).reply(200, mockResponse);
+    mock.onGet(END_POINTS.ACCOUNTS.ME).reply(200, mockResponse);
 
     const result = await getInfoUser();
 
@@ -30,7 +30,7 @@ describe('profileService', () => {
   it('should edit info user successfully', async () => {
     const mockRequest = { id: '1', firstName: 'John', lastName: 'Davis' };
 
-    mock.onPatch(END_POINTS.USER_DETAIL).reply(200, mockRequest);
+    mock.onPatch(END_POINTS.ACCOUNTS.ME).reply(200, mockRequest);
 
     const result = await editInfoUser(mockRequest);
 
@@ -41,7 +41,7 @@ describe('profileService', () => {
     const mockRequest = { id: '1', firstName: 'John', lastName: 'Davis' };
 
     mock
-      .onGet(END_POINTS.USER_DETAIL)
+      .onGet(END_POINTS.ACCOUNTS.ME)
       .reply(500, MESSAGES.COMMON.UPDATE_FAILED('User'));
 
     await expect(editInfoUser(mockRequest)).rejects.toThrow(

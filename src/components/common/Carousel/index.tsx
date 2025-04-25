@@ -3,6 +3,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import isEqual from 'react-fast-compare';
 
 import { cn } from '@/utils';
 import { Button } from '../Button';
@@ -169,26 +170,27 @@ const CarouselContent = React.forwardRef<
 });
 CarouselContent.displayName = 'CarouselContent';
 
-const CarouselItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel();
+const CarouselItem = React.memo(
+  React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    ({ className, ...props }, ref) => {
+      const { orientation } = useCarousel();
 
-  return (
-    <div
-      ref={ref}
-      role="group"
-      aria-roledescription="slide"
-      className={cn(
-        'min-w-0 shrink-0 grow-0 basis-full cursor-pointer',
-        orientation === 'horizontal' ? 'pl-8' : 'pt-4',
-        className,
-      )}
-      {...props}
-    />
-  );
-});
+      return (
+        <div
+          ref={ref}
+          role="group"
+          aria-roledescription="slide"
+          className={cn(
+            'min-w-0 shrink-0 grow-0 basis-full cursor-pointer',
+            orientation === 'horizontal' ? 'pl-8' : 'pt-4',
+            className,
+          )}
+          {...props}
+        />
+      );
+    },
+  ),
+);
 CarouselItem.displayName = 'CarouselItem';
 
 const CarouselPrevious = React.forwardRef<
@@ -250,30 +252,33 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = 'CarouselNext';
 
 export interface CarouselProps {
-  listContent: { content: React.ReactNode; className?: string }[];
+  listContent: { key: string; content: React.ReactNode; className?: string }[];
   isAction?: boolean;
   className?: string;
 }
 
-const Carousel = ({ listContent, isAction, className }: CarouselProps) => (
-  <CarouselRoot>
-    <CarouselContent className={className}>
-      {listContent?.map(({ content, className }, index) => (
-        <CarouselItem
-          key={index}
-          className={cn(`basis-1/${listContent.length}`, className)}
-        >
-          {content}
-        </CarouselItem>
-      ))}
-    </CarouselContent>
-    {isAction && (
-      <>
-        <CarouselPrevious />
-        <CarouselNext />
-      </>
-    )}
-  </CarouselRoot>
+const Carousel = React.memo(
+  ({ listContent, isAction, className }: CarouselProps) => (
+    <CarouselRoot>
+      <CarouselContent className={className}>
+        {listContent?.map(({ key, content, className }) => (
+          <CarouselItem
+            key={key}
+            className={cn(`basis-1/${listContent.length}`, className)}
+          >
+            {content}
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      {isAction && (
+        <>
+          <CarouselPrevious />
+          <CarouselNext />
+        </>
+      )}
+    </CarouselRoot>
+  ),
+  isEqual,
 );
 
 export {

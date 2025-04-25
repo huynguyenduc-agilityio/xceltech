@@ -20,7 +20,7 @@ describe('accountService', () => {
   it('should get accounts successfully', async () => {
     const mockResponse = { accounts: [{ id: 1, username: 'john.doe' }] };
 
-    mock.onGet(END_POINTS.ACCOUNT).reply(200, mockResponse);
+    mock.onGet(END_POINTS.ACCOUNTS.BASE).reply(200, mockResponse);
 
     const result = await getAccounts();
 
@@ -29,7 +29,7 @@ describe('accountService', () => {
 
   it('should handle error when getting accounts', async () => {
     mock
-      .onGet(END_POINTS.ACCOUNT)
+      .onGet(END_POINTS.ACCOUNTS.BASE)
       .reply(500, { message: 'Internal Server Error' });
 
     await expect(getAccounts()).rejects.toThrow(

@@ -4,6 +4,9 @@ import { Button } from '@/components';
 // Icons
 import { LogoIcon } from '@/icons';
 
+// Constants
+import { IMAGES } from '@/constants';
+
 import RegisterForm from './RegisterForm';
 
 const UserSignUp = () => {
@@ -16,7 +19,7 @@ const UserSignUp = () => {
             <LogoIcon />
           </div>
           <img
-            src="/public/assets/images/registerImage.webp"
+            src={IMAGES.REGISTER_IMAGE}
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
           />

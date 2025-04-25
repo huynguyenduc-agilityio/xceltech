@@ -6,7 +6,7 @@ import { HttpClient } from '.';
 
 export const getListJobs = async () => {
   try {
-    const response = await HttpClient.get(END_POINTS.JOB);
+    const response = await HttpClient.get(END_POINTS.USER_PROFILE.JOBS);
     return response?.data ?? [];
   } catch (error) {
     throw new Error((error as ErrorType).detail || MESSAGES.COMMON.EMPTY_DATA);

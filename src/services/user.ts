@@ -8,13 +8,13 @@ import { ErrorType, IInfoUser } from '@/types';
 import { HttpClient } from '.';
 
 const getInfoUser = async (): Promise<IInfoUser> => {
-  return (await HttpClient.get(END_POINTS.USER_DETAIL)).data;
+  return (await HttpClient.get(END_POINTS.ACCOUNTS.ME)).data;
 };
 
 const editInfoUser = async (data: Partial<IInfoUser>) => {
   try {
     return (
-      await HttpClient.patch(END_POINTS.USER_DETAIL, data, {
+      await HttpClient.patch(END_POINTS.ACCOUNTS.ME, data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

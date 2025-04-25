@@ -1,7 +1,7 @@
 import { OverviewCard, Progress } from '@/components';
 
 // Constants
-import { DASHBOARD_PAYROLLS } from '@/constants';
+import { DASHBOARD_PAYROLLS } from '@/__mocks__';
 
 // Utils
 import { cn } from '@/utils';

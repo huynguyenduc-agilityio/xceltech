@@ -11,7 +11,13 @@ import './global.css';
 
 const App = () => {
   return (
-    <Suspense fallback={<Fallback />}>
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen">
+          <Fallback />
+        </div>
+      }
+    >
       <RouterProvider router={router} />
       <Toast />
     </Suspense>

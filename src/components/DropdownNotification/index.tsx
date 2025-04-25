@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Icons
 import { BellIcon } from '@/icons';
@@ -23,29 +24,26 @@ import { formatDate } from '@/utils';
 
 // Constants
 import { MESSAGES, USER_PAGE } from '@/constants';
-import { useMemo } from 'react';
 
 const DropdownNotification = () => {
   const { isNotificationLoading, notifications } = useGetNotifications();
+  const navigate = useNavigate();
 
   const renderListNotification = useMemo(() => {
     return notifications?.length ? (
       notifications?.map(({ id, message, createdAt }) => (
-        <Link to={`${USER_PAGE.LEAVE_RECALL}/${id}`}>
-          <DropdownMenuItem
-            key={id}
-            className="flex justify-between p-4 border-b"
-          >
-            <div className="flex flex-col gap-2">
-              <p className="text-md text-slate-500 truncate max-w-[350px]">
-                {message}
-              </p>
-              <p className="text-slate-500">
-                {formatDate(new Date(createdAt))}
-              </p>
-            </div>
-          </DropdownMenuItem>
-        </Link>
+        <DropdownMenuItem
+          key={id}
+          className="flex justify-between p-4 border-b"
+          onClick={() => navigate(`${USER_PAGE.LEAVE_RECALL}/${id}`)}
+        >
+          <div className="flex flex-col gap-2">
+            <p className="text-md text-slate-500 truncate max-w-[350px]">
+              {message}
+            </p>
+            <p className="text-slate-500">{formatDate(new Date(createdAt))}</p>
+          </div>
+        </DropdownMenuItem>
       ))
     ) : (
       <DropdownMenuItem className="flex justify-between p-4 border-b">
@@ -56,7 +54,7 @@ const DropdownNotification = () => {
         </div>
       </DropdownMenuItem>
     );
-  }, [notifications]);
+  }, [navigate, notifications]);
 
   return (
     <DropdownMenu>

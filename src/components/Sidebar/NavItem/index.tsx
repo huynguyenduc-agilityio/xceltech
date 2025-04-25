@@ -1,5 +1,5 @@
 import { ComponentType, SVGProps } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Utils
 import { cn } from '@/utils';
@@ -12,6 +12,7 @@ type TNavItemProps = {
 
 const NavItem = ({ subTitle, url, icon: Icon }: TNavItemProps) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isDefaultFocused = location.pathname === '/';
   const isFocused = location.pathname.includes(url);
   const isDisabled = url !== 'leave-management' && url !== 'dashboard';
@@ -23,21 +24,25 @@ const NavItem = ({ subTitle, url, icon: Icon }: TNavItemProps) => {
       ? 'bg-secondary text-black-default'
       : 'hover:bg-gray-ash',
   );
+
   return (
-    <Link to={url}>
-      <button title={subTitle} className={linkClasses} disabled={isDisabled}>
-        <div className="w-10">
-          <Icon
-            className={cn(
-              (isDefaultFocused || isFocused) && url
-                ? 'text-black'
-                : 'text-white',
-            )}
-          />
-        </div>
-        <span className="text-md">{subTitle}</span>
-      </button>
-    </Link>
+    <button
+      title={subTitle}
+      className={linkClasses}
+      disabled={isDisabled}
+      onClick={() => navigate(url)}
+    >
+      <div className="w-10">
+        <Icon
+          className={cn(
+            (isDefaultFocused || isFocused) && url
+              ? 'text-black'
+              : 'text-white',
+          )}
+        />
+      </div>
+      <span className="text-md">{subTitle}</span>
+    </button>
   );
 };
 

@@ -20,7 +20,7 @@ describe('profileService', () => {
   it('should get list jobs successfully', async () => {
     const mockResponse = [{ id: 1, job: 'Developer' }];
 
-    mock.onGet(END_POINTS.JOB).reply(200, mockResponse);
+    mock.onGet(END_POINTS.USER_PROFILE.JOBS).reply(200, mockResponse);
 
     const result = await getListJobs();
 
@@ -28,7 +28,7 @@ describe('profileService', () => {
   });
 
   it('should return empty array if response data is undefined', async () => {
-    mock.onGet(END_POINTS.JOB).reply(200);
+    mock.onGet(END_POINTS.USER_PROFILE.JOBS).reply(200);
 
     const result = await getListJobs();
 
@@ -37,7 +37,7 @@ describe('profileService', () => {
 
   it('should handle error when getting list jobs', async () => {
     mock
-      .onGet(END_POINTS.JOB)
+      .onGet(END_POINTS.USER_PROFILE.JOBS)
       .reply(500, { message: MESSAGES.COMMON.EMPTY_DATA });
 
     await expect(getListJobs()).rejects.toThrow(MESSAGES.COMMON.EMPTY_DATA);

@@ -31,21 +31,21 @@ describe('familyService', () => {
       },
     ];
 
-    mock.onGet(END_POINTS.FAMILIES).reply(200, mockData);
+    mock.onGet(END_POINTS.USER_PROFILE.FAMILIES).reply(200, mockData);
 
     const result = await getListFamilies();
     expect(result).toEqual(mockData);
   });
 
   it('should return empty array when response is null', async () => {
-    mock.onGet(END_POINTS.FAMILIES).reply(200, null);
+    mock.onGet(END_POINTS.USER_PROFILE.FAMILIES).reply(200, null);
 
     const result = await getListFamilies();
     expect(result).toEqual([]);
   });
 
   it('should throw error when getListFamilies fails', async () => {
-    mock.onGet(END_POINTS.FAMILIES).reply(500, {
+    mock.onGet(END_POINTS.USER_PROFILE.FAMILIES).reply(500, {
       detail: 'Server Error',
     });
 
@@ -62,14 +62,14 @@ describe('familyService', () => {
 
     const mockResponse = { id: '2', ...family };
 
-    mock.onPost(END_POINTS.FAMILIES).reply(201, mockResponse);
+    mock.onPost(END_POINTS.USER_PROFILE.FAMILIES).reply(201, mockResponse);
 
     const result = await addFamily(family);
     expect(result).toEqual(mockResponse);
   });
 
   it('should handle addFamily failure (without checking error message)', async () => {
-    mock.onPost(END_POINTS.FAMILIES).reply(400);
+    mock.onPost(END_POINTS.USER_PROFILE.FAMILIES).reply(400);
 
     await expect(addFamily({})).rejects.toThrow();
   });
@@ -88,7 +88,7 @@ describe('familyService', () => {
     };
 
     mock
-      .onPatch(`${END_POINTS.FAMILIES}${family.id}/`)
+      .onPatch(`${END_POINTS.USER_PROFILE.FAMILIES}${family.id}/`)
       .reply(200, mockResponse);
 
     const result = await editFamily(family);
@@ -96,7 +96,7 @@ describe('familyService', () => {
   });
 
   it('should throw error when editFamily fails', async () => {
-    mock.onPatch(`${END_POINTS.FAMILIES}3/`).reply(400, {
+    mock.onPatch(`${END_POINTS.USER_PROFILE.FAMILIES}3/`).reply(400, {
       detail: 'Update failed',
     });
 
@@ -106,14 +106,14 @@ describe('familyService', () => {
   });
 
   it('should delete family successfully', async () => {
-    mock.onDelete(`${END_POINTS.FAMILIES}3/`).reply(204);
+    mock.onDelete(`${END_POINTS.USER_PROFILE.FAMILIES}3/`).reply(204);
 
     const response = await deleteFamily('3');
     expect(response.status).toBe(204);
   });
 
   it('should throw error when deleteFamily fails', async () => {
-    mock.onDelete(`${END_POINTS.FAMILIES}3/`).reply(404, {
+    mock.onDelete(`${END_POINTS.USER_PROFILE.FAMILIES}3/`).reply(404, {
       detail: 'Not found',
     });
 

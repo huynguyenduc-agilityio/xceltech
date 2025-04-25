@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 // Constants
-import { documentsQueryKeys, MESSAGES } from '@/constants';
+import { documentsQueryKeys } from '@/constants';
 
 // Types
 import { MutationType } from '@/types';
@@ -51,10 +51,6 @@ export const useDownloadDocuments = () => {
     useMutation({
       mutationFn: downloadAllDocuments,
       onSuccess: (data) => {
-        if (!data) {
-          throw new Error(MESSAGES.COMMON.DOWNLOAD_FAILED);
-        }
-
         downloadBlobFile(data, 'documents.zip');
       },
     });

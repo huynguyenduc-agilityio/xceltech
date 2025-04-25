@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Components
 import { Button } from '@/components';
@@ -7,6 +7,7 @@ import { Button } from '@/components';
 import { ADMIN_PAGE, USER_PAGE } from '@/constants';
 
 const NotFound = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const hrefDashboard = location.pathname.includes('admin')
     ? ADMIN_PAGE.DASHBOARD
@@ -22,11 +23,12 @@ const NotFound = () => {
           The page you are looking for might have been removed or temporarily
           unavailable.
         </p>
-        <Link to={hrefDashboard}>
-          <Button className="px-6 py-3 mt-10 transition">
-            Back to Dashboard
-          </Button>
-        </Link>
+        <Button
+          className="px-6 py-3 mt-10 transition"
+          onClick={() => navigate(hrefDashboard)}
+        >
+          Back to Dashboard
+        </Button>
       </div>
     </div>
   );

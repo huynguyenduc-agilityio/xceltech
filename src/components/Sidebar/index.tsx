@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Constants
-import { AUTHENTICATION_PAGE } from '@/constants';
+import { AUTHENTICATION_PAGE, IMAGES } from '@/constants';
 
 // Stores
 import { useUserActions } from '@/stores';
@@ -67,7 +67,7 @@ const Sidebar = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
 
-        <img src="/assets/images/footerNav.webp" alt="Footer Nav" />
+        <img src={IMAGES.FOOTER_NAV} alt="Footer Nav" />
       </nav>
 
       {/* Body Content */}

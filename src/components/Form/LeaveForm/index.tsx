@@ -161,14 +161,18 @@ const LeaveForm = ({ initialValues }: ILeaveForm) => {
 
       toast({
         status: ToastStatus.Success,
-        title: MESSAGES.COMMON.ADD_SUCCESS(leaveType),
+        title: leaveIdParam
+          ? MESSAGES.COMMON.UPDATE_SUCCESS(leaveType)
+          : MESSAGES.COMMON.ADD_SUCCESS(leaveType),
       });
 
       navigate(USER_PAGE.LEAVE);
     } catch {
       toast({
         status: ToastStatus.Error,
-        title: MESSAGES.COMMON.ADD_FAILED(leaveType),
+        title: leaveIdParam
+          ? MESSAGES.COMMON.UPDATE_FAILED(leaveType)
+          : MESSAGES.COMMON.ADD_FAILED(leaveType),
       });
     }
   };

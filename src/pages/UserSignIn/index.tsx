@@ -1,4 +1,5 @@
 // Components
+import { IMAGES } from '@/constants';
 import SignInForm from './SignInForm';
 
 const UserSignIn = () => {
@@ -13,7 +14,7 @@ const UserSignIn = () => {
         {/* Right Section */}
         <div className="w-1/2 bg-primary text-white flex flex-col pl-12 justify-end relative">
           <img
-            src="/public/assets/images/signinImage.webp"
+            src={IMAGES.SIGNIN_IMAGE}
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
           />

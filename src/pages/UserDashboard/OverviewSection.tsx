@@ -2,7 +2,7 @@
 import { CalendarIcon } from '@/icons';
 
 // Constants
-import { PROGRESS_LEAVE_ITEMS } from '@/constants';
+import { PROGRESS_LEAVE_ITEMS } from '@/__mocks__';
 
 // Mocks
 import { mockPaySlipData } from '@/__mocks__';

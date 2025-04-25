@@ -14,7 +14,7 @@ const InfoTile = ({ count, title, icon, styled }: InfoTileProps) => {
   return (
     <div
       className={cn(
-        'flex items-center gap-8 w-[323px] text-white rounded-[14px] pt-9 pb-8 px-8',
+        'flex items-center gap-8 w-[323px] text-white rounded-[14px] pt-9 pb-8 px-8 cursor-default',
         styled,
       )}
     >

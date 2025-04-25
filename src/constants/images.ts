@@ -1,0 +1,16 @@
+export const IMAGES = {
+  ACCESS_BANK: '/assets/images/accessBank.webp',
+  ADMIN_SIGN_IN: '/assets/images/adminSignInImage.webp',
+  ARROW: '/assets/images/arrow.webp',
+  ARROW_LEFT: '/assets/images/arrowLeft.webp',
+  ARROW_RIGHT: '/assets/images/arrowRight.webp',
+  FOOTER_NAV: '/assets/images/footerNav.webp',
+  LEAVE_IMAGE: '/assets/images/leaveImage.webp',
+  OLD_MAN: '/assets/images/oldMan.webp',
+  PAY_STACK: '/assets/images/payStack.webp',
+  REGISTER_IMAGE: '/assets/images/registerImage.webp',
+  SIGNIN_IMAGE: '/assets/images/signinImage.webp',
+  TPAY: '/assets/images/tpay.webp',
+  YOUNG_GIRL: '/assets/images/youngGirl.webp',
+  YOUNG_MAN: '/assets/images/youngMan.webp',
+};

@@ -22,16 +22,11 @@ exports[`LeaveTile component should match snapshot 1`] = `
       >
         Annual Leave
       </span>
-      <a
-        data-discover="true"
-        href="/"
+      <button
+        class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed h-10 rounded-[23px] bg-secondary hover:bg-secondary/90 text-black-default px-[72px] py-2"
       >
-        <button
-          class="font-productsans inline-flex items-center justify-center whitespace-nowrap text-lg font-bold ring-offset-background transition-all duration-300 ease-in-out outline-none focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed h-10 rounded-[23px] bg-secondary hover:bg-secondary/90 text-black-default px-[72px] py-2"
-        >
-          Apply
-        </button>
-      </a>
+        Apply
+      </button>
     </div>
   </div>
 </DocumentFragment>

@@ -15,22 +15,27 @@ const infoTileProps = {
 };
 const listContent = [
   {
+    key: '1',
     content: <InfoTile {...infoTileProps} />,
   },
   {
+    key: '2',
     content: <InfoTile {...infoTileProps} styled="bg-primary" count={30} />,
   },
   {
+    key: '3',
     content: (
       <InfoTile {...infoTileProps} styled="bg-green-primary" count={2232111} />
     ),
   },
   {
+    key: '4',
     content: (
       <InfoTile {...infoTileProps} styled="bg-black-muted" count={40231312} />
     ),
   },
   {
+    key: '5',
     content: (
       <InfoTile
         {...infoTileProps}
@@ -40,9 +45,11 @@ const listContent = [
     ),
   },
   {
+    key: '6',
     content: <InfoTile {...infoTileProps} styled="bg-primary" count={3000} />,
   },
   {
+    key: '7',
     content: (
       <InfoTile {...infoTileProps} styled="bg-green-primary" count={80} />
     ),

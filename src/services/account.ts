@@ -5,7 +5,7 @@ import { END_POINTS } from '@/constants';
 import { HttpClient } from '.';
 
 const getAccounts = async () => {
-  return (await HttpClient.get(END_POINTS.ACCOUNT)).data;
+  return (await HttpClient.get(END_POINTS.ACCOUNTS.BASE)).data;
 };
 
 export { getAccounts };

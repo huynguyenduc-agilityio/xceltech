@@ -38,15 +38,17 @@ const Toast = () => {
             )}
           >
             <div className="flex items-center gap-3">
-              {isSuccess ? (
-                <div className="flex justify-center items-center w-6 h-6 rounded-full bg-green-primary">
-                  <Check className="text-white w-4 h-4" />
-                </div>
-              ) : (
-                <div className="flex justify-center items-center w-6 h-6 rounded-full bg-red-600">
-                  <X className="text-white w-4 h-4" />
-                </div>
-              )}
+              <div className="flex item-center w-6">
+                {isSuccess ? (
+                  <div className="flex justify-center items-center w-6 h-6 rounded-full bg-green-primary">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                ) : (
+                  <div className="flex justify-center items-center w-6 h-6 rounded-full bg-red-600">
+                    <X className="text-white w-4 h-4" />
+                  </div>
+                )}
+              </div>
               <div className="grid gap-1">
                 {title && <ToastTitle>{title}</ToastTitle>}
                 {description && (

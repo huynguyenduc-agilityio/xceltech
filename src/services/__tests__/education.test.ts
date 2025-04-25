@@ -35,21 +35,21 @@ describe('educationService', () => {
       },
     ];
 
-    mock.onGet(END_POINTS.EDUCATIONS).reply(200, mockData);
+    mock.onGet(END_POINTS.USER_PROFILE.EDUCATIONS).reply(200, mockData);
 
     const result = await getListEducations();
     expect(result).toEqual(mockData);
   });
 
   it('should return empty array when response is null', async () => {
-    mock.onGet(END_POINTS.EDUCATIONS).reply(200, null);
+    mock.onGet(END_POINTS.USER_PROFILE.EDUCATIONS).reply(200, null);
 
     const result = await getListEducations();
     expect(result).toEqual([]);
   });
 
   it('should throw error when getListEducations fails', async () => {
-    mock.onGet(END_POINTS.EDUCATIONS).reply(500, {
+    mock.onGet(END_POINTS.USER_PROFILE.EDUCATIONS).reply(500, {
       detail: 'No data found',
     });
 
@@ -69,14 +69,14 @@ describe('educationService', () => {
 
     const mockResponse = { id: '2', ...education };
 
-    mock.onPost(END_POINTS.EDUCATIONS).reply(201, mockResponse);
+    mock.onPost(END_POINTS.USER_PROFILE.EDUCATIONS).reply(201, mockResponse);
 
     const result = await addEducation(education);
     expect(result).toEqual(mockResponse);
   });
 
   it('should throw error when addEducation fails', async () => {
-    mock.onPost(END_POINTS.EDUCATIONS).reply(400, {
+    mock.onPost(END_POINTS.USER_PROFILE.EDUCATIONS).reply(400, {
       detail: 'Invalid data',
     });
 
@@ -95,7 +95,7 @@ describe('educationService', () => {
     };
 
     mock
-      .onPatch(`${END_POINTS.EDUCATIONS}${education.id}/`)
+      .onPatch(`${END_POINTS.USER_PROFILE.EDUCATIONS}${education.id}/`)
       .reply(200, mockResponse);
 
     const result = await editEducation(education);
@@ -103,7 +103,7 @@ describe('educationService', () => {
   });
 
   it('should throw error when editEducation fails', async () => {
-    mock.onPatch(`${END_POINTS.EDUCATIONS}3/`).reply(400, {
+    mock.onPatch(`${END_POINTS.USER_PROFILE.EDUCATIONS}3/`).reply(400, {
       detail: 'Update failed',
     });
 
@@ -113,14 +113,14 @@ describe('educationService', () => {
   });
 
   it('should delete education successfully', async () => {
-    mock.onDelete(`${END_POINTS.EDUCATIONS}3/`).reply(204);
+    mock.onDelete(`${END_POINTS.USER_PROFILE.EDUCATIONS}3/`).reply(204);
 
     const response = await deleteEducation('3');
     expect(response.status).toBe(204);
   });
 
   it('should throw error when deleteEducation fails', async () => {
-    mock.onDelete(`${END_POINTS.EDUCATIONS}3/`).reply(404, {
+    mock.onDelete(`${END_POINTS.USER_PROFILE.EDUCATIONS}3/`).reply(404, {
       detail: 'Not found',
     });
 

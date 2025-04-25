@@ -57,7 +57,10 @@ export const financialSchema = z.object({
   accountName: requiredString('Account Name'),
   accountNo: z.preprocess(
     (val) => Number(val),
-    z.number().min(1, MESSAGES.VALIDATE.FIELD_REQUIRED('Account No')),
+    z
+      .number()
+      .min(1, MESSAGES.VALIDATE.FIELD_REQUIRED('Account No'))
+      .max(9999999999, MESSAGES.VALIDATE.INVALID_ACCOUNT_NO),
   ),
 });
 

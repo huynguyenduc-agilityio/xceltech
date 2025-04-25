@@ -29,7 +29,7 @@ describe('authService', () => {
     const user = { email: 'john.doe@gmail.com', password: 'password' };
     const mockAuthResponse = { token: 'mock_token' };
 
-    mock.onPost(END_POINTS.LOGIN).reply(200, mockAuthResponse);
+    mock.onPost(END_POINTS.ACCOUNTS.LOGIN).reply(200, mockAuthResponse);
 
     const result = await loginUser(user);
 
@@ -47,7 +47,7 @@ describe('authService', () => {
     };
     const mockRegisterResponse = { id: '1', username: 'jane.doe' };
 
-    mock.onPost(END_POINTS.REGISTER).reply(200, mockRegisterResponse);
+    mock.onPost(END_POINTS.ACCOUNTS.REGISTER).reply(200, mockRegisterResponse);
 
     const result = await registerUser(user);
 
@@ -60,7 +60,7 @@ describe('authService', () => {
     const token = 'some_token';
 
     mock
-      .onGet(`${END_POINTS.ACTIVE}/${uidb64}/${token}/`)
+      .onGet(`${END_POINTS.ACCOUNTS.ACTIVATE}/${uidb64}/${token}/`)
       .reply(200, mockActivateResponse);
 
     const result = await activateAccount({ uidb64, token });
@@ -72,7 +72,7 @@ describe('authService', () => {
     const user = { email: 'wrong.user@gmail.com', password: 'wrongpassword' };
 
     mock
-      .onPost(END_POINTS.LOGIN)
+      .onPost(END_POINTS.ACCOUNTS.LOGIN)
       .reply(400, { message: 'Invalid credentials' });
 
     await expect(loginUser(user)).rejects.toThrow(
@@ -85,7 +85,7 @@ describe('authService', () => {
     const token = 'invalid_token';
 
     mock
-      .onGet(`${END_POINTS.ACTIVE}/${uidb64}/${token}/`)
+      .onGet(`${END_POINTS.ACCOUNTS.ACTIVATE}/${uidb64}/${token}/`)
       .reply(400, { message: 'Activation failed' });
 
     await expect(activateAccount({ uidb64, token })).rejects.toThrow(

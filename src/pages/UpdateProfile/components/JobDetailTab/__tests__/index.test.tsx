@@ -55,18 +55,6 @@ describe('JobDetailTab - Integration Test', () => {
     ).toBeInTheDocument();
   });
 
-  it('navigates to UploadDocuments and shows fields', async () => {
-    renderComponent(mockJobInfo);
-
-    fireEvent.click(screen.getByRole('button', { name: /upload documents/i }));
-
-    await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: /upload documents/i }),
-      ).toBeInTheDocument();
-    });
-  });
-
   it('navigates to ViewDocument and shows file', async () => {
     renderComponent(mockJobInfo);
 

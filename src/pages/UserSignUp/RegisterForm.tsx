@@ -69,6 +69,7 @@ const RegisterForm = () => {
         title: 'Register Success!',
         description: MESSAGES.AUTHENTICATION.REGISTER_SUCCESS,
         status: ToastStatus.Success,
+        duration: 10000,
       });
 
       reset(initialValues);

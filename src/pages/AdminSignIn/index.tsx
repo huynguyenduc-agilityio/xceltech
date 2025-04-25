@@ -1,11 +1,14 @@
+import { IMAGES } from '@/constants';
+
 import { LogoIcon } from '@/icons';
+
 import SignInForm from './SignInForm';
 
 const AdminSignIn = () => {
   return (
     <div className="relative w-screen h-screen">
       <img
-        src="/assets/images/adminSignInImage.webp"
+        src={IMAGES.ADMIN_SIGN_IN}
         alt="Background"
         className="absolute top-0 left-0 w-full h-full object-cover"
       />

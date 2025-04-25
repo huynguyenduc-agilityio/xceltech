@@ -242,14 +242,15 @@ const EducationForm = ({
             key={name}
             control={control}
             name="description"
-            render={({ field }) => (
+            render={({ field, fieldState: { error } }) => (
               <FormItem className="space-y-5">
                 <Label className="text-md">Description</Label>
                 <FormControl>
                   <Textarea
-                    {...field}
                     className="h-[122px] px-9 rounded-[15px]"
                     placeholder="Enter your description"
+                    isInvalid={!!error}
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />

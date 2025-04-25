@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Constants
 import { AUTHENTICATION_PAGE, USER_NAVIGATION_CONFIG } from '@/constants';
@@ -46,25 +46,24 @@ const Navbar = () => {
             location.pathname.split('/')[1] === item.path.split('/')[1];
 
           return (
-            <Link key={item.title} to={item.path}>
-              <button
-                onClick={() => {
-                  if (item.title === 'Dashboard') {
-                    navigate(item.path);
-                  }
-                }}
-                className={cn(
-                  'relative w-[160px] py-[22px] text-lg',
-                  !isActive && 'cursor-not-allowed',
-                )}
-                disabled={!isActive}
-              >
-                {item.title}
-                {isActive && (
-                  <span className="absolute left-1/2 transform -translate-x-1/2 w-[160px] h-[5px] bg-secondary bottom-0 rounded-regular" />
-                )}
-              </button>
-            </Link>
+            <button
+              key={item.title}
+              onClick={() => {
+                if (item.title === 'Dashboard') {
+                  navigate(item.path);
+                }
+              }}
+              className={cn(
+                'relative w-[160px] py-[22px] text-lg',
+                !isActive && 'cursor-not-allowed',
+              )}
+              disabled={!isActive}
+            >
+              {item.title}
+              {isActive && (
+                <span className="absolute left-1/2 transform -translate-x-1/2 w-[160px] h-[5px] bg-secondary bottom-0 rounded-regular" />
+              )}
+            </button>
           );
         })}
       </div>
@@ -83,20 +82,22 @@ const Navbar = () => {
               key: 'logout',
               label: (
                 <>
-                  <LogoutIcon
-                    width={16}
-                    height={16}
-                    className="mr-2 text-black-default text-md"
-                  />
+                  <LogoutIcon width={16} height={16} className="mr-2 text-md" />
                   <p className="text-md font-bold">Logout</p>
                 </>
               ),
               onClick: handleClickLogoutBtn,
             },
           ]}
-          itemClassName="bg-white text-black-default border-b border-b-gray-200 hover:bg-gray-100"
+          itemClassName="h-12 bg-red-500 text-white border-b border-b-gray-200 rounded-md hover:bg-red-500/80"
+          className="bg-gray-100 px-1"
         >
-          <Button size="fit" value="ghost" className="rounded-full">
+          <Button
+            aria-label="avatar"
+            size="fit"
+            value="ghost"
+            className="rounded-full"
+          >
             <Avatar
               src={avatar as string}
               fallback={getInitialsAvatar(`${firstName} ${lastName}`)}

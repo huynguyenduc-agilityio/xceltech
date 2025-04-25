@@ -1,9 +1,11 @@
+import { IMAGES } from '@/constants';
+
 const AdminLeave = () => {
   return (
     <div className="px-12 bg-primary rounded-3xl mt-10 flex justify-between max-h-[422px] overflow-hidden">
       <div className="w-[740px]">
         <img
-          src="/assets/images/arrowRight.webp"
+          src={IMAGES.ARROW_RIGHT}
           alt="Arrow Right Image"
           className="ml-5 object-cover"
         />
@@ -17,7 +19,7 @@ const AdminLeave = () => {
 
         <div className="w-full flex justify-end">
           <img
-            src="/assets/images/arrowLeft.webp"
+            src={IMAGES.ARROW_LEFT}
             alt="Arrow Left Image"
             className="object-cover"
           />
@@ -25,7 +27,7 @@ const AdminLeave = () => {
       </div>
 
       <img
-        src="/assets/images/leaveImage.webp"
+        src={IMAGES.LEAVE_IMAGE}
         alt="Leave Image"
         className="object-cover"
       />

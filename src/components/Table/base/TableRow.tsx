@@ -1,7 +1,9 @@
 import * as React from 'react';
+import isEqual from 'react-fast-compare';
+
 import { cn } from '@/utils';
 
-const TableRow = React.forwardRef<
+const TableRowComponent = React.forwardRef<
   HTMLTableRowElement,
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => (
@@ -14,6 +16,8 @@ const TableRow = React.forwardRef<
     {...props}
   />
 ));
-TableRow.displayName = 'TableRow';
+TableRowComponent.displayName = 'TableRow';
+
+const TableRow = React.memo(TableRowComponent, isEqual);
 
 export { TableRow };

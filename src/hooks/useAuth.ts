@@ -1,8 +1,22 @@
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useMutation } from '@tanstack/react-query';
+import {
+  useNavigate,
+  useLocation,
+  NavigateFunction,
+  Location,
+} from 'react-router-dom';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 //Types
-import { IActiveUser } from '@/types';
+import { IActiveUser, IAuthUser } from '@/types';
+
+// Services
+import { activateAccount, loginUser, registerUser } from '@/services';
+
+// Stores
+import { useUserActions } from '@/stores';
+
+// Constants
+import { usersQueryKeys } from '@/constants';
 
 // Constants
 import {
@@ -12,16 +26,45 @@ import {
   USER_PAGE,
 } from '@/constants';
 
-// Services
-import { activateAccount, loginUser, registerUser } from '@/services';
+const handleLoginSuccess = (
+  data: IAuthUser | null,
+  location: Location,
+  navigate: NavigateFunction,
+  setUser: (data: IAuthUser) => void,
+) => {
+  if (data) {
+    const path = location.pathname;
+    const role = data.user.role;
 
-// Stores
-import { useUserActions } from '@/stores';
+    const isAdmin =
+      role === RoleAuthentication.Admin &&
+      path === AUTHENTICATION_PAGE.ADMIN_SIGN_IN;
+
+    const isUser =
+      [
+        RoleAuthentication.Employee,
+        RoleAuthentication.Candidate,
+        RoleAuthentication.Admin,
+      ].includes(role as RoleAuthentication) &&
+      path === AUTHENTICATION_PAGE.USER_SIGN_IN;
+
+    if (isAdmin) {
+      setUser(data);
+      navigate(ADMIN_PAGE.DASHBOARD);
+    }
+
+    if (isUser) {
+      setUser(data);
+      navigate(USER_PAGE.DASHBOARD);
+    }
+  }
+};
 
 export const useLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { setUser } = useUserActions();
+  const queryClient = useQueryClient();
 
   const {
     mutateAsync: handleLoginUser,
@@ -30,32 +73,8 @@ export const useLogin = () => {
   } = useMutation({
     mutationFn: loginUser,
     onSuccess: (data) => {
-      // Save data in local storage
-      if (data) {
-        const path = location.pathname;
-        const role = data.user.role;
-        const isAdmin =
-          role === RoleAuthentication.Admin &&
-          path === AUTHENTICATION_PAGE.ADMIN_SIGN_IN;
-
-        const isUser =
-          [
-            RoleAuthentication.Employee,
-            RoleAuthentication.Candidate,
-            RoleAuthentication.Admin,
-          ].includes(role as RoleAuthentication) &&
-          path === AUTHENTICATION_PAGE.USER_SIGN_IN;
-
-        if (isAdmin) {
-          setUser(data);
-          navigate(ADMIN_PAGE.DASHBOARD);
-        }
-
-        if (isUser) {
-          setUser(data);
-          navigate(USER_PAGE.DASHBOARD);
-        }
-      }
+      queryClient.invalidateQueries({ queryKey: usersQueryKeys.details() });
+      handleLoginSuccess(data, location, navigate, setUser);
     },
   });
 

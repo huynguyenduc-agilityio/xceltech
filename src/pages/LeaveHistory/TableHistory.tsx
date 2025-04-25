@@ -64,13 +64,13 @@ const TableHistory = () => {
   } = usePagination(leaveData?.metaData.totalCount);
 
   const { leaves, isLeavesLoading } = useGetLeaves({
-    page: query.employeeName ? DEFAULT_CURRENT_PAGE : currentPage,
+    page: currentPage,
     limit: pageSize,
     filters: query,
   });
 
   const { handleUpdateStatus } = useUpdateStatusLeaveRequest({
-    page: query.employeeName ? DEFAULT_CURRENT_PAGE : currentPage,
+    page: currentPage,
     limit: pageSize,
     filters: query,
   });
@@ -101,6 +101,12 @@ const TableHistory = () => {
       setLeaveData(leaves);
     }
   }, [leaves]);
+
+  useEffect(() => {
+    if (searchParams.get('search')) {
+      handleChangePage(DEFAULT_CURRENT_PAGE);
+    }
+  }, [handleChangePage, searchParams]);
 
   const renderActionsDropdown = ({ id, status }: TDataSource) => {
     const isDisabled = status !== StatusLeave.Pending;
@@ -164,6 +170,9 @@ const TableHistory = () => {
       renderBody: renderActionsDropdown,
     },
   ];
+
+  const isDisableAction = isLeavesLoading || !leaves?.results.length;
+
   return (
     <div>
       <div className="flex justify-between px-5 pt-0 py-6">
@@ -171,9 +180,10 @@ const TableHistory = () => {
         <div className="flex items-center gap-14">
           <FilterMenu
             options={{ type: Object.values(LeaveType) }}
+            isDisabled={isLeavesLoading}
             onApply={handleApplyFilters}
           />
-          <DropdownExport />
+          <DropdownExport isDisable={isDisableAction} />
         </div>
       </div>
 

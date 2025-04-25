@@ -1,7 +1,7 @@
 import { OverviewCard } from '@/components';
 
 // Constants
-import { DASHBOARD_APPLY_JOBS } from '@/constants';
+import { DASHBOARD_APPLY_JOBS } from '@/__mocks__';
 
 const AppliedJobsCard = () => (
   <OverviewCard title="Applied Jobs">

@@ -26,6 +26,7 @@ const VALIDATE = {
   INVALID_PASSWORD:
     'Password must include uppercase, lowercase, number, and special character',
   INVALID_CONFIRM_PASSWORD: 'Password and Confirm Password don’t match',
+  INVALID_ACCOUNT_NO: 'Account No is not up to 10 digits',
 };
 
 const AUTHENTICATION = {

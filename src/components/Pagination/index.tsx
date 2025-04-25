@@ -58,6 +58,7 @@ const Pagination = ({
           <Select
             defaultValue={String(limit)}
             option={OPTION_LIMITS}
+            isDisable={!totalRecords}
             onChange={handleChangeLimit}
             className="bg-white border border-gray-dark rounded-md w-fit"
           />

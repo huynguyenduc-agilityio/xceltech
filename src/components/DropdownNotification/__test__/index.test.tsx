@@ -5,6 +5,7 @@ import DropdownNotification from '..';
 
 // Mocks
 import { mockDataRecallNotifications } from '@/__mocks__';
+import { BrowserRouter } from 'react-router-dom';
 
 jest.mock('@/hooks', () => ({
   useGetNotifications: () => ({
@@ -15,7 +16,11 @@ jest.mock('@/hooks', () => ({
 
 describe('DropdownNotification Components', () => {
   it('renders DropdownNotification with trigger and content', () => {
-    const { getByTitle, getByText } = render(<DropdownNotification />);
+    const { getByTitle, getByText } = render(
+      <BrowserRouter>
+        <DropdownNotification />
+      </BrowserRouter>,
+    );
 
     const notificationButton = getByTitle('Dropdown Notification');
     fireEvent.click(notificationButton);

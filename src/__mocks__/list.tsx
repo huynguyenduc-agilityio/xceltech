@@ -4,6 +4,9 @@ import { LeaveFormEnum } from '@/types';
 // Components
 import { InfoTile, LeaveTile } from '@/components';
 
+// Constants
+import { IMAGES } from '@/constants';
+
 // Icons
 import {
   BagIcon,
@@ -16,7 +19,7 @@ import {
 } from '@/icons';
 
 // Routers
-import { USER_PAGE } from './router';
+import { USER_PAGE } from '../constants/router';
 
 // Define mock data for progress leave list
 export const PROGRESS_LEAVE_ITEMS = [
@@ -55,6 +58,7 @@ export const PROGRESS_LEAVE_ITEMS = [
 // Define mock data for leave tile list
 export const LEAVE_TILE_ITEMS = [
   {
+    key: 'annual',
     content: (
       <LeaveTile
         count={60}
@@ -64,6 +68,7 @@ export const LEAVE_TILE_ITEMS = [
     ),
   },
   {
+    key: 'sick',
     content: (
       <LeaveTile
         count={20}
@@ -73,6 +78,7 @@ export const LEAVE_TILE_ITEMS = [
     ),
   },
   {
+    key: 'maternity',
     content: (
       <LeaveTile
         count={60}
@@ -82,6 +88,7 @@ export const LEAVE_TILE_ITEMS = [
     ),
   },
   {
+    key: 'compassionate',
     content: (
       <LeaveTile
         count={30}
@@ -94,6 +101,7 @@ export const LEAVE_TILE_ITEMS = [
 
 export const DASHBOARD_TILE_ITEMS = [
   {
+    key: 'messages',
     content: (
       <InfoTile
         title="Messages"
@@ -104,6 +112,7 @@ export const DASHBOARD_TILE_ITEMS = [
     ),
   },
   {
+    key: 'jobs',
     content: (
       <InfoTile
         title="Jobs"
@@ -114,6 +123,7 @@ export const DASHBOARD_TILE_ITEMS = [
     ),
   },
   {
+    key: 'candidates',
     content: (
       <InfoTile
         title="Candidates"
@@ -124,6 +134,7 @@ export const DASHBOARD_TILE_ITEMS = [
     ),
   },
   {
+    key: 'resumes',
     content: (
       <InfoTile
         title="Resumes"
@@ -134,6 +145,7 @@ export const DASHBOARD_TILE_ITEMS = [
     ),
   },
   {
+    key: 'employees',
     content: (
       <InfoTile
         title="Employees"
@@ -144,6 +156,7 @@ export const DASHBOARD_TILE_ITEMS = [
     ),
   },
   {
+    key: 'leaves',
     content: (
       <InfoTile
         title="Leaves"
@@ -154,6 +167,7 @@ export const DASHBOARD_TILE_ITEMS = [
     ),
   },
   {
+    key: 'payrolls',
     content: (
       <InfoTile
         title="Payrolls"
@@ -168,21 +182,21 @@ export const DASHBOARD_TILE_ITEMS = [
 export const DASHBOARD_APPLY_JOBS = [
   {
     id: 1,
-    image: '/assets/images/accessBank.webp',
+    image: IMAGES.ACCESS_BANK,
     title: 'Sales Executive',
     company: 'Access Bank',
     date: '20mins ago',
   },
   {
     id: 2,
-    image: '/assets/images/payStack.webp',
+    image: IMAGES.PAY_STACK,
     title: 'User Experience Designer',
     company: 'Paystack',
     date: '20mins ago',
   },
   {
     id: 3,
-    image: '/assets/images/tpay.webp',
+    image: IMAGES.TPAY,
     title: 'Product Manager',
     company: 'T-Pay',
     date: '20mins ago',
@@ -192,19 +206,19 @@ export const DASHBOARD_APPLY_JOBS = [
 export const DASHBOARD_EMPLOYEES = [
   {
     id: 1,
-    image: '/assets/images/youngMan.webp',
+    image: IMAGES.YOUNG_MAN,
     name: 'Aman',
     role: 'Product Manager',
   },
   {
     id: 2,
-    image: '/assets/images/youngGirl.webp',
+    image: IMAGES.YOUNG_GIRL,
     name: 'Gelila',
     role: 'Sales Executive',
   },
   {
     id: 3,
-    image: '/assets/images/oldMan.webp',
+    image: IMAGES.OLD_MAN,
     name: 'Biruk',
     role: 'UI UX Designer',
   },
@@ -213,19 +227,19 @@ export const DASHBOARD_EMPLOYEES = [
 export const DASHBOARD_CANDIDATES = [
   {
     id: 1,
-    image: '/assets/images/youngMan.webp',
+    image: IMAGES.YOUNG_MAN,
     name: 'Feven Tesfaye',
     job: ' backend Engineer',
   },
   {
     id: 2,
-    image: '/assets/images/youngGirl.webp',
+    image: IMAGES.YOUNG_GIRL,
     name: 'Yanet mekuriya',
     job: 'Sales',
   },
   {
     id: 3,
-    image: '/assets/images/youngMan.webp',
+    image: IMAGES.YOUNG_MAN,
     name: 'Aman beyene',
     job: 'Product Manager',
   },
@@ -234,7 +248,7 @@ export const DASHBOARD_CANDIDATES = [
 export const DASHBOARD_PAYROLLS = [
   {
     id: 1,
-    image: '/assets/images/youngMan.webp',
+    image: IMAGES.YOUNG_MAN,
     name: 'Aman',
     salary: '30,000 Birr',
     status: 'Paid',
@@ -242,7 +256,7 @@ export const DASHBOARD_PAYROLLS = [
   },
   {
     id: 2,
-    image: '/assets/images/youngGirl.webp',
+    image: IMAGES.YOUNG_GIRL,
     name: 'Gelila',
     salary: '50,000 Birr',
     status: 'Processing',
@@ -250,7 +264,7 @@ export const DASHBOARD_PAYROLLS = [
   },
   {
     id: 3,
-    image: '/assets/images/oldMan.webp',
+    image: IMAGES.OLD_MAN,
     name: 'Biruk',
     salary: '40,000 Birr',
     status: 'Processing',

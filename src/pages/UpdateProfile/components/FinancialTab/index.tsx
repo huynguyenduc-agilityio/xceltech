@@ -73,7 +73,7 @@ const FinancialTab = () => {
             onClick={handleBack}
           >
             Financial Details
-          </Button>{' '}
+          </Button>
           / {isUpdate ? 'Edit Financial' : 'View Financial Details'}
         </h2>
         <FinancialForm

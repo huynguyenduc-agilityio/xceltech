@@ -29,9 +29,9 @@ jest.mock('embla-carousel-react', () => {
 
 describe('Carousel component', () => {
   const mockContent = [
-    { content: <div>Slide 1</div> },
-    { content: <div>Slide 2</div> },
-    { content: <div>Slide 3</div> },
+    { key: '1', content: <div>Slide 1</div> },
+    { key: '2', content: <div>Slide 2</div> },
+    { key: '3', content: <div>Slide 3</div> },
   ];
 
   it('renders all slides', () => {

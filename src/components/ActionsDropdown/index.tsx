@@ -19,6 +19,7 @@ export interface ActionsDropdownProps {
   }[];
   className?: string;
   itemClassName?: string;
+  disabled?: boolean;
 }
 
 const ActionsDropdown = ({
@@ -26,17 +27,20 @@ const ActionsDropdown = ({
   items,
   className,
   itemClassName,
+  disabled = false,
 }: ActionsDropdownProps) => {
   return (
     <DropdownMenuRoot>
-      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild disabled={disabled}>
+        {children}
+      </DropdownMenuTrigger>
       <DropdownMenuContent className={cn(className)}>
         {items.map((item) => (
           <DropdownMenuItem
             key={item.key}
             onClick={item.onClick}
             disabled={item.disabled}
-            className={cn(itemClassName)}
+            className={itemClassName}
           >
             {item.label}
           </DropdownMenuItem>

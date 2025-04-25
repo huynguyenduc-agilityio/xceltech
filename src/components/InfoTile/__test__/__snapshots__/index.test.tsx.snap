@@ -3,7 +3,7 @@
 exports[`InfoTile component should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="flex items-center gap-8 w-[323px] text-white rounded-[14px] pt-9 pb-8 px-8"
+    class="flex items-center gap-8 w-[323px] text-white rounded-[14px] pt-9 pb-8 px-8 cursor-default"
   >
     <span>
       icon
